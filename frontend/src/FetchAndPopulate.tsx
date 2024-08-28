@@ -2,12 +2,13 @@ import React, { useState, useEffect } from 'react';
 
 // Define the type for your data
 interface Product {
+    id: number;
     name: string;
     price: number;
     rating: number;
     is_in_stock: boolean;
     url: string;
-    product_code: string;
+    productCode: string;
 }
 
 const FetchAndPopulate: React.FC = () => {
@@ -33,6 +34,7 @@ const FetchAndPopulate: React.FC = () => {
             }
 
             const result: Product[] = await response.json();
+            console.log(result)
             setData(result);
         } catch (error) {
             console.error('There was a problem with the fetch operation:', error);
@@ -54,15 +56,19 @@ const FetchAndPopulate: React.FC = () => {
                 ) : (
                     <ul>
                         {data.map(item => (
-                            <li key={item.product_code} className="product-item">
+                            <li key={item.id} className="product-item">
                                 <div className="product-info">
-                                    <h2 className="product-name">{item.name}</h2>
-                                    <p className="product-price">${item.price.toFixed(2)}</p>
+                                    <h2 className="product-name">
+                                    <a href={`http://localhost:5173/products/${item.productCode}`}>                                          
+                                      {item.name}
+                                    </a>
+                                    </h2>
+                                    <p className="product-price">{item.price.toFixed(2)} lei</p>
                                     <p className="product-rating">Rating: {item.rating.toFixed(1)}</p>
                                     <p className="product-stock">
-                                        {item.is_in_stock ? 'In Stock' : 'Out of Stock'}
+                                        {item.is_in_stock ? 'In stoc' : 'Nu este in stoc'}
                                     </p>
-                                    <p className='product-code'> {item.product_code} </p>
+                                    <p className='product-code'>{item.productCode}</p>
                                 </div>
                             </li>
                         ))}

@@ -12,7 +12,8 @@ import jakarta.persistence.Table;
 public class Product {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Integer id;
+    @Column(name = "id")
+    private Integer productId;
     @Column(name = "name")
     private String name;
     @Column(name = "raw_price")
@@ -24,11 +25,12 @@ public class Product {
     @Column(name = "product_code")
     private String productCode;
 
-    public Product(String name, float price, boolean isInStock, byte rating) {
+    public Product(String name, float price, boolean isInStock, byte rating, String productCode) {
         this.name = name;
         this.price = price;
         this.isInStock = isInStock;
         this.rating = rating;
+        this.productCode = productCode;
     }
 
     private Product() {
@@ -67,9 +69,26 @@ public class Product {
         this.rating = rating;
     }
 
+    public void setProductCode(String productCode) {
+        this.productCode = productCode;
+    }
+
+    public String getProductCode() {
+        return this.productCode;
+    }
+
+    public void setId(int id) {
+        this.productId = id;
+    }
+
+    public int getId() {
+        return this.productId;
+    }
+
     @Override
     public String toString() {
-        return "Product [id=" + id + ", name=" + name + ", price=" + price + ", isInStock=" + isInStock + ", rating="
+        return "Product [id=" + productId + ", name=" + name + ", price=" + price + ", isInStock=" + isInStock
+                + ", rating="
                 + rating + ", productCode=" + productCode + "]";
     }
 

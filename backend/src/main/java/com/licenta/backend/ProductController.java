@@ -14,14 +14,14 @@ public class ProductController {
     @CrossOrigin(origins = "*")
     @GetMapping("/products/{name}")
     public Iterable<Product> findAllProducts(@PathVariable String name) {
-        Iterable<Product> bigThing;
-        bigThing = this.productRepository.findProductByName(name);
+        Iterable<Product> retrievedProductList;
+        retrievedProductList = this.productRepository.findProductByName(name);
 
-        for (Product product : bigThing) {
+        for (Product product : retrievedProductList) {
             System.out.println(product.toString());
         }
 
         System.out.println("i found stuff from the db!");
-        return bigThing;
+        return retrievedProductList;
     }
 }
