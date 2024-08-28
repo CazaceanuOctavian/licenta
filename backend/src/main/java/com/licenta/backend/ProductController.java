@@ -11,7 +11,7 @@ public class ProductController {
     @Autowired
     private ProductRepository productRepository;
 
-    @CrossOrigin(origins = "http://localhost:5173/")
+    @CrossOrigin(origins = "*")
     @GetMapping("/products/{name}")
     public Iterable<Product> findAllProducts(@PathVariable String name) {
         Iterable<Product> bigThing;

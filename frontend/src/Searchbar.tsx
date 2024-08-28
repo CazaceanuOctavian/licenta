@@ -1,16 +1,20 @@
 // src/SearchBar.tsx
-import React, { useState, ChangeEvent, KeyboardEvent } from 'react';
+import React, { ChangeEvent, KeyboardEvent } from 'react';
 
-const SearchBar: React.FC = () => {
-  const [query, setQuery] = useState<string>('');
+interface SearchBarProps {
+  query: string;
+  onQueryChange: (newQuery: string) => void;
+  onSearch: () => void;
+}
 
+const SearchBar: React.FC<SearchBarProps> = ({ query, onQueryChange, onSearch }) => {
   const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
-    setQuery(event.target.value);
+    onQueryChange(event.target.value);
   };
 
   const handleKeyDown = (event: KeyboardEvent<HTMLInputElement>) => {
     if (event.key === 'Enter') {
-      console.log(query); // Print the current input value to the console when Enter is pressed
+      onSearch(); // Trigger the search when Enter is pressed
     }
   };
 
@@ -20,7 +24,7 @@ const SearchBar: React.FC = () => {
         type="text"
         value={query}
         onChange={handleChange}
-        onKeyDown={handleKeyDown} // Add the onKeyDown event handler
+        onKeyDown={handleKeyDown}
         placeholder="Search..."
       />
     </div>

@@ -1,13 +1,23 @@
-import FetchAndPopulate from './FetchAndPopulate'
+import React, { useState } from 'react';
+import FetchAndPopulate from './FetchAndPopulate';
 import SearchBar from './Searchbar';
 
 function App() {
+  const [query, setQuery] = useState<string>('telefon');
+
+  const handleQueryChange = (newQuery: string) => {
+    setQuery(newQuery);
+  };
+
+  const handleSearch = () => {
+    console.log(query); 
+  };
+
   return (
-    <p className=''>
-          <SearchBar></SearchBar>
-          <p className = 'products-list'>{FetchAndPopulate('samsung galaxy smartwatch')}</p>
-    </p>
-  )
+      <div className='products-list'>
+        <FetchAndPopulate />
+      </div>
+  );
 }
 
 export default App;
