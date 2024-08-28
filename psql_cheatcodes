@@ -1,0 +1,18 @@
+POSTGRESS CHEATCODES
+
+sudo -i -u postgres / licenta_admin
+psql
+
+\l -> listeaza baze de date
+\c <nume_bd> -> te conecteaza la baza de date specificata
+\COPY products(name, raw_price, raw_rating, is_in_stock, url, product_code) FROM '/home/tavi/Desktop/testScraping/vexio/<nume_la_fisier_scrape>.csv' DELIMITER ',' CSV HEADER;
+
+
+
+
+
+select id 
+from products
+group by id
+having count(product_code) > 1;
+

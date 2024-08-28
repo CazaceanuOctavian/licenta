@@ -1,0 +1,48 @@
+{"name": " Tableta LENOVO Tab M8 Gen 4, 8\", 3GB RAM, 32GB, Wi-Fi, Arctic Grey", "raw_price": "494,90-50 lei444,90 lei", "raw_rating": "", "is_in_stoc": "in stoc"}
+{"name": " Tableta SAMSUNG Galaxy Tab A9, 8.7\", 64GB, 4GB RAM, Wi-Fi + 4G, Graphite", "raw_price": "PRP:1.095,00 lei949,99 lei", "raw_rating": "5.00 (3)", "is_in_stoc": "in stoc"}
+{"name": " Tableta LENOVO Tab M11, 11\", 8GB RAM, 128GB, 4G + Wi-Fi, Seafoam Green", "raw_price": "PRP:1.399,99 lei1.199,20 lei", "raw_rating": "4.31 (13)", "is_in_stoc": "in stoc"}
+{"name": " Tableta LENOVO Tab M11, 11\", 4GB RAM, 128GB, 4G + Wi-Fi, Luna Grey", "raw_price": "PRP:1.199,99 lei979,99 lei", "raw_rating": "4.31 (13)", "is_in_stoc": "in stoc"}
+{"name": " Tableta LENOVO Tab M9, 9\", 3GB RAM, 32GB, Wi-Fi + 4G, Arctic Grey", "raw_price": "PRP:899,99 lei689,90 lei", "raw_rating": "4.54 (13)", "is_in_stoc": "in stoc"}
+{"name": " Tableta APPLE iPad 10 (2022), 10.9\", 64GB, Wi-Fi, Blue", "raw_price": "2.199,00 lei", "raw_rating": "4.76 (25)", "is_in_stoc": "in stoc"}
+{"name": " Tableta APPLE iPad 10 (2022), 10.9\", 64GB, Wi-Fi, Silver", "raw_price": "2.199,00 lei", "raw_rating": "4.76 (25)", "is_in_stoc": "in stoc"}
+{"name": " Tableta LENOVO Tab P12, 12.7\", 4GB, 128GB, Wi-Fi, Storm Grey", "raw_price": "PRP:1.899,99 lei1.429,90 lei", "raw_rating": "4.50 (4)", "is_in_stoc": "in stoc"}
+{"name": " Tableta SAMSUNG Galaxy Tab A9 Plus, 11\", 64GB, 4GB RAM, Wi-Fi, Graphite", "raw_price": "PRP:1.245,00 lei999,99 lei", "raw_rating": "3.83 (6)", "is_in_stoc": "in stoc"}
+{"name": " Tableta SAMSUNG Galaxy Tab A9 Plus, 11\", 64GB, 4GB RAM, Wi-Fi + 5G, Graphite", "raw_price": "PRP:1.495,00 lei1.199,99 lei", "raw_rating": "5.00 (1)", "is_in_stoc": "in stoc"}
+{"name": " Tableta LENOVO Tab K10, 10.3\", 3GB RAM, 32GB, 4G + Wi-Fi, Abyss Blue", "raw_price": "PRP:899,90 lei699,90 lei", "raw_rating": "", "is_in_stoc": "in stoc"}
+{"name": " Tableta SAMSUNG Galaxy Tab S9 FE, 10.9\", 128GB, 6GB RAM, Wi-Fi, Gray", "raw_price": "PRP:2.645,00 lei2.149,00 lei", "raw_rating": "5.00 (2)", "is_in_stoc": "in stoc"}
+{"name": " Tableta LENOVO Tab Plus, 11.5\", 8GB RAM, 128GB, Wi-Fi, Luna Grey", "raw_price": "PRP:1.499,99 lei1.489,90 lei", "raw_rating": "", "is_in_stoc": "in stoc"}
+{"name": " Tableta SAMSUNG Galaxy Tab A9 Plus, 11\", 64GB, 4GB RAM, Wi-Fi, Navy", "raw_price": "PRP:1.245,00 lei999,00 lei", "raw_rating": "3.83 (6)", "is_in_stoc": "in stoc"}
+{"name": " Tableta LENOVO Tab P12, 12.7\", 8GB, 256GB, Wi-Fi, Storm Grey", "raw_price": "PRP:2.399,99 lei1.999,90 lei", "raw_rating": "5.00 (1)", "is_in_stoc": "in stoc"}
+{"name": " Tableta SAMSUNG Galaxy Tab A9 Plus, 11\", 64GB, 4GB RAM, Wi-Fi + 5G, Navy", "raw_price": "PRP:1.495,00 lei1.199,99 lei", "raw_rating": "5.00 (1)", "is_in_stoc": "in stoc"}
+{"name": " Tableta APPLE iPad 10 (2022), 10.9\", 256GB, Wi-Fi, Pink", "raw_price": "2.999,00 lei", "raw_rating": "4.73 (11)", "is_in_stoc": "in stoc"}
+{"name": " Tableta APPLE iPad 9 (2021), 10.2\", 64GB, Wi-Fi, Space Grey", "raw_price": "PRP:2.020,62 lei1.899,90 lei", "raw_rating": "4.94 (82)", "is_in_stoc": "in stoc"}
+{"name": " Tableta HUAWEI MatePad 11.5\", 128GB, 8GB RAM, Wi-Fi, Space Gray", "raw_price": "PRP:2.199,00 lei1.749,90 lei", "raw_rating": "5.00 (1)", "is_in_stoc": "in stoc"}
+{"name": " Tableta SAMSUNG Galaxy Tab A9, 8.7\", 64GB, 4GB RAM, Wi-Fi + 4G, Navy", "raw_price": "PRP:1.095,00 lei938,90 lei", "raw_rating": "5.00 (3)", "is_in_stoc": "in stoc"}
+{"name": " Tableta SAMSUNG Galaxy Tab A9, 8.7\", 64GB, 4GB RAM, Wi-Fi, Graphite", "raw_price": "PRP:895,00 lei749,90 lei", "raw_rating": "4.33 (3)", "is_in_stoc": "in stoc"}
+{"name": " Tableta SAMSUNG Galaxy Tab A9, 8.7\", 64GB, 4GB RAM, Wi-Fi, Navy", "raw_price": "749,90-100 lei649,90 lei", "raw_rating": "4.33 (3)", "is_in_stoc": "in stoc"}
+{"name": "exclusiv onlineTableta APPLE iPad Pro 13\" (M4), 1TB, Cellular, Nano-Texture Glass, Space Black", "raw_price": "PRP:12.955,53 lei12.899,99 lei", "raw_rating": "", "is_in_stoc": "in stoc"}
+{"name": "exclusiv onlineTableta APPLE iPad Pro 11\" (M4), 512GB, Wi-Fi, Space Black", "raw_price": "PRP:7.123,34 lei7.099,99 lei", "raw_rating": "5.00 (2)", "is_in_stoc": "in stoc"}
+{"name": " Tableta APPLE iPad Pro 12.9\" 6th Gen (2022), 128GB, Wi-Fi, Space Gray", "raw_price": "PRP:6.497,40 lei6.399,99 lei", "raw_rating": "5.00 (4)", "is_in_stoc": "in stoc"}
+{"name": " Tableta APPLE iPad Air 13\" (M2), 256GB, Wi-Fi, Space Gray", "raw_price": "PRP:5.345,48 lei5.049,99 lei", "raw_rating": "", "is_in_stoc": "in stoc"}
+{"name": " Tableta SAMSUNG Galaxy Tab S9+, 12.4\", 256GB, 12GB RAM, Wi-Fi, Graphite", "raw_price": "PRP:5.595,00 lei4.699,99 lei", "raw_rating": "5.00 (1)", "is_in_stoc": "in stoc"}
+{"name": "exclusiv onlineTableta APPLE iPad Air 11\" (M2), 128GB, Wi-Fi, Space Gray", "raw_price": "PRP:3.515,26 lei3.499,90 lei", "raw_rating": "5.00 (2)", "is_in_stoc": "din: 31.08.2024"}
+{"name": " Tableta APPLE iPad 10 (2022), 10.9\", 256GB, Wi-Fi, Silver", "raw_price": "2.999,99 lei", "raw_rating": "4.73 (11)", "is_in_stoc": "in stoc"}
+{"name": "exclusiv onlineTableta SAMSUNG Galaxy Tab S9 FE, 10.9\", 256GB, 8GB RAM, Wi-Fi + 5G, Gray", "raw_price": "PRP:3.145,00 lei2.999,90 lei", "raw_rating": "", "is_in_stoc": "in stoc"}
+{"name": " Tableta APPLE iPad 9 (2021), 10.2\", 256GB, Wi-Fi, Silver", "raw_price": "PRP:2.838,15 lei2.621,00 lei", "raw_rating": "4.88 (16)", "is_in_stoc": "in stoc"}
+{"name": " Tableta SAMSUNG Galaxy Tab A9, 8.7\", 64GB, 4GB RAM, Wi-Fi + 4G, Silver", "raw_price": "PRP:1.095,00 lei949,99 lei", "raw_rating": "5.00 (3)", "is_in_stoc": "in stoc"}
+{"name": "exclusiv onlineTableta APPLE iPad Pro 13\" (M4), 2TB, Cellular, Nano-Texture Glass, Space Black", "raw_price": "PRP:15.266,51 lei15.199,99 lei", "raw_rating": "", "is_in_stoc": "din: 31.08.2024"}
+{"name": "exclusiv onlineTableta APPLE iPad Pro 13\" (M4), 2TB, Wi-Fi, Space Black", "raw_price": "PRP:13.435,10 lei13.399,99 lei", "raw_rating": "4.33 (3)", "is_in_stoc": "din: 31.08.2024"}
+{"name": "exclusiv onlineTableta APPLE iPad Air 11\" (M2), 1TB, Wi-Fi, Purple", "raw_price": "PRP:6.548,57 lei6.499,99 lei", "raw_rating": "5.00 (2)", "is_in_stoc": "din: 31.08.2024"}
+{"name": " Tableta SAMSUNG Galaxy Tab S9+, 12.4\", 512GB, 12GB RAM, Wi-Fi + 5G, Beige", "raw_price": "PRP:6.195,00 lei5.500,00 lei", "raw_rating": "", "is_in_stoc": "in stoc"}
+{"name": " Tableta APPLE iPad Pro 11\" 4th Gen (2022), 256GB, Wi-Fi, Space Gray", "raw_price": "5.449,99 lei", "raw_rating": "5.00 (3)", "is_in_stoc": "in stoc"}
+{"name": "exclusiv onlineTableta APPLE iPad Air 11\" (M2), 256GB, Cellular, Blue", "raw_price": "PRP:4.961,11 lei4.899,99 lei", "raw_rating": "", "is_in_stoc": "din: 31.08.2024"}
+{"name": " Tableta APPLE iPad Pro 11\" 4th Gen (2022), 128GB, Wi-Fi, Silver", "raw_price": "4.899,99 lei", "raw_rating": "4.75 (12)", "is_in_stoc": "in stoc"}
+{"name": "exclusiv onlineTableta APPLE iPad Air 13\" (M2), 128GB, Wi-Fi, Starlight", "raw_price": "PRP:4.718,35 lei4.699,99 lei", "raw_rating": "", "is_in_stoc": "in stoc"}
+{"name": " Tableta APPLE iPad Air 13\" (M2), 128GB, Wi-Fi, Blue", "raw_price": "PRP:4.718,35 lei4.699,99 lei", "raw_rating": "", "is_in_stoc": "in stoc"}
+{"name": "exclusiv onlineTableta SAMSUNG Galaxy Tab S9, 11\", 128GB, 8GB RAM, Wi-Fi + 5G, Graphite", "raw_price": "PRP:5.245,00 lei4.299,99 lei", "raw_rating": "", "is_in_stoc": "in stoc"}
+{"name": "exclusiv onlineTableta APPLE iPad Air 11\" (M2), 128GB, Cellular, Purple", "raw_price": "PRP:4.332,79 lei4.299,99 lei", "raw_rating": "", "is_in_stoc": "din: 31.08.2024"}
+{"name": "exclusiv onlineTableta APPLE iPad Air 11\" (M2), 256GB, Wi-Fi, Purple", "raw_price": "PRP:4.137,63 lei4.099,99 lei", "raw_rating": "5.00 (2)", "is_in_stoc": "in stoc"}
+{"name": "exclusiv onlineTableta APPLE iPad Air 11\" (M2), 128GB, Wi-Fi, Purple", "raw_price": "PRP:3.515,26 lei3.499,90 lei", "raw_rating": "5.00 (2)", "is_in_stoc": "din: 31.08.2024"}
+{"name": " Tableta SAMSUNG Galaxy Tab S9 FE Plus, 12.4\", 256GB, 12GB RAM, Wi-Fi, Gray", "raw_price": "PRP:3.995,00 lei3.399,90 lei", "raw_rating": "", "is_in_stoc": "in stoc"}
+{"name": " Tableta APPLE iPad 10 (2022), 10.9\", 64GB, Cellular, Pink", "raw_price": "2.999,99 lei", "raw_rating": "", "is_in_stoc": "in stoc"}
+{"name": " Tableta APPLE iPad 10 (2022), 10.9\", 256GB, Wi-Fi, Blue", "raw_price": "2.999,00 lei", "raw_rating": "4.73 (11)", "is_in_stoc": "in stoc"}
