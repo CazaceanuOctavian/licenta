@@ -24,13 +24,16 @@ public class Product {
     private byte rating;
     @Column(name = "product_code")
     private String productCode;
+    @Column(name = "url")
+    private String url;
 
-    public Product(String name, float price, boolean isInStock, byte rating, String productCode) {
+    public Product(String name, float price, boolean isInStock, byte rating, String productCode, String url) {
         this.name = name;
         this.price = price;
         this.isInStock = isInStock;
         this.rating = rating;
         this.productCode = productCode;
+        this.url = url;
     }
 
     private Product() {
@@ -83,6 +86,14 @@ public class Product {
 
     public int getId() {
         return this.productId;
+    }
+
+    public void setUrl(String url) {
+        this.url = url;
+    }
+
+    public String getUrl() {
+        return this.url;
     }
 
     @Override

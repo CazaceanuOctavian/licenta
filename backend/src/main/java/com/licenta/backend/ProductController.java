@@ -12,8 +12,8 @@ public class ProductController {
     private ProductRepository productRepository;
 
     @CrossOrigin(origins = "*")
-    @GetMapping("/products/{name}")
-    public Iterable<Product> findAllProducts(@PathVariable String name) {
+    @GetMapping("/products/name/search={name}")
+    public Iterable<Product> findAllProductsByName(@PathVariable String name) {
         Iterable<Product> retrievedProductList;
         retrievedProductList = this.productRepository.findProductByName(name);
 
@@ -21,7 +21,21 @@ public class ProductController {
             System.out.println(product.toString());
         }
 
-        System.out.println("i found stuff from the db!");
+        System.out.println("i the above product by name from the db!");
+        return retrievedProductList;
+    }
+
+    @CrossOrigin(origins = "*")
+    @GetMapping("/products/code/search={productCode}")
+    public Iterable<Product> findAllProductsByProductCode(@PathVariable String productCode) {
+        Iterable<Product> retrievedProductList;
+        retrievedProductList = this.productRepository.findProductByProductCode(productCode);
+
+        for (Product product : retrievedProductList) {
+            System.out.println(product.toString());
+        }
+
+        System.out.println("i found the above products by id from the db!");
         return retrievedProductList;
     }
 }
