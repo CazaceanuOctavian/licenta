@@ -15,7 +15,7 @@ export const ProductComponentDefault: React.FC<Product> = ( { name, price, ratin
         <div className="product-info">
             <h2 className="product-name">
             <a 
-            href={`http://localhost:5173/products/fetch_data=${productCode}`} 
+            href={`http://localhost:5173/products/current_product/fetch_data=${productCode}`} 
             target="_blank" 
             rel="noopener noreferrer"
             >

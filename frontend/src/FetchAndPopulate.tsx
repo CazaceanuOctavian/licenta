@@ -17,13 +17,11 @@ const FetchAndPopulate: React.FC = () => {
     const [data, setData] = useState<Product[] | null>(null);
     const currentHref = window.location.href;
 
-
-    if (currentHref === 'http://localhost:5173/') {
+    if (true) {
          // Function to fetch data
         const fetchData = async (query: string) => {
             try {
                 console.log('trying to fetch with query...');
-                console.log(encodeURIComponent(query))
                 
                 const response = await fetch('http://localhost:8080/products/name/search=' + encodeURIComponent(query));
                 

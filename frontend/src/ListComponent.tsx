@@ -1,6 +1,6 @@
 import React from "react";
 import { ProductComponentDefault, ProductComponentDetailed } from "./ProductComponent";
-import { Product, ProductList } from "./ProductInterface";
+import { ProductList } from "./ProductInterface";
 
 
 export const ProductListDefault : React.FC<ProductList> = ( { data } ) => {
