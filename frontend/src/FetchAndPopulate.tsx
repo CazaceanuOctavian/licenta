@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { ProductListDefault, ProductListDetailed } from './ListComponent';
 
 // Define the type for your data
 interface Product {
@@ -58,29 +59,7 @@ const FetchAndPopulate: React.FC = () => {
                     {data === null ? (
                         <div>Loading...</div>
                     ) : (
-                        <ul>
-                            {data.map(item => (
-                                <li key={item.id} className="product-item">
-                                    <div className="product-info">
-                                        <h2 className="product-name">
-                                        <a 
-                                        href={`http://localhost:5173/products/fetch_data=${item.productCode}`} 
-                                        target="_blank" 
-                                        rel="noopener noreferrer"
-                                        >
-                                        {item.name}
-                                        </a>
-                                        </h2>
-                                        <p className="product-price">{item.price.toFixed(2)} lei</p>
-                                        <p className="product-rating">Rating: {item.rating.toFixed(1)}</p>
-                                        <p className="product-stock">
-                                            {item.is_in_stock ? 'In stoc' : 'Nu este in stoc'}
-                                        </p>
-                                        <p className='product-code'> Cod Produs: {item.productCode}</p>
-                                    </div>
-                                </li>
-                            ))}
-                        </ul>
+                       <ProductListDefault data={data} />
                     )}
                 </div>
             </div>
@@ -118,29 +97,7 @@ const FetchAndPopulate: React.FC = () => {
                         {data === null ? (
                             <div>Loading...</div>
                         ) : (
-                            <ul>
-                                {data.map(item => (
-                                    <li key={item.id} className="product-item">
-                                        <div className="product-info">
-                                            <h2 className="product-name">
-                                                {item.name}
-                                            </h2>
-                                            <p className="product-price">{item.price.toFixed(2)} lei</p>
-                                            <p className="product-rating">Rating: {item.rating.toFixed(1)}</p>
-                                            <p className="product-stock">
-                                                {item.is_in_stock ? 'In stoc' : 'Nu este in stoc'}
-                                            </p>
-                                            <p className='product-code'> Cod Produs: {item.productCode}</p>
-                                            <p className='origin-url'>
-                                                Link magazin: 
-                                                <a href={item.url}>                                                
-                                                    {item.url}
-                                                </a> 
-                                            </p>
-                                        </div>
-                                    </li>
-                                ))}
-                            </ul>
+                            <ProductListDetailed data={data} />
                         )}
                     </div>
             </div>
