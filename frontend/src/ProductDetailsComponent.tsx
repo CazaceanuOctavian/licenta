@@ -7,7 +7,7 @@ const ProductDetailsComponent: React.FC = () => {
     return (
         <div className='page'>
             <div className='fist-section'>this is the product details section</div>
-            <PopulateComponent userQuery={product_id}></PopulateComponent>
+            <PopulateComponent productDisplayType="detailed" userQuery={product_id}></PopulateComponent>
         </div>
         
     );

@@ -4,13 +4,17 @@ import { FetchData } from "./FetchComponent";
 import { Product } from "./ProductInterface";
 import interpretPath from "./InterpretPathFunc";
 
-
-
 interface userQueryProp {
     userQuery: string;
+    productDisplayType: string
 }
 
-const PopulateComponent: React.FC<userQueryProp> = ({ userQuery }) => {
+interface SwitchComponentProps {
+    displayType: string;
+    fetchedData: Product[];
+}
+
+const PopulateComponent: React.FC<userQueryProp> = ({ productDisplayType, userQuery }) => {
     const [fetchedData, setData] = useState<Product[]>([]);
     let apiQuery: string = interpretPath()
 
@@ -28,9 +32,23 @@ const PopulateComponent: React.FC<userQueryProp> = ({ userQuery }) => {
         callApi(userQuery)
       }, [userQuery]); 
 
+    const ContextComponent: React.FC<SwitchComponentProps> = ({ displayType, fetchedData }) => {
+        switch (displayType) {
+            case "default":
+                return <ProductListDefault data={fetchedData} />;
+            case "detailed":
+                return <ProductListDetailed data={fetchedData} />;
+            default:
+                return null;
+        }
+    };
+
+    //make it a switch statement
     return (
         <div>
-            <ProductListDefault data={fetchedData} />
+            {
+                <ContextComponent displayType={productDisplayType} fetchedData={fetchedData}></ContextComponent>
+            }
         </div>
     )
 }

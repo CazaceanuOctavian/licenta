@@ -7,7 +7,7 @@ const Products: React.FC = () => {
     return (
         <div className="product-component">
             <Search userQuery={userQuery} setUserQuery={setUserQuery} />
-            <PopulateComponent userQuery={userQuery}></PopulateComponent>
+            <PopulateComponent productDisplayType="default" userQuery={userQuery}></PopulateComponent>
         </div>
     )
 }
