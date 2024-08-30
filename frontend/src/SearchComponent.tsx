@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 interface SearchProps {
     userQuery: string;
@@ -6,23 +6,35 @@ interface SearchProps {
 }
 
 const Search: React.FC<SearchProps> = ({ userQuery, setUserQuery }) => {
-    const handleKeyPress = (event: React.KeyboardEvent<HTMLInputElement>) => {
-        if (event.key === 'Enter') {
-            console.log(userQuery);
-        }
+    const [query, setQuery] = useState<string>('')
+
+    useEffect(() => {
+        window.addEventListener('keydown', handleKeyPress);
+                return () => {
+          window.removeEventListener('keydown', handleKeyPress);
+        };
+      }, []); 
+
+      function getStringOrDefault(value: string | null): string {
+        return value !== null ? value : "";
     }
-    // const handlesubmit = (event: React.FormEvent<HTMLFormElement>) => {
-    //     event.preventDefault();
-    //     if
-    //   };
+
+    const handleKeyPress = (event: KeyboardEvent) => {
+        if(event.key === "Enter"){
+            var search = document.getElementById('search_bar') as HTMLInputElement;
+            if(search){
+                let userQuery:string = getStringOrDefault(search.value)
+                setUserQuery(userQuery)
+            }
+        }
+      };
 
     return (
         <div>
             <input id="search_bar"
                 type="text"
-                value={userQuery}
-                onKeyDown={handleKeyPress}
-                onChange={(e) => setUserQuery(e.target.value)}
+                value={query}
+                onChange={(e) => setQuery(e.target.value)}
                 
                 placeholder="Enter your query and press Enter"
             />
