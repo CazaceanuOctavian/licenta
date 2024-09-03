@@ -7,6 +7,8 @@ import interpretPath from "./InterpretPathFunc";
 interface userQueryProp {
     userQuery: string;
     productDisplayType: string
+    selectedValue?: string
+    selectedPage?: number
 }
 
 interface SwitchComponentProps {
@@ -14,8 +16,9 @@ interface SwitchComponentProps {
     fetchedData: Product[];
 }
 
-const PopulateComponent: React.FC<userQueryProp> = ({ productDisplayType, userQuery }) => {
+const PopulateComponent: React.FC<userQueryProp> = ({ productDisplayType, userQuery, selectedValue, selectedPage }) => {
     const [fetchedData, setData] = useState<Product[]>([]);
+    
     let apiQuery: string = interpretPath()
 
     const callApi = async ( query: string ) => {
@@ -29,8 +32,12 @@ const PopulateComponent: React.FC<userQueryProp> = ({ productDisplayType, userQu
     }
  
     useEffect(() => {
-        callApi(userQuery)
-      }, [userQuery]); 
+        if (selectedValue === undefined)
+            selectedValue = '20'
+        if (selectedPage === undefined)
+            selectedPage = 1
+            callApi(userQuery + ',' + selectedValue + ',' + selectedPage)
+      }, [userQuery, selectedValue, selectedPage]); 
 
     const ContextComponent: React.FC<SwitchComponentProps> = ({ displayType, fetchedData }) => {
         switch (displayType) {
@@ -43,12 +50,10 @@ const PopulateComponent: React.FC<userQueryProp> = ({ productDisplayType, userQu
         }
     };
 
-    //make it a switch statement
     return (
         <div>
-            {
+                <p>selected page value is from FUNCTION: {selectedPage}</p>
                 <ContextComponent displayType={productDisplayType} fetchedData={fetchedData}></ContextComponent>
-            }
         </div>
     )
 }

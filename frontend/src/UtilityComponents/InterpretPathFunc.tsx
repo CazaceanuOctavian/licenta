@@ -4,8 +4,8 @@ const interpretPath = (): string => {
     var hrefArray = currentHref.split('/');
 
     if (hrefArray.includes('search')) {
-        console.log('returning the search query: http://localhost:8080/products/name/search=');
-        return 'http://localhost:8080/products/name/search=';
+        console.log('returning the search query: http://localhost:8080/products/name/searchAndPaginate=');
+        return 'http://localhost:8080/products/name/searchAndPaginate=';
     }
     else if (hrefArray.includes('current_product')) {
         console.log('returning the details query: http://localhost:8080/products/code/search=');
