@@ -35,7 +35,6 @@ const Search: React.FC<SearchProps> = ({ userQuery, setUserQuery }) => {
                 type="text"
                 value={query}
                 onChange={(e) => setQuery(e.target.value)}
-                
                 placeholder="Enter your query and press Enter"
             />
         </div>

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
-import Search from "./SearchComponent";
-import PopulateComponent from "./PopulatePageComponent";
+import Search from "../UtilityComponents/SearchComponent";
+import PopulateComponent from "../UtilityComponents/PopulatePageComponent";
 
 const Products: React.FC = () => {
     const [userQuery, setUserQuery] = useState<string>('');

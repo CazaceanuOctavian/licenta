@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { Product} from "./ProductInterface";
+import { Product} from "../ProductComponents/ProductInterface";
 
 export const FetchData = async (query: string) : Promise<Product[]> => {
     try {

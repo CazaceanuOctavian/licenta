@@ -1,8 +1,8 @@
 import React from 'react';
-import { Home } from './HomeComponent';
+import { Home } from './PathComponents/HomeComponent';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Products from './ProductsComponent';
-import ProductDetailsComponent from './ProductDetailsComponent';
+import Products from './PathComponents/ProductsComponent';
+import ProductDetailsComponent from './PathComponents/ProductDetailsComponent';
 
 const App: React.FC = () => {
 

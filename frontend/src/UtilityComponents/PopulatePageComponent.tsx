@@ -1,7 +1,7 @@
 import React, { ChangeEvent, useEffect, useState } from "react";
-import { ProductListDefault, ProductListDetailed } from "./ListComponent";
+import { ProductListDefault, ProductListDetailed } from "../ProductComponents/ListComponent";
 import { FetchData } from "./FetchComponent";
-import { Product } from "./ProductInterface";
+import { Product } from "../ProductComponents/ProductInterface";
 import interpretPath from "./InterpretPathFunc";
 
 interface userQueryProp {

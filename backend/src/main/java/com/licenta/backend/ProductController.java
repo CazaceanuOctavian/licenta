@@ -38,4 +38,19 @@ public class ProductController {
         System.out.println("i found the above products by id from the db!");
         return retrievedProductList;
     }
+
+    @CrossOrigin(origins = "*")
+    @GetMapping("/products/name/searchAndPaginate={productName},{limit},{page}")
+    public Iterable<Product> findAllProductsByProductNameLimit(@PathVariable String productName,
+            @PathVariable int limit, @PathVariable int page) {
+        Iterable<Product> retrievedProductList;
+        retrievedProductList = this.productRepository.findProductByNameLimit(productName, limit, page);
+
+        for (Product product : retrievedProductList) {
+            System.out.println(product.toString());
+        }
+
+        System.out.println("i found the above products by id from the db!");
+        return retrievedProductList;
+    }
 }
