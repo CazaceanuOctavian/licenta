@@ -32,11 +32,16 @@ const PopulateComponent: React.FC<userQueryProp> = ({ productDisplayType, userQu
     }
  
     useEffect(() => {
-        if (selectedValue === undefined)
-            selectedValue = '20'
-        if (selectedPage === undefined)
-            selectedPage = 1
+        if (window.location.href.includes('search')) {
+            if (selectedValue === undefined)
+                selectedValue = '20'
+            if (selectedPage === undefined)
+                selectedPage = 1
             callApi(userQuery + ',' + selectedValue + ',' + selectedPage)
+        }
+        else {
+            callApi(userQuery)
+        }
       }, [userQuery, selectedValue, selectedPage]); 
 
     const ContextComponent: React.FC<SwitchComponentProps> = ({ displayType, fetchedData }) => {

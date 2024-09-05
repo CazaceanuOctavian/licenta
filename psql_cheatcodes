@@ -8,11 +8,36 @@ psql
 \COPY products(name, raw_price, raw_rating, is_in_stock, url, product_code) FROM '/home/tavi/Desktop/testScraping/vexio/<nume_la_fisier_scrape>.csv' DELIMITER ',' CSV HEADER;
 
 
+===================workink========================================
+
+CREATE OR REPLACE FUNCTION assign_categories(OUT p_product_code VARCHAR(255), OUT p_duplicates_number INTEGER ) RETURNS SETOF RECORD AS $$
+DECLARE
+        duplicates_cursor CURSOR FOR
+                SELECT product_code, COUNT(product_code) as num_of_duplicates FROM products GROUP BY product_code HAVING COUNT(product_code) > 1;
+        iterator RECORD;
+BEGIN
+        OPEN duplicates_cursor;
+        LOOP
+                FETCH NEXT FROM duplicates_cursor INTO iterator;
+                EXIT WHEN NOT FOUND;
+                
+                p_product_code := iterator.product_code;
+                p_duplicates_number := iterator.num_of_duplicates;
+                
+                UPDATE products 
+                SET dummy_category = 'dummy_category_changed'
+                WHERE product_code = iterator.product_code;
+                
+                RETURN NEXT;
+        END LOOP; 
+        CLOSE duplicates_cursor;
+END;
+$$
+LANGUAGE PLPGSQL;
 
 
 
-select id 
-from products
-group by id
-having count(product_code) > 1;
+
+
+
 
