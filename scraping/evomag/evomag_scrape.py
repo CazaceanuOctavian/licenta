@@ -47,7 +47,8 @@ def format_data(item):
             'raw_rating' : -1,
             'is_in_stoc' : isInStoc,
             'url' : itemUrl,
-            'product_code' : product_code
+            'product_code' : product_code,
+            'online_mag' : 'evomag'
             }
     
     except Exception as e:
@@ -74,15 +75,17 @@ def scrape(path):
             file.write(html_content)
         
         li_items = soup.find_all(class_="nice_product_item")
+        category = soup.find(class_='breadcrumbs').text.strip().split('»')[-1].strip()
 
         if li_items == []:
             break
 
-        with open('evomag_scrape.csv', 'a') as scrapefile:
+        with open('evomag_scrape_new.csv', 'a') as scrapefile:
                 for element in li_items:
                     try:
                         element = no_nav_strings(element.descendants)
                         formatted_dict = format_data(element[0])
+                        formatted_dict['category']=category
  
                         writer = csv.writer(scrapefile)
                         writer.writerow(formatted_dict.values())

@@ -44,7 +44,8 @@ def format_data(item):
             'raw_rating' : -1,
             'is_in_stoc' : isInStoc,
             'url' : itemUrl,
-            'product_code' : product_code
+            'product_code' : product_code,
+            'online_mag' : 'vexio' 
             }
     
     except Exception as e:
@@ -60,6 +61,7 @@ def scrape(path):
 
     pagina_existenta = True
     current_page = 1
+
     while(pagina_existenta):
         current_page+=1
         page_source = driver.page_source
@@ -72,12 +74,14 @@ def scrape(path):
             file.write(html_content)
         
         li_items = soup.find_all(class_="grid-full col-xs-8 col-sm-4 col-md-4")
+        category = soup.find(class_='breadcrumb').text.strip().split('\xa0')[-1]
 
-        with open('vexio_scrape.csv', 'a', newline='') as scrapefile:
+        with open('vexio_scrape_new.csv', 'a', newline='') as scrapefile:
                 for element in li_items:
                     try:
                         element = no_nav_strings(element.descendants)
                         formatted_dict = format_data(element[0])
+                        formatted_dict['category'] = category
 
                         writer = csv.writer(scrapefile)
                         writer.writerow(formatted_dict.values())
@@ -93,20 +97,18 @@ def scrape(path):
 
         if last_url == url_test:
             break
-
-
-
 #validare-access
                 
 def main():
     print(os.getcwd())
-    with open('vexio_tree.txt', 'r') as file:
+    with open('vexio_tree_new.txt', 'r') as file:
         for path in file:
             driver.delete_all_cookies()
             path = path.strip()
             if path is None:
                 continue
             try:
+
                 scrape(path=path)
             except Exception as e:
                 print(str({e}))

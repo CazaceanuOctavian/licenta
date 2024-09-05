@@ -29,10 +29,21 @@ html_content = soup.prettify()
 with open('htmldump.txt', 'w') as file:
     file.write(html_content)
 
-li_items = soup.find_all(class_=re.compile("lvl", re.IGNORECASE))
+li_items = soup.find_all('strong')
+raw_hrefs = []
+for elemet in li_items:
+    raw_hrefs.append(elemet.find_previous('a'))
 
-with open('vexio_tree.txt', 'w') as treefile:
-    for item in li_items:
-        treefile.write(item.a['href'] + '\n')
+print(raw_hrefs)
+string_hrefs = []
+
+for href in raw_hrefs:
+    string_hrefs.append(href['href'])
+
+print(string_hrefs)
+
+with open('vexio_tree_new.txt', 'w') as treefile:
+    for href in string_hrefs:
+        treefile.write(href + '\n')
 
 driver.quit()
