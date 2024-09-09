@@ -1,4 +1,6 @@
 import React from "react";
+import dummy_image from "../assets/images/dummy_image.jpg"
+import "../ProductBox.css"
 
 interface Product {
     id: number;
@@ -21,6 +23,11 @@ export const ProductComponentDefault: React.FC<Product> = ( { name, price, ratin
             >
             {name}
             </a>
+            <img 
+                src={dummy_image} 
+                style={{ width: '100px', height: 'auto' }} 
+                alt="Product" 
+            />
             </h2>
             <p className="product-price">{price.toFixed(2)} lei</p>
             <p className="product-rating">Rating: {rating.toFixed(1)}</p>

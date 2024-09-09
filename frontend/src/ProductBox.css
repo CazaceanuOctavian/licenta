@@ -1,0 +1,39 @@
+/* Container for all product boxes */
+.product-container {
+    display: flex;
+    flex-direction: column; /* Ensures items are arranged horizontally */
+    flex-wrap: wrap; /* Allows wrapping if there are too many boxes to fit in one row */
+    gap: 32px; /* Adds space between the boxes */
+    justify-content: center; /* Centers the boxes horizontally */
+    padding: 16px;
+}
+
+
+/* Individual product box styling */
+.product-info {
+    border: 1px solid #929292; /* Light border around the box */
+    border-radius: 8px; /* Rounded corners */
+    padding: 16px;
+    width: 200px; /* Fixed width for each box */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    text-align: center; /* Center align text inside the box */
+    background-color: #292929; /* Background color of the box */
+}
+
+.product-name {
+    font-size: 1.2rem;
+    margin-bottom: 8px;
+}
+
+.product-price, .product-rating, .product-stock, .product-code {
+    margin: 4px 0;
+}
+
+.product-name a {
+    color: #007bff; /* Link color */
+    text-decoration: none; /* Removes underline from link */
+}
+
+.product-name a:hover {
+    text-decoration: underline; /* Underline on hover for better UX */
+}

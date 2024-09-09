@@ -3,6 +3,7 @@ import { ProductListDefault, ProductListDetailed } from "../ProductComponents/Li
 import { FetchData } from "./FetchComponent";
 import { Product } from "../ProductComponents/ProductInterface";
 import interpretPath from "./InterpretPathFunc";
+import myImage from "../assets/images/dummy_image.jpg"
 
 interface userQueryProp {
     userQuery: string;
@@ -63,7 +64,6 @@ const PopulateComponent: React.FC<userQueryProp> = ({ productDisplayType, userQu
 
     return (
         <div>
-                <p>selected page value is from FUNCTION: {selectedPage}</p>
                 <ContextComponent displayType={productDisplayType} fetchedData={fetchedData}></ContextComponent>
         </div>
     )

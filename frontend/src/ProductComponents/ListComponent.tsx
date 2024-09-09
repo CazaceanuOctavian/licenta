@@ -1,6 +1,7 @@
 import React from "react";
 import { ProductComponentDefault, ProductComponentDetailed } from "./ProductComponent";
 import { ProductList } from "./ProductInterface";
+import "../ProductList.css"
 
 
 export const ProductListDefault : React.FC<ProductList> = ( { data } ) => {
