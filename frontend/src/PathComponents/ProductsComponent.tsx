@@ -2,19 +2,31 @@ import React, { useEffect, useState } from "react";
 import Search from "../UtilityComponents/SearchComponent";
 import PopulateComponent from "../UtilityComponents/PopulatePageComponent";
 import Navbar from "../UtilityComponents/NavbarComponent";
+import QueryPrice from "../UtilityComponents/QueryingComponent";
 
 const Products: React.FC = () => {
     const [userQuery, setUserQuery] = useState<string>('');
     const [selectedValue, setSelectedValue] = useState<string>('')
     const [selectedPage, setSelectedPage] = useState<number>(1)
+    const [lowerPrice, setLowerPrice] = useState<string>('')
+    const [upperPrice, setUpperPrice] = useState<string>('')
 
     return (
         <div className="product-component">
-            <p>selected page value is from MAIN: {selectedPage}</p>
+            <p>selected elements on page from MAIN is: {selectedValue}</p>
+            <p>selected page value from MAIN is: {selectedPage}</p>
+            <p>selected price values from MAIN are: {lowerPrice} , {upperPrice}</p>
+            
             <Navbar userQuery={userQuery} setUserQuery={setUserQuery} 
             selectedValue={selectedValue} setSelectedValue={setSelectedValue}
             selectedPage={selectedPage} setSelectedPage={setSelectedPage} />
-            <PopulateComponent productDisplayType="default" userQuery={userQuery} selectedValue={selectedValue} selectedPage={selectedPage}></PopulateComponent>
+
+            <QueryPrice lowerPice={lowerPrice} upperPrice={upperPrice} 
+            setLowerPrice={setLowerPrice} setUpperPrice={setUpperPrice} />
+
+            <PopulateComponent productDisplayType="default" userQuery={userQuery} 
+            selectedValue={selectedValue} selectedPage={selectedPage}
+            lowerPrice={lowerPrice} upperPrice={upperPrice} />
         </div>
     )
 }

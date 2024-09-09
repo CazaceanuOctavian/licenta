@@ -9,6 +9,8 @@ interface userQueryProp {
     productDisplayType: string
     selectedValue?: string
     selectedPage?: number
+    lowerPrice?: string
+    upperPrice?: string
 }
 
 interface SwitchComponentProps {
@@ -16,7 +18,7 @@ interface SwitchComponentProps {
     fetchedData: Product[];
 }
 
-const PopulateComponent: React.FC<userQueryProp> = ({ productDisplayType, userQuery, selectedValue, selectedPage }) => {
+const PopulateComponent: React.FC<userQueryProp> = ({ productDisplayType, userQuery, selectedValue, selectedPage, lowerPrice, upperPrice }) => {
     const [fetchedData, setData] = useState<Product[]>([]);
     
     let apiQuery: string = interpretPath()
@@ -33,16 +35,20 @@ const PopulateComponent: React.FC<userQueryProp> = ({ productDisplayType, userQu
  
     useEffect(() => {
         if (window.location.href.includes('search')) {
-            if (selectedValue === undefined)
+            if (selectedValue === '')
                 selectedValue = '20'
             if (selectedPage === undefined)
                 selectedPage = 1
-            callApi(userQuery + ',' + selectedValue + ',' + selectedPage)
+            if (lowerPrice === '')
+                lowerPrice = '0'
+            if (upperPrice === '')
+                upperPrice = '999999'
+            callApi(userQuery + ',' + selectedValue + ',' + selectedPage + ',' + lowerPrice + ',' + upperPrice)
         }
         else {
             callApi(userQuery)
         }
-      }, [userQuery, selectedValue, selectedPage]); 
+      }, [userQuery, selectedValue, selectedPage, lowerPrice, upperPrice]); 
 
     const ContextComponent: React.FC<SwitchComponentProps> = ({ displayType, fetchedData }) => {
         switch (displayType) {

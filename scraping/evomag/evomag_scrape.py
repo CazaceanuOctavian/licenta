@@ -8,7 +8,7 @@ from bs4 import NavigableString
 from bs4 import BeautifulSoup
 
 options = Options()
-
+options.add_argument('--headless')
 options.binary_location = '/etc/firefox'
 
 driver = webdriver.Firefox(options=options)
@@ -70,9 +70,9 @@ def scrape(path):
         page_source = driver.page_source
         soup = BeautifulSoup(page_source, 'html.parser')
 
-        html_content = soup.prettify()
-        with open('htmldump.txt', 'w') as file:
-            file.write(html_content)
+        # html_content = soup.prettify()
+        # with open('htmldump.txt', 'w') as file:
+        #     file.write(html_content)
         
         li_items = soup.find_all(class_="nice_product_item")
         category = soup.find(class_='breadcrumbs').text.strip().split('»')[-1].strip()

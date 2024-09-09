@@ -9,7 +9,7 @@ from bs4 import NavigableString
 from bs4 import BeautifulSoup
 
 options = Options()
-
+options.add_argument('--headless')
 options.binary_location = '/etc/firefox'
 
 driver = webdriver.Firefox(options=options)
@@ -97,10 +97,9 @@ def scrape(path):
 
         if last_url == url_test:
             break
-#validare-access
-                
+           
 def main():
-    print(os.getcwd())
+    print(os.getcwd())  
     with open('vexio_tree_new.txt', 'r') as file:
         for path in file:
             driver.delete_all_cookies()
