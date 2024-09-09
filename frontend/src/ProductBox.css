@@ -1,23 +1,32 @@
 /* Container for all product boxes */
 .product-container {
     display: flex;
-    flex-direction: column; /* Ensures items are arranged horizontally */
+    flex-direction: column; /* Ensures items are arranged vertically */
     flex-wrap: wrap; /* Allows wrapping if there are too many boxes to fit in one row */
     gap: 32px; /* Adds space between the boxes */
     justify-content: center; /* Centers the boxes horizontally */
     padding: 16px;
 }
 
-
 /* Individual product box styling */
 .product-info {
-    border: 1px solid #929292; /* Light border around the box */
+    border: 1px solid #5e5e5e; /* Light border around the box */
     border-radius: 8px; /* Rounded corners */
     padding: 16px;
     width: 200px; /* Fixed width for each box */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
     text-align: center; /* Center align text inside the box */
     background-color: #292929; /* Background color of the box */
+    display: flex; /* Enables flexbox layout */
+    flex-direction: column; /* Stack children vertically */
+    align-items: center; /* Center items horizontally */
+}
+
+/* Center the image within its container */
+.product-info img {
+    max-width: 100%; /* Ensure the image does not overflow the box */
+    height: auto; /* Maintain aspect ratio */
+    margin-bottom: 8px; /* Space below the image */
 }
 
 .product-name {

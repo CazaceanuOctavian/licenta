@@ -16,19 +16,19 @@ export const ProductComponentDefault: React.FC<Product> = ( { name, price, ratin
     return (
         <div className="product-info">
             <h2 className="product-name">
-            <a 
-            href={`http://localhost:5173/products/current_product/fetch_data=${productCode}`} 
-            target="_blank" 
-            rel="noopener noreferrer"
-            >
-            {name}
-            </a>
+                <a 
+                href={`http://localhost:5173/products/current_product/fetch_data=${productCode}`} 
+                target="_blank" 
+                rel="noopener noreferrer"
+                >
+                {name}
+                </a>
+            </h2>
             <img 
                 src={dummy_image} 
                 style={{ width: '100px', height: 'auto' }} 
                 alt="Product" 
             />
-            </h2>
             <p className="product-price">{price.toFixed(2)} lei</p>
             <p className="product-rating">Rating: {rating.toFixed(1)}</p>
             <p className="product-stock">
