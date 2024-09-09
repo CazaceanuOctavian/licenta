@@ -25,10 +25,8 @@ def format_data(item):
             isInStoc = 1
         else:
             isInStoc = 0
-        print(name)
         #price = float(item.find_next(class_='real_price').text.strip().replace(',','.').split(' ')[0])
         price = float(item.find_next(class_='real_price').text.split(' ')[0].replace('.','').replace(',','.'))
-
 
         driver.delete_all_cookies()
         driver.get(itemUrl)
@@ -55,9 +53,6 @@ def format_data(item):
         print(str({e}))
         print('EXCEPTION====='+str(name)+str(isInStoc)+'=====EXCEPTION')
 
-
-    print()
-
 def scrape(path):
     target_url = 'https://www.evomag.ro' + path
     #target_url = path
@@ -80,19 +75,6 @@ def scrape(path):
         if li_items == []:
             break
 
-        with open('evomag_scrape_new.csv', 'a') as scrapefile:
-                for element in li_items:
-                    try:
-                        element = no_nav_strings(element.descendants)
-                        formatted_dict = format_data(element[0])
-                        formatted_dict['category']=category
- 
-                        writer = csv.writer(scrapefile)
-                        writer.writerow(formatted_dict.values())
-                    except Exception as e:
-                        print(str({e}))
-                        break
-
         next_page_button = soup.find(attrs= {'class' : 'next hidden'})
         if next_page_button is not None:
             break
@@ -100,6 +82,19 @@ def scrape(path):
         next_page_button = soup.find(attrs= {'class' : 'next'})
         if next_page_button is None:
             break
+
+        with open('evomag_scrape_new.csv', 'a') as scrapefile:
+                writer = csv.writer(scrapefile)
+                for element in li_items:
+                    try:
+                        element = no_nav_strings(element.descendants)
+                        formatted_dict = format_data(element[0])
+                        formatted_dict['category']=category
+ 
+                        writer.writerow(formatted_dict.values())
+                    except Exception as e:
+                        print(str({e}))
+                        break
 
         new_path = target_url + 'filtru/pagina:' + str(current_page) 
         driver.delete_all_cookies()

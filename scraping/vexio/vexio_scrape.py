@@ -9,7 +9,7 @@ from bs4 import NavigableString
 from bs4 import BeautifulSoup
 
 options = Options()
-options.add_argument('--headless')
+#options.add_argument('--headless')
 options.binary_location = '/etc/firefox'
 
 driver = webdriver.Firefox(options=options)
@@ -76,19 +76,19 @@ def scrape(path):
         li_items = soup.find_all(class_="grid-full col-xs-8 col-sm-4 col-md-4")
         category = soup.find(class_='breadcrumb').text.strip().split('\xa0')[-1]
 
-        with open('vexio_scrape_new.csv', 'a', newline='') as scrapefile:
+        with open('vexio_scrape_new-test.csv', 'a', newline='') as scrapefile:
+                writer = csv.writer(scrapefile)
                 for element in li_items:
                     try:
                         element = no_nav_strings(element.descendants)
                         formatted_dict = format_data(element[0])
                         formatted_dict['category'] = category
 
-                        writer = csv.writer(scrapefile)
                         writer.writerow(formatted_dict.values())
                     except Exception as e:
                         print(str({e}))
                         break
-      
+                
         new_path = path + 'pagina' + str(current_page) + '/'
         driver.delete_all_cookies()
         driver.get(new_path)

@@ -12,7 +12,7 @@ psql
 
 ===================workink========================================
 
-CREATE OR REPLACE FUNCTION assign_categories(OUT p_product_code VARCHAR(255), OUT p_duplicates_number INTEGER ) RETURNS SETOF RECORD AS $$
+CREATE OR REPLACE FUNCTION assign_categories_test(OUT p_product_code VARCHAR(255), OUT p_duplicates_number INTEGER ) RETURNS SETOF RECORD AS $$
 DECLARE
 	duplicates_cursor CURSOR FOR
 	        SELECT product_code, COUNT(product_code) as num_of_duplicates FROM products GROUP BY product_code HAVING COUNT(product_code) > 1;
@@ -36,6 +36,42 @@ BEGIN
 END;
 $$
 LANGUAGE PLPGSQL;
+
+
+CREATE OR REPLACE FUNCTION assign_categories(OUT p_product_code VARCHAR(255), OUT p_duplicates_number INTEGER ) RETURNS SETOF RECORD AS $$
+DECLARE
+	duplicates_cursor CURSOR FOR
+	        SELECT product_code, COUNT(product_code) as num_of_duplicates FROM products GROUP BY product_code HAVING COUNT(product_code) > 1;
+	iterator RECORD;
+	p_category_evomag VARCHAR(225);
+BEGIN
+	OPEN duplicates_cursor;
+	LOOP
+	        FETCH NEXT FROM duplicates_cursor INTO iterator;
+	        EXIT WHEN NOT FOUND;
+	        
+	        p_product_code := iterator.product_code;
+	        p_duplicates_number := iterator.num_of_duplicates;
+	        
+	        SELECT category 
+	        INTO p_category_evomag
+	        FROM products
+	        WHERE retailer LIKE 'evomag' AND product_code LIKE p_product_code;
+	        
+	        IF p_category_evomag NOT LIKE (SELECT category FROM products WHERE retailer LIKE 'vexio' and product_code LIKE p_product_code LIMIT 1) THEN
+			UPDATE products 
+			SET category = (SELECT category FROM products WHERE retailer LIKE 'vexio' and product_code LIKE p_product_code LIMIT 1)
+			WHERE retailer LIKE 'evomag' AND category LIKE p_category_evomag;
+		
+		END IF;
+	        
+	        RETURN NEXT;
+	END LOOP; 
+	CLOSE duplicates_cursor;
+END;
+$$
+LANGUAGE PLPGSQL;
+
 
 
 
