@@ -67,7 +67,7 @@ def scrape(path):
         page_source = driver.page_source
         soup = BeautifulSoup(page_source, 'html.parser')
 
-        last_url = driver.current_url
+        # last_url = driver.current_url
 
         html_content = soup.prettify()
         with open('htmldump.txt', 'w') as file:
@@ -75,6 +75,7 @@ def scrape(path):
         
         li_items = soup.find_all(class_="grid-full col-xs-8 col-sm-4 col-md-4")
         category = soup.find(class_='breadcrumb').text.strip().split('\xa0')[-1]
+        next_page_button = soup.find(class_ = 'pagination-next')
 
         with open('vexio_scrape_new-test.csv', 'a', newline='') as scrapefile:
                 writer = csv.writer(scrapefile)
@@ -88,15 +89,18 @@ def scrape(path):
                     except Exception as e:
                         print(str({e}))
                         break
+
+        if (next_page_button == None):
+            break
                 
         new_path = path + 'pagina' + str(current_page) + '/'
         driver.delete_all_cookies()
         driver.get(new_path)
 
-        url_test = driver.current_url
+        # url_test = driver.current_url
 
-        if last_url == url_test:
-            break
+        # if last_url == url_test:
+        #     break
            
 def main():
     print(os.getcwd())  
@@ -107,12 +111,15 @@ def main():
             if path is None:
                 continue
             try:
-
                 scrape(path=path)
             except Exception as e:
                 print(str({e}))
                 driver.delete_all_cookies()
                 continue
+
+
+
+scrape('https://www.vexio.ro/laptop-accesorii/pagina503/')
 
 main()
 driver.quit()
