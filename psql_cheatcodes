@@ -6,7 +6,8 @@ psql
 \l -> listeaza baze de date
 \c <nume_bd> -> te conecteaza la baza de date specificata
 \COPY products(name, raw_price, raw_rating, is_in_stock, url, product_code, retailer, category) FROM '/home/tavi/Desktop/licenta/scraping/evomag/evomag_scrape_new.csv' DELIMITER ',' CSV HEADER;
-\COPY products(name, raw_price, raw_rating, is_in_stock, url, product_code, retailer, category) FROM '/home/tavi/Desktop/licenta/scraping/vexio/vexio_scrape_new.csv' DELIMITER ',' CSV HEADER;
+\COPY products(name, raw_price, raw_rating, is_in_stock, url, product_code, retailer, imagepath, category) FROM '/home/tavi/Desktop/licenta/scraping/vexio/vexio_scrape_jpgs.csv' DELIMITER ',' CSV HEADER;
+
 
 
 

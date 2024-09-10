@@ -3,7 +3,6 @@ import { ProductListDefault, ProductListDetailed } from "../ProductComponents/Li
 import { FetchData } from "./FetchComponent";
 import { Product } from "../ProductComponents/ProductInterface";
 import interpretPath from "./InterpretPathFunc";
-import myImage from "../assets/images/dummy_image.jpg"
 
 interface userQueryProp {
     userQuery: string;

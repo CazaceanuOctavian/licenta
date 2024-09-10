@@ -6,6 +6,7 @@ export interface Product {
     is_in_stock: boolean;
     url: string;
     productCode: string;
+    imagePath: string;
 }
 
 export interface ProductList {

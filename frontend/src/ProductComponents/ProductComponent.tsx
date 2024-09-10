@@ -10,9 +10,10 @@ interface Product {
     is_in_stock: boolean;
     url: string;
     productCode: string;
+    imagePath: string;
 }
 
-export const ProductComponentDefault: React.FC<Product> = ( { name, price, rating, is_in_stock, productCode } ) => {
+export const ProductComponentDefault: React.FC<Product> = ( { name, price, rating, is_in_stock, productCode, imagePath } ) => {
     return (
         <div className="product-info">
             <h2 className="product-name">
@@ -25,7 +26,7 @@ export const ProductComponentDefault: React.FC<Product> = ( { name, price, ratin
                 </a>
             </h2>
             <img 
-                src={dummy_image} 
+                src={imagePath} 
                 style={{ width: '100px', height: 'auto' }} 
                 alt="Product" 
             />
@@ -39,12 +40,17 @@ export const ProductComponentDefault: React.FC<Product> = ( { name, price, ratin
     )
 }
 
-export const ProductComponentDetailed: React.FC<Product> = ( { name, price, rating, is_in_stock, productCode, url } ) => {
+export const ProductComponentDetailed: React.FC<Product> = ( { name, price, rating, is_in_stock, productCode, url, imagePath } ) => {
     return (
         <div className="product-info">
         <h2 className="product-name">
             {name}
         </h2>
+        <img 
+            src={imagePath} 
+            style={{ width: '100px', height: 'auto' }} 
+            alt="Product" 
+        />
         <p className="product-price">{price.toFixed(2)} lei</p>
         <p className="product-rating">Rating: {rating.toFixed(1)}</p>
         <p className="product-stock">

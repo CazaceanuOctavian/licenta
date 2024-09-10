@@ -1,7 +1,8 @@
 import re
-import json
 import os
 import csv
+import requests
+import time
 
 from selenium import webdriver
 from selenium.webdriver.firefox.options import Options
@@ -11,7 +12,6 @@ from bs4 import BeautifulSoup
 options = Options()
 #options.add_argument('--headless')
 options.binary_location = '/etc/firefox'
-
 driver = webdriver.Firefox(options=options)
 
 def no_nav_strings(iterable):
@@ -26,17 +26,31 @@ def format_data(item):
             isInStoc = 1
         else:
             isInStoc = 0
-        print(name)
         price = float(item.find_next(class_='price margin-bottom-xs clearfix col-xs-6 grid-full').text.strip().replace(',','.').split(' ')[0])
         itemUrl = item.find_parent().findPreviousSibling().a['href']
+        #explodes here when there are no valid images
+        imageUrl = item.find_parent().findPreviousSibling().find_next('img')['data-src']
 
         driver.delete_all_cookies()
         driver.get(itemUrl)
-
         page_source = driver.page_source
         other_soup = BeautifulSoup(page_source, 'html.parser')
 
         product_code = other_soup.find(class_='model').text.strip()
+        print(name)
+
+        #=====scraping image=====
+        try:
+            img_data = requests.get(imageUrl).content
+            img_name = product_code + '.jpeg'
+            #
+            filepath = os.path.join('/home/tavi/Desktop/licenta/frontend/public/images', img_name) 
+            with open(filepath, 'wb') as file:
+                file.write(img_data)
+        except Exception as e:
+            print('could not get image, so sad...')
+            filepath = 'err'
+        #=====scraping image=====
 
         return {
             'name' : name,
@@ -45,7 +59,8 @@ def format_data(item):
             'is_in_stoc' : isInStoc,
             'url' : itemUrl,
             'product_code' : product_code,
-            'online_mag' : 'vexio' 
+            'online_mag' : 'vexio',
+            'img_path' : '/images/' + img_name
             }
     
     except Exception as e:
@@ -68,16 +83,33 @@ def scrape(path):
         soup = BeautifulSoup(page_source, 'html.parser')
 
         # last_url = driver.current_url
-
-        html_content = soup.prettify()
-        with open('htmldump.txt', 'w') as file:
-            file.write(html_content)
         
         li_items = soup.find_all(class_="grid-full col-xs-8 col-sm-4 col-md-4")
         category = soup.find(class_='breadcrumb').text.strip().split('\xa0')[-1]
         next_page_button = soup.find(class_ = 'pagination-next')
 
-        with open('vexio_scrape_new-test.csv', 'a', newline='') as scrapefile:
+        #done here because images on product page are too high quality
+        #wait 2 seconds on each large page to make images load --> replace with wait-until(selenium) at some point...
+        # time.sleep(2)
+        # #=====scraping image=====
+        # li_images = soup.find_all(class_="margin-bottom-xs grid-full image text-center col-xs-4 col-sm-3 col-md-3")
+        # counter = 0
+        # for image in li_images:
+        #     imageUrl = image.find_next('img')['data-src']
+        #     try:
+        #         img_data = requests.get(imageUrl).content
+        #         img_name = str(counter)
+        #         #
+        #         filepath = os.path.join('/home/tavi/Desktop/licenta/content', img_name) 
+        #         with open(filepath, 'wb') as file:
+        #             file.write(img_data)
+        #         counter+=1
+        #     except Exception as e:
+        #         print('could not get image, so sad...')
+        #         filepath = 'err'
+        # #=====scraping image=====
+
+        with open('vexio_scrape_jpgs.csv', 'a', newline='') as scrapefile:
                 writer = csv.writer(scrapefile)
                 for element in li_items:
                     try:
@@ -119,7 +151,7 @@ def main():
 
 
 
-scrape('https://www.vexio.ro/laptop-accesorii/pagina503/')
+#scrape('https://www.vexio.ro/laptop-accesorii/pagina503/')
 
 main()
 driver.quit()

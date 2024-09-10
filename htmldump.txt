@@ -35,7 +35,7 @@
   </script>
   <script async="" charset="UTF-8" crossorigin="*" src="https://embed.tawk.to/55ded35e9a90d72b5bab9c3a/default">
   </script>
-  <script async="" crossorigin="anonymous" src="https://connect.facebook.net/ro_RO/all.js?hash=0710a796623b1d7fa802629cadb8a629">
+  <script async="" crossorigin="anonymous" src="https://connect.facebook.net/ro_RO/all.js?hash=f7d75063cbbf39dd41671fc2ee39393f">
   </script>
   <script async="" defer="" id="facebook-jssdk" src="//connect.facebook.net/ro_RO/all.js#xfbml=1">
   </script>
@@ -325,7 +325,7 @@ body > .sn-loader {
   font-size: 90%;
   text-decoration: line-through; }
   </style>
-  <script async="" src="https://googleads.g.doubleclick.net/pagead/viewthroughconversion/939402149/?random=1725949673068&amp;cv=9&amp;fst=1725949673068&amp;num=1&amp;guid=ON&amp;resp=GooglemKTybQhCsO&amp;eid=375603261%2C466465925%2C512247838&amp;u_h=1080&amp;u_w=1920&amp;u_ah=1053&amp;u_aw=1850&amp;u_cd=24&amp;u_his=1&amp;u_tz=180&amp;u_java=false&amp;u_nplug=5&amp;u_nmime=2&amp;sendb=1&amp;ig=1&amp;frm=0&amp;url=https%3A%2F%2Fwww.vexio.ro%2Flaptop-accesorii%2Fpagina503%2F&amp;tiba=Pagina%20503%20-%20Laptop%20%26%20Accesorii%20Ieftine%20Online%20-%20VEXIO&amp;hn=www.googleadservices.com&amp;rfmt=3&amp;fmt=4" type="text/javascript">
+  <script async="" src="https://googleads.g.doubleclick.net/pagead/viewthroughconversion/939402149/?random=1725953063428&amp;cv=9&amp;fst=1725953063428&amp;num=1&amp;guid=ON&amp;resp=GooglemKTybQhCsO&amp;eid=375603260%2C466465926%2C512247838&amp;u_h=1080&amp;u_w=1920&amp;u_ah=1053&amp;u_aw=1850&amp;u_cd=24&amp;u_his=1&amp;u_tz=180&amp;u_java=false&amp;u_nplug=5&amp;u_nmime=2&amp;sendb=1&amp;ig=1&amp;frm=0&amp;url=https%3A%2F%2Fwww.vexio.ro%2Flaptop-accesorii%2Fpagina503%2F&amp;tiba=Pagina%20503%20-%20Laptop%20%26%20Accesorii%20Ieftine%20Online%20-%20VEXIO&amp;hn=www.googleadservices.com&amp;rfmt=3&amp;fmt=4" type="text/javascript">
   </script>
   <style data-fbcssmodules="css:fb.css.base css:fb.css.dialog css:fb.css.iframewidget css:fb.css.customer_chat_plugin_iframe" type="text/css">
    .fb_hidden{position:absolute;top:-10000px;z-index:10001}.fb_reposition{overflow:hidden;position:relative}.fb_invisible{display:none}.fb_reset{background:none;border:0;border-spacing:0;color:#000;cursor:auto;direction:ltr;font-family:'lucida grande', tahoma, verdana, arial, sans-serif;font-size:11px;font-style:normal;font-variant:normal;font-weight:normal;letter-spacing:normal;line-height:1;margin:0;overflow:visible;padding:0;text-align:left;text-decoration:none;text-indent:0;text-shadow:none;text-transform:none;visibility:visible;white-space:normal;word-spacing:normal}.fb_reset>div{overflow:hidden}@keyframes fb_transform{from{opacity:0;transform:scale(.95)}to{opacity:1;transform:scale(1)}}.fb_animate{animation:fb_transform .3s forwards}
@@ -334,7 +334,7 @@ body > .sn-loader {
 .fb_iframe_widget{display:inline-block;position:relative}.fb_iframe_widget span{display:inline-block;position:relative;text-align:justify}.fb_iframe_widget iframe{position:absolute}.fb_iframe_widget_fluid_desktop,.fb_iframe_widget_fluid_desktop span,.fb_iframe_widget_fluid_desktop iframe{max-width:100%}.fb_iframe_widget_fluid_desktop iframe{min-width:220px;position:relative}.fb_iframe_widget_lift{z-index:1}.fb_iframe_widget_fluid{display:inline}.fb_iframe_widget_fluid span{width:100%}
 .fb_mpn_mobile_landing_page_slide_out{animation-duration:200ms;animation-name:fb_mpn_landing_page_slide_out;transition-timing-function:ease-in}.fb_mpn_mobile_landing_page_slide_out_from_left{animation-duration:200ms;animation-name:fb_mpn_landing_page_slide_out_from_left;transition-timing-function:ease-in}.fb_mpn_mobile_landing_page_slide_up{animation-duration:500ms;animation-name:fb_mpn_landing_page_slide_up;transition-timing-function:ease-in}.fb_mpn_mobile_bounce_in{animation-duration:300ms;animation-name:fb_mpn_bounce_in;transition-timing-function:ease-in}.fb_mpn_mobile_bounce_out{animation-duration:300ms;animation-name:fb_mpn_bounce_out;transition-timing-function:ease-in}.fb_mpn_mobile_bounce_out_v2{animation-duration:300ms;animation-name:fb_mpn_fade_out;transition-timing-function:ease-in}.fb_customer_chat_bounce_in_v2{animation-duration:300ms;animation-name:fb_bounce_in_v2;transition-timing-function:ease-in}.fb_customer_chat_bounce_in_from_left{animation-duration:300ms;animation-name:fb_bounce_in_from_left;transition-timing-function:ease-in}.fb_customer_chat_bounce_out_v2{animation-duration:300ms;animation-name:fb_bounce_out_v2;transition-timing-function:ease-in}.fb_customer_chat_bounce_out_from_left{animation-duration:300ms;animation-name:fb_bounce_out_from_left;transition-timing-function:ease-in}.fb_invisible_flow{display:inherit;height:0;overflow-x:hidden;width:0}@keyframes fb_mpn_landing_page_slide_out{0%{margin:0 12px;width:100% - 24px}60%{border-radius:18px}100%{border-radius:50%;margin:0 24px;width:60px}}@keyframes fb_mpn_landing_page_slide_out_from_left{0%{left:12px;width:100% - 24px}60%{border-radius:18px}100%{border-radius:50%;left:12px;width:60px}}@keyframes fb_mpn_landing_page_slide_up{0%{bottom:0;opacity:0}100%{bottom:24px;opacity:1}}@keyframes fb_mpn_bounce_in{0%{opacity:.5;top:100%}100%{opacity:1;top:0}}@keyframes fb_mpn_fade_out{0%{bottom:30px;opacity:1}100%{bottom:0;opacity:0}}@keyframes fb_mpn_bounce_out{0%{opacity:1;top:0}100%{opacity:.5;top:100%}}@keyframes fb_bounce_in_v2{0%{opacity:0;transform:scale(0, 0);transform-origin:bottom right}50%{transform:scale(1.03, 1.03);transform-origin:bottom right}100%{opacity:1;transform:scale(1, 1);transform-origin:bottom right}}@keyframes fb_bounce_in_from_left{0%{opacity:0;transform:scale(0, 0);transform-origin:bottom left}50%{transform:scale(1.03, 1.03);transform-origin:bottom left}100%{opacity:1;transform:scale(1, 1);transform-origin:bottom left}}@keyframes fb_bounce_out_v2{0%{opacity:1;transform:scale(1, 1);transform-origin:bottom right}100%{opacity:0;transform:scale(0, 0);transform-origin:bottom right}}@keyframes fb_bounce_out_from_left{0%{opacity:1;transform:scale(1, 1);transform-origin:bottom left}100%{opacity:0;transform:scale(0, 0);transform-origin:bottom left}}@keyframes slideInFromBottom{0%{opacity:.1;transform:translateY(100%)}100%{opacity:1;transform:translateY(0)}}@keyframes slideInFromBottomDelay{0%{opacity:0;transform:translateY(100%)}97%{opacity:0;transform:translateY(100%)}100%{opacity:1;transform:translateY(0)}}
   </style>
-  <script src="https://static.compari.ro/widget/g/69a8c4e2e6884ecaf98ce46fabc90e87.js?c=109" type="text/javascript">
+  <script src="https://static.compari.ro/widget/g/69a8c4e2e6884ecaf98ce46fabc90e87.js?c=1010" type="text/javascript">
   </script>
   <link href="https://static.compari.ro/widget/widget.css" rel="stylesheet" type="text/css"/>
  </head>
@@ -1545,16 +1545,6 @@ body > .sn-loader {
                 </a>
                </li>
                <li class="lvl2">
-                <a href="https://www.vexio.ro/videoproiectoare/" title="Videoproiectoare">
-                 › Videoproiectoare
-                </a>
-               </li>
-               <li class="lvl2">
-                <a href="https://www.vexio.ro/ecrane-proiectie/" title="Ecrane Proiectie">
-                 › Ecrane Proiectie
-                </a>
-               </li>
-               <li class="lvl2">
                 <a href="https://www.vexio.ro/accesorii-videoproiectoare/" title="Accesorii videoproiectoare">
                  › Accesorii videoproiectoare
                 </a>
@@ -1565,11 +1555,6 @@ body > .sn-loader {
                 </a>
                </li>
                <li class="lvl2">
-                <a href="https://www.vexio.ro/carduri-memorie/" title="Carduri memorie">
-                 › Carduri memorie
-                </a>
-               </li>
-               <li class="lvl2">
                 <a href="https://www.vexio.ro/echipamente-foto-de-studio/" title="Echipamente foto de studio">
                  › Echipamente foto de studio
                 </a>
@@ -1577,6 +1562,33 @@ body > .sn-loader {
                <li class="lvl2">
                 <a href="https://www.vexio.ro/lampi-led/" title="Lampi Led">
                  › Lampi Led
+                </a>
+               </li>
+              </div>
+              <div class="col-1">
+               <li class="lvl1">
+                <a href="https://www.vexio.ro/carduri-memorie/">
+                 <strong>
+                  Carduri memorie
+                 </strong>
+                </a>
+               </li>
+              </div>
+              <div class="col-1">
+               <li class="lvl1">
+                <a href="https://www.vexio.ro/videoproiectoare/">
+                 <strong>
+                  Videoproiectoare
+                 </strong>
+                </a>
+               </li>
+              </div>
+              <div class="col-1">
+               <li class="lvl1">
+                <a href="https://www.vexio.ro/ecrane-proiectie/">
+                 <strong>
+                  Ecrane Proiectie
+                 </strong>
                 </a>
                </li>
               </div>
@@ -5821,6 +5833,486 @@ body > .sn-loader {
       <div class="row list-group" id="products-list">
        <article class="product-box item col-xs-6 col-sm-4 col-md-3 col-lg-3 grid-group-item">
         <form action="https://www.vexio.ro/shopping/add-to-cart/" id="product_box_1" method="post">
+         <input name="product-2745796" type="hidden" value="1"/>
+         <script>
+          ecListedProducts['2745796'] = {
+			type: 'impression',
+			item_id: '2745796',
+			item_group_id: '2745796',
+			item_name: 'Rucsac pentru laptop de 15 inch, Negru',
+			discount: 0,
+			index: 11547,
+			item_brand: 'THULE',
+			item_category: 'Genti, Rucsaci si Huse',
+			item_list_id: 'browsing_viewcategory::stock_descending',
+			item_list_name: 'Product listing',
+			item_variant: '',
+			price: 564.99,
+			quantity: 1,
+			vat: 19,
+			stock_status: 'outofstock',
+			currency: 'RON',
+			url: 'https://www.vexio.ro/genti-rucsaci-si-huse/thule/2745796-rucsac-pentru-laptop-de-15-inch-negru/'
+		};
+         </script>
+         <div class="row">
+          <div class="margin-bottom-xs grid-full image text-center col-xs-4 col-sm-3 col-md-3">
+           <a data-ecpid="2745796" data-ecproduct="true" data-ecvariant="" href="https://www.vexio.ro/genti-rucsaci-si-huse/thule/2745796-rucsac-pentru-laptop-de-15-inch-negru/" title="Rucsac pentru laptop de 15 inch, Negru">
+            <img alt="Rucsac pentru laptop de 15 inch, Negru" class="img-responsive lazy col-xs-12" src="https://cdn.vexio.ro/images/products/img_202407240952/2745796/thumbnails/thule-rucsac-thule-pt-notebook-de-max-15-inch-macbook-1-compartiment-buzunar-frontal-buzunar-dorsal-waterproof-nylon-negru-landmark-40-l-3203722-5817883.jpg" style="display: block; opacity: 0;"/>
+           </a>
+           <div class="product-icons">
+           </div>
+           <a class="preview btn" href="https://www.vexio.ro/genti-rucsaci-si-huse/thule/2745796-rucsac-pentru-laptop-de-15-inch-negru/">
+            Vezi detalii
+           </a>
+          </div>
+          <div class="grid-full col-xs-8 col-sm-4 col-md-4">
+           <div class="clearfix">
+            <div class="manufacturer pull-left">
+             THULE
+            </div>
+           </div>
+           <h2 class="name">
+            <a data-ecpid="2745796" data-ecproduct="true" data-ecvariant="" href="https://www.vexio.ro/genti-rucsaci-si-huse/thule/2745796-rucsac-pentru-laptop-de-15-inch-negru/" title="Rucsac pentru laptop de 15 inch, Negru">
+             THULE Rucsac pentru laptop de 15 inch, Negru
+            </a>
+           </h2>
+           <div class="description hidden-xs hidden-sm">
+            <ul class="list-unstyled">
+             <li>
+              <span>
+               Tip: Rucsac
+              </span>
+             </li>
+             <li>
+              <span>
+               Compatibilitate maxima: 15 inch
+              </span>
+             </li>
+             <li>
+              <span>
+               Culoare: Negru
+              </span>
+             </li>
+            </ul>
+           </div>
+          </div>
+          <div class="grid-full col-xs-8 col-sm-4 col-md-2">
+           <div class="rating">
+           </div>
+          </div>
+          <div class="grid-full col-xs-6 col-sm-5 col-md-3">
+           <div class="availability margin-bottom-xs outofstock">
+            nu este in stoc
+           </div>
+           <div class="row">
+            <div class="price margin-bottom-xs clearfix col-xs-6 grid-full">
+             <div class="pull-left">
+             </div>
+             <div class="pull-left">
+              <strong>
+               564,99 lei
+              </strong>
+             </div>
+            </div>
+            <div class="col-xs-12 add">
+             <button class="stock-alert btn btn-default btn-sm btn-block" onclick="stockAlert(2745796, 'Alerta stoc', 'THULE Rucsac pentru laptop de 15 inch, Negru');" type="button">
+              <i class="fa fa-bell">
+              </i>
+              Alerta stoc
+             </button>
+            </div>
+           </div>
+          </div>
+         </div>
+        </form>
+       </article>
+       <article class="product-box item col-xs-6 col-sm-4 col-md-3 col-lg-3 grid-group-item">
+        <form action="https://www.vexio.ro/shopping/add-to-cart/" id="product_box_2" method="post">
+         <input name="product-2745802" type="hidden" value="1"/>
+         <script>
+          ecListedProducts['2745802'] = {
+			type: 'impression',
+			item_id: '2745802',
+			item_group_id: '2745802',
+			item_name: 'Rucsac pentru laptop de 15.6 inch, 21 L, Verde',
+			discount: 0,
+			index: 11548,
+			item_brand: 'THULE',
+			item_category: 'Genti, Rucsaci si Huse',
+			item_list_id: 'browsing_viewcategory::stock_descending',
+			item_list_name: 'Product listing',
+			item_variant: '',
+			price: 296.99,
+			quantity: 1,
+			vat: 19,
+			stock_status: 'outofstock',
+			currency: 'RON',
+			url: 'https://www.vexio.ro/genti-rucsaci-si-huse/thule/2745802-rucsac-pentru-laptop-de-15-6-inch-21-l-verde/'
+		};
+         </script>
+         <div class="row">
+          <div class="margin-bottom-xs grid-full image text-center col-xs-4 col-sm-3 col-md-3">
+           <a data-ecpid="2745802" data-ecproduct="true" data-ecvariant="" href="https://www.vexio.ro/genti-rucsaci-si-huse/thule/2745802-rucsac-pentru-laptop-de-15-6-inch-21-l-verde/" title="Rucsac pentru laptop de 15.6 inch, 21 L, Verde">
+            <img alt="Rucsac pentru laptop de 15.6 inch, 21 L, Verde" class="img-responsive lazy col-xs-12" src="https://cdn.vexio.ro/images/products/img_202407240952/2745802/thumbnails/thule-rucsac-thule-enroute-21-l-pt-notebook-de-max-15-6-inch-1-compartiment-buzunar-lateral-x-2-waterproof-nylon-verde-tebp4116mallardgreen-3204839-5817919.jpg" style="display: block; opacity: 0;"/>
+           </a>
+           <div class="product-icons">
+           </div>
+           <a class="preview btn" href="https://www.vexio.ro/genti-rucsaci-si-huse/thule/2745802-rucsac-pentru-laptop-de-15-6-inch-21-l-verde/">
+            Vezi detalii
+           </a>
+          </div>
+          <div class="grid-full col-xs-8 col-sm-4 col-md-4">
+           <div class="clearfix">
+            <div class="manufacturer pull-left">
+             THULE
+            </div>
+           </div>
+           <h2 class="name">
+            <a data-ecpid="2745802" data-ecproduct="true" data-ecvariant="" href="https://www.vexio.ro/genti-rucsaci-si-huse/thule/2745802-rucsac-pentru-laptop-de-15-6-inch-21-l-verde/" title="Rucsac pentru laptop de 15.6 inch, 21 L, Verde">
+             THULE Rucsac pentru laptop de 15.6 inch, 21 L, Verde
+            </a>
+           </h2>
+           <div class="description hidden-xs hidden-sm">
+            <ul class="list-unstyled">
+             <li>
+              <span>
+               Tip: Rucsac
+              </span>
+             </li>
+             <li>
+              <span>
+               Compatibilitate maxima: 15.6 inch
+              </span>
+             </li>
+             <li>
+              <span>
+               Culoare: Verde
+              </span>
+             </li>
+            </ul>
+           </div>
+          </div>
+          <div class="grid-full col-xs-8 col-sm-4 col-md-2">
+           <div class="rating">
+           </div>
+          </div>
+          <div class="grid-full col-xs-6 col-sm-5 col-md-3">
+           <div class="availability margin-bottom-xs outofstock">
+            nu este in stoc
+           </div>
+           <div class="row">
+            <div class="price margin-bottom-xs clearfix col-xs-6 grid-full">
+             <div class="pull-left">
+             </div>
+             <div class="pull-left">
+              <strong>
+               296,99 lei
+              </strong>
+             </div>
+            </div>
+            <div class="col-xs-12 add">
+             <button class="stock-alert btn btn-default btn-sm btn-block" onclick="stockAlert(2745802, 'Alerta stoc', 'THULE Rucsac pentru laptop de 15.6 inch, 21 L, Verde');" type="button">
+              <i class="fa fa-bell">
+              </i>
+              Alerta stoc
+             </button>
+            </div>
+           </div>
+          </div>
+         </div>
+        </form>
+       </article>
+       <article class="product-box item col-xs-6 col-sm-4 col-md-3 col-lg-3 grid-group-item">
+        <form action="https://www.vexio.ro/shopping/add-to-cart/" id="product_box_3" method="post">
+         <input name="product-2745808" type="hidden" value="1"/>
+         <script>
+          ecListedProducts['2745808'] = {
+			type: 'impression',
+			item_id: '2745808',
+			item_group_id: '2745808',
+			item_name: 'Rucsac pentru laptop de 15.6 inch, 23 L, Verde',
+			discount: 0,
+			index: 11549,
+			item_brand: 'THULE',
+			item_category: 'Genti, Rucsaci si Huse',
+			item_list_id: 'browsing_viewcategory::stock_descending',
+			item_list_name: 'Product listing',
+			item_variant: '',
+			price: 335.99,
+			quantity: 1,
+			vat: 19,
+			stock_status: 'outofstock',
+			currency: 'RON',
+			url: 'https://www.vexio.ro/genti-rucsaci-si-huse/thule/2745808-rucsac-pentru-laptop-de-15-6-inch-23-l-verde/'
+		};
+         </script>
+         <div class="row">
+          <div class="margin-bottom-xs grid-full image text-center col-xs-4 col-sm-3 col-md-3">
+           <a data-ecpid="2745808" data-ecproduct="true" data-ecvariant="" href="https://www.vexio.ro/genti-rucsaci-si-huse/thule/2745808-rucsac-pentru-laptop-de-15-6-inch-23-l-verde/" title="Rucsac pentru laptop de 15.6 inch, 23 L, Verde">
+            <img alt="Rucsac pentru laptop de 15.6 inch, 23 L, Verde" class="img-responsive lazy col-xs-12" src="https://cdn.vexio.ro/images/products/img_202407240952/2745808/thumbnails/thule-rucsac-thule-enroute-23-l-pt-notebook-de-max-15-6-inch-1-compartiment-buzunar-lateral-x-2-waterproof-nylon-verde-tebp4216-mallard-green-3204842-5817958.jpg" style="display: block; opacity: 0;"/>
+           </a>
+           <div class="product-icons">
+           </div>
+           <a class="preview btn" href="https://www.vexio.ro/genti-rucsaci-si-huse/thule/2745808-rucsac-pentru-laptop-de-15-6-inch-23-l-verde/">
+            Vezi detalii
+           </a>
+          </div>
+          <div class="grid-full col-xs-8 col-sm-4 col-md-4">
+           <div class="clearfix">
+            <div class="manufacturer pull-left">
+             THULE
+            </div>
+           </div>
+           <h2 class="name">
+            <a data-ecpid="2745808" data-ecproduct="true" data-ecvariant="" href="https://www.vexio.ro/genti-rucsaci-si-huse/thule/2745808-rucsac-pentru-laptop-de-15-6-inch-23-l-verde/" title="Rucsac pentru laptop de 15.6 inch, 23 L, Verde">
+             THULE Rucsac pentru laptop de 15.6 inch, 23 L, Verde
+            </a>
+           </h2>
+           <div class="description hidden-xs hidden-sm">
+            <ul class="list-unstyled">
+             <li>
+              <span>
+               Tip: Rucsac
+              </span>
+             </li>
+             <li>
+              <span>
+               Compatibilitate maxima: 15.6 inch
+              </span>
+             </li>
+             <li>
+              <span>
+               Culoare: Verde
+              </span>
+             </li>
+            </ul>
+           </div>
+          </div>
+          <div class="grid-full col-xs-8 col-sm-4 col-md-2">
+           <div class="rating">
+           </div>
+          </div>
+          <div class="grid-full col-xs-6 col-sm-5 col-md-3">
+           <div class="availability margin-bottom-xs outofstock">
+            nu este in stoc
+           </div>
+           <div class="row">
+            <div class="price margin-bottom-xs clearfix col-xs-6 grid-full">
+             <div class="pull-left">
+             </div>
+             <div class="pull-left">
+              <strong>
+               335,99 lei
+              </strong>
+             </div>
+            </div>
+            <div class="col-xs-12 add">
+             <button class="stock-alert btn btn-default btn-sm btn-block" onclick="stockAlert(2745808, 'Alerta stoc', 'THULE Rucsac pentru laptop de 15.6 inch, 23 L, Verde');" type="button">
+              <i class="fa fa-bell">
+              </i>
+              Alerta stoc
+             </button>
+            </div>
+           </div>
+          </div>
+         </div>
+        </form>
+       </article>
+       <article class="product-box item col-xs-6 col-sm-4 col-md-3 col-lg-3 grid-group-item">
+        <form action="https://www.vexio.ro/shopping/add-to-cart/" id="product_box_4" method="post">
+         <input name="product-2745814" type="hidden" value="1"/>
+         <script>
+          ecListedProducts['2745814'] = {
+			type: 'impression',
+			item_id: '2745814',
+			item_group_id: '2745814',
+			item_name: 'Rucsac pentru laptop de 15.6 inch, 18 L, Negru',
+			discount: 0,
+			index: 11550,
+			item_brand: 'THULE',
+			item_category: 'Genti, Rucsaci si Huse',
+			item_list_id: 'browsing_viewcategory::stock_descending',
+			item_list_name: 'Product listing',
+			item_variant: '',
+			price: 455.99,
+			quantity: 1,
+			vat: 19,
+			stock_status: 'outofstock',
+			currency: 'RON',
+			url: 'https://www.vexio.ro/genti-rucsaci-si-huse/thule/2745814-rucsac-pentru-laptop-de-15-6-inch-18-l-negru/'
+		};
+         </script>
+         <div class="row">
+          <div class="margin-bottom-xs grid-full image text-center col-xs-4 col-sm-3 col-md-3">
+           <a data-ecpid="2745814" data-ecproduct="true" data-ecvariant="" href="https://www.vexio.ro/genti-rucsaci-si-huse/thule/2745814-rucsac-pentru-laptop-de-15-6-inch-18-l-negru/" title="Rucsac pentru laptop de 15.6 inch, 18 L, Negru">
+            <img alt="Rucsac pentru laptop de 15.6 inch, 18 L, Negru" class="img-responsive lazy col-xs-12" data-src="https://cdn.vexio.ro/images/products/img_202407240952/2745814/thumbnails/thule-rucsac-thule-paramount-18-l-pt-notebook-de-max-15-6-inch-1-compartiment-buzunar-frontal-x-2-buzunar-lateral-x-2-waterproof-nylon-negru-3204729-5817991.jpg" src="https://cdn.vexio.ro/views/vexio/images/layout/lazy-loader.gif"/>
+           </a>
+           <div class="product-icons">
+           </div>
+           <a class="preview btn" href="https://www.vexio.ro/genti-rucsaci-si-huse/thule/2745814-rucsac-pentru-laptop-de-15-6-inch-18-l-negru/">
+            Vezi detalii
+           </a>
+          </div>
+          <div class="grid-full col-xs-8 col-sm-4 col-md-4">
+           <div class="clearfix">
+            <div class="manufacturer pull-left">
+             THULE
+            </div>
+           </div>
+           <h2 class="name">
+            <a data-ecpid="2745814" data-ecproduct="true" data-ecvariant="" href="https://www.vexio.ro/genti-rucsaci-si-huse/thule/2745814-rucsac-pentru-laptop-de-15-6-inch-18-l-negru/" title="Rucsac pentru laptop de 15.6 inch, 18 L, Negru">
+             THULE Rucsac pentru laptop de 15.6 inch, 18 L, Negru
+            </a>
+           </h2>
+           <div class="description hidden-xs hidden-sm">
+            <ul class="list-unstyled">
+             <li>
+              <span>
+               Tip: Rucsac
+              </span>
+             </li>
+             <li>
+              <span>
+               Compatibilitate maxima: 15.6 inch
+              </span>
+             </li>
+             <li>
+              <span>
+               Culoare: Negru
+              </span>
+             </li>
+            </ul>
+           </div>
+          </div>
+          <div class="grid-full col-xs-8 col-sm-4 col-md-2">
+           <div class="rating">
+           </div>
+          </div>
+          <div class="grid-full col-xs-6 col-sm-5 col-md-3">
+           <div class="availability margin-bottom-xs outofstock">
+            nu este in stoc
+           </div>
+           <div class="row">
+            <div class="price margin-bottom-xs clearfix col-xs-6 grid-full">
+             <div class="pull-left">
+             </div>
+             <div class="pull-left">
+              <strong>
+               455,99 lei
+              </strong>
+             </div>
+            </div>
+            <div class="col-xs-12 add">
+             <button class="stock-alert btn btn-default btn-sm btn-block" onclick="stockAlert(2745814, 'Alerta stoc', 'THULE Rucsac pentru laptop de 15.6 inch, 18 L, Negru');" type="button">
+              <i class="fa fa-bell">
+              </i>
+              Alerta stoc
+             </button>
+            </div>
+           </div>
+          </div>
+         </div>
+        </form>
+       </article>
+       <article class="product-box item col-xs-6 col-sm-4 col-md-3 col-lg-3 grid-group-item">
+        <form action="https://www.vexio.ro/shopping/add-to-cart/" id="product_box_5" method="post">
+         <input name="product-2745823" type="hidden" value="1"/>
+         <script>
+          ecListedProducts['2745823'] = {
+			type: 'impression',
+			item_id: '2745823',
+			item_group_id: '2745823',
+			item_name: 'Rucsac pentru laptop de 15.6 inch, 27 L, Verde',
+			discount: 0,
+			index: 11551,
+			item_brand: 'THULE',
+			item_category: 'Genti, Rucsaci si Huse',
+			item_list_id: 'browsing_viewcategory::stock_descending',
+			item_list_name: 'Product listing',
+			item_variant: '',
+			price: 607.99,
+			quantity: 1,
+			vat: 19,
+			stock_status: 'outofstock',
+			currency: 'RON',
+			url: 'https://www.vexio.ro/genti-rucsaci-si-huse/thule/2745823-rucsac-pentru-laptop-de-15-6-inch-27-l-verde/'
+		};
+         </script>
+         <div class="row">
+          <div class="margin-bottom-xs grid-full image text-center col-xs-4 col-sm-3 col-md-3">
+           <a data-ecpid="2745823" data-ecproduct="true" data-ecvariant="" href="https://www.vexio.ro/genti-rucsaci-si-huse/thule/2745823-rucsac-pentru-laptop-de-15-6-inch-27-l-verde/" title="Rucsac pentru laptop de 15.6 inch, 27 L, Verde">
+            <img alt="Rucsac pentru laptop de 15.6 inch, 27 L, Verde" class="img-responsive lazy col-xs-12" data-src="https://cdn.vexio.ro/images/products/img_202407240952/2745823/thumbnails/thule-rucsac-thule-paramount-27-l-pt-notebook-de-max-15-6-inch-1-compartiment-buzunar-frontal-x-2-buzunar-lateral-x-2-waterproof-nylon-olive-3204732-5818051.jpg" src="https://cdn.vexio.ro/views/vexio/images/layout/lazy-loader.gif"/>
+           </a>
+           <div class="product-icons">
+           </div>
+           <a class="preview btn" href="https://www.vexio.ro/genti-rucsaci-si-huse/thule/2745823-rucsac-pentru-laptop-de-15-6-inch-27-l-verde/">
+            Vezi detalii
+           </a>
+          </div>
+          <div class="grid-full col-xs-8 col-sm-4 col-md-4">
+           <div class="clearfix">
+            <div class="manufacturer pull-left">
+             THULE
+            </div>
+           </div>
+           <h2 class="name">
+            <a data-ecpid="2745823" data-ecproduct="true" data-ecvariant="" href="https://www.vexio.ro/genti-rucsaci-si-huse/thule/2745823-rucsac-pentru-laptop-de-15-6-inch-27-l-verde/" title="Rucsac pentru laptop de 15.6 inch, 27 L, Verde">
+             THULE Rucsac pentru laptop de 15.6 inch, 27 L, Verde
+            </a>
+           </h2>
+           <div class="description hidden-xs hidden-sm">
+            <ul class="list-unstyled">
+             <li>
+              <span>
+               Tip: Rucsac
+              </span>
+             </li>
+             <li>
+              <span>
+               Compatibilitate maxima: 15.6 inch
+              </span>
+             </li>
+             <li>
+              <span>
+               Culoare: Verde
+              </span>
+             </li>
+            </ul>
+           </div>
+          </div>
+          <div class="grid-full col-xs-8 col-sm-4 col-md-2">
+           <div class="rating">
+           </div>
+          </div>
+          <div class="grid-full col-xs-6 col-sm-5 col-md-3">
+           <div class="availability margin-bottom-xs outofstock">
+            nu este in stoc
+           </div>
+           <div class="row">
+            <div class="price margin-bottom-xs clearfix col-xs-6 grid-full">
+             <div class="pull-left">
+             </div>
+             <div class="pull-left">
+              <strong>
+               607,99 lei
+              </strong>
+             </div>
+            </div>
+            <div class="col-xs-12 add">
+             <button class="stock-alert btn btn-default btn-sm btn-block" onclick="stockAlert(2745823, 'Alerta stoc', 'THULE Rucsac pentru laptop de 15.6 inch, 27 L, Verde');" type="button">
+              <i class="fa fa-bell">
+              </i>
+              Alerta stoc
+             </button>
+            </div>
+           </div>
+          </div>
+         </div>
+        </form>
+       </article>
+       <article class="product-box item col-xs-6 col-sm-4 col-md-3 col-lg-3 grid-group-item">
+        <form action="https://www.vexio.ro/shopping/add-to-cart/" id="product_box_6" method="post">
          <input name="product-2745826" type="hidden" value="1"/>
          <script>
           ecListedProducts['2745826'] = {
@@ -5829,7 +6321,7 @@ body > .sn-loader {
 			item_group_id: '2745826',
 			item_name: 'Rucsac pentru laptop de 15.6 inch, 28 L, Negru',
 			discount: 0,
-			index: 11547,
+			index: 11552,
 			item_brand: 'THULE',
 			item_category: 'Genti, Rucsaci si Huse',
 			item_list_id: 'browsing_viewcategory::stock_descending',
@@ -5916,7 +6408,7 @@ body > .sn-loader {
         </form>
        </article>
        <article class="product-box item col-xs-6 col-sm-4 col-md-3 col-lg-3 grid-group-item">
-        <form action="https://www.vexio.ro/shopping/add-to-cart/" id="product_box_2" method="post">
+        <form action="https://www.vexio.ro/shopping/add-to-cart/" id="product_box_7" method="post">
          <input name="product-2745829" type="hidden" value="1"/>
          <script>
           ecListedProducts['2745829'] = {
@@ -5925,7 +6417,7 @@ body > .sn-loader {
 			item_group_id: '2745829',
 			item_name: 'Rucsac pentru laptop de 15.6 inch, 23 L, Negru',
 			discount: 0,
-			index: 11548,
+			index: 11553,
 			item_brand: 'THULE',
 			item_category: 'Genti, Rucsaci si Huse',
 			item_list_id: 'browsing_viewcategory::stock_descending',
@@ -6012,7 +6504,7 @@ body > .sn-loader {
         </form>
        </article>
        <article class="product-box item col-xs-6 col-sm-4 col-md-3 col-lg-3 grid-group-item">
-        <form action="https://www.vexio.ro/shopping/add-to-cart/" id="product_box_3" method="post">
+        <form action="https://www.vexio.ro/shopping/add-to-cart/" id="product_box_8" method="post">
          <input name="product-2745835" type="hidden" value="1"/>
          <script>
           ecListedProducts['2745835'] = {
@@ -6021,7 +6513,7 @@ body > .sn-loader {
 			item_group_id: '2745835',
 			item_name: 'Rucsac pentru laptop de 15.6 inch, Negru',
 			discount: 0,
-			index: 11549,
+			index: 11554,
 			item_brand: 'THULE',
 			item_category: 'Genti, Rucsaci si Huse',
 			item_list_id: 'browsing_viewcategory::stock_descending',
@@ -6108,103 +6600,7 @@ body > .sn-loader {
         </form>
        </article>
        <article class="product-box item col-xs-6 col-sm-4 col-md-3 col-lg-3 grid-group-item">
-        <form action="https://www.vexio.ro/shopping/add-to-cart/" id="product_box_4" method="post">
-         <input name="product-2745838" type="hidden" value="1"/>
-         <script>
-          ecListedProducts['2745838'] = {
-			type: 'impression',
-			item_id: '2745838',
-			item_group_id: '2745838',
-			item_name: 'Rucsac pentru laptop, 28 L, 15.6&quot;, Albastru',
-			discount: 0,
-			index: 11550,
-			item_brand: 'THULE',
-			item_category: 'Genti, Rucsaci si Huse',
-			item_list_id: 'browsing_viewcategory::stock_descending',
-			item_list_name: 'Product listing',
-			item_variant: '',
-			price: 714.99,
-			quantity: 1,
-			vat: 19,
-			stock_status: 'insupplierstock',
-			currency: 'RON',
-			url: 'https://www.vexio.ro/genti-rucsaci-si-huse/thule/2745838-rucsac-pentru-laptop-28-l-15-6-albastru/'
-		};
-         </script>
-         <div class="row">
-          <div class="margin-bottom-xs grid-full image text-center col-xs-4 col-sm-3 col-md-3">
-           <a data-ecpid="2745838" data-ecproduct="true" data-ecvariant="" href="https://www.vexio.ro/genti-rucsaci-si-huse/thule/2745838-rucsac-pentru-laptop-28-l-15-6-albastru/" title='Rucsac pentru laptop, 28 L, 15.6", Albastru'>
-            <img ,="" albastru"="" alt="Rucsac pentru laptop, 28 L, 15.6" class="img-responsive lazy col-xs-12" data-src="https://cdn.vexio.ro/images/products/img_202407240952/2745838/thumbnails/thule-rucsac-laptop-thule-aion-travel-28l-albastru-tatb128-dark-slate-3205018-5818099.jpg" src="https://cdn.vexio.ro/views/vexio/images/layout/lazy-loader.gif"/>
-           </a>
-           <div class="product-icons">
-           </div>
-           <a class="preview btn" href="https://www.vexio.ro/genti-rucsaci-si-huse/thule/2745838-rucsac-pentru-laptop-28-l-15-6-albastru/">
-            Vezi detalii
-           </a>
-          </div>
-          <div class="grid-full col-xs-8 col-sm-4 col-md-4">
-           <div class="clearfix">
-            <div class="manufacturer pull-left">
-             THULE
-            </div>
-           </div>
-           <h2 class="name">
-            <a data-ecpid="2745838" data-ecproduct="true" data-ecvariant="" href="https://www.vexio.ro/genti-rucsaci-si-huse/thule/2745838-rucsac-pentru-laptop-28-l-15-6-albastru/" title='Rucsac pentru laptop, 28 L, 15.6", Albastru'>
-             THULE Rucsac pentru laptop, 28 L, 15.6", Albastru
-            </a>
-           </h2>
-           <div class="description hidden-xs hidden-sm">
-            <ul class="list-unstyled">
-             <li>
-              <span>
-               Tip: Rucsac
-              </span>
-             </li>
-             <li>
-              <span>
-               Compatibilitate maxima: 15.6 inch
-              </span>
-             </li>
-             <li>
-              <span>
-               Culoare: Albastru
-              </span>
-             </li>
-            </ul>
-           </div>
-          </div>
-          <div class="grid-full col-xs-8 col-sm-4 col-md-2">
-           <div class="rating">
-           </div>
-          </div>
-          <div class="grid-full col-xs-6 col-sm-5 col-md-3">
-           <div class="availability margin-bottom-xs insupplierstock">
-            in stoc depozit
-           </div>
-           <div class="row">
-            <div class="price margin-bottom-xs clearfix col-xs-6 grid-full">
-             <div class="pull-left">
-             </div>
-             <div class="pull-left">
-              <strong>
-               714,99 lei
-              </strong>
-             </div>
-            </div>
-            <div class="col-xs-12 add">
-             <button class="add-to-cart btn btn-primary btn-block" onclick="return checkChosenProperties('product_box_4', false, true, function () { ecAddToCart(2745838, 714.99, 1, '') });">
-              <i class="fa fa-shopping-cart">
-              </i>
-              Adauga in cos
-             </button>
-            </div>
-           </div>
-          </div>
-         </div>
-        </form>
-       </article>
-       <article class="product-box item col-xs-6 col-sm-4 col-md-3 col-lg-3 grid-group-item">
-        <form action="https://www.vexio.ro/shopping/add-to-cart/" id="product_box_5" method="post">
+        <form action="https://www.vexio.ro/shopping/add-to-cart/" id="product_box_9" method="post">
          <input name="product-2745844" type="hidden" value="1"/>
          <script>
           ecListedProducts['2745844'] = {
@@ -6213,7 +6609,7 @@ body > .sn-loader {
 			item_group_id: '2745844',
 			item_name: 'Rucsac pentru laptop de 15.6 inch, Negru',
 			discount: 0,
-			index: 11551,
+			index: 11555,
 			item_brand: 'THULE',
 			item_category: 'Genti, Rucsaci si Huse',
 			item_list_id: 'browsing_viewcategory::stock_descending',
@@ -6303,7 +6699,7 @@ body > .sn-loader {
         </form>
        </article>
        <article class="product-box item col-xs-6 col-sm-4 col-md-3 col-lg-3 grid-group-item">
-        <form action="https://www.vexio.ro/shopping/add-to-cart/" id="product_box_6" method="post">
+        <form action="https://www.vexio.ro/shopping/add-to-cart/" id="product_box_10" method="post">
          <input name="product-2745853" type="hidden" value="1"/>
          <script>
           ecListedProducts['2745853'] = {
@@ -6312,7 +6708,7 @@ body > .sn-loader {
 			item_group_id: '2745853',
 			item_name: 'Rucsac pentru laptop 15.6 inch, 21 L, Negru',
 			discount: 0,
-			index: 11552,
+			index: 11556,
 			item_brand: 'THULE',
 			item_category: 'Genti, Rucsaci si Huse',
 			item_list_id: 'browsing_viewcategory::stock_descending',
@@ -6402,7 +6798,7 @@ body > .sn-loader {
         </form>
        </article>
        <article class="product-box item col-xs-6 col-sm-4 col-md-3 col-lg-3 grid-group-item">
-        <form action="https://www.vexio.ro/shopping/add-to-cart/" id="product_box_7" method="post">
+        <form action="https://www.vexio.ro/shopping/add-to-cart/" id="product_box_11" method="post">
          <input name="product-2745865" type="hidden" value="1"/>
          <script>
           ecListedProducts['2745865'] = {
@@ -6411,7 +6807,7 @@ body > .sn-loader {
 			item_group_id: '2745865',
 			item_name: 'Geanta pentru laptop, 14&quot;, Negru',
 			discount: 0,
-			index: 11553,
+			index: 11557,
 			item_brand: 'THULE',
 			item_category: 'Genti, Rucsaci si Huse',
 			item_list_id: 'browsing_viewcategory::stock_descending',
@@ -6498,7 +6894,7 @@ body > .sn-loader {
         </form>
        </article>
        <article class="product-box item col-xs-6 col-sm-4 col-md-3 col-lg-3 grid-group-item">
-        <form action="https://www.vexio.ro/shopping/add-to-cart/" id="product_box_8" method="post">
+        <form action="https://www.vexio.ro/shopping/add-to-cart/" id="product_box_12" method="post">
          <input name="product-2745868" type="hidden" value="1"/>
          <script>
           ecListedProducts['2745868'] = {
@@ -6507,7 +6903,7 @@ body > .sn-loader {
 			item_group_id: '2745868',
 			item_name: 'Rucsac cu un compartiment pentru laptop 16 inch, 24 L, Negru',
 			discount: 0,
-			index: 11554,
+			index: 11558,
 			item_brand: 'THULE',
 			item_category: 'Genti, Rucsaci si Huse',
 			item_list_id: 'browsing_viewcategory::stock_descending',
@@ -6594,7 +6990,7 @@ body > .sn-loader {
         </form>
        </article>
        <article class="product-box item col-xs-6 col-sm-4 col-md-3 col-lg-3 grid-group-item">
-        <form action="https://www.vexio.ro/shopping/add-to-cart/" id="product_box_9" method="post">
+        <form action="https://www.vexio.ro/shopping/add-to-cart/" id="product_box_13" method="post">
          <input name="product-2753509" type="hidden" value="1"/>
          <script>
           ecListedProducts['2753509'] = {
@@ -6603,7 +6999,7 @@ body > .sn-loader {
 			item_group_id: '2753509',
 			item_name: 'PRE 7780 FHD i9-13950HX 64 1 3500ADA WP',
 			discount: 0,
-			index: 11555,
+			index: 11559,
 			item_brand: 'Dell',
 			item_category: 'Laptop / Ultrabook',
 			item_list_id: 'browsing_viewcategory::stock_descending',
@@ -6755,7 +7151,7 @@ body > .sn-loader {
              Toate produsele
             </span>
             <span class="badge">
-             11555
+             11559
             </span>
            </a>
            <a class="list-group-item" href="/laptop-accesorii/promotii/">
@@ -6795,7 +7191,17 @@ body > .sn-loader {
              Produsele disponibile
             </span>
             <span class="badge">
-             4488
+             4493
+            </span>
+           </a>
+           <a class="list-group-item" href="/laptop-accesorii/noutati/">
+            <span class="fcontent">
+             <i class="fa fa-fw fa-square-o">
+             </i>
+             Noutatile
+            </span>
+            <span class="badge">
+             4
             </span>
            </a>
           </div>
@@ -8805,7 +9211,7 @@ body > .sn-loader {
                  Spacer
                 </span>
                 <span class="badge">
-                 33
+                 34
                 </span>
                </a>
                <a class="list-group-item" href="https://www.vexio.ro/laptop-accesorii/spigen/">
@@ -8845,7 +9251,7 @@ body > .sn-loader {
                  Targus
                 </span>
                 <span class="badge">
-                 104
+                 107
                 </span>
                </a>
                <a class="list-group-item" href="https://www.vexio.ro/laptop-accesorii/team-group/">
@@ -9512,7 +9918,7 @@ body > .sn-loader {
 Registrul Comertului: j23/4437/2022, Cod fiscal: RO31962960, Capital social 200 RON,
 Adresa: Oxigenului nr 1H, Cernica, Ilfov , Telefon: 0374 477 111.
 Preturile includ TVA. Stocurile sunt afisate in timp real.
-Statistici site: 257 useri online din care 202 vizitatori si 55 clienti inregistrati.
+Statistici site: 383 useri online din care 311 vizitatori si 72 clienti inregistrati.
        </p>
        <div class="row">
         <div class="col-xs-12 powered text-center">
@@ -10256,11 +10662,11 @@ Statistici site: 257 useri online din care 202 vizitatori si 55 clienti inregist
    </div>
   </div>
   <script>
-   (function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'8c0d5acf0b0b70c7',t:'MTcyNTk0OTY3My4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();
+   (function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'8c0dad88ab52b9e4',t:'MTcyNTk1MzA2Mi4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();
   </script>
   <iframe height="1" style="position: absolute; top: 0px; left: 0px; border: medium; visibility: hidden;" width="1">
   </iframe>
-  <script crossorigin="anonymous" data-cf-beacon='{"rayId":"8c0d5acf0b0b70c7","serverTiming":{"name":{"cfExtPri":true,"cfL4":true}},"version":"2024.8.0","token":"11f9370d018d402395579bf3db053461"}' defer="" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015">
+  <script crossorigin="anonymous" data-cf-beacon='{"rayId":"8c0dad88ab52b9e4","serverTiming":{"name":{"cfExtPri":true,"cfL4":true}},"version":"2024.8.0","token":"11f9370d018d402395579bf3db053461"}' defer="" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015">
   </script>
   <div>
    <div class="akw-ro akw-well akw-bottom-left" id="ak-widget">
@@ -10513,7 +10919,7 @@ Statistici site: 257 useri online din care 202 vizitatori si 55 clienti inregist
     </div>
    </div>
   </div>
-  <script charset="" id="" type="text/javascript">
+  <script id="" type="text/javascript">
    !function(b,e,f,g,a,c,d){b.fbq||(a=b.fbq=function(){a.callMethod?a.callMethod.apply(a,arguments):a.queue.push(arguments)},b._fbq||(b._fbq=a),a.push=a,a.loaded=!0,a.version="2.0",a.queue=[],c=e.createElement(f),c.async=!0,c.src=g,d=e.getElementsByTagName(f)[0],d.parentNode.insertBefore(c,d))}(window,document,"script","https://connect.facebook.net/en_US/fbevents.js");fbq("init","2299814236697003");fbq("track","PageView");
   </script>
   <noscript>
