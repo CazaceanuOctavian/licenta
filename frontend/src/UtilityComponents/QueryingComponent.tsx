@@ -6,10 +6,11 @@ interface SearchProps {
     upperPrice: string;
     setLowerPrice: (query: string) => void;
     setUpperPrice: (query: string) => void;
+    category: string[];
+    setCategory: (query: string[]) => void;
 }
 
-const QueryPrice: React.FC<SearchProps> = ({ lowerPice, upperPrice, setLowerPrice, setUpperPrice }) => {
-    const [category, setCategory] = useState<string[]>([]);
+const QueryPrice: React.FC<SearchProps> = ({ lowerPice, upperPrice, category, setLowerPrice, setUpperPrice, setCategory }) => {
 
     const callApi = async () => {
         try {
@@ -42,7 +43,7 @@ const QueryPrice: React.FC<SearchProps> = ({ lowerPice, upperPrice, setLowerPric
                 value={upperPrice}
                 onChange={(e) => setUpperPrice(e.target.value)}
                 placeholder="MaxVal"
-            />
+             /> 
             <select id="category-dropdown">
                 <option value="">--Select--</option>
                 {category.map((option, index) => (
