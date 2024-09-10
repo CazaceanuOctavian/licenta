@@ -35,9 +35,10 @@ def format_data(item):
         itemUrl = item.find_parent().findPreviousSibling().a['href']
         #explodes here when there are no valid images
         try:
-            imageUrl = item.find_parent().findPreviousSibling().find_next('img')['data-src']
+            imageUrl = item.find_previous('img')['data-src']
+            #imageUrl = item.find_parent().findPreviousSibling().find_next('img')['data-src']
         except Exception as e:
-            imageUrl = None
+            imageUrl = 'err'
 
 
         driver.delete_all_cookies()
@@ -49,17 +50,18 @@ def format_data(item):
         print(name)
 
         #=====scraping image=====
-        try:
-            img_data = requests.get(imageUrl).content
-            img_name = product_code + '.jpeg'
-            #
-            filepath = os.path.join('/home/tavi/Desktop/licenta/frontend/public/images', img_name) 
-            with open(filepath, 'wb') as file:
-                file.write(img_data)
-        except Exception as e:
-            print('could not get image, so sad...')
-            filepath = 'err'
-        #=====scraping image=====
+        if imageUrl is not 'err':
+            try:
+                img_data = requests.get(imageUrl).content
+                img_name = product_code + '.jpeg'
+                #
+                filepath = os.path.join('/home/tavi/Desktop/licenta/frontend/public/images', img_name) 
+                with open(filepath, 'wb') as file:
+                    file.write(img_data)
+            except Exception as e:
+                print('could not get image, so sad...')
+                filepath = 'err'
+            #=====scraping image=====
 
         return {
             'name' : name,
@@ -75,7 +77,9 @@ def format_data(item):
     except Exception as e:
         print(str({e}))
         print('EXCEPTION====='+str(name)+str(isInStoc)+'=====EXCEPTION')
-
+        with open('errLog.txt', 'a') as logs:
+            logs.write('ERR FOR PRODUCT: ' + name)
+            logs.write('ERR: ' + str({e}) + '\n')
 
     print()
 
@@ -107,7 +111,9 @@ def scrape(path):
                         writer.writerow(formatted_dict.values())
                     except Exception as e:
                         print(str({e}))
-                        break
+                        with open('errLog.txt', 'a') as logs:
+                            logs.write('ON PATH:' + path +  '\n' + 'PAGE:' + str(current_page) + '\n')
+                        continue
 
         if (next_page_button == None):
             break
@@ -138,7 +144,7 @@ def main():
 
 
 
-#scrape('https://www.vexio.ro/laptop-accesorii/pagina10/')
+scrape('https://www.vexio.ro/laptop-accesorii/pagina10/')
 
 main()
 driver.quit()

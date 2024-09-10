@@ -1,0 +1,2 @@
+ERR FOR PRODUCT: Notebook Asus VivoBook Go 15 E1504FA-BQ050 15.6" FHD AMD Ryzen 5...ERR: {UnboundLocalError("local variable 'img_name' referenced before assignment")}
+ON PATH:https://www.vexio.ro/laptop-accesorii/pagina10/
