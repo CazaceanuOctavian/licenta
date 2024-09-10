@@ -21,7 +21,8 @@ const Navbar: React.FC<SearchProps> = ( {userQuery, setUserQuery, selectedValue,
     }
 
     const decrement = () => {
-        setSelectedPage(selectedPage - 1)
+        if (selectedPage > 1)
+            setSelectedPage(selectedPage - 1)
     }
 
     return (
