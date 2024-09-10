@@ -26,10 +26,19 @@ def format_data(item):
             isInStoc = 1
         else:
             isInStoc = 0
-        price = float(item.find_next(class_='price margin-bottom-xs clearfix col-xs-6 grid-full').text.strip().replace(',','.').split(' ')[0])
+
+        try:
+            price = float(item.find_next(class_='price margin-bottom-xs clearfix col-xs-6 grid-full').text.strip().replace(',','.').split(' ')[0])
+        except Exception as e:
+            price = float(item.find_next(class_='price margin-bottom-xs clearfix col-xs-6 grid-full').text.strip().split('\n')[-1].split(' ')[0].split(',')[0])
+
         itemUrl = item.find_parent().findPreviousSibling().a['href']
         #explodes here when there are no valid images
-        imageUrl = item.find_parent().findPreviousSibling().find_next('img')['data-src']
+        try:
+            imageUrl = item.find_parent().findPreviousSibling().find_next('img')['data-src']
+        except Exception as e:
+            imageUrl = None
+
 
         driver.delete_all_cookies()
         driver.get(itemUrl)
@@ -78,36 +87,14 @@ def scrape(path):
     current_page = 1
 
     while(pagina_existenta):
+
         current_page+=1
         page_source = driver.page_source
         soup = BeautifulSoup(page_source, 'html.parser')
-
-        # last_url = driver.current_url
         
         li_items = soup.find_all(class_="grid-full col-xs-8 col-sm-4 col-md-4")
         category = soup.find(class_='breadcrumb').text.strip().split('\xa0')[-1]
         next_page_button = soup.find(class_ = 'pagination-next')
-
-        #done here because images on product page are too high quality
-        #wait 2 seconds on each large page to make images load --> replace with wait-until(selenium) at some point...
-        # time.sleep(2)
-        # #=====scraping image=====
-        # li_images = soup.find_all(class_="margin-bottom-xs grid-full image text-center col-xs-4 col-sm-3 col-md-3")
-        # counter = 0
-        # for image in li_images:
-        #     imageUrl = image.find_next('img')['data-src']
-        #     try:
-        #         img_data = requests.get(imageUrl).content
-        #         img_name = str(counter)
-        #         #
-        #         filepath = os.path.join('/home/tavi/Desktop/licenta/content', img_name) 
-        #         with open(filepath, 'wb') as file:
-        #             file.write(img_data)
-        #         counter+=1
-        #     except Exception as e:
-        #         print('could not get image, so sad...')
-        #         filepath = 'err'
-        # #=====scraping image=====
 
         with open('vexio_scrape_jpgs.csv', 'a', newline='') as scrapefile:
                 writer = csv.writer(scrapefile)
@@ -151,7 +138,7 @@ def main():
 
 
 
-#scrape('https://www.vexio.ro/laptop-accesorii/pagina503/')
+#scrape('https://www.vexio.ro/laptop-accesorii/pagina10/')
 
 main()
 driver.quit()

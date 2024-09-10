@@ -1,5 +1,4 @@
 import React from "react";
-import dummy_image from "../assets/images/dummy_image.jpg"
 import "../ProductBox.css"
 
 interface Product {
