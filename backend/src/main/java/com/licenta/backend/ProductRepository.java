@@ -17,4 +17,7 @@ public interface ProductRepository extends CrudRepository<Product, Integer> {
 
     @Query(value = "SELECT * FROM products WHERE product_code LIKE ?1", nativeQuery = true)
     List<Product> findProductByProductCode(String productCode);
+
+    @Query(value = "SELECT DISTINCT category FROM products", nativeQuery = true)
+    List<String> fetchProductCategories();
 }

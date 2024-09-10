@@ -2,7 +2,6 @@ import React, { ChangeEvent, useEffect, useState } from "react";
 import { ProductListDefault, ProductListDetailed } from "../ProductComponents/ListComponent";
 import { FetchData } from "./FetchComponent";
 import { Product } from "../ProductComponents/ProductInterface";
-import interpretPath from "./InterpretPathFunc";
 
 interface userQueryProp {
     userQuery: string;
@@ -21,7 +20,7 @@ interface SwitchComponentProps {
 const PopulateComponent: React.FC<userQueryProp> = ({ productDisplayType, userQuery, selectedValue, selectedPage, lowerPrice, upperPrice }) => {
     const [fetchedData, setData] = useState<Product[]>([]);
     
-    let apiQuery: string = interpretPath()
+    let apiQuery: string = '';
 
     const callApi = async ( query: string ) => {
         try {
@@ -53,8 +52,10 @@ const PopulateComponent: React.FC<userQueryProp> = ({ productDisplayType, userQu
     const ContextComponent: React.FC<SwitchComponentProps> = ({ displayType, fetchedData }) => {
         switch (displayType) {
             case "default":
+                apiQuery = 'http://localhost:8080/products/name/searchAndPaginateCustom=';
                 return <ProductListDefault data={fetchedData} />;
             case "detailed":
+                apiQuery = 'http://localhost:8080/products/code/search=';
                 return <ProductListDetailed data={fetchedData} />;
             default:
                 return null;

@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import Search from "../UtilityComponents/SearchComponent";
 import PopulateComponent from "../UtilityComponents/PopulatePageComponent";
 import Navbar from "../UtilityComponents/NavbarComponent";
 import QueryPrice from "../UtilityComponents/QueryingComponent";

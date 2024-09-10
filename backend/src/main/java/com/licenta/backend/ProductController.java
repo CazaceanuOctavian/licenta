@@ -70,4 +70,18 @@ public class ProductController {
         System.out.println("i found the above products by id from the db!");
         return retrievedProductList;
     }
+
+    @CrossOrigin(origins = "*")
+    @GetMapping("/products/categories")
+    public Iterable<String> findCategories() {
+        Iterable<String> retrievedCategoryList;
+        retrievedCategoryList = this.productRepository.fetchProductCategories();
+
+        for (String category : retrievedCategoryList) {
+            System.out.println(category);
+        }
+
+        System.out.println("i the above product by name from the db!");
+        return retrievedCategoryList;
+    }
 }
