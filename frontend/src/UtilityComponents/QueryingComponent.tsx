@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { FetchData } from "./FetchComponent";
 
 interface SearchProps {
     lowerPice: string;
@@ -8,48 +9,50 @@ interface SearchProps {
 }
 
 const QueryPrice: React.FC<SearchProps> = ({ lowerPice, upperPrice, setLowerPrice, setUpperPrice }) => {
-    //const [lowerPice, setLowerPrice] = useState<number>(0)
+    const [category, setCategory] = useState<string[]>([]);
 
-    // useEffect(() => {
-    //     window.addEventListener('keydown', handleKeyPress);
-    //             return () => {
-    //       window.removeEventListener('keydown', handleKeyPress);
-    //     };
-    //   }, []); 
+    const callApi = async () => {
+        try {
+            console.log('FROM APICALL TRYING TO FETCH: CATEGORIES');
+            const data = await FetchData('http://localhost:8080/products/categories');
+            setCategory(data);
+        } catch (error) {
+            console.log('error with fetch operation: ' + error);
+        }
+    };
 
-    //   function getStringOrDefault(value: string | null): string {
-    //     return value !== null ? value : "";
-    // }
-
-    // const handleKeyPress = (event: KeyboardEvent) => {
-    //     if(event.key === "Enter"){
-    //         var search = document.getElementById('search_bar') as HTMLInputElement;
-    //         if(search){
-    //             let userQuery:string = getStringOrDefault(search.value)
-    //             setUserQuery(userQuery)
-    //             //move to another url with page 1 as beginning
-    //         }
-    //     }
-    //   };
+    useEffect(() => {
+        callApi();
+    }, []);
 
     return (
-        <div>
-            <input id="price_bar"
+        <div className="query-options">
+            <input
+                id="price-bar-min"
                 type="number"
                 min="0"
                 value={lowerPice}
                 onChange={(e) => setLowerPrice(e.target.value)}
                 placeholder="MinVal"
             />
-                <input id="price_bar"
-                min="0"
+            <input
+                id="price-bar-max"
                 type="number"
+                min="0"
                 value={upperPrice}
                 onChange={(e) => setUpperPrice(e.target.value)}
                 placeholder="MaxVal"
             />
+            <select id="category-dropdown">
+                <option value="">--Select--</option>
+                {category.map((option, index) => (
+                    <option key={index} value={option}>
+                        {option}
+                    </option>
+                ))}
+            </select>
         </div>
-    )
-}
+    );
+};
 
 export default QueryPrice;

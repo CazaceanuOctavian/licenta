@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { Product} from "../ProductComponents/ProductInterface";
 
-export const FetchData = async (query: string) : Promise<Product[]> => {
+export const FetchData = async (query: string) : Promise<any> => {
     try {
         console.log('trying to fetch with query: ' + query);
         
