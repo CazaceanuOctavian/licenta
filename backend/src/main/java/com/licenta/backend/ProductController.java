@@ -55,7 +55,7 @@ public class ProductController {
     }
 
     @CrossOrigin(origins = "*")
-    @GetMapping("/products/name/searchAndPaginateCustom={productName},{limit},{page},{lowerPrice},{upperPrice}")
+    @GetMapping("/products/name/searchAndPaginateCustom={productName},{limit},{page},{lowerPrice},{upperPrice},")
     public Iterable<Product> customPaginateSearchPrice(@PathVariable String productName,
             @PathVariable int limit, @PathVariable int page, @PathVariable int lowerPrice,
             @PathVariable int upperPrice) {

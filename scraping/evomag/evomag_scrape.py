@@ -1,14 +1,18 @@
 import re
 import os
 import csv
+import requests
 
 from selenium import webdriver
 from selenium.webdriver.firefox.options import Options
 from bs4 import NavigableString
 from bs4 import BeautifulSoup
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
 
 options = Options()
-options.add_argument('--headless')
+#options.add_argument('--headless')
 options.binary_location = '/etc/firefox'
 
 driver = webdriver.Firefox(options=options)
@@ -28,6 +32,18 @@ def format_data(item):
         #price = float(item.find_next(class_='real_price').text.strip().replace(',','.').split(' ')[0])
         price = float(item.find_next(class_='real_price').text.split(' ')[0].replace('.','').replace(',','.'))
 
+        try:
+            #evomag are hidden un 'fa cadou' in care mai e o imagine care este scraped din greseala
+            #imaginea e ascunsa in item, asa ca item.find_next o ia pe ea in loc de imaginea cautata
+            #Solutie --> move forward to the next sibling si apoi apeleaza find_next()
+            imageUrl = item.next_sibling.find_next(loading = 'lazy') 
+            if imageUrl['alt']=='Offer':
+                imageUrl = imageUrl.find_next(loading = 'lazy')['src']
+            else :
+                imageUrl =imageUrl['src']
+        except Exception as e:
+            imageUrl = 'err'
+
         driver.delete_all_cookies()
         driver.get(itemUrl)
 
@@ -39,6 +55,20 @@ def format_data(item):
         if match:
             product_code = match.group(1)
 
+        #=====scraping image=====
+        if imageUrl != 'err':
+            try:
+                img_data = requests.get(imageUrl).content
+                img_name = product_code + '.jpeg'
+                #
+                filepath = os.path.join('/home/tavi/Desktop/licenta/content', img_name) 
+                with open(filepath, 'wb') as file:
+                    file.write(img_data)
+            except Exception as e:
+                print('could not get image, so sad...')
+                filepath = 'err'
+            #=====scraping image=====
+
         return {
             'name' : name,
             'raw_price' : price,
@@ -46,17 +76,24 @@ def format_data(item):
             'is_in_stoc' : isInStoc,
             'url' : itemUrl,
             'product_code' : product_code,
-            'online_mag' : 'evomag'
+            'online_mag' : 'evomag',
+            'img_path' : filepath 
             }
     
     except Exception as e:
         print(str({e}))
         print('EXCEPTION====='+str(name)+str(isInStoc)+'=====EXCEPTION')
+        with open('errLog.txt', 'a') as logs:
+            logs.write('ERR FOR PRODUCT: ' + name)
+            logs.write('ERR: ' + str({e}) + '\n')
 
 def scrape(path):
     target_url = 'https://www.evomag.ro' + path
     #target_url = path
     driver.get(target_url)
+
+    #wait for images to lazly load
+    element = WebDriverWait(driver, 2)
 
     pagina_existenta = True
     current_page = 1
@@ -65,9 +102,8 @@ def scrape(path):
         page_source = driver.page_source
         soup = BeautifulSoup(page_source, 'html.parser')
 
-        # html_content = soup.prettify()
-        # with open('htmldump.txt', 'w') as file:
-        #     file.write(html_content)
+        with open('dump.txt', 'a') as dump:
+            dump.write(page_source)
         
         li_items = soup.find_all(class_="nice_product_item")
         category = soup.find(class_='breadcrumbs').text.strip().split('»')[-1].strip()
@@ -94,14 +130,12 @@ def scrape(path):
                         writer.writerow(formatted_dict.values())
                     except Exception as e:
                         print(str({e}))
-                        break
-
+                        with open('errLog.txt', 'a') as logs:
+                            logs.write('ON PATH:' + path +  '\n' + 'PAGE:' + str(current_page) + '\n')
+                        continue
         new_path = target_url + 'filtru/pagina:' + str(current_page) 
         driver.delete_all_cookies()
         driver.get(new_path)
-
-
-#validare-access
                 
 def main():
     print(os.getcwd())

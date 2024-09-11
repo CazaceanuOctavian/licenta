@@ -26,18 +26,18 @@ const Navbar: React.FC<SearchProps> = ( {userQuery, setUserQuery, selectedValue,
     }
 
     return (
-        <div>
+        <div className="nav-baar">
             <Search userQuery="" setUserQuery={setUserQuery}></Search>
-            <select id="count_dropdown" value={selectedValue} onChange={handleSelectChange}>
+            <select id="count-dropdown" value={selectedValue} onChange={handleSelectChange}>
                 <option value="">--Select--</option>
                 <option value="20">20 Elemente</option>
                 <option value="40">40 Elemente</option>
                 <option value="60">60 Elemente</option>
             </select>
-            <button onClick={decrement}>
+            <button className="prev-button" onClick={decrement}>
                 prev
             </button>
-            <button onClick={increment}>
+            <button className="next-button" onClick={increment}>
                 next
             </button>
         </div>
