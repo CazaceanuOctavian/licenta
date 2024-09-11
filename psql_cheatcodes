@@ -38,6 +38,7 @@ END;
 $$
 LANGUAGE PLPGSQL;
 
+===================workink========================================
 
 CREATE OR REPLACE FUNCTION assign_categories(OUT p_product_code VARCHAR(255), OUT p_duplicates_number INTEGER ) RETURNS SETOF RECORD AS $$
 DECLARE

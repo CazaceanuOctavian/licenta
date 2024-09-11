@@ -22,6 +22,9 @@ def no_nav_strings(iterable):
 
 def format_data(item):
     try:
+
+        
+
         name = item.find_next(class_='npi_name').text.strip()
         itemUrl = 'https://www.evomag.ro' + item.find_next(class_='npi_name').h2.a['href']
         isInStoc = item.find_next(class_=re.compile('stock_', re.IGNORECASE)).text.strip()
@@ -47,6 +50,8 @@ def format_data(item):
         driver.delete_all_cookies()
         driver.get(itemUrl)
 
+        WebDriverWait(driver, 2).until( EC.presence_of_all_elements_located )
+
         page_source = driver.page_source
         other_soup = BeautifulSoup(page_source, 'html.parser')
 
@@ -54,6 +59,8 @@ def format_data(item):
         match = re.search(r'\[ (.*?) \]', product_code)
         if match:
             product_code = match.group(1)
+        
+        product_code = product_code.replace('/','+rep+')
 
         #=====scraping image=====
         if imageUrl != 'err':
@@ -66,6 +73,9 @@ def format_data(item):
                     file.write(img_data)
             except Exception as e:
                 print('could not get image, so sad...')
+                with open('errLog.txt', 'a') as logs:
+                    logs.write('ERR FOR PRODUCT: ' + name)
+                    logs.write('ERR: ' + str({e}) + '\n')
                 filepath = 'err'
             #=====scraping image=====
 
@@ -86,6 +96,7 @@ def format_data(item):
         with open('errLog.txt', 'a') as logs:
             logs.write('ERR FOR PRODUCT: ' + name)
             logs.write('ERR: ' + str({e}) + '\n')
+    
 
 def scrape(path):
     target_url = 'https://www.evomag.ro' + path
@@ -152,11 +163,7 @@ def main():
                 driver.delete_all_cookies()
                 continue
 
+#scrape('/portabile-laptopuri-notebook/filtru/pagina:2')
+
 main()
-#debug
-#scrape('https://www.evomag.ro/telefoane-tablete-accesorii-tablete-epaper-accesorii-tablete-epaper/filtru/pagina:89')
-
-#end debug
-
-
 driver.quit()
