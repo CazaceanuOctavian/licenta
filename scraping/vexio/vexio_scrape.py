@@ -2,7 +2,6 @@ import re
 import os
 import csv
 import requests
-import time
 
 from selenium import webdriver
 from selenium.webdriver.firefox.options import Options
@@ -30,16 +29,16 @@ def format_data(item):
         try:
             price = float(item.find_next(class_='price margin-bottom-xs clearfix col-xs-6 grid-full').text.strip().replace(',','.').split(' ')[0])
         except Exception as e:
+            #TODO -->fix bug where this gets value of 2.7 instead of 2799 
             price = float(item.find_next(class_='price margin-bottom-xs clearfix col-xs-6 grid-full').text.strip().split('\n')[-1].split(' ')[0].split(',')[0])
 
         itemUrl = item.find_parent().findPreviousSibling().a['href']
-        #explodes here when there are no valid images
+        #TODO -->fix bug when the first image off of every big page gets skipped 
         try:
             imageUrl = item.find_previous('img')['data-src']
             #imageUrl = item.find_parent().findPreviousSibling().find_next('img')['data-src']
         except Exception as e:
             imageUrl = 'err'
-
 
         driver.delete_all_cookies()
         driver.get(itemUrl)
@@ -50,7 +49,7 @@ def format_data(item):
         print(name)
 
         #=====scraping image=====
-        if imageUrl is not 'err':
+        if imageUrl != 'err':
             try:
                 img_data = requests.get(imageUrl).content
                 img_name = product_code + '.jpeg'
@@ -141,10 +140,6 @@ def main():
                 print(str({e}))
                 driver.delete_all_cookies()
                 continue
-
-
-
-scrape('https://www.vexio.ro/laptop-accesorii/pagina10/')
 
 main()
 driver.quit()
