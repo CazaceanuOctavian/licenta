@@ -13,7 +13,11 @@ public interface ProductRepository extends CrudRepository<Product, Integer> {
     List<Product> findProductByNameLimit(String name, int limit, int page);
 
     @Query(value = "SELECT * FROM products WHERE to_tsvector(name) @@ plainto_tsquery(?1) AND raw_price BETWEEN ?4 AND ?5 LIMIT ?2 OFFSET (?3-1) * ?2", nativeQuery = true)
-    List<Product> customSearchQuery(String name, int limit, int page, int lowerPrice, int upperPrice);
+    List<Product> customSearchQueryByPrice(String name, int limit, int page, int lowerPrice, int upperPrice);
+
+    @Query(value = "SELECT * FROM products WHERE to_tsvector(name) @@ plainto_tsquery(?1) AND raw_price BETWEEN ?4 AND ?5 AND category LIKE ?6 LIMIT ?2 OFFSET (?3-1) * ?2", nativeQuery = true)
+    List<Product> customSearchQueryByCategoryAndPrice(String name, int limit, int page, int lowerPrice, int upperPrice,
+            String category);
 
     @Query(value = "SELECT * FROM products WHERE product_code LIKE ?1", nativeQuery = true)
     List<Product> findProductByProductCode(String productCode);

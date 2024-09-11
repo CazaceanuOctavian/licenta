@@ -6,21 +6,28 @@ interface SearchProps {
     upperPrice: string;
     setLowerPrice: (query: string) => void;
     setUpperPrice: (query: string) => void;
-    category: string[];
-    setCategory: (query: string[]) => void;
+    categories: string[];
+    setCategories: (query: string[]) => void;
+    selectedCategory: string
+    setSelectedCategory: (query: string) => void;
 }
 
-const QueryPrice: React.FC<SearchProps> = ({ lowerPice, upperPrice, category, setLowerPrice, setUpperPrice, setCategory }) => {
+const QueryPrice: React.FC<SearchProps> = ({ selectedCategory, lowerPice, upperPrice, categories, setLowerPrice, setUpperPrice, setCategories, setSelectedCategory }) => {
 
     const callApi = async () => {
         try {
             console.log('FROM APICALL TRYING TO FETCH: CATEGORIES');
             const data = await FetchData('http://localhost:8080/products/categories');
-            setCategory(data);
+            setCategories(data);
         } catch (error) {
             console.log('error with fetch operation: ' + error);
         }
     };
+
+    const handleCategoryChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
+        setSelectedCategory(event.target.value);
+      };
+
 
     useEffect(() => {
         callApi();
@@ -36,6 +43,7 @@ const QueryPrice: React.FC<SearchProps> = ({ lowerPice, upperPrice, category, se
                 onChange={(e) => setLowerPrice(e.target.value)}
                 placeholder="MinVal"
             />
+            
             <input
                 id="price-bar-max"
                 type="number"
@@ -44,9 +52,10 @@ const QueryPrice: React.FC<SearchProps> = ({ lowerPice, upperPrice, category, se
                 onChange={(e) => setUpperPrice(e.target.value)}
                 placeholder="MaxVal"
              /> 
-            <select id="category-dropdown">
-                <option value="">--Select--</option>
-                {category.map((option, index) => (
+
+            <select id="category-dropdown" value={selectedCategory} onChange={handleCategoryChange}>
+                <option>--Select--</option>
+                {categories.map((option, index) => (
                     <option key={index} value={option}>
                         {option}
                     </option>

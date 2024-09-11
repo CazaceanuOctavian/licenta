@@ -28,9 +28,11 @@ public class Product {
     private String url;
     @Column(name = "imagepath")
     private String imagePath;
+    @Column(name = "category")
+    private String category;
 
     public Product(String name, float price, boolean isInStock, byte rating, String productCode, String url,
-            String imagePath) {
+            String imagePath, String category) {
         this.name = name;
         this.price = price;
         this.isInStock = isInStock;
@@ -38,10 +40,19 @@ public class Product {
         this.productCode = productCode;
         this.url = url;
         this.imagePath = imagePath;
+        this.category = category;
     }
 
     private Product() {
 
+    }
+
+    public void setCategory(String category) {
+        this.category = category;
+    }
+
+    public String getCategory() {
+        return this.category;
     }
 
     public String getImagePath() {

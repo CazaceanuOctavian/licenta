@@ -1,3 +1,5 @@
+//oh, my beloved...
+
 import React, { useState, useEffect } from 'react';
 import { ProductListDefault, ProductListDetailed } from './ProductComponents/ListComponent';
 

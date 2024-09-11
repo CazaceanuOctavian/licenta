@@ -6,18 +6,26 @@ import { Product } from "../ProductComponents/ProductInterface";
 interface userQueryProp {
     userQuery: string;
     productDisplayType: string
+    queryType: string
     selectedValue?: string
     selectedPage?: number
     lowerPrice?: string
     upperPrice?: string
+    category?: string
 }
 
 interface SwitchComponentProps {
     displayType: string;
+    queryType: string;
     fetchedData: Product[];
 }
 
-const PopulateComponent: React.FC<userQueryProp> = ({ productDisplayType, userQuery, selectedValue, selectedPage, lowerPrice, upperPrice }) => {
+// interface QueryComponentProps {
+//     queryType: string;
+//     fetchedData: Product[];
+// }
+
+const PopulateComponent: React.FC<userQueryProp> = ({ queryType, productDisplayType, userQuery, selectedValue, selectedPage, lowerPrice, upperPrice, category }) => {
     const [fetchedData, setData] = useState<Product[]>([]);
     
     let apiQuery: string = '';
@@ -42,29 +50,49 @@ const PopulateComponent: React.FC<userQueryProp> = ({ productDisplayType, userQu
                 lowerPrice = '0'
             if (upperPrice === '')
                 upperPrice = '999999'
-            callApi(userQuery + ',' + selectedValue + ',' + selectedPage + ',' + lowerPrice + ',' + upperPrice)
+            callApi(userQuery + ',' + selectedValue + ',' + selectedPage + ',' + lowerPrice + ',' + upperPrice + ',' + category)
         }
         else {
             callApi(userQuery)
         }
-      }, [userQuery, selectedValue, selectedPage, lowerPrice, upperPrice]); 
+      }, [userQuery, selectedValue, selectedPage, lowerPrice, upperPrice, category]); 
 
-    const ContextComponent: React.FC<SwitchComponentProps> = ({ displayType, fetchedData }) => {
+    //TODO --> queryType switch statement might be shit, look to see if you can refactor at some point...
+    const ContextComponent: React.FC<SwitchComponentProps> = ({ displayType, queryType, fetchedData }) => {
+        switch(queryType) {
+            case "withNoCategory":
+                apiQuery = 'http://localhost:8080/products/name/searchAndPaginateCustom=';
+                console.log('called withNoCategory')
+                break;
+            case "withCategory":
+                if (category === '') {
+                    apiQuery = 'http://localhost:8080/products/name/searchAndPaginateCustom=';
+                    console.log('called withCategory but found no category so defaulted to withNoCategory')
+                }
+                else {
+                    apiQuery = 'http://localhost:8080/products/name/searchAndPaginateCustomCategory=';
+                    console.log('called withCategory')
+                }
+                break;
+            case "withProductCode":
+                apiQuery = 'http://localhost:8080/products/code/search=';
+                console.log('called withProductCode')
+                break;
+        }
+        //======================================================================
         switch (displayType) {
             case "default":
-                apiQuery = 'http://localhost:8080/products/name/searchAndPaginateCustom=';
                 return <ProductListDefault data={fetchedData} />;
             case "detailed":
-                apiQuery = 'http://localhost:8080/products/code/search=';
                 return <ProductListDetailed data={fetchedData} />;
             default:
                 return null;
-        }
+        }  
     };
 
     return (
         <div>
-                <ContextComponent displayType={productDisplayType} fetchedData={fetchedData}></ContextComponent>
+                <ContextComponent displayType={productDisplayType} queryType={queryType} fetchedData={fetchedData}></ContextComponent>
         </div>
     )
 }

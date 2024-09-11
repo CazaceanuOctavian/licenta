@@ -56,12 +56,30 @@ public class ProductController {
 
     @CrossOrigin(origins = "*")
     @GetMapping("/products/name/searchAndPaginateCustom={productName},{limit},{page},{lowerPrice},{upperPrice}")
-    public Iterable<Product> customSearch(@PathVariable String productName,
+    public Iterable<Product> customPaginateSearchPrice(@PathVariable String productName,
             @PathVariable int limit, @PathVariable int page, @PathVariable int lowerPrice,
             @PathVariable int upperPrice) {
         Iterable<Product> retrievedProductList;
-        retrievedProductList = this.productRepository.customSearchQuery(productName, limit, page, lowerPrice,
+        retrievedProductList = this.productRepository.customSearchQueryByPrice(productName, limit, page, lowerPrice,
                 upperPrice);
+
+        for (Product product : retrievedProductList) {
+            System.out.println(product.toString());
+        }
+
+        System.out.println("i found the above products by id from the db!");
+        return retrievedProductList;
+    }
+
+    @CrossOrigin(origins = "*")
+    @GetMapping("/products/name/searchAndPaginateCustomCategory={productName},{limit},{page},{lowerPrice},{upperPrice},{category}")
+    public Iterable<Product> customPaginateSearchPriceCategory(@PathVariable String productName,
+            @PathVariable int limit, @PathVariable int page, @PathVariable int lowerPrice,
+            @PathVariable int upperPrice, @PathVariable String category) {
+        Iterable<Product> retrievedProductList;
+        retrievedProductList = this.productRepository.customSearchQueryByCategoryAndPrice(productName, limit, page,
+                lowerPrice,
+                upperPrice, category);
 
         for (Product product : retrievedProductList) {
             System.out.println(product.toString());
