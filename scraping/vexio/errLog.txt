@@ -11596,3 +11596,63 @@ PAGE:82
 ERR FOR PRODUCT: Memorie Patriot Viper Elite RGB 16GB DDR5 5600MHz CL38 Single KitERR: {UnboundLocalError("local variable 'img_name' referenced before assignment")}
 ON PATH:https://www.vexio.ro/memorii-ram/
 PAGE:82
+ERR FOR PRODUCT: Folie discretie ecran Lenovo 0A61771, 15.6 inchERR: {UnboundLocalError("local variable 'img_name' referenced before assignment")}
+ON PATH:https://www.vexio.ro/laptop-accesorii/
+PAGE:2
+ERR FOR PRODUCT: Memorie laptop Corsair notebook 8GB, DDR3, 1066MHz, CL7 Dual...ERR: {UnboundLocalError("local variable 'img_name' referenced before assignment")}
+ON PATH:https://www.vexio.ro/laptop-accesorii/
+PAGE:2
+ERR FOR PRODUCT: Memorie laptop Corsair notebook Kit 2x4GB, DDR3, 1333MHz CL9 Dual...ERR: {UnboundLocalError("local variable 'img_name' referenced before assignment")}
+ON PATH:https://www.vexio.ro/laptop-accesorii/
+PAGE:2
+ERR FOR PRODUCT: Husa AntiSoc Case Logic LAPS116K, pentru laptop, 15.6 inch, NegruERR: {UnboundLocalError("local variable 'img_name' referenced before assignment")}
+ON PATH:https://www.vexio.ro/laptop-accesorii/
+PAGE:2
+ERR FOR PRODUCT: Folie discretie ecran Lenovo 0A61771, 15.6 inchERR: {UnboundLocalError("local variable 'img_name' referenced before assignment")}
+ON PATH:https://www.vexio.ro/laptop-accesorii/
+PAGE:2
+ERR FOR PRODUCT: Memorie laptop Corsair notebook 8GB, DDR3, 1066MHz, CL7 Dual...ERR: {UnboundLocalError("local variable 'img_name' referenced before assignment")}
+ON PATH:https://www.vexio.ro/laptop-accesorii/
+PAGE:2
+ERR FOR PRODUCT: Memorie laptop Corsair notebook Kit 2x4GB, DDR3, 1333MHz CL9 Dual...ERR: {UnboundLocalError("local variable 'img_name' referenced before assignment")}
+ON PATH:https://www.vexio.ro/laptop-accesorii/
+PAGE:2
+ERR FOR PRODUCT: Husa AntiSoc Case Logic LAPS116K, pentru laptop, 15.6 inch, NegruERR: {UnboundLocalError("local variable 'img_name' referenced before assignment")}
+ON PATH:https://www.vexio.ro/laptop-accesorii/
+PAGE:2
+ERR FOR PRODUCT: Memorie laptop Zeppelin SODIMM, 8GB, DDR3, 1333MHz, BulkERR: {UnboundLocalError("local variable 'img_name' referenced before assignment")}
+ON PATH:https://www.vexio.ro/laptop-accesorii/
+PAGE:2
+ERR FOR PRODUCT: Memorie laptop Kingston KVR16S11S6/2, 2GB DDR3 1600MHz, SODIMMERR: {UnboundLocalError("local variable 'img_name' referenced before assignment")}
+ON PATH:https://www.vexio.ro/laptop-accesorii/
+PAGE:2
+ERR FOR PRODUCT: Memorie laptop Corsair 8GB DDR3L SODIMM, 1600MHz Dual ChannelERR: {UnboundLocalError("local variable 'img_name' referenced before assignment")}
+ON PATH:https://www.vexio.ro/laptop-accesorii/
+PAGE:2
+ERR FOR PRODUCT: Dicota Rucsac notebook D30675 ECO 14-15.6 inch cu husa detasabilaERR: {UnboundLocalError("local variable 'img_name' referenced before assignment")}
+ON PATH:https://www.vexio.ro/laptop-accesorii/
+PAGE:2
+ERR FOR PRODUCT: Folie discretie ecran Lenovo 0A61771, 15.6 inchERR: {UnboundLocalError("local variable 'img_name' referenced before assignment")}
+ON PATH:https://www.vexio.ro/laptop-accesorii/
+PAGE:2
+ERR FOR PRODUCT: Memorie laptop Corsair notebook 8GB, DDR3, 1066MHz, CL7 Dual...ERR: {UnboundLocalError("local variable 'img_name' referenced before assignment")}
+ON PATH:https://www.vexio.ro/laptop-accesorii/
+PAGE:2
+ERR FOR PRODUCT: Memorie laptop Corsair notebook Kit 2x4GB, DDR3, 1333MHz CL9 Dual...ERR: {UnboundLocalError("local variable 'img_name' referenced before assignment")}
+ON PATH:https://www.vexio.ro/laptop-accesorii/
+PAGE:2
+ERR FOR PRODUCT: Husa AntiSoc Case Logic LAPS116K, pentru laptop, 15.6 inch, NegruERR: {UnboundLocalError("local variable 'img_name' referenced before assignment")}
+ON PATH:https://www.vexio.ro/laptop-accesorii/
+PAGE:2
+ERR FOR PRODUCT: Memorie laptop Zeppelin SODIMM, 8GB, DDR3, 1333MHz, BulkERR: {UnboundLocalError("local variable 'img_name' referenced before assignment")}
+ON PATH:https://www.vexio.ro/laptop-accesorii/
+PAGE:2
+ERR FOR PRODUCT: Memorie laptop Kingston KVR16S11S6/2, 2GB DDR3 1600MHz, SODIMMERR: {UnboundLocalError("local variable 'img_name' referenced before assignment")}
+ON PATH:https://www.vexio.ro/laptop-accesorii/
+PAGE:2
+ERR FOR PRODUCT: Folie discretie ecran Lenovo 0A61771, 15.6 inchERR: {UnboundLocalError("local variable 'img_name' referenced before assignment")}
+ON PATH:https://www.vexio.ro/laptop-accesorii/
+PAGE:2
+ERR FOR PRODUCT: Memorie laptop Corsair Vengeance 16GB DDR4 2400MHz CL16 1.2vERR: {UnboundLocalError("local variable 'img_name' referenced before assignment")}
+ON PATH:https://www.vexio.ro/laptop-accesorii/
+PAGE:3

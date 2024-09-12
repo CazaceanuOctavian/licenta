@@ -22,9 +22,6 @@ def no_nav_strings(iterable):
 
 def format_data(item):
     try:
-
-        
-
         name = item.find_next(class_='npi_name').text.strip()
         itemUrl = 'https://www.evomag.ro' + item.find_next(class_='npi_name').h2.a['href']
         isInStoc = item.find_next(class_=re.compile('stock_', re.IGNORECASE)).text.strip()
@@ -68,7 +65,7 @@ def format_data(item):
                 img_data = requests.get(imageUrl).content
                 img_name = product_code + '.jpeg'
                 #
-                filepath = os.path.join('/home/tavi/Desktop/licenta/content', img_name) 
+                filepath = os.path.join('/home/tavi/Desktop/licenta/frontend/public/images', img_name) 
                 with open(filepath, 'wb') as file:
                     file.write(img_data)
             except Exception as e:
@@ -113,7 +110,7 @@ def scrape(path):
         page_source = driver.page_source
         soup = BeautifulSoup(page_source, 'html.parser')
 
-        with open('dump.txt', 'a') as dump:
+        with open('dump.txt', 'w') as dump:
             dump.write(page_source)
         
         li_items = soup.find_all(class_="nice_product_item")
@@ -130,7 +127,7 @@ def scrape(path):
         if next_page_button is None:
             break
 
-        with open('evomag_scrape_new.csv', 'a') as scrapefile:
+        with open('evomag_scrape_shitted.csv', 'a') as scrapefile:
                 writer = csv.writer(scrapefile)
                 for element in li_items:
                     try:

@@ -1,0 +1,6 @@
+ERR FOR PRODUCT: Laptop Lenovo V15 G4 IRU (Procesor Intel® Core™ i7-1355U (12M Cache, up to 5.00 GHz), 15.6" FHD, 16GB, 512GB SSD, Intel® Iris Xe Graphics, Negru)ERR: {FileNotFoundError(2, 'No such file or directory')}
+ERR FOR PRODUCT: Laptop ASUS Vivobook X1504ZA (Procesor Intel Core i3-1215U (10M Cache, up to 4.40 GHz) 15.6" FHD, 8GB, 512GB SSD, Intel UHD Graphics, Argintiu)ERR: {FileNotFoundError(2, 'No such file or directory')}
+ERR FOR PRODUCT: Laptop ASUS Vivobook A1504VA (Procesor Intel Core i5-1335U (12M Cache, up to 4.60 GHz) 15.6" FHD, 8GB, 512GB SSD, Intel Iris Xe Graphics, Albastru)ERR: {FileNotFoundError(2, 'No such file or directory')}
+ERR FOR PRODUCT: Laptop Asus X515KA (Procesor Intel® Celeron® N4500 (4M Cache, up to 2.80 GHz) 15.6" FHD, 8GB, 512GB SSD, Intel® UHD Graphics, Argintiu)ERR: {FileNotFoundError(2, 'No such file or directory')}
+ERR FOR PRODUCT: Laptop Gaming ASUS TUF F15 FX507VV (Procesor Intel® Core™ i7-13620H (24M Cache, up to 4.90 GHz) 15.6" FHD 144Hz, 32GB, 1TB SSD, nVidia GeForce RTX 4060 @8GB, Negru/Gri)ERR: {FileNotFoundError(2, 'No such file or directory')}
+ERR FOR PRODUCT: Laptop ASUS VivoBook 17 X1704VA (Procesor Intel® Core™ i5-1335U (12M Cache, up to 4.60 GHz, with IPU) 17.3" FHD, 16GB, 1TB SSD, Intel Iris Xe Graphics, Albastru)ERR: {FileNotFoundError(2, 'No such file or directory')}
