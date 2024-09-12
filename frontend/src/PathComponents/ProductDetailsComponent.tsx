@@ -16,7 +16,7 @@ const ProductDetailsComponent: React.FC = () => {
                     <p>
                         statistics will go here at some point
                     </p>
-                    <GraphComponent />
+                    <GraphComponent userQuery={product_id}/>
                 </h1>
             </div>
         </div>

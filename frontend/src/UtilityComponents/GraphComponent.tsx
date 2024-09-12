@@ -5,7 +5,12 @@ import { Chart as ChartJS, CategoryScale, LinearScale, BarElement, Title, Toolti
 
 ChartJS.register(CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend);
 
-const GraphComponent: React.FC = () => {
+
+interface userQueryProp {
+    userQuery: string;
+}
+
+const GraphComponent: React.FC<userQueryProp> = ({ userQuery }) => {
     const [graphData, setGraphData] = useState<string>('');
     const [arrayGraphData, setArrayGraphData] = useState<number[]>([]);
 
@@ -38,7 +43,7 @@ const GraphComponent: React.FC = () => {
     const callApi = async () => {
         try {
             console.log('FROM APICALL TRYING TO FETCH: PRICE HISTORY');
-            const data = await FetchData('http://localhost:8080/products/productHistory=Z15T001D0');
+            const data = await FetchData('http://localhost:8080/products/productHistory=' + userQuery);
             setGraphData(data);
         } catch (error) {
             console.log('error with fetch operation: ' + error);
