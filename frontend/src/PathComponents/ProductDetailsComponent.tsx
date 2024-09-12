@@ -1,3 +1,4 @@
+import GraphComponent from "../UtilityComponents/GraphComponent";
 import PopulateComponent from "../UtilityComponents/PopulatePageComponent";
 
 const ProductDetailsComponent: React.FC = () => {
@@ -15,6 +16,7 @@ const ProductDetailsComponent: React.FC = () => {
                     <p>
                         statistics will go here at some point
                     </p>
+                    <GraphComponent />
                 </h1>
             </div>
         </div>
