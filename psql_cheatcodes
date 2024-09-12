@@ -74,7 +74,41 @@ END;
 $$
 LANGUAGE PLPGSQL;
 
+==============test=================================================
+UPDATE products_test
+SET raw_price = floor(random() * (1500 - 50 + 1) + 50);
+--------------------------
+select MIN(products.raw_price) as og_raw_price, MIN(products_test.raw_price) as newest_raw_price, products.product_code, 
+ from products
+ join products_test ON products.product_code = products_test.product_code 
+ GROUP BY products.product_code;
+--------------------------
+!!!god_script
 
+DO $$
+DECLARE
+    sql_query TEXT := 'SELECT * FROM table1';  -- Start with base query
+    join_clause TEXT;
+    i INT;
+    table_names TEXT[] := ARRAY['table2', 'table3', 'table4'];  -- Array of tables to join
+BEGIN
+    FOR i IN 1..array_length(table_names, 1) LOOP
+        join_clause := ' INNER JOIN ' || table_names[i] || ' ON table1.id = ' || table_names[i] || '.table1_id';
+        sql_query := sql_query || join_clause;
+    END LOOP;
+
+    -- Execute the dynamic query
+    EXECUTE sql_query;
+END $$; 
+--------------------------
+SELECT tablename
+FROM pg_catalog.pg_tables
+WHERE schemaname = 'public'
+--------------------------
+SELECT ARRAY(SELECT tablename
+                 FROM pg_catalog.pg_tables
+                 WHERE schemaname = 'public') INTO table_names;
+--------------------------  
 
 
 
