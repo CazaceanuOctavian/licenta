@@ -127,7 +127,7 @@ def scrape(path):
         if next_page_button is None:
             break
 
-        with open('evomag_scrape_shitted.csv', 'a') as scrapefile:
+        with open('evomag_scrape_new.csv', 'a') as scrapefile:
                 writer = csv.writer(scrapefile)
                 for element in li_items:
                     try:

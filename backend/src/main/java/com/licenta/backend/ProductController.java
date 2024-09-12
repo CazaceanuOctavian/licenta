@@ -102,4 +102,18 @@ public class ProductController {
         System.out.println("i the above product by name from the db!");
         return retrievedCategoryList;
     }
+
+    @CrossOrigin(origins = "*")
+    @GetMapping("/products/productHistory={product_code}")
+    public Iterable<String> findHistory(@PathVariable String product_code) {
+        Iterable<String> retrievedCategoryList;
+        retrievedCategoryList = this.productRepository.fetchProductHistory(product_code);
+
+        for (String category : retrievedCategoryList) {
+            System.out.println(category);
+        }
+
+        System.out.println("i the above product by name from the db!");
+        return retrievedCategoryList;
+    }
 }
