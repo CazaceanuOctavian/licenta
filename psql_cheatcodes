@@ -46,6 +46,7 @@ DECLARE
 	        SELECT product_code, COUNT(product_code) as num_of_duplicates FROM products GROUP BY product_code HAVING COUNT(product_code) > 1;
 	iterator RECORD;
 	p_category_evomag VARCHAR(225);
+	p_category_vexio VARCHAR(225);
 BEGIN
 	OPEN duplicates_cursor;
 	LOOP
@@ -60,13 +61,18 @@ BEGIN
 	        FROM products
 	        WHERE retailer LIKE 'evomag' AND product_code LIKE p_product_code;
 	        
-	        IF p_category_evomag NOT LIKE (SELECT category FROM products WHERE retailer LIKE 'vexio' and product_code LIKE p_product_code LIMIT 1) THEN
-			UPDATE products 
-			SET category = (SELECT category FROM products WHERE retailer LIKE 'vexio' and product_code LIKE p_product_code LIMIT 1)
-			WHERE retailer LIKE 'evomag' AND category LIKE p_category_evomag;
-		
-		END IF;
+		SELECT category 
+	        INTO p_category_vexio
+	        FROM products
+	        WHERE retailer LIKE 'vexio' AND product_code LIKE p_product_code;
 	        
+	       	RAISE NOTICE 'EVOMAG: % - VEXIO: %', p_category_evomag, p_category_vexio;
+	       	
+	       	IF p_category_evomag NOT LIKE p_category_vexio THEN
+			UPDATE products
+			SET category = p_category_vexio
+			WHERE category like p_category_evomag; 
+	        END IF;
 	        RETURN NEXT;
 	END LOOP; 
 	CLOSE duplicates_cursor;
