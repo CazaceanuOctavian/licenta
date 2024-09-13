@@ -2,8 +2,12 @@ import re
 import os
 import csv
 import requests
+import datetime
 
 from selenium import webdriver
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.firefox.options import Options
 from bs4 import NavigableString
 from bs4 import BeautifulSoup
@@ -12,6 +16,8 @@ options = Options()
 #options.add_argument('--headless')
 options.binary_location = '/etc/firefox'
 driver = webdriver.Firefox(options=options)
+
+currentDate = datetime.datetime.now().date()
 
 def no_nav_strings(iterable):
     return list(filter(lambda x: type(x) != NavigableString, iterable))
@@ -45,8 +51,11 @@ def format_data(item):
         page_source = driver.page_source
         other_soup = BeautifulSoup(page_source, 'html.parser')
 
+        #WebDriverWait(driver, 2).until( EC.presence_of_all_elements_located )
+
         product_code = other_soup.find(class_='model').text.strip()
         print(name)
+        product_code = product_code.replace('/','+rep+')
 
         #=====scraping image=====
         if imageUrl != 'err':
@@ -58,9 +67,11 @@ def format_data(item):
                 with open(filepath, 'wb') as file:
                     file.write(img_data)
             except Exception as e:
-                print('could not get image, so sad...')
-                filepath = 'err'
-            #=====scraping image=====
+                with open('output/errLog-' + str(currentDate) + '.txt', 'a') as logs:
+                    logs.write('ERR FOR IMAGE SCRAPING: ' + name)
+                    logs.write('ERR: ' + str({e}) + '\n')
+                img_name = 'not_found.jpeg'
+        #=====scraping image=====
 
         return {
             'name' : name,
@@ -76,8 +87,8 @@ def format_data(item):
     except Exception as e:
         print(str({e}))
         print('EXCEPTION====='+str(name)+str(isInStoc)+'=====EXCEPTION')
-        with open('errLog.txt', 'a') as logs:
-            logs.write('ERR FOR PRODUCT: ' + name)
+        with open('output/errLog-' + str(currentDate) + '.txt', 'a') as logs:
+            logs.write('ERR IN FORMAT_DATA FOR PRODUCT: ' + name)
             logs.write('ERR: ' + str({e}) + '\n')
 
     print()
@@ -99,7 +110,7 @@ def scrape(path):
         category = soup.find(class_='breadcrumb').text.strip().split('\xa0')[-1]
         next_page_button = soup.find(class_ = 'pagination-next')
 
-        with open('vexio_.csv', 'a', newline='') as scrapefile:
+        with open('output/vexio_' + str(currentDate) + '.csv', 'a', newline='') as scrapefile:
                 writer = csv.writer(scrapefile)
                 for element in li_items:
                     try:
@@ -110,7 +121,7 @@ def scrape(path):
                         writer.writerow(formatted_dict.values())
                     except Exception as e:
                         print(str({e}))
-                        with open('errLog.txt', 'a') as logs:
+                        with open('output/errLog-' + str(currentDate) + '.txt', 'a') as logs:
                             logs.write('ON PATH:' + path +  '\n' + 'PAGE:' + str(current_page) + '\n')
                         continue
 
@@ -138,6 +149,8 @@ def main():
                 scrape(path=path)
             except Exception as e:
                 print(str({e}))
+                with open('output/errLog-' + str(currentDate) + '.txt', 'a') as logs:
+                    logs.write('ERR MAIN: ' + str({e}))
                 driver.delete_all_cookies()
                 continue
 
