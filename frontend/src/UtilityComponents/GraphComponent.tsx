@@ -57,7 +57,7 @@ const GraphComponent: React.FC<userQueryProp> = ({ userQuery }) => {
     useEffect(() => {
         if (graphData) {
             // Transform graphData to array of numbers
-            const parsedData = graphData[0].split(',').map(Number)
+            const parsedData = graphData[0].split(',').filter(value => value !== 'null').map(Number)
             setArrayGraphData(parsedData);
         }
     }, [graphData]);

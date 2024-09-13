@@ -99,7 +99,7 @@ def scrape(path):
         category = soup.find(class_='breadcrumb').text.strip().split('\xa0')[-1]
         next_page_button = soup.find(class_ = 'pagination-next')
 
-        with open('vexio_scrape_shitted.csv', 'a', newline='') as scrapefile:
+        with open('vexio_scrape_big.csv', 'a', newline='') as scrapefile:
                 writer = csv.writer(scrapefile)
                 for element in li_items:
                     try:

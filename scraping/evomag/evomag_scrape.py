@@ -84,7 +84,7 @@ def format_data(item):
             'url' : itemUrl,
             'product_code' : product_code,
             'online_mag' : 'evomag',
-            'img_path' : filepath 
+            'img_path' : '/images/' + img_name
             }
     
     except Exception as e:
@@ -127,7 +127,7 @@ def scrape(path):
         if next_page_button is None:
             break
 
-        with open('evomag_scrape_new.csv', 'a') as scrapefile:
+        with open('evomag_scrape_big.csv', 'a') as scrapefile:
                 writer = csv.writer(scrapefile)
                 for element in li_items:
                     try:

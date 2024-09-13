@@ -4,3 +4,160 @@ ERR FOR PRODUCT: Laptop ASUS Vivobook A1504VA (Procesor Intel Core i5-1335U (12M
 ERR FOR PRODUCT: Laptop Asus X515KA (Procesor Intel® Celeron® N4500 (4M Cache, up to 2.80 GHz) 15.6" FHD, 8GB, 512GB SSD, Intel® UHD Graphics, Argintiu)ERR: {FileNotFoundError(2, 'No such file or directory')}
 ERR FOR PRODUCT: Laptop Gaming ASUS TUF F15 FX507VV (Procesor Intel® Core™ i7-13620H (24M Cache, up to 4.90 GHz) 15.6" FHD 144Hz, 32GB, 1TB SSD, nVidia GeForce RTX 4060 @8GB, Negru/Gri)ERR: {FileNotFoundError(2, 'No such file or directory')}
 ERR FOR PRODUCT: Laptop ASUS VivoBook 17 X1704VA (Procesor Intel® Core™ i5-1335U (12M Cache, up to 4.60 GHz, with IPU) 17.3" FHD, 16GB, 1TB SSD, Intel Iris Xe Graphics, Albastru)ERR: {FileNotFoundError(2, 'No such file or directory')}
+ERR FOR PRODUCT: Nou! Telefon Mobil Apple iPhone 16 Plus, Super Retina XDR OLED 6.7", 512GB Flash, Camera Duala 48 + 12 MP, Wi-Fi, 5G, iOS (Verde)ERR: {AttributeError("'NoneType' object has no attribute 'text'")}
+ON PATH:/telefoane-tablete-accesorii-telefoane/
+PAGE:23
+ERR FOR PRODUCT: Nou! Telefon Mobil Apple iPhone 16 Pro Max, LTPO Super Retina XDR OLED 6.9", 512GB Flash, Camera Tripla 48 + 12 + 48 MP, Wi-Fi, 5G, iOS (Negru)ERR: {AttributeError("'NoneType' object has no attribute 'text'")}
+ON PATH:/telefoane-tablete-accesorii-telefoane/
+PAGE:23
+ERR FOR PRODUCT: Nou! Telefon Mobil Apple iPhone 16, Super Retina XDR OLED 6.1", 128GB Flash, Camera Duala 48 + 12 MP, Wi-Fi, 5G, iOS (Negru)ERR: {AttributeError("'NoneType' object has no attribute 'text'")}
+ON PATH:/telefoane-tablete-accesorii-telefoane/
+PAGE:23
+ERR FOR PRODUCT: Nou! Telefon Mobil Apple iPhone 16 Pro, LTPO Super Retina XDR OLED 6.3", 256GB Flash, Camera Tripla 48 + 12 + 48 MP, Wi-Fi, 5G, iOS (Alb)ERR: {AttributeError("'NoneType' object has no attribute 'text'")}
+ON PATH:/telefoane-tablete-accesorii-telefoane/
+PAGE:23
+ERR FOR PRODUCT: Nou! Telefon Mobil Apple iPhone 16 Plus, Super Retina XDR OLED 6.7", 256GB Flash, Camera Duala 48 + 12 MP, Wi-Fi, 5G, iOS (Albastru)ERR: {AttributeError("'NoneType' object has no attribute 'text'")}
+ON PATH:/telefoane-tablete-accesorii-telefoane/
+PAGE:23
+ERR FOR PRODUCT: Nou! Telefon Mobil Apple iPhone 16 Pro, LTPO Super Retina XDR OLED 6.3", 128GB Flash, Camera Tripla 48 + 12 + 48 MP, Wi-Fi, 5G, iOS (Gri)ERR: {AttributeError("'NoneType' object has no attribute 'text'")}
+ON PATH:/telefoane-tablete-accesorii-telefoane/
+PAGE:23
+ERR FOR PRODUCT: Nou! Telefon Mobil Apple iPhone 16 Pro, LTPO Super Retina XDR OLED 6.3", 256GB Flash, Camera Tripla 48 + 12 + 48 MP, Wi-Fi, 5G, iOS (Negru)ERR: {AttributeError("'NoneType' object has no attribute 'text'")}
+ON PATH:/telefoane-tablete-accesorii-telefoane/
+PAGE:23
+ERR FOR PRODUCT: Nou! Telefon Mobil Apple iPhone 16 Plus, Super Retina XDR OLED 6.7", 256GB Flash, Camera Duala 48 + 12 MP, Wi-Fi, 5G, iOS (Alb)ERR: {AttributeError("'NoneType' object has no attribute 'text'")}
+ON PATH:/telefoane-tablete-accesorii-telefoane/
+PAGE:23
+ERR FOR PRODUCT: Nou! Telefon Mobil Apple iPhone 16 Pro, LTPO Super Retina XDR OLED 6.3", 128GB Flash, Camera Tripla 48 + 12 + 48 MP, Wi-Fi, 5G, iOS (Auriu)ERR: {AttributeError("'NoneType' object has no attribute 'text'")}
+ON PATH:/telefoane-tablete-accesorii-telefoane/
+PAGE:23
+ERR FOR PRODUCT: Nou! Telefon Mobil Apple iPhone 16, Super Retina XDR OLED 6.1", 128GB Flash, Camera Duala 48 + 12 MP, Wi-Fi, 5G, iOS (Roz)ERR: {AttributeError("'NoneType' object has no attribute 'text'")}
+ON PATH:/telefoane-tablete-accesorii-telefoane/
+PAGE:23
+ERR FOR PRODUCT: Nou! Telefon Mobil Apple iPhone 16, Super Retina XDR OLED 6.1", 256GB Flash, Camera Duala 48 + 12 MP, Wi-Fi, 5G, iOS (Negru)ERR: {AttributeError("'NoneType' object has no attribute 'text'")}
+ON PATH:/telefoane-tablete-accesorii-telefoane/
+PAGE:23
+ERR FOR PRODUCT: Nou! Telefon Mobil Apple iPhone 16 Pro Max, LTPO Super Retina XDR OLED 6.9", 256GB Flash, Camera Tripla 48 + 12 + 48 MP, Wi-Fi, 5G, iOS (Gri)ERR: {AttributeError("'NoneType' object has no attribute 'text'")}
+ON PATH:/telefoane-tablete-accesorii-telefoane/
+PAGE:23
+ERR FOR PRODUCT: Senzor detector de gaz natural comprimat Shelly Gas CNG, Wireless, Alarma 70 dB, Notificari aplicatie (Alb)ERR: {ConnectionError(MaxRetryError("HTTPSConnectionPool(host='static3.evomag.ro', port=443): Max retries exceeded with url: /img?file=products%2F3842%2F3842549%2F61dc57fd35fd8.jpg&height=150&extend=white (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x729625316f80>: Failed to establish a new connection: [Errno 111] Connection refused'))"))}
+ERR FOR PRODUCT: Senzor detector de gaz natural comprimat Shelly Gas CNG, Wireless, Alarma 70 dB, Notificari aplicatie (Alb)ERR: {UnboundLocalError("local variable 'img_name' referenced before assignment")}
+ON PATH:/tv-multimedia-casa-inteligenta-senzori-si-detectoare/
+PAGE:7
+ERR FOR PRODUCT: Mini senzor de miscare ORNO OR-CR-214, unghi detectie 180°/360°, 1200W, 230V, IP20 (Alb)ERR: {AttributeError("'NoneType' object has no attribute 'span'")}
+ON PATH:/tv-multimedia-casa-inteligenta-senzori-si-detectoare/
+PAGE:7
+ERR FOR PRODUCT: Senzor de miscare Orno OR-CR-203/W, 120°/110° (Alb)ERR: {AttributeError("'NoneType' object has no attribute 'span'")}
+ON PATH:/tv-multimedia-casa-inteligenta-senzori-si-detectoare/
+PAGE:7
+ERR FOR PRODUCT: Senzor de Temperatura si Umiditate Livolo cu Rama din Sticla, Protocol Zigbee (Alb)ERR: {AttributeError("'NoneType' object has no attribute 'span'")}
+ON PATH:/tv-multimedia-casa-inteligenta-senzori-si-detectoare/
+PAGE:7
+ERR FOR PRODUCT: Detector de exterior, dubla tehnologie dual PIR + MW - DSC LC-171ERR: {AttributeError("'NoneType' object has no attribute 'span'")}
+ON PATH:/tv-multimedia-casa-inteligenta-senzori-si-detectoare/
+PAGE:7
+ERR FOR PRODUCT: Senzor prezenta wireless Sonoff PIR2 (Alb)ERR: {AttributeError("'NoneType' object has no attribute 'span'")}
+ON PATH:/tv-multimedia-casa-inteligenta-senzori-si-detectoare/
+PAGE:7
+ERR FOR PRODUCT: Senzor inteligent pentru usi si ferestre Aqara MCCGQ11LM, Wireless (Alb)ERR: {AttributeError("'NoneType' object has no attribute 'span'")}
+ON PATH:/tv-multimedia-casa-inteligenta-senzori-si-detectoare/
+PAGE:7
+ERR FOR PRODUCT: Detector de fum, temperatura si CO, AJAX; Protectie eficienta de alarmare impotriva incendiilor si monoxidului de carbon, posibilitate operare stand-alone; Temperatura declansare alarma: +59°С ± 2°С; Prag declansare CO: 3 minERR: {AttributeError("'NoneType' object has no attribute 'span'")}
+ON PATH:/tv-multimedia-casa-inteligenta-senzori-si-detectoare/
+PAGE:7
+ERR FOR PRODUCT: Senzor de miscare ORNO OR-CR-259/W, unghi detectie 360°, 2000W, IP65, reglabil vertical (Alb)ERR: {AttributeError("'NoneType' object has no attribute 'span'")}
+ON PATH:/tv-multimedia-casa-inteligenta-senzori-si-detectoare/
+PAGE:7
+ERR FOR PRODUCT: Detector miscare tip cortina Dual Curtain Outdoor wireless AJAX; Protectie eficienta la exterior prin doua sisteme optice independente cu cate doi PIR fiecare, analiza digitala, antimaskingERR: {AttributeError("'NoneType' object has no attribute 'span'")}
+ON PATH:/tv-multimedia-casa-inteligenta-senzori-si-detectoare/
+PAGE:7
+ERR FOR PRODUCT: Centrala Unipos conventionala FS4000/4 de detectie si semnalizare incendiu: - 4 linii de detectie, maxim 32 detectoare pe linie; - 2 iesiri monitorizateERR: {AttributeError("'NoneType' object has no attribute 'span'")}
+ON PATH:/tv-multimedia-casa-inteligenta-senzori-si-detectoare/
+PAGE:7
+ERR FOR PRODUCT: Detector Geam Spart Honeywell FG1625RT cu tamperERR: {AttributeError("'NoneType' object has no attribute 'span'")}
+ON PATH:/tv-multimedia-casa-inteligenta-senzori-si-detectoare/
+PAGE:7
+ERR FOR PRODUCT: Senzor Control Sunet si Lumini Livolo cu Rama din Sticla, Protocol Zigbee (Gri)ERR: {AttributeError("'NoneType' object has no attribute 'span'")}
+ON PATH:/tv-multimedia-casa-inteligenta-senzori-si-detectoare/
+PAGE:7
+ERR FOR PRODUCT: Detector de geam spart radio DSC WLS-912ERR: {AttributeError("'NoneType' object has no attribute 'span'")}
+ON PATH:/tv-multimedia-casa-inteligenta-senzori-si-detectoare/
+PAGE:7
+ERR FOR PRODUCT: Detector de miscare OPTEX SIP-404, PIR exterior comanda CCTV, 40 x 4m, anti-masking, anti-vandalERR: {AttributeError("'NoneType' object has no attribute 'span'")}
+ON PATH:/tv-multimedia-casa-inteligenta-senzori-si-detectoare/
+PAGE:7
+ERR FOR PRODUCT: Detector multicriterial optic & termic Morley-IAS cu izolatorERR: {AttributeError("'NoneType' object has no attribute 'span'")}
+ON PATH:/tv-multimedia-casa-inteligenta-senzori-si-detectoare/
+PAGE:7
+ERR FOR PRODUCT: Detector de miscare OPTEX SIP-3020, PIR exterior comanda CCTVERR: {AttributeError("'NoneType' object has no attribute 'span'")}
+ON PATH:/tv-multimedia-casa-inteligenta-senzori-si-detectoare/
+PAGE:7
+ERR FOR PRODUCT: Senzor miscare incastrabil MCE 130, detector infrarosu, temporizatorERR: {AttributeError("'NoneType' object has no attribute 'span'")}
+ON PATH:/tv-multimedia-casa-inteligenta-senzori-si-detectoare/
+PAGE:7
+ERR FOR PRODUCT: Detector de miscare PIR MotionCam Indoor AJAX, imunitate animale,  Protectie eficienta prin senzor miscare cu verificare foto.; Detectie miscare: max. 12 m, Unghi camera: 90°; Sensibilitate: ajustabila 3 nivele Unghi detectie: 88.5°...ERR: {AttributeError("'NoneType' object has no attribute 'span'")}
+ON PATH:/tv-multimedia-casa-inteligenta-senzori-si-detectoare/
+PAGE:7
+ERR FOR PRODUCT: Detector de temperatura fixa Morley-IAS cu izolatorERR: {AttributeError("'NoneType' object has no attribute 'span'")}
+ON PATH:/tv-multimedia-casa-inteligenta-senzori-si-detectoare/
+PAGE:7
+ERR FOR PRODUCT: Detector de fum optic si temperatura DSC 601PH, 2 fire, alimentare 12-24 VD, Reactioneaza la o crestere rapida a temperaturiiERR: {AttributeError("'NoneType' object has no attribute 'span'")}
+ON PATH:/tv-multimedia-casa-inteligenta-senzori-si-detectoare/
+PAGE:7
+ERR FOR PRODUCT: Detector incendiu DSC pentru interior, montaj pe tavan, material ignifug, tensiune de alimentare 18-28VDCERR: {AttributeError("'NoneType' object has no attribute 'span'")}
+ON PATH:/tv-multimedia-casa-inteligenta-senzori-si-detectoare/
+PAGE:7
+ERR FOR PRODUCT: Detector de miscare PIR+MW, exterior, 90°, 12m, anti-masking - OPTEX VXS-DAM-X5ERR: {AttributeError("'NoneType' object has no attribute 'span'")}
+ON PATH:/tv-multimedia-casa-inteligenta-senzori-si-detectoare/
+PAGE:7
+ERR FOR PRODUCT: Senzor crepuscular ORNO OR-CR-232, cu sonda externa, IP65ERR: {AttributeError("'NoneType' object has no attribute 'span'")}
+ON PATH:/tv-multimedia-casa-inteligenta-senzori-si-detectoare/
+PAGE:7
+ERR FOR PRODUCT: Modul Senzor de Temperatura si Umiditate Livolo, Protocol Zigbee (Alb)ERR: {AttributeError("'NoneType' object has no attribute 'span'")}
+ON PATH:/tv-multimedia-casa-inteligenta-senzori-si-detectoare/
+PAGE:7
+ERR FOR PRODUCT: Detector PIR tip cortina WIRELESS DSC PG-8924, Setare zona detectie la 2, 4 sau 6 metri, Indicator nivel semnal radio, Tehnologie PowerGERR: {AttributeError("'NoneType' object has no attribute 'span'")}
+ON PATH:/tv-multimedia-casa-inteligenta-senzori-si-detectoare/
+PAGE:7
+ERR FOR PRODUCT: Senzor de miscare Ubiquiti Smart Flood Light UP-FLOODLIGHTERR: {AttributeError("'NoneType' object has no attribute 'span'")}
+ON PATH:/tv-multimedia-casa-inteligenta-senzori-si-detectoare/
+PAGE:7
+ERR FOR PRODUCT: Senzor de miscare Orno OR-CR-203/B, 120°/110° (Negru)ERR: {AttributeError("'NoneType' object has no attribute 'span'")}
+ON PATH:/tv-multimedia-casa-inteligenta-senzori-si-detectoare/
+PAGE:7
+ERR FOR PRODUCT: Detector de miscare PIR MotionProtect, wireless; Detectie miscare: max. 12 m, Sensibilitate: ajustabila 3 nivele; Unghi detectie: 88.5° orizontal, 80° vertical; Viteza detectie: 0.3 ÷ 2 m/s; Timp alarmare: 0.15 sERR: {AttributeError("'NoneType' object has no attribute 'span'")}
+ON PATH:/tv-multimedia-casa-inteligenta-senzori-si-detectoare/
+PAGE:7
+ERR FOR PRODUCT: Senzor de Temperatura si Umiditate Livolo cu Rama din Sticla, Protocol Zigbee (Negru)ERR: {AttributeError("'NoneType' object has no attribute 'span'")}
+ON PATH:/tv-multimedia-casa-inteligenta-senzori-si-detectoare/
+PAGE:7
+ERR FOR PRODUCT: Detector de temperatura OEM FC460H (Alb)ERR: {AttributeError("'NoneType' object has no attribute 'span'")}
+ON PATH:/tv-multimedia-casa-inteligenta-senzori-si-detectoare/
+PAGE:7
+ERR FOR PRODUCT: Senzor de gaz Paradox cu 4 fire si releu; certificat EN54, tip gaz natural; sensibilitate: mai putin de 1/4 LEL gaz natural 12/24 VDCERR: {AttributeError("'NoneType' object has no attribute 'span'")}
+ON PATH:/tv-multimedia-casa-inteligenta-senzori-si-detectoare/
+PAGE:7
+ERR FOR PRODUCT: Detector inteligent de soc: temporizator si contor pentru analizare impulsuri,  control automat / manual al sensibilitatii, LED stare 3 culoriERR: {AttributeError("'NoneType' object has no attribute 'span'")}
+ON PATH:/tv-multimedia-casa-inteligenta-senzori-si-detectoare/
+PAGE:7
+ERR FOR PRODUCT: Senzor de miscare Philips WiZ, compatibil cu gama WiZ, tip baterie LR6 (AA) (nu sunt incluse), IP20, dimensiuni 5x6.2x6.2cm, distanta control 15 metriERR: {AttributeError("'NoneType' object has no attribute 'span'")}
+ON PATH:/tv-multimedia-casa-inteligenta-senzori-si-detectoare/
+PAGE:7
+ERR FOR PRODUCT: Senzor de miscare OEM URZ0751 (Negru)ERR: {AttributeError("'NoneType' object has no attribute 'span'")}
+ON PATH:/tv-multimedia-casa-inteligenta-senzori-si-detectoare/
+PAGE:7
+ERR FOR PRODUCT: Kit senzor gaz inteligent si electrovalva PNI Safe House Smart Gas 300, WiFi, cu alertare sonora, aplicatie de mobil Tuya Smart, integrare in scenarii si automatizari smart cu alte produse compatibile Tuya, Alexa si Google AssistantERR: {AttributeError("'NoneType' object has no attribute 'span'")}
+ON PATH:/tv-multimedia-casa-inteligenta-senzori-si-detectoare/
+PAGE:7
+ERR FOR PRODUCT: Senzor Aqara Hub M1S, multifunctional de tip Smart Gateway, WirelessERR: {AttributeError("'NoneType' object has no attribute 'span'")}
+ON PATH:/tv-multimedia-casa-inteligenta-senzori-si-detectoare/
+PAGE:7
+ERR FOR PRODUCT: Senzor de contact pentru usi si ferestre Eve Door & Window, Wireless (Alb)ERR: {AttributeError("'NoneType' object has no attribute 'span'")}
+ON PATH:/tv-multimedia-casa-inteligenta-senzori-si-detectoare/
+PAGE:7
+ERR FOR PRODUCT: Detector cabluri electrice, Stanley, S200, Galben/NegruERR: {AttributeError("'NoneType' object has no attribute 'span'")}
+ON PATH:/tv-multimedia-casa-inteligenta-senzori-si-detectoare/
+PAGE:7
+ERR FOR PRODUCT: Senzor Control Sunet si Lumini Livolo cu Rama din Sticla, Protocol Zigbee (Negru)ERR: {AttributeError("'NoneType' object has no attribute 'span'")}
+ON PATH:/tv-multimedia-casa-inteligenta-senzori-si-detectoare/
+PAGE:7
