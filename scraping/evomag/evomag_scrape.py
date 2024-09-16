@@ -2,6 +2,7 @@ import re
 import os
 import csv
 import requests
+import datetime
 
 from selenium import webdriver
 from selenium.webdriver.firefox.options import Options
@@ -14,8 +15,9 @@ from selenium.webdriver.support import expected_conditions as EC
 options = Options()
 #options.add_argument('--headless')
 options.binary_location = '/etc/firefox'
-
 driver = webdriver.Firefox(options=options)
+
+currentDate = datetime.datetime.now().date()
 
 def no_nav_strings(iterable):
     return list(filter(lambda x: type(x) != NavigableString, iterable))
@@ -69,11 +71,10 @@ def format_data(item):
                 with open(filepath, 'wb') as file:
                     file.write(img_data)
             except Exception as e:
-                print('could not get image, so sad...')
-                with open('errLog.txt', 'a') as logs:
-                    logs.write('ERR FOR PRODUCT: ' + name)
+                with open('output/errLog-' + str(currentDate) + '.txt', 'a') as logs:
+                    logs.write('ERR FOR IMAGE SCRAPING: ' + name)
                     logs.write('ERR: ' + str({e}) + '\n')
-                filepath = 'err'
+                img_name = 'not_found.jpeg'
             #=====scraping image=====
 
         return {
@@ -90,8 +91,8 @@ def format_data(item):
     except Exception as e:
         print(str({e}))
         print('EXCEPTION====='+str(name)+str(isInStoc)+'=====EXCEPTION')
-        with open('errLog.txt', 'a') as logs:
-            logs.write('ERR FOR PRODUCT: ' + name)
+        with open('output/errLog-' + str(currentDate) + '.txt', 'a') as logs:
+            logs.write('ERR IN FORMAT_DATA FOR PRODUCT: ' + name)
             logs.write('ERR: ' + str({e}) + '\n')
     
 
@@ -127,7 +128,7 @@ def scrape(path):
         if next_page_button is None:
             break
 
-        with open('evomag_scrape_big.csv', 'a') as scrapefile:
+        with open('output/evomag_' + str(currentDate) + '.csv', 'a', newline='') as scrapefile:
                 writer = csv.writer(scrapefile)
                 for element in li_items:
                     try:
@@ -138,9 +139,10 @@ def scrape(path):
                         writer.writerow(formatted_dict.values())
                     except Exception as e:
                         print(str({e}))
-                        with open('errLog.txt', 'a') as logs:
+                        with open('output/errLog-' + str(currentDate) + '.txt', 'a') as logs:
                             logs.write('ON PATH:' + path +  '\n' + 'PAGE:' + str(current_page) + '\n')
                         continue
+
         new_path = target_url + 'filtru/pagina:' + str(current_page) 
         driver.delete_all_cookies()
         driver.get(new_path)
@@ -157,6 +159,8 @@ def main():
                 scrape(path=path)
             except Exception as e:
                 print(str({e}))
+                with open('output/errLog-' + str(currentDate) + '.txt', 'a') as logs:
+                    logs.write('ERR MAIN: ' + str({e}))
                 driver.delete_all_cookies()
                 continue
 
