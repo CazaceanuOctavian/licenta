@@ -180,6 +180,7 @@ def main():
 
                 driver.delete_all_cookies()
                 path = path.strip()
+                
                 if path is None:
                     continue
                 try:
@@ -195,7 +196,7 @@ def main():
         print('PANIC!')
         with open('output/dying_gasp_' + str(currentDate) + '_tmp.txt', 'w') as gasp:
             gasp.write(latest_path)
-            #gasp.write(latest_path + "\n")
+            
             with open(origin, 'r') as origin_file:
                 for _ in range(pathCount):
                     origin_file.readline()

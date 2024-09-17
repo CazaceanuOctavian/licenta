@@ -85,3 +85,36 @@ PAGE:3
 ERR IN FORMAT_DATA FOR PRODUCT: Scaun auto U-GROW Inaltator auto 125-150 cm, R129, rosuERR: {UnboundLocalError("local variable 'img_name' referenced before assignment")}
 ON PATH:https://www.vexio.ro/scaune-auto/
 PAGE:3
+ERR MAIN: {InvalidArgumentException()}ERR MAIN: {InvalidArgumentException()}ERR MAIN: {InvalidArgumentException()}ERR MAIN: {InvalidArgumentException()}ERR MAIN: {InvalidArgumentException()}ERR MAIN: {InvalidArgumentException()}ERR MAIN: {InvalidArgumentException()}ERR MAIN: {InvalidArgumentException()}ERR MAIN: {InvalidArgumentException()}ERR MAIN: {InvalidArgumentException()}ERR MAIN: {InvalidArgumentException()}ERR MAIN: {InvalidArgumentException()}ERR MAIN: {InvalidArgumentException()}ERR MAIN: {InvalidArgumentException()}ERR MAIN: {InvalidArgumentException()}ERR MAIN: {InvalidArgumentException()}ERR MAIN: {InvalidArgumentException()}ERR MAIN: {InvalidArgumentException()}ERR MAIN: {InvalidArgumentException()}ERR MAIN: {InvalidArgumentException()}ERR MAIN: {InvalidArgumentException()}ERR MAIN: {InvalidArgumentException()}ERR MAIN: {InvalidArgumentException()}ERR MAIN: {InvalidArgumentException()}ERR MAIN: {InvalidArgumentException()}ERR MAIN: {InvalidArgumentException()}ERR MAIN: {InvalidArgumentException()}ERR MAIN: {InvalidArgumentException()}ERR MAIN: {InvalidArgumentException()}ERR MAIN: {InvalidArgumentException()}ERR MAIN: {InvalidArgumentException()}ERR MAIN: {InvalidArgumentException()}ERR MAIN: {InvalidArgumentException()}ERR IN FORMAT_DATA FOR PRODUCT: BABY MONITOR LCD 3.2 INCH JACOB ESPERANZAERR: {UnboundLocalError("local variable 'img_name' referenced before assignment")}
+ON PATH:https://www.vexio.ro/supraveghere-bebe/
+PAGE:2
+ERR IN FORMAT_DATA FOR PRODUCT: Motorola PIP1500 5.0" Video Baby Monitor, White/BlackERR: {UnboundLocalError("local variable 'img_name' referenced before assignment")}
+ON PATH:https://www.vexio.ro/supraveghere-bebe/
+PAGE:3
+ERR IN FORMAT_DATA FOR PRODUCT: Motorola PIP1500 5.0" Video Baby Monitor, White/BlackERR: {UnboundLocalError("local variable 'img_name' referenced before assignment")}
+ON PATH:https://www.vexio.ro/supraveghere-bebe/pagina2/
+PAGE:3
+ERR IN FORMAT_DATA FOR PRODUCT: Baby Monitor si Camera Audio-Video Wireless Philips Avent Premium...ERR: {UnboundLocalError("local variable 'img_name' referenced before assignment")}
+ON PATH:https://www.vexio.ro/supraveghere-bebe/pagina2/
+PAGE:3
+ERR IN FORMAT_DATA FOR PRODUCT: Philips AVENT Digital Video Baby MonitorERR: {UnboundLocalError("local variable 'img_name' referenced before assignment")}
+ON PATH:https://www.vexio.ro/supraveghere-bebe/pagina2/
+PAGE:3
+ERR IN FORMAT_DATA FOR PRODUCT: Camera de Supraveghere Mini, Monitor Bebelusi, Tuya App - Techsuit...ERR: {UnboundLocalError("local variable 'img_name' referenced before assignment")}
+ON PATH:https://www.vexio.ro/supraveghere-bebe/pagina2/
+PAGE:3
+ERR IN FORMAT_DATA FOR PRODUCT: Monitor pentru Bebelus Wireless cu Baterie, Senzor de Temperatura -...ERR: {UnboundLocalError("local variable 'img_name' referenced before assignment")}
+ON PATH:https://www.vexio.ro/supraveghere-bebe/pagina2/
+PAGE:3
+ERR IN FORMAT_DATA FOR PRODUCT: Monitor pentru Bebelus Wireless, Microfon Dual, Noise Reduction,...ERR: {UnboundLocalError("local variable 'img_name' referenced before assignment")}
+ON PATH:https://www.vexio.ro/supraveghere-bebe/pagina2/
+PAGE:3
+ERR IN FORMAT_DATA FOR PRODUCT: Monitor pentru Bebelus Wireless, Senzor de Temperatura, 360 -...ERR: {UnboundLocalError("local variable 'img_name' referenced before assignment")}
+ON PATH:https://www.vexio.ro/supraveghere-bebe/pagina2/
+PAGE:3
+ERR IN FORMAT_DATA FOR PRODUCT: Monitor pentru Bebelus Wireless, Senzor de Temperatura, Display...ERR: {UnboundLocalError("local variable 'img_name' referenced before assignment")}
+ON PATH:https://www.vexio.ro/supraveghere-bebe/pagina2/
+PAGE:3
+ERR IN FORMAT_DATA FOR PRODUCT: Philips-Avent Suzete fosforescente PHILIPS AVENT Ultra Air...ERR: {UnboundLocalError("local variable 'img_name' referenced before assignment")}
+ON PATH:https://www.vexio.ro/biberoane-tetine-si-suzete/
+PAGE:3

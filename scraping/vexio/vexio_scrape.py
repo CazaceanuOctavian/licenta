@@ -96,13 +96,20 @@ def format_data(item):
 
     print()
 
-def scrape(path):
+def scrape(path : str):
     target_url = path
+
+    global latest_path
+    latest_path = path
+
+    if path.rfind("pagina") == -1:
+        current_page = 1
+    else:
+        current_page = int(path.split('/')[-2][-1])
+
     driver.get(target_url)
 
     pagina_existenta = True
-    current_page = 1
-
     while(pagina_existenta):
 
         current_page+=1
@@ -130,60 +137,58 @@ def scrape(path):
 
         if (next_page_button == None):
             break
-        global latest_path
 
         new_path = path + 'pagina' + str(current_page) + '/'
         latest_path = new_path
 
         driver.delete_all_cookies()
         driver.get(new_path)
-
-        # url_test = driver.current_url
-
-        # if last_url == url_test:
-        #     break
            
 def main():
-    print(os.getcwd())  
-    origin = os.path.join('output', 'dying_gasp_' + str(currentDate) + '.txt')
+    try:
+        print(os.getcwd())  
+        origin = os.path.join('output', 'dying_gasp_' + str(currentDate) + '.txt')
+        pathCount=0
 
-    if (os.path.exists(origin)):
-        print('DYING GASP DETECTED -- DEFAULTING TO ' + str(origin))
-        # with open(origin, 'r') as file:
-        #     latest_path = file.readline()
-        # scrape(latest_path)
-    else:
-        print('NO DYING GASP -- DEFAULTING TO vexio_tree.txt')
-        origin = 'vexio_tree.txt' 
+        if (os.path.exists(origin)):
+            print('DYING GASP DETECTED -- DEFAULTING TO ' + str(origin) + ' -- SCRAPING FROM LAST KNOWN PATH')
+        else:
+            print('NO DYING GASP -- DEFAULTING TO vexio_tree.txt')
+            origin = 'vexio_tree.txt' 
 
-    with open(origin, 'r') as origin:
-        
-        for path in origin:
-            driver.delete_all_cookies()
-            path = path.strip()
-            if path is None:
-                continue
-            try:
-                scrape(path=path)
-            except Exception as e:
-                print(str({e}))
-                with open('output/errLog-' + str(currentDate) + '.txt', 'a') as logs:
-                    logs.write('ERR MAIN: ' + str({e}))
+        with open(origin, 'r') as origin_file:
+            for path in origin_file:
+                pathCount+=1
+
                 driver.delete_all_cookies()
-                continue
-            except KeyboardInterrupt as end:
-                #write the remaining lines in dying_gasp from current line to EOF
-                print('PANIC!')
-                with open('output/dying_gasp_' + str(currentDate) + '_tmp.txt', 'a') as gasp:
-                    #gasp.write(latest_path + "\n")
-                    line = path
-                    gasp.write(line + '\n')
-                    while(line):
-                        line = origin.readline()
-                        gasp.write(line)
+                path = path.strip()
+
+                if path is None:
+                    continue
+                try:
+                    scrape(path=path)
+                except Exception as e:
+                    print(str({e}))
+                    with open('output/errLog-' + str(currentDate) + '.txt', 'a') as logs:
+                        logs.write('ERR MAIN: ' + str({e}))
+                    driver.delete_all_cookies()
+                    continue
+    except KeyboardInterrupt as end:
+        #write the remaining lines in dying_gasp from current line to EOF
+        print('PANIC!')
+        with open('output/dying_gasp_' + str(currentDate) + '_tmp.txt', 'w') as gasp:
+            gasp.write(latest_path + '\n')
+
+            with open(origin, 'r') as origin_file:
+                for _ in range(pathCount):
+                    origin_file.readline()
+
+                line = origin_file.readline()
+                gasp.write(line)
+                while(line):
+                    line = origin_file.readline()
+                    gasp.write(line)
+        os.rename('output/dying_gasp_' + str(currentDate) + '_tmp.txt', 'output/dying_gasp_' + str(currentDate) + '.txt')
 
 main()
-os.rename('output/dying_gasp_' + str(currentDate) + '_tmp.txt', 'output/dying_gasp_' + str(currentDate) + '.txt')
 driver.quit()
-
-#TODO --> add last accessed page 
