@@ -18,7 +18,6 @@ options.binary_location = '/etc/firefox'
 driver = webdriver.Firefox(options=options)
 
 currentDate = datetime.datetime.now().strftime('%Y_%m_%d')
-dying_gasp_url = None
 
 latest_path = None
 
@@ -103,15 +102,20 @@ def scrape(path : str):
 
     if path.rfind("https") == -1:
         target_url = 'https://www.evomag.ro' + path
+        current_page = 1
     else:
         target_url = path
+        current_page = int(path.split(":")[-1].split('/')[0])
+
+    global latest_path
+    latest_path = path
+
     driver.get(target_url)
 
     #wait for images to lazly load
     element = WebDriverWait(driver, 2)
 
     pagina_existenta = True
-    current_page = 1
     while(pagina_existenta):
         current_page+=1
         page_source = driver.page_source
@@ -152,52 +156,56 @@ def scrape(path : str):
                     
         
         new_path = target_url + 'filtru/pagina:' + str(current_page) 
-        global latest_path
+
         latest_path = new_path
+
         driver.delete_all_cookies()
         driver.get(new_path)
                 
 def main():
-    global latest_path
-    print(os.getcwd())
-    category_counter = 0
-    origin = os.path.join('output', 'dying_gasp_' + str(currentDate) + '.txt')
+    try:
+        origin = os.path.join('output', 'dying_gasp_' + str(currentDate) + '.txt')
+        pathCount = 0
+        global latest_path
 
-    if (os.path.exists(origin)):
-        print('DYING GASP DETECTED -- DEFAULTING TO ' + str(origin))
-        with open(origin, 'r') as file:
-            latest_path = file.readline()
-        scrape(latest_path)
-        
-    else:
-        print('NO DYING GASP -- DEFAULTING TO evomag_tree.txt')
-        origin = 'evomag_tree.txt' 
+        if (os.path.exists(origin)):
+            print('DYING GASP DETECTED -- DEFAULTING TO ' + str(origin) + ' -- SCRAPING FROM LAST KNOW PATH')
+        else:
+            print('NO DYING GASP -- DEFAULTING TO evomag_tree.txt')
+            origin = 'evomag_tree.txt' 
 
-    with open(origin, 'r') as origin:
-        category_counter+=1
-        for path in origin:
-            driver.delete_all_cookies()
-            path = path.strip()
-            if path is None:
-                continue
-            try:
-                scrape(path=path)
-            except Exception as e:
-                print(str({e}))
-                with open('output/errLog-' + str(currentDate) + '.txt', 'a') as logs:
-                    logs.write('ERR MAIN: ' + str({e}))
+        with open(origin, 'r') as origin_file:
+            for path in origin_file:
+                pathCount+=1
+
                 driver.delete_all_cookies()
-                continue
-            except KeyboardInterrupt as end:
-                #write the remaining lines in dying_gasp from current line to EOF
-                print('PANIC!')
-                with open('output/dying_gasp_' + str(currentDate) + '.txt', 'a') as gasp:
-                    gasp.write(latest_path + "\n")
-                    line = path
-                    gasp.write(line + '\n')
-                    while(line):
-                        line = origin.readline()
-                        gasp.write(line)
+                path = path.strip()
+                if path is None:
+                    continue
+                try:
+                    scrape(path=path)
+                except Exception as e:
+                    print(str({e}))
+                    with open('output/errLog-' + str(currentDate) + '.txt', 'a') as logs:
+                        logs.write('ERR MAIN: ' + str({e}))
+                    driver.delete_all_cookies()
+                    continue
+    except KeyboardInterrupt as end:
+        #write the remaining lines in dying_gasp from current line to EOF
+        print('PANIC!')
+        with open('output/dying_gasp_' + str(currentDate) + '_tmp.txt', 'w') as gasp:
+            gasp.write(latest_path)
+            #gasp.write(latest_path + "\n")
+            with open(origin, 'r') as origin_file:
+                for _ in range(pathCount):
+                    origin_file.readline()
 
+                line = origin_file.readline()
+                gasp.write(line)
+                while(line):
+                    line = origin_file.readline()
+                    gasp.write(line)
+        os.rename('output/dying_gasp_' + str(currentDate) + '_tmp.txt', 'output/dying_gasp_' + str(currentDate) + '.txt')
+        
 main()
 driver.quit()

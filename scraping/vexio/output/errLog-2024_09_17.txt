@@ -1,0 +1,87 @@
+ERR IN FORMAT_DATA FOR PRODUCT: Folie discretie ecran Lenovo 0A61771, 15.6 inchERR: {UnboundLocalError("local variable 'img_name' referenced before assignment")}
+ON PATH:https://www.vexio.ro/laptop-accesorii/
+PAGE:2
+ERR IN FORMAT_DATA FOR PRODUCT: Aspirator auto Black Decker NVB12AVA alimentare 12V 5 accesorii...ERR: {UnboundLocalError("local variable 'img_name' referenced before assignment")}
+ON PATH:https://www.vexio.ro/aspiratoare-auto/
+
+PAGE:2
+ERR IN FORMAT_DATA FOR PRODUCT: Folie discretie ecran Lenovo 0A61771, 15.6 inchERR: {UnboundLocalError("local variable 'img_name' referenced before assignment")}
+ON PATH:https://www.vexio.ro/laptop-accesorii/
+PAGE:2
+ERR IN FORMAT_DATA FOR PRODUCT: ZEBRA Cablu USB Serie A pentru cititoare coduri de bareERR: {UnboundLocalError("local variable 'img_name' referenced before assignment")}
+ON PATH:https://www.vexio.ro/articole-de-birou/
+
+PAGE:2
+ERR IN FORMAT_DATA FOR PRODUCT: Folie discretie ecran Lenovo 0A61771, 15.6 inchERR: {UnboundLocalError("local variable 'img_name' referenced before assignment")}
+ON PATH:https://www.vexio.ro/laptop-accesorii/
+PAGE:2
+ERR IN FORMAT_DATA FOR PRODUCT: Memorie laptop Corsair notebook 8GB, DDR3, 1066MHz, CL7 Dual...ERR: {UnboundLocalError("local variable 'img_name' referenced before assignment")}
+ON PATH:https://www.vexio.ro/laptop-accesorii/
+PAGE:2
+ERR IN FORMAT_DATA FOR PRODUCT: Memorie laptop Corsair notebook Kit 2x4GB, DDR3, 1333MHz CL9 Dual...ERR: {UnboundLocalError("local variable 'img_name' referenced before assignment")}
+ON PATH:https://www.vexio.ro/laptop-accesorii/
+PAGE:2
+ERR IN FORMAT_DATA FOR PRODUCT: Husa AntiSoc Case Logic LAPS116K, pentru laptop, 15.6 inch, NegruERR: {UnboundLocalError("local variable 'img_name' referenced before assignment")}
+ON PATH:https://www.vexio.ro/laptop-accesorii/
+PAGE:2
+ERR IN FORMAT_DATA FOR PRODUCT: Folie discretie ecran Lenovo 0A61771, 15.6 inchERR: {UnboundLocalError("local variable 'img_name' referenced before assignment")}
+ON PATH:https://www.vexio.ro/laptop-accesorii/
+
+PAGE:2
+ERR IN FORMAT_DATA FOR PRODUCT: Memorie laptop Corsair notebook 8GB, DDR3, 1066MHz, CL7 Dual...ERR: {UnboundLocalError("local variable 'img_name' referenced before assignment")}
+ON PATH:https://www.vexio.ro/laptop-accesorii/
+
+PAGE:2
+ERR IN FORMAT_DATA FOR PRODUCT: Memorie laptop Corsair notebook Kit 2x4GB, DDR3, 1333MHz CL9 Dual...ERR: {UnboundLocalError("local variable 'img_name' referenced before assignment")}
+ON PATH:https://www.vexio.ro/laptop-accesorii/
+
+PAGE:2
+ERR IN FORMAT_DATA FOR PRODUCT: Husa AntiSoc Case Logic LAPS116K, pentru laptop, 15.6 inch, NegruERR: {UnboundLocalError("local variable 'img_name' referenced before assignment")}
+ON PATH:https://www.vexio.ro/laptop-accesorii/
+
+PAGE:2
+ERR IN FORMAT_DATA FOR PRODUCT: Biblioraft A5, plastifiat PP/PP, margine metalica, 75 mm, ESSELTE -...ERR: {UnboundLocalError("local variable 'img_name' referenced before assignment")}
+ON PATH:https://www.vexio.ro/arhivare-si-organizare/
+
+PAGE:3
+ERR IN FORMAT_DATA FOR PRODUCT: Biblioraft A4, plastifiat PP/PP, margine metalica, 75 mm, ESSELTE...ERR: {UnboundLocalError("local variable 'img_name' referenced before assignment")}
+ON PATH:https://www.vexio.ro/arhivare-si-organizare/
+
+PAGE:3
+ERR IN FORMAT_DATA FOR PRODUCT: Biblioraft A5, plastifiat PP/PP, margine metalica, 75 mm, ESSELTE -...ERR: {UnboundLocalError("local variable 'img_name' referenced before assignment")}
+ON PATH:https://www.vexio.ro/arhivare-si-organizare/
+
+PAGE:3
+ERR IN FORMAT_DATA FOR PRODUCT: Folie discretie ecran Lenovo 0A61771, 15.6 inchERR: {UnboundLocalError("local variable 'img_name' referenced before assignment")}
+ON PATH:https://www.vexio.ro/laptop-accesorii/
+PAGE:2
+ERR IN FORMAT_DATA FOR PRODUCT: Folie protectie A4, pentru 4 CD/DVD, 160 microni, 25buc/set, DONAUERR: {UnboundLocalError("local variable 'img_name' referenced before assignment")}
+ON PATH:https://www.vexio.ro/arhivare-si-organizare/
+PAGE:2
+ERR IN FORMAT_DATA FOR PRODUCT: Carucior BabyJogger Baby Jogger Pałąk do Wózka Pojedyńczego 356193ERR: {UnboundLocalError("local variable 'img_name' referenced before assignment")}
+ON PATH:https://www.vexio.ro/carucioare/
+PAGE:2
+ERR IN FORMAT_DATA FOR PRODUCT: Carucior Graco Myavo miętowyERR: {UnboundLocalError("local variable 'img_name' referenced before assignment")}
+ON PATH:https://www.vexio.ro/carucioare/
+PAGE:2
+ERR IN FORMAT_DATA FOR PRODUCT: Scaun auto Sparco SK100 Isofix Grey (SK100IGR) 125-150 cm ( 22-36 kg)ERR: {UnboundLocalError("local variable 'img_name' referenced before assignment")}
+ON PATH:https://www.vexio.ro/scaune-auto/
+PAGE:3
+ERR IN FORMAT_DATA FOR PRODUCT: Scaun auto U-GROW Scaun auto rotativ 360 gr,isofix,NegruERR: {UnboundLocalError("local variable 'img_name' referenced before assignment")}
+ON PATH:https://www.vexio.ro/scaune-auto/
+PAGE:3
+ERR IN FORMAT_DATA FOR PRODUCT: Scaun auto Scaun auto U-Grow,isofix,76-150 cm,rosuERR: {UnboundLocalError("local variable 'img_name' referenced before assignment")}
+ON PATH:https://www.vexio.ro/scaune-auto/
+PAGE:3
+ERR IN FORMAT_DATA FOR PRODUCT: Scaun auto Scaun auto U-Grow,isofix,76-150 cm,griERR: {UnboundLocalError("local variable 'img_name' referenced before assignment")}
+ON PATH:https://www.vexio.ro/scaune-auto/
+PAGE:3
+ERR IN FORMAT_DATA FOR PRODUCT: Scaun auto Scaun auto U-Grow,isofix,76-150 cm,negruERR: {UnboundLocalError("local variable 'img_name' referenced before assignment")}
+ON PATH:https://www.vexio.ro/scaune-auto/
+PAGE:3
+ERR IN FORMAT_DATA FOR PRODUCT: Scaun auto U-GROW Scaun auto 100-150 cm , R129,cu isofixERR: {UnboundLocalError("local variable 'img_name' referenced before assignment")}
+ON PATH:https://www.vexio.ro/scaune-auto/
+PAGE:3
+ERR IN FORMAT_DATA FOR PRODUCT: Scaun auto U-GROW Inaltator auto 125-150 cm, R129, rosuERR: {UnboundLocalError("local variable 'img_name' referenced before assignment")}
+ON PATH:https://www.vexio.ro/scaune-auto/
+PAGE:3
