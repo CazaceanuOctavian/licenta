@@ -4,10 +4,10 @@ import csv
 import requests
 import datetime
 
-from selenium import webdriver
-from selenium.webdriver.firefox.options import Options
 from bs4 import NavigableString
 from bs4 import BeautifulSoup
+from selenium import webdriver
+from selenium.webdriver.firefox.options import Options
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
@@ -17,7 +17,10 @@ options = Options()
 options.binary_location = '/etc/firefox'
 driver = webdriver.Firefox(options=options)
 
-currentDate = datetime.datetime.now().date()
+currentDate = datetime.datetime.now().strftime('%Y_%m_%d')
+dying_gasp_url = None
+
+latest_path = None
 
 def no_nav_strings(iterable):
     return list(filter(lambda x: type(x) != NavigableString, iterable))
@@ -96,9 +99,12 @@ def format_data(item):
             logs.write('ERR: ' + str({e}) + '\n')
     
 
-def scrape(path):
-    target_url = 'https://www.evomag.ro' + path
-    #target_url = path
+def scrape(path : str):
+
+    if path.rfind("https") == -1:
+        target_url = 'https://www.evomag.ro' + path
+    else:
+        target_url = path
     driver.get(target_url)
 
     #wait for images to lazly load
@@ -111,8 +117,8 @@ def scrape(path):
         page_source = driver.page_source
         soup = BeautifulSoup(page_source, 'html.parser')
 
-        with open('dump.txt', 'w') as dump:
-            dump.write(page_source)
+        # with open('dump.txt', 'w') as dump:
+        #     dump.write(page_source)
         
         li_items = soup.find_all(class_="nice_product_item")
         category = soup.find(class_='breadcrumbs').text.strip().split('»')[-1].strip()
@@ -137,20 +143,39 @@ def scrape(path):
                         formatted_dict['category']=category
  
                         writer.writerow(formatted_dict.values())
+                        
                     except Exception as e:
                         print(str({e}))
                         with open('output/errLog-' + str(currentDate) + '.txt', 'a') as logs:
                             logs.write('ON PATH:' + path +  '\n' + 'PAGE:' + str(current_page) + '\n')
                         continue
-
+                    
+        
         new_path = target_url + 'filtru/pagina:' + str(current_page) 
+        global latest_path
+        latest_path = new_path
         driver.delete_all_cookies()
         driver.get(new_path)
                 
 def main():
+    global latest_path
     print(os.getcwd())
-    with open('evomag_tree.txt', 'r') as file:
-        for path in file:
+    category_counter = 0
+    origin = os.path.join('output', 'dying_gasp_' + str(currentDate) + '.txt')
+
+    if (os.path.exists(origin)):
+        print('DYING GASP DETECTED -- DEFAULTING TO ' + str(origin))
+        with open(origin, 'r') as file:
+            latest_path = file.readline()
+        scrape(latest_path)
+        
+    else:
+        print('NO DYING GASP -- DEFAULTING TO evomag_tree.txt')
+        origin = 'evomag_tree.txt' 
+
+    with open(origin, 'r') as origin:
+        category_counter+=1
+        for path in origin:
             driver.delete_all_cookies()
             path = path.strip()
             if path is None:
@@ -163,8 +188,16 @@ def main():
                     logs.write('ERR MAIN: ' + str({e}))
                 driver.delete_all_cookies()
                 continue
-
-#scrape('/portabile-laptopuri-notebook/filtru/pagina:2')
+            except KeyboardInterrupt as end:
+                #write the remaining lines in dying_gasp from current line to EOF
+                print('PANIC!')
+                with open('output/dying_gasp_' + str(currentDate) + '.txt', 'a') as gasp:
+                    gasp.write(latest_path + "\n")
+                    line = path
+                    gasp.write(line + '\n')
+                    while(line):
+                        line = origin.readline()
+                        gasp.write(line)
 
 main()
 driver.quit()

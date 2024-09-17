@@ -1,4 +1,5 @@
 /portabile-laptopuri-notebook/
+/portabile-laptopuri-notebook/
 /portabile-accesorii-laptop-componente-laptop/
 /portabile-accesorii-laptop-genti-si-huse-laptop/
 /portabile-accesorii-laptop-rucsacuri-si-ghiozdane-laptop/
