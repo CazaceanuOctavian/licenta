@@ -14,6 +14,9 @@ for dataset in os.listdir(datasetDir):
         data = pd.read_csv(dataset_path)
         if data.empty:
             print(f"Skipping empty dataset: {dataset}")
+            with open('models/performanceLogs.txt', 'a') as logs:
+                logs.write(f"WARNING -- DATASET: " + str(dataset) + " is empty!\n")
+                logs.write("-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\n")
             continue
 
         X = data[['Old_Price']]  
@@ -30,7 +33,7 @@ for dataset in os.listdir(datasetDir):
         mse = mean_squared_error(y_test, y_pred)
         r2 = r2_score(y_test, y_pred)
 
-        with open('performanceLogs.txt', 'a') as logs:
+        with open('models/performanceLogs.txt', 'a') as logs:
             logs.write(f"Performance for category: " + '_'.join(dataset.split('_')[1:])  + '\n') 
             logs.write(f"Mean Squared Error: {mse}" + '\n')
             logs.write(f"R-Squared: {r2}" + '\n')
