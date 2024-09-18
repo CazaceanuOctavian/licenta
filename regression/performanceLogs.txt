@@ -1,0 +1,32 @@
+Performance for category: Sisteme_Audio.csv
+Mean Squared Error: 1743.012274283549
+R-Squared: 0.9938539293367215
+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+Performance for category: Soundbar.csv
+Mean Squared Error: 2411.832603013536
+R-Squared: 0.9961208763334186
+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+Performance for category: Smartwatch.csv
+Mean Squared Error: 1000.5885025221784
+R-Squared: 0.9991479754492896
+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+Performance for category: Televizoare.csv
+Mean Squared Error: 2898.267283805015
+R-Squared: 0.9995830474223977
+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+Performance for category: Laptop_&_Accesorii.csv
+Mean Squared Error: 796.95933472038
+R-Squared: 0.999806848666497
+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+Performance for category: Boxe_Portabile_cu_Bluetooth.csv
+Mean Squared Error: 87.95103980801008
+R-Squared: 0.9974716853635254
+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+Performance for category: Telefoane.csv
+Mean Squared Error: 1494.4823796622888
+R-Squared: 0.999526917440475
+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+Performance for category: Laptopuri_Refurbished.csv
+Mean Squared Error: 187.50695161290272
+R-Squared: 0.9994198225916022
+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
