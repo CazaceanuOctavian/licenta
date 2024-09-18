@@ -105,7 +105,7 @@ def scrape(path : str):
     if path.rfind("pagina") == -1:
         current_page = 1
     else:
-        current_page = int(path.split('/')[-2][-1])
+        current_page = path.split('/')[-2][-1]
 
     driver.get(target_url)
 

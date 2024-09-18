@@ -101,6 +101,7 @@ def format_data(item):
 def scrape(path : str):
 
     if path.rfind("https") == -1:
+    # TODO --> bug ciudat aici unde nu ia bine current_page-ul si da append la prima linie din dying_breath noul path...
         target_url = 'https://www.evomag.ro' + path
         current_page = 1
     else:
@@ -196,7 +197,7 @@ def main():
         print('PANIC!')
         with open('output/dying_gasp_' + str(currentDate) + '_tmp.txt', 'w') as gasp:
             gasp.write(latest_path)
-            
+
             with open(origin, 'r') as origin_file:
                 for _ in range(pathCount):
                     origin_file.readline()
