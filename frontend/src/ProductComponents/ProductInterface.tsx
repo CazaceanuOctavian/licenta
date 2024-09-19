@@ -7,6 +7,7 @@ export interface Product {
     url: string;
     productCode: string;
     imagePath: string;
+    predictedPrice: string;
 }
 
 export interface ProductList {

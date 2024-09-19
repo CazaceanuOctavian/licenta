@@ -23,16 +23,8 @@ rf_regressor = RandomForestRegressor(n_estimators=100, random_state=42)
 # Train the model on the training data
 rf_regressor.fit(X_train, y_train)
 
-# Save the model to a file using pickle
-with open('models/testCategory.pkl', 'wb') as file:
-    pickle.dump(rf_regressor, file)
-
-# Load the saved model (in case you want to load it later)
-with open('models/testCategory.pkl', 'rb') as file:
-    loaded_model = pickle.load(file)
-
 # Make predictions on the test set to evaluate the model
-y_pred = loaded_model.predict(X_test)
+y_pred = rf_regressor.predict(X_test)
 
 # Evaluate the model performance
 mse = mean_squared_error(y_test, y_pred)
@@ -49,7 +41,7 @@ def predict_new_price(old_price):
     input_data = pd.DataFrame([[old_price]], columns=['old_price'])
     
     # Use the loaded model to make a prediction
-    predicted_price = loaded_model.predict(input_data)
+    predicted_price = rf_regressor.predict(input_data)
     
     return predicted_price[0]  # Return the single predicted value
 

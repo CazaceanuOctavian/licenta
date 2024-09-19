@@ -30,9 +30,11 @@ public class Product {
     private String imagePath;
     @Column(name = "category")
     private String category;
+    @Column(name = "predicted_price")
+    private float predictedPrice;
 
     public Product(String name, float price, boolean isInStock, byte rating, String productCode, String url,
-            String imagePath, String category) {
+            String imagePath, String category, float predictedPrice) {
         this.name = name;
         this.price = price;
         this.isInStock = isInStock;
@@ -41,10 +43,19 @@ public class Product {
         this.url = url;
         this.imagePath = imagePath;
         this.category = category;
+        this.predictedPrice = predictedPrice;
     }
 
     private Product() {
 
+    }
+
+    public void setPredictedPrice(float newPredictedPrice) {
+        this.predictedPrice = newPredictedPrice;
+    }
+
+    public float getPredictedPrice() {
+        return this.predictedPrice;
     }
 
     public void setCategory(String category) {

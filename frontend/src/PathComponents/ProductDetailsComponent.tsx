@@ -1,8 +1,10 @@
+import React, { useState } from "react";
 import GraphComponent from "../UtilityComponents/GraphComponent";
 import PopulateComponent from "../UtilityComponents/PopulatePageComponent";
 
 const ProductDetailsComponent: React.FC = () => {
     var product_id = window.location.href.split('=')[1]
+    const [predictedPrice, setPredictedPrice] = useState<string>('?')
 
     return (
         <div className='page'>
@@ -17,6 +19,7 @@ const ProductDetailsComponent: React.FC = () => {
                         statistics will go here at some point
                     </p>
                     <GraphComponent userQuery={product_id}/>
+                    <p>the predicted price for next month for this product is: {predictedPrice}</p>
                 </h1>
             </div>
         </div>
