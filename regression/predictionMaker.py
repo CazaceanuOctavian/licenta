@@ -4,7 +4,7 @@ import pickle
 import os
 import time
 
-
+start_time = time.time()
 
 conn = psycopg2.connect(
     host="localhost",  
@@ -16,7 +16,7 @@ conn = psycopg2.connect(
 def predict_price(Old_Price, loaded_model):
     input_data = pd.DataFrame([[Old_Price]], columns=['Old_Price'])
     predicted_price = loaded_model.predict(input_data)
-    return predicted_price[0]  
+    return round(predicted_price[0], 2)  
 
 cur = conn.cursor()
 cur.execute('SELECT DISTINCT category FROM products')
@@ -52,3 +52,6 @@ for category in formatted_categories:
 
 cur.close()
 conn.close()
+
+uptime = time.time() - start_time
+print('Process finished with an uptime of: ' + str(uptime) + ' seconds')
