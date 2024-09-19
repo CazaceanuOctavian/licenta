@@ -19,6 +19,7 @@ interface Product {
 export const ProductComponentDefault: React.FC<Product> = ({ name, price, rating, is_in_stock, productCode, imagePath }) => {
     return (
         <div className="product-info">
+            <div className="upper-product">
             <h2 className="product-name">
                 <a 
                 href={`http://localhost:5173/products/current_product/fetch_data=${productCode}`} 
@@ -33,12 +34,15 @@ export const ProductComponentDefault: React.FC<Product> = ({ name, price, rating
                 style={{ width: '100px', height: 'auto' }} 
                 alt="Product" 
             />
-            <p className="product-price">{price.toFixed(2)} lei</p>
-            <p className="product-rating">Rating: {rating.toFixed(1)}</p>
-            <p className="product-stock">
-                {is_in_stock ? 'In stoc' : 'Nu este in stoc'}
-            </p>
-            <p className='product-code'> Cod Produs: {productCode}</p>
+            </div>
+            <div className="middle-product">
+                <p className="product-price">{price.toFixed(2)} lei</p>
+                <p className="product-rating">Rating: {rating.toFixed(1)}</p>
+                <p className="product-stock">
+                    {is_in_stock ? 'In stoc' : 'Nu este in stoc'}
+                </p>
+                <p className='product-code'> Cod Produs: {productCode}</p>
+            </div>
         </div>
     );
 };
@@ -47,14 +51,16 @@ export const ProductComponentDetailed: React.FC<Product> = ({ name, price, ratin
     productCode, url, imagePath, predictedPrice }) => {
     return (
         <div className="product-info">
-            <h2 className="product-name">
-                {name}
-            </h2>
-            <img 
-                src={imagePath} 
-                style={{ width: '100px', height: 'auto' }} 
-                alt="Product" 
-            />
+            <div className="upper-product">
+                <h2 className="product-name">
+                    {name}
+                </h2>
+                <img 
+                    src={imagePath} 
+                    style={{ width: '100px', height: 'auto' }} 
+                    alt="Product" 
+                />
+            </ div>
             <p className="product-price">{price.toFixed(2)} lei</p>
             <p className="predicted-price"> Pretul Prezis pentru luna viitoare: {predictedPrice}</p>
             <p className="product-rating">Rating: {rating.toFixed(1)}</p>

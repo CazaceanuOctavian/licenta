@@ -12,13 +12,7 @@
 }
 
 .product-list ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    display: flex; /* Enables Flexbox */
-    flex-wrap:wrap;
-    gap: 16px; /* Adds space between items */
-    margin-left: 100px; /* Adjust this value as needed */
+   
 }
 .product-info{
     

@@ -11,9 +11,11 @@ interface SearchProps {
     setCategories: (query: string[]) => void;
     selectedCategory: string
     setSelectedCategory: (query: string) => void;
+    selectedOrder: string
+    setSelectedOrder: (query: string) =>void;
 }
 
-const QueryPrice: React.FC<SearchProps> = ({ selectedCategory, lowerPice, upperPrice, categories, setLowerPrice, setUpperPrice, setCategories, setSelectedCategory }) => {
+const QueryPrice: React.FC<SearchProps> = ({ selectedOrder, selectedCategory, lowerPice, upperPrice, categories, setSelectedOrder, setLowerPrice, setUpperPrice, setCategories, setSelectedCategory }) => {
 
     const callApi = async () => {
         try {
@@ -27,6 +29,10 @@ const QueryPrice: React.FC<SearchProps> = ({ selectedCategory, lowerPice, upperP
 
     const handleCategoryChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
         setSelectedCategory(event.target.value);
+      };
+
+      const handleOrderChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
+        setSelectedOrder(event.target.value);
       };
 
 
@@ -56,6 +62,14 @@ const QueryPrice: React.FC<SearchProps> = ({ selectedCategory, lowerPice, upperP
                     placeholder="MaxVal"
                  /> 
             </div>
+            <p>ordonare: </p>
+            <div className="price-ordering">
+                <select id="order-dropdown" value={selectedOrder} onChange={handleOrderChange}>
+                    <option>--Select--</option>
+                    <option value={'desc'}>Descrescatoare</option>
+                    <option value={'cresc'}>Crescatoare</option>
+                </select>
+            </div>
             <p>categoria de produs:</p>
             <div className="category-container">
                 <select id="category-dropdown" value={selectedCategory} onChange={handleCategoryChange}>
@@ -65,7 +79,7 @@ const QueryPrice: React.FC<SearchProps> = ({ selectedCategory, lowerPice, upperP
                             {option}
                         </option>
                     ))}
-                </select>
+                </select> 
             </div>
         </div>
     );

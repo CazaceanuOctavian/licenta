@@ -12,6 +12,7 @@ interface userQueryProp {
     lowerPrice?: string
     upperPrice?: string
     category?: string
+    selectedOrder?: string
 }
 
 interface SwitchComponentProps {
@@ -25,7 +26,7 @@ interface SwitchComponentProps {
 //     fetchedData: Product[];
 // }
 
-const PopulateComponent: React.FC<userQueryProp> = ({ queryType, productDisplayType, userQuery, selectedValue, selectedPage, lowerPrice, upperPrice, category }) => {
+const PopulateComponent: React.FC<userQueryProp> = ({ selectedOrder, queryType, productDisplayType, userQuery, selectedValue, selectedPage, lowerPrice, upperPrice, category }) => {
     const [fetchedData, setData] = useState<Product[]>([]);
     
     let apiQuery: string = '';
@@ -73,6 +74,15 @@ const PopulateComponent: React.FC<userQueryProp> = ({ queryType, productDisplayT
                     apiQuery = 'http://localhost:8080/products/name/searchAndPaginateCustomCategory=';
                     console.log('called withCategory')
                 }
+                break;
+            case "withCategoryAndOrdering":
+                if (category === '' || selectedOrder === '') {
+                    apiQuery = 'http://localhost:8080/products/name/searchAndPaginateCustom=';
+                    console.log('called withCategory but found no category so defaulted to withNoCategory')
+                }
+                else {
+                    apiQuery = 'http://localhost:8080/products/name/searchAndPaginateCustomWithOrdering='
+                }   
                 break;
             case "withProductCode":
                 apiQuery = 'http://localhost:8080/products/code/search=';

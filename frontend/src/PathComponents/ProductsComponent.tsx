@@ -12,12 +12,12 @@ const Products: React.FC = () => {
     const [upperPrice, setUpperPrice] = useState<string>('')
     const [categories, setCategory] = useState<string[]>([])
     const [selectedCategory, setSelectedCategory] = useState<string>('')
+    const [selectedOrder, setSelectedOrder] = useState<string>('')
 
     return (
         <div className="product-component">
-
-
-            <Navbar userQuery={userQuery} setUserQuery={setUserQuery} 
+            <p>selected ordering is: {selectedOrder}</p>
+            <Navbar displayType="withFullFeatures" userQuery={userQuery} setUserQuery={setUserQuery} 
             selectedValue={selectedValue} setSelectedValue={setSelectedValue}
             selectedPage={selectedPage} setSelectedPage={setSelectedPage} />
 
@@ -25,13 +25,18 @@ const Products: React.FC = () => {
                 <QueryPrice lowerPice={lowerPrice} upperPrice={upperPrice} 
                 setLowerPrice={setLowerPrice} setUpperPrice={setUpperPrice} 
                 categories={categories} setCategories={setCategory} 
-                selectedCategory={selectedCategory} setSelectedCategory={setSelectedCategory}/>
+                selectedCategory={selectedCategory} setSelectedCategory={setSelectedCategory}
+                selectedOrder={selectedOrder} setSelectedOrder={setSelectedOrder}/>
 
                 <PopulateComponent productDisplayType="default" queryType='withCategory' userQuery={userQuery} 
                 selectedValue={selectedValue} selectedPage={selectedPage}
-                lowerPrice={lowerPrice} upperPrice={upperPrice} category={selectedCategory}/>
+                lowerPrice={lowerPrice} upperPrice={upperPrice} category={selectedCategory} selectedOrder={selectedOrder}/>
             
             </div>
+
+            <Navbar displayType="withOnlyButtons" userQuery={userQuery} setUserQuery={setUserQuery} 
+            selectedValue={selectedValue} setSelectedValue={setSelectedValue}
+            selectedPage={selectedPage} setSelectedPage={setSelectedPage} />
         </div>
     )
 }

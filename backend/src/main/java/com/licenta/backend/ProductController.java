@@ -1,6 +1,12 @@
 package com.licenta.backend;
 
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Sort;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -90,6 +96,54 @@ public class ProductController {
     }
 
     @CrossOrigin(origins = "*")
+    @GetMapping("/products/name/searchAndPaginateCustomCategoryAndOrdering={productName},{limit},{page},{lowerPrice},{upperPrice},{category},{order},")
+    public Iterable<Product> customPaginateSearchPriceCategoryAndOrdering(
+            @PathVariable String productName,
+            @PathVariable int limit,
+            @PathVariable int page,
+            @PathVariable int lowerPrice,
+            @PathVariable int upperPrice,
+            @PathVariable String category,
+            @PathVariable String order) {
+
+        Iterable<Product> retrievedProductList;
+        retrievedProductList = this.productRepository.customSearchQueryByCategoryAndPrice(productName, limit, page,
+                lowerPrice,
+                upperPrice, category);
+
+        List<Product> productList = new ArrayList<>();
+        for (Product product : retrievedProductList) {
+            productList.add(product);
+        }
+
+        retrievedProductList = this.productRepository.customSearchQueryByCategoryAndPrice(productName, limit, page,
+                lowerPrice,
+                upperPrice, category);
+
+        if (String.valueOf(order).equals("asc")) {
+            Collections.sort(productList, new Comparator<Product>() {
+                @Override
+                public int compare(Product p1, Product p2) {
+                    return Double.compare(p1.getPrice(), p2.getPrice());
+                }
+            });
+        } else {
+            Collections.sort(productList, new Comparator<Product>() {
+                @Override
+                public int compare(Product p1, Product p2) {
+                    return Double.compare(p2.getPrice(), p1.getPrice());
+                }
+            });
+        }
+        for (Product product : retrievedProductList) {
+            System.out.println(product.toString());
+        }
+
+        System.out.println("i found the above products by id from the db!");
+        return productList;
+    }
+
+    @CrossOrigin(origins = "*")
     @GetMapping("/products/categories")
     public Iterable<String> findCategories() {
         Iterable<String> retrievedCategoryList;
@@ -116,4 +170,5 @@ public class ProductController {
         System.out.println("i the above product by name from the db!");
         return retrievedCategoryList;
     }
+
 }

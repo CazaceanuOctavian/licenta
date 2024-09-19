@@ -70,12 +70,22 @@ body {
 .product-info {
   display: flex;
   flex-direction: column;
+
   width: 150px;
 }
 
 .product-name {
   font-size: 1.2em;
   margin: 0;
+  max-height: 150px;
+  overflow: scroll;
+  text-overflow: ellipsis;
+  height: 10rem;
+  padding-bottom: 1rem;
+}
+
+.middle-product {
+  padding-bottom: 0.1rem;
 }
 
 .product-price {
@@ -206,5 +216,7 @@ button:focus-visible {
   button:hover {
     background-color: #003d7a;
   }
+
+  
 
 }
