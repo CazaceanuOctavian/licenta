@@ -1,0 +1,25 @@
+/* Container for query-options and product-list */
+.main-page-div {
+    display: flex; /* Enables Flexbox layout */
+    align-items: flex-start; /* Aligns items at the top of the container */
+    gap: 20px; /* Space between query-options and product-list */
+    padding: 20px;
+}
+
+/* Ensure query-options and product-list take up appropriate space */
+.query-options {
+    flex: 0 0 250px; /* Fixed width for query-options */
+}
+
+.product-list ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex; /* Enables Flexbox */
+    flex-wrap:wrap;
+    gap: 16px; /* Adds space between items */
+    margin-left: 100px; /* Adjust this value as needed */
+}
+.product-info{
+    
+}

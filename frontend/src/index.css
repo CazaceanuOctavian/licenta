@@ -1,7 +1,7 @@
 /* Global Styles */
 :root {
   font-family: 'Inter', system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.6;
+  line-height: 1.4;
   font-weight: 400;
   color-scheme: light dark;
   color: #333;
@@ -45,10 +45,13 @@ body {
 }
 
 .product-list {
-  display: flex;
-  flex-direction: column;
-  gap: 40px;
-}
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex; /* Enables Flexbox */
+  flex-wrap:wrap;
+  gap: 16px; /* Adds space between items */
+  }
 
 .product-item {
   background: #000000;
@@ -67,6 +70,7 @@ body {
 .product-info {
   display: flex;
   flex-direction: column;
+  width: 150px;
 }
 
 .product-name {
@@ -99,7 +103,7 @@ body {
 
 /* Input Styles */
 input[type="text"] {
-  width: 100%;
+  width: 90%;
   max-width: 600px;
   padding: 10px;
   border: 1px solid #ddd;
@@ -126,6 +130,37 @@ button {
   color: #fff;
   cursor: pointer;
   transition: background-color 0.3s, border-color 0.3s;
+}
+
+.nav-baar {
+  display: flex;
+  flex-direction: column; /* Stack elements vertically */
+  align-items: center; /* Center elements horizontally */
+  gap: 10px; /* Space between elements */
+}
+
+.nav-baar .search-container {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Space between buttons and search component */
+}
+
+.prev-button {
+  padding: 5px 10px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.next-button {
+  padding: 5px 10px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.count-dropdown {
+  margin-top: 10px; /* Space between search section and dropdown */
+  padding: 5px;
+  font-size: 16px;
 }
 
 button:hover {
@@ -171,4 +206,5 @@ button:focus-visible {
   button:hover {
     background-color: #003d7a;
   }
+
 }

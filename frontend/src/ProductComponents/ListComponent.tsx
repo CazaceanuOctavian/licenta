@@ -6,7 +6,7 @@ import "../ProductList.css"
 
 export const ProductListDefault : React.FC<ProductList> = ( { data } ) => {
     return (
-        <ul>
+    <ul className="product-list">
         {data.map(item => (
           <ProductComponentDefault id = {item.id} name={item.name} price={item.price} 
             rating={item.rating} is_in_stock = {item.is_in_stock} url={item.url} productCode={item.productCode} 
@@ -18,12 +18,13 @@ export const ProductListDefault : React.FC<ProductList> = ( { data } ) => {
 
 export const ProductListDetailed : React.FC<ProductList> = ( { data } ) => {
     return (
-        <ul>
+    <ul className="product-list">
         {data.map(item => (
           <ProductComponentDetailed id = {item.id} name={item.name} price={item.price} 
             rating={item.rating} is_in_stock = {item.is_in_stock} url={item.url} productCode={item.productCode}
             imagePath={item.imagePath} predictedPrice={item.predictedPrice}/>
         ))}
+        
     </ul>
     )
 }

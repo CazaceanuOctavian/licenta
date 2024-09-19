@@ -91,9 +91,7 @@ const PopulateComponent: React.FC<userQueryProp> = ({ queryType, productDisplayT
     };
 
     return (
-        <div>
-                <ContextComponent displayType={productDisplayType} queryType={queryType} fetchedData={fetchedData}></ContextComponent>
-        </div>
+        <ContextComponent displayType={productDisplayType} queryType={queryType} fetchedData={fetchedData}></ContextComponent>
     )
 }
 

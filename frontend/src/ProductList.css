@@ -1,8 +1,0 @@
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    display: flex; /* Enables Flexbox */
-    flex-wrap: wrap; /* Allows items to wrap to the next line if needed */
-    gap: 16px; /* Adds space between items */
-}

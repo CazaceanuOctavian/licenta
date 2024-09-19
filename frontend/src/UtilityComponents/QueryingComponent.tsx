@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { FetchData } from "./FetchComponent";
+import '../QueryComponent.css'
 
 interface SearchProps {
     lowerPice: string;
@@ -35,34 +36,40 @@ const QueryPrice: React.FC<SearchProps> = ({ selectedCategory, lowerPice, upperP
 
     return (
         <div className="query-options">
-            <input
-                id="price-bar-min"
-                type="number"
-                min="0"
-                value={lowerPice}
-                onChange={(e) => setLowerPrice(e.target.value)}
-                placeholder="MinVal"
-            />
-            
-            <input
-                id="price-bar-max"
-                type="number"
-                min="0"
-                value={upperPrice}
-                onChange={(e) => setUpperPrice(e.target.value)}
-                placeholder="MaxVal"
-             /> 
-
-            <select id="category-dropdown" value={selectedCategory} onChange={handleCategoryChange}>
-                <option>--Select--</option>
-                {categories.map((option, index) => (
-                    <option key={index} value={option}>
-                        {option}
-                    </option>
-                ))}
-            </select>
+            <p>intervalul de pret:</p>
+            <div className="price-container">
+                <input
+                    id="price-bar-min"
+                    type="number"
+                    min="0"
+                    value={lowerPice}
+                    onChange={(e) => setLowerPrice(e.target.value)}
+                    placeholder="MinVal"
+                />
+                
+                <input
+                    id="price-bar-max"
+                    type="number"
+                    min="0"
+                    value={upperPrice}
+                    onChange={(e) => setUpperPrice(e.target.value)}
+                    placeholder="MaxVal"
+                 /> 
+            </div>
+            <p>categoria de produs:</p>
+            <div className="category-container">
+                <select id="category-dropdown" value={selectedCategory} onChange={handleCategoryChange}>
+                    <option>--Select--</option>
+                    {categories.map((option, index) => (
+                        <option key={index} value={option}>
+                            {option}
+                        </option>
+                    ))}
+                </select>
+            </div>
         </div>
     );
+    
 };
 
 export default QueryPrice;
