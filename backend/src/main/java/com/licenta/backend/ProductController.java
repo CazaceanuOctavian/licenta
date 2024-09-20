@@ -6,7 +6,6 @@ import java.util.Comparator;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.Sort;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -47,8 +46,10 @@ public class ProductController {
 
     @CrossOrigin(origins = "*")
     @GetMapping("/products/name/searchAndPaginate={productName},{limit},{page}")
-    public Iterable<Product> findAllProductsByProductNameLimit(@PathVariable String productName,
-            @PathVariable int limit, @PathVariable int page) {
+    public Iterable<Product> findAllProductsByProductNameLimit(
+            @PathVariable String productName,
+            @PathVariable int limit,
+            @PathVariable int page) {
         Iterable<Product> retrievedProductList;
         retrievedProductList = this.productRepository.findProductByNameLimit(productName, limit, page);
 
@@ -62,8 +63,11 @@ public class ProductController {
 
     @CrossOrigin(origins = "*")
     @GetMapping("/products/name/searchAndPaginateCustom={productName},{limit},{page},{lowerPrice},{upperPrice},")
-    public Iterable<Product> customPaginateSearchPrice(@PathVariable String productName,
-            @PathVariable int limit, @PathVariable int page, @PathVariable int lowerPrice,
+    public Iterable<Product> customPaginateSearchPrice(
+            @PathVariable String productName,
+            @PathVariable int limit,
+            @PathVariable int page,
+            @PathVariable int lowerPrice,
             @PathVariable int upperPrice) {
         Iterable<Product> retrievedProductList;
         retrievedProductList = this.productRepository.customSearchQueryByPrice(productName, limit, page, lowerPrice,
@@ -79,9 +83,13 @@ public class ProductController {
 
     @CrossOrigin(origins = "*")
     @GetMapping("/products/name/searchAndPaginateCustomCategory={productName},{limit},{page},{lowerPrice},{upperPrice},{category}")
-    public Iterable<Product> customPaginateSearchPriceCategory(@PathVariable String productName,
-            @PathVariable int limit, @PathVariable int page, @PathVariable int lowerPrice,
-            @PathVariable int upperPrice, @PathVariable String category) {
+    public Iterable<Product> customPaginateSearchPriceCategory(
+            @PathVariable String productName,
+            @PathVariable int limit,
+            @PathVariable int page,
+            @PathVariable int lowerPrice,
+            @PathVariable int upperPrice,
+            @PathVariable String category) {
         Iterable<Product> retrievedProductList;
         retrievedProductList = this.productRepository.customSearchQueryByCategoryAndPrice(productName, limit, page,
                 lowerPrice,
@@ -116,10 +124,6 @@ public class ProductController {
             productList.add(product);
         }
 
-        retrievedProductList = this.productRepository.customSearchQueryByCategoryAndPrice(productName, limit, page,
-                lowerPrice,
-                upperPrice, category);
-
         if (String.valueOf(order).equals("asc")) {
             Collections.sort(productList, new Comparator<Product>() {
                 @Override
@@ -127,7 +131,7 @@ public class ProductController {
                     return Double.compare(p1.getPrice(), p2.getPrice());
                 }
             });
-        } else {
+        } else if (String.valueOf(order).equals("desc")) {
             Collections.sort(productList, new Comparator<Product>() {
                 @Override
                 public int compare(Product p1, Product p2) {
@@ -135,6 +139,7 @@ public class ProductController {
                 }
             });
         }
+
         for (Product product : retrievedProductList) {
             System.out.println(product.toString());
         }

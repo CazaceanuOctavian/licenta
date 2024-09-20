@@ -47,6 +47,8 @@ export const ProductComponentDefault: React.FC<Product> = ({ name, price, rating
     );
 };
 
+
+
 export const ProductComponentDetailed: React.FC<Product> = ({ name, price, rating, is_in_stock, 
     productCode, url, imagePath, predictedPrice }) => {
     return (

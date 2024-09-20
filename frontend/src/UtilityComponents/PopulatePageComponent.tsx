@@ -51,12 +51,17 @@ const PopulateComponent: React.FC<userQueryProp> = ({ selectedOrder, queryType, 
                 lowerPrice = '0'
             if (upperPrice === '')
                 upperPrice = '999999'
-            callApi(userQuery + ',' + selectedValue + ',' + selectedPage + ',' + lowerPrice + ',' + upperPrice + ',' + category)
+            if (selectedOrder === '')
+                selectedOrder = 'undefined'
+            if (category === '')
+                category = 'undefined'
+            //SEE HOW YOU CAN REMOVE THE HARD CODING SHIT YOU DID HERE
+            callApi(userQuery + ',' + selectedValue + ',' + selectedPage + ',' + lowerPrice + ',' + upperPrice + ',' + category + ',' + selectedOrder + ',')
         }
         else {
             callApi(userQuery)
         }
-      }, [userQuery, selectedValue, selectedPage, lowerPrice, upperPrice, category]); 
+      }, [userQuery, selectedValue, selectedPage, lowerPrice, upperPrice, category, selectedOrder,]); 
 
     //TODO --> queryType switch statement might be shit, look to see if you can refactor at some point...
     const ContextComponent: React.FC<SwitchComponentProps> = ({ displayType, queryType, fetchedData }) => {
@@ -76,13 +81,8 @@ const PopulateComponent: React.FC<userQueryProp> = ({ selectedOrder, queryType, 
                 }
                 break;
             case "withCategoryAndOrdering":
-                if (category === '' || selectedOrder === '') {
-                    apiQuery = 'http://localhost:8080/products/name/searchAndPaginateCustom=';
-                    console.log('called withCategory but found no category so defaulted to withNoCategory')
-                }
-                else {
-                    apiQuery = 'http://localhost:8080/products/name/searchAndPaginateCustomWithOrdering='
-                }   
+                apiQuery = 'http://localhost:8080/products/name/searchAndPaginateCustomCategoryAndOrdering='
+                console.log('called withCategoryAndOrdering')
                 break;
             case "withProductCode":
                 apiQuery = 'http://localhost:8080/products/code/search=';
