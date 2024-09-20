@@ -31,7 +31,7 @@ body {
   align-items: center;
   min-width: 320px;
   min-height: 100vh;
-  background: linear-gradient(135deg, #282a36,	 	#44475a); /* Gradient background */
+  background: linear-gradient(135deg, #383a4b,	 	#44475a); /* Gradient background */
   color: #d4d4d4;
 }
 
@@ -53,8 +53,22 @@ body {
   gap: 16px; /* Adds space between items */
   }
 
+  .product-info-detailed {
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    background: #1c1d2b;
+    border-radius: 50px;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    padding: 15px;
+    transition: box-shadow 0.5s;
+    margin-bottom: 15px; /* Adjust this value to control the space between items */
+    text-align: center;
+  }
+
 .product-item {
-  background: #000000;
+  background: #282a36;
   border-radius: 50px;
   box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
   overflow: hidden;
@@ -70,7 +84,6 @@ body {
 .product-info {
   display: flex;
   flex-direction: column;
-
   width: 150px;
 }
 
@@ -146,10 +159,17 @@ button {
   display: flex;
   flex-direction: column; /* Stack elements vertically */
   align-items: center; /* Center elements horizontally */
-  gap: 10px; /* Space between elements */
+  gap: 10px; 
+  margin-top: 45px;
 }
 
 .nav-baar .search-container {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Space between buttons and search component */
+}
+
+.search-container {
   display: flex;
   align-items: center;
   gap: 10px; /* Space between buttons and search component */
@@ -165,6 +185,22 @@ button {
   padding: 5px 10px;
   font-size: 16px;
   cursor: pointer;
+}
+
+.prev-button-bottom {
+  padding: 5px 10px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 15px;
+  margin-bottom: 45px;
+}
+
+.next-button-bottom {
+  padding: 5px 10px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 15px;
+  margin-bottom: 45px;
 }
 
 .count-dropdown {

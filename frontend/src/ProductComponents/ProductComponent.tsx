@@ -29,11 +29,13 @@ export const ProductComponentDefault: React.FC<Product> = ({ name, price, rating
                 {name}
                 </a>
             </h2>
-            <img 
-                src={imagePath} 
-                style={{ width: '100px', height: 'auto' }} 
-                alt="Product" 
-            />
+            <a className="img-container" href={`http://localhost:5173/products/current_product/fetch_data=${productCode}`} >
+                <img 
+                    src={imagePath} 
+                    style={{ width: '100px', height: 'auto' }} 
+                    alt="Product" 
+                />
+            </a>
             </div>
             <div className="middle-product">
                 <p className="product-price">{price.toFixed(2)} lei</p>
@@ -47,35 +49,37 @@ export const ProductComponentDefault: React.FC<Product> = ({ name, price, rating
     );
 };
 
-
-
 export const ProductComponentDetailed: React.FC<Product> = ({ name, price, rating, is_in_stock, 
     productCode, url, imagePath, predictedPrice }) => {
     return (
-        <div className="product-info">
+        <div className="product-info-detailed">
             <div className="upper-product">
                 <h2 className="product-name">
                     {name}
                 </h2>
-                <img 
-                    src={imagePath} 
-                    style={{ width: '100px', height: 'auto' }} 
-                    alt="Product" 
-                />
+                <a className="img-container" href={url}> 
+                    <img 
+                        src={imagePath} 
+                        style={{ width: 'auto', height: 'auto' }} 
+                        alt="Product" 
+                    />
+                </a>
             </ div>
-            <p className="product-price">{price.toFixed(2)} lei</p>
-            <p className="predicted-price"> Pretul Prezis pentru luna viitoare: {predictedPrice}</p>
-            <p className="product-rating">Rating: {rating.toFixed(1)}</p>
-            <p className="product-stock">
-                {is_in_stock ? 'In stoc' : 'Nu este in stoc'}
-            </p>
-            <p className='product-code'> Cod Produs: {productCode}</p>
-            <p className='origin-url'>
-                Link magazin: 
-                <a href={url}>                                                
-                    {url}
-                </a> 
-            </p>
-        </div>
+            <div className="lower-products">
+                <p className="product-price">{price.toFixed(2)} lei</p>
+                <p className="predicted-price"> Pretul Prezis pentru luna viitoare: {predictedPrice}</p>
+                <p className="product-rating">Rating: {rating.toFixed(1)}</p>
+                <p className="product-stock">
+                    {is_in_stock ? 'In stoc' : 'Nu este in stoc'}
+                </p>
+                <p className='product-code'> Cod Produs: {productCode}</p>
+                <p className='origin-url'>
+                    Link magazin: 
+                    <a href={url}>                                                
+                        {url}
+                    </a> 
+                </p>
+            </div>
+        </ div>
     );
 };

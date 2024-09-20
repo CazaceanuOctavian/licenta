@@ -18,7 +18,7 @@ export const ProductListDefault : React.FC<ProductList> = ( { data } ) => {
 
 export const ProductListDetailed : React.FC<ProductList> = ( { data } ) => {
     return (
-    <ul className="product-list">
+    <ul className="product-list-detailed">
         {data.map(item => (
           <ProductComponentDetailed id = {item.id} name={item.name} price={item.price} 
             rating={item.rating} is_in_stock = {item.is_in_stock} url={item.url} productCode={item.productCode}

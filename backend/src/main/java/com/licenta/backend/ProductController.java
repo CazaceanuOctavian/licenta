@@ -115,9 +115,16 @@ public class ProductController {
             @PathVariable String order) {
 
         Iterable<Product> retrievedProductList;
-        retrievedProductList = this.productRepository.customSearchQueryByCategoryAndPrice(productName, limit, page,
-                lowerPrice,
-                upperPrice, category);
+        if (String.valueOf(order).equals("asc")) {
+            retrievedProductList = this.productRepository.customSearchQueryByCategoryAndPriceAsc(productName, limit,
+                    page, lowerPrice, upperPrice, category);
+        } else if (String.valueOf(order).equals("desc")) {
+            retrievedProductList = this.productRepository.customSearchQueryByCategoryAndPriceDesc(productName, limit,
+                    page, lowerPrice, upperPrice, category);
+        } else {
+            retrievedProductList = this.productRepository.customSearchQueryByCategoryAndPrice(productName, limit, page,
+                    lowerPrice, upperPrice, category);
+        }
 
         List<Product> productList = new ArrayList<>();
         for (Product product : retrievedProductList) {
@@ -146,6 +153,7 @@ public class ProductController {
 
         System.out.println("i found the above products by id from the db!");
         return productList;
+
     }
 
     @CrossOrigin(origins = "*")

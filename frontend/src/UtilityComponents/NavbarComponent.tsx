@@ -55,8 +55,8 @@ const Navbar: React.FC<SearchProps> = ( {displayType, setUserQuery, selectedValu
                 return (
                     <div className="nav-baar">
                         <div className="search-container">
-                            <button className="prev-button" onClick={decrement}>prev</button>
-                            <button className="next-button" onClick={increment}>next</button>
+                            <button className="prev-button-bottom" onClick={decrement}>prev</button>
+                            <button className="next-button-bottom" onClick={increment}>next</button>
                         </div>
                     </div>
                 );

@@ -162,7 +162,7 @@ SELECT *
 FROM products
 WHERE to_tsvector(name) @@ plainto_tsquery(?1) AND 
 	raw_price BETWEEN ?4 AND ?5 AND 
-	category LIKE COALESCE(NULLIF(:category_param, 'undefined'), '%') 
+	category LIKE COALESCE(NULLIF(?6, 'undefined'), '%') 
 LIMIT ?2 OFFSET (?3-1) * ?2
 
 

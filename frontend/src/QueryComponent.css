@@ -1,12 +1,12 @@
 .query-options {
     display: flex;
     flex-direction: column; /* Stack items vertically */
-    gap: 10px; /* Space between rows */
+    gap: 0 px; /* Space between rows */
     padding: 20px; /* Padding inside the box */
     margin: 0px; /* Margin outside the box */
     border: 1px solid #ccc; /* Border around the box */
     border-radius: 10px; /* Rounded corners */
-    background-color: #0e0e0e; /* Background color of the box */
+    background-color: #1d1c26; /* Background color of the box */
     width: 250px; /* Fixed width for the box */
     left: 0; /* Aligns the box to the left edge of the page */
     top: 20px; /* Adds some space from the top of the page */
@@ -16,6 +16,7 @@
 .query-options select {
     margin: 5px 0; /* Vertical spacing for inputs/select */
     width: calc(100% - 10px); /* Makes inputs and select take full width minus margins */
+    height: 40px;
 }
 
 .query-options .price-container {

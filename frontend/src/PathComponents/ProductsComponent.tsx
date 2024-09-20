@@ -16,7 +16,6 @@ const Products: React.FC = () => {
 
     return (
         <div className="product-component">
-            <p>selected ordering is: {selectedOrder}</p>
             <Navbar displayType="withFullFeatures" userQuery={userQuery} setUserQuery={setUserQuery} 
             selectedValue={selectedValue} setSelectedValue={setSelectedValue}
             selectedPage={selectedPage} setSelectedPage={setSelectedPage} />
