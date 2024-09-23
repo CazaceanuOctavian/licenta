@@ -17,6 +17,13 @@ options = Options()
 #options.add_argument('--headless')
 options.binary_location = '/etc/firefox'
 driver = webdriver.Firefox(options=options)
+try:
+    driver.install_addon('/home/tavi/snap/firefox/common/.mozilla/firefox/53alnjep.default/extensions/{d10d0bf8-f5b5-c8b4-a8b2-2b9879e08c5d}.xpi')
+    driver.install_addon('/home/tavi/snap/firefox/common/.mozilla/firefox/53alnjep.default/extensions/jid1-MnnxcxisBPnSXQ@jetpack.xpi')
+    driver.install_addon('/home/tavi/snap/firefox/common/.mozilla/firefox/53alnjep.default/extensions/langpack-en-US@firefox.mozilla.org.xpi')
+    driver.install_addon('/home/tavi/snap/firefox/common/.mozilla/firefox/53alnjep.default/extensions/uBlock0@raymondhill.net.xpi')
+except Exception as e:
+    print('WARNING: Could not install some add-ons...')
 
 currentDate = datetime.datetime.now().strftime('%Y_%m_%d')
 

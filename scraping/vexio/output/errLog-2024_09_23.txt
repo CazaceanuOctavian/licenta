@@ -28,3 +28,21 @@ PAGE:8
 ERR IN FORMAT_DATA FOR PRODUCT: Samsung Galaxy Tab S6 lite S Pen Pink EJ-PP610BPEGEUERR: {UnboundLocalError("local variable 'img_name' referenced before assignment")}
 ON PATH:https://www.vexio.ro/tablete-accesorii/
 PAGE:9
+ERR IN FORMAT_DATA FOR PRODUCT: Samsung Tab S7 Book Cover Light Gray Tab S7 Book Cover Light GrayERR: {UnboundLocalError("local variable 'img_name' referenced before assignment")}
+ON PATH:https://www.vexio.ro/tablete-accesorii/
+PAGE:10
+ERR IN FORMAT_DATA FOR PRODUCT: Samsung Tab S7 Book Cover Navy Tab S7 Book Cover NavyERR: {UnboundLocalError("local variable 'img_name' referenced before assignment")}
+ON PATH:https://www.vexio.ro/tablete-accesorii/
+PAGE:10
+ERR IN FORMAT_DATA FOR PRODUCT: Samsung Tab S7+/ S7+ Lite Book Cover Navy Tab S7+/ S7+ Lite Book...ERR: {UnboundLocalError("local variable 'img_name' referenced before assignment")}
+ON PATH:https://www.vexio.ro/tablete-accesorii/
+PAGE:10
+ERR IN FORMAT_DATA FOR PRODUCT: Samsung Tab S7+/ S7+ Lite Book Cover Light Green Tab S7+/ S7+ Lite...ERR: {UnboundLocalError("local variable 'img_name' referenced before assignment")}
+ON PATH:https://www.vexio.ro/tablete-accesorii/
+PAGE:10
+ERR IN FORMAT_DATA FOR PRODUCT: Samsung Tab S7 FE S Pen Mystic PinkERR: {AttributeError("'NoneType' object has no attribute 'text'")}
+ON PATH:https://www.vexio.ro/tablete-accesorii/
+PAGE:11
+ERR IN FORMAT_DATA FOR PRODUCT: Husa cu tastatura Logitech Slim Folio pentru iPad (7th gen) / iPad...ERR: {UnboundLocalError("local variable 'img_name' referenced before assignment")}
+ON PATH:https://www.vexio.ro/tablete-accesorii/
+PAGE:11

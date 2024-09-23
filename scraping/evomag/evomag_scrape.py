@@ -9,14 +9,24 @@ from bs4 import NavigableString
 from bs4 import BeautifulSoup
 from selenium import webdriver
 from selenium.webdriver.firefox.options import Options
+from selenium.webdriver.firefox.firefox_profile import FirefoxProfile
+
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
 options = Options()
+profile = FirefoxProfile()
 #options.add_argument('--headless')
 options.binary_location = '/etc/firefox'
 driver = webdriver.Firefox(options=options)
+try:
+    driver.install_addon('/home/tavi/snap/firefox/common/.mozilla/firefox/53alnjep.default/extensions/{d10d0bf8-f5b5-c8b4-a8b2-2b9879e08c5d}.xpi')
+    driver.install_addon('/home/tavi/snap/firefox/common/.mozilla/firefox/53alnjep.default/extensions/jid1-MnnxcxisBPnSXQ@jetpack.xpi')
+    driver.install_addon('/home/tavi/snap/firefox/common/.mozilla/firefox/53alnjep.default/extensions/langpack-en-US@firefox.mozilla.org.xpi')
+    driver.install_addon('/home/tavi/snap/firefox/common/.mozilla/firefox/53alnjep.default/extensions/uBlock0@raymondhill.net.xpi')
+except Exception as e:
+    print('WARNING: Could not install some add-ons...')
 
 currentDate = datetime.datetime.now().strftime('%Y_%m_%d')
 
