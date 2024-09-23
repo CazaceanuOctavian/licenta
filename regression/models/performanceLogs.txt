@@ -136,3 +136,49 @@ R-Squared: 0.9994198225916022
 -+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
 WARNING -- DATASET: dts_Placi_Video.csv is empty!
 -+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+WARNING -- DATASET: dts_Placi_de_baza.csv is empty!
+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+Performance for category: Sisteme_Audio.csv
+Mean Squared Error: 1743.012274283549
+R-Squared: 0.9938539293367215
+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+Performance for category: Soundbar.csv
+Mean Squared Error: 2411.832603013536
+R-Squared: 0.9961208763334186
+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+WARNING -- DATASET: dts_Coolere_si_ventilatoare.csv is empty!
+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+WARNING -- DATASET: dts_Casti_bluetooth_wireless_airpods_si_audio.csv is empty!
+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+Performance for category: Smartwatch.csv
+Mean Squared Error: 1000.5885025221784
+R-Squared: 0.9991479754492896
+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+Performance for category: Televizoare.csv
+Mean Squared Error: 2898.267283805015
+R-Squared: 0.9995830474223977
+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+WARNING -- DATASET: dts_Alte_accesorii.csv is empty!
+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+Performance for category: Laptop_&_Accesorii.csv
+Mean Squared Error: 797.1833337920324
+R-Squared: 0.9998086465363849
+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+WARNING -- DATASET: dts_Suporturi_TV.csv is empty!
+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+Performance for category: Boxe_Portabile_cu_Bluetooth.csv
+Mean Squared Error: 87.95103980801008
+R-Squared: 0.9974716853635254
+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+Performance for category: Telefoane.csv
+Mean Squared Error: 1494.4823796622888
+R-Squared: 0.999526917440475
+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+WARNING -- DATASET: dts_Procesoare.csv is empty!
+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+Performance for category: Laptopuri_Refurbished.csv
+Mean Squared Error: 187.50695161290272
+R-Squared: 0.9994198225916022
+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+WARNING -- DATASET: dts_Placi_Video.csv is empty!
+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+

@@ -44,7 +44,7 @@ for category in formatted_categories:
         cur.execute('SELECT id, raw_price FROM products WHERE category LIKE ' + category)
         fetchedItems = cur.fetchall()
 
-        with open(config['Paths']['output_path'] + 'output_test.csv', 'a') as output:
+        with open(config['Paths']['regression_output'] + 'output_test.csv', 'a') as output:
             for item in fetchedItems:
                 item_id = item[0]
                 item_price = item[1]

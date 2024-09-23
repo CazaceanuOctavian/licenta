@@ -1,6 +1,10 @@
 import subprocess
+import configparser
 
-scripts = [r'../regression/datasetBuilder.py', r'../regression/modelTrainer.py', r'../regression/predictionMaker.py']
+config = configparser.ConfigParser()
+config.read('/home/tavi/Desktop/licenta/cfg.ini')
+
+scripts = [config['Scripts']['dataset_builder'], config['Scripts']['model_trainer'], config['Scripts']['prediction_maker']]
 
 for script in scripts:
     print(f'Strating {script}...')

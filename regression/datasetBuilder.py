@@ -24,7 +24,6 @@ for category in categories:
 
 for category in formatted_categories:
     try:
-        #Dehardcode This Path Please :D
         with open(config['Paths']['dataset_path'] + 'dts_' + category.replace("'",'').replace(' ','_') + '_tmp.csv', 'a') as dataset:
             cur.execute('SELECT price_products, price_products_2 FROM price_history_view_test WHERE category LIKE ' + str(category))
             prices = cur.fetchall()

@@ -3,6 +3,7 @@ import os
 import csv
 import requests
 import datetime
+import configparser
 
 from selenium import webdriver
 from selenium.webdriver.common.by import By
@@ -18,6 +19,9 @@ options.binary_location = '/etc/firefox'
 driver = webdriver.Firefox(options=options)
 
 currentDate = datetime.datetime.now().strftime('%Y_%m_%d')
+
+config = configparser.ConfigParser()
+config.read('/home/tavi/Desktop/licenta/cfg.ini')
 
 latest_path = None
 
@@ -66,11 +70,11 @@ def format_data(item):
                 img_data = requests.get(imageUrl).content
                 img_name = product_code + '.jpeg'
                 #
-                filepath = os.path.join('/home/tavi/Desktop/licenta/frontend/public/images', img_name) 
+                filepath = os.path.join(config['Paths']['image_output'], img_name) 
                 with open(filepath, 'wb') as file:
                     file.write(img_data)
             except Exception as e:
-                with open('output/errLog-' + str(currentDate) + '.txt', 'a') as logs:
+                with open(config['Paths']['vexio_output'] + 'errLog-' + str(currentDate) + '.txt', 'a') as logs:
                     logs.write('ERR FOR IMAGE SCRAPING: ' + name)
                     logs.write('ERR: ' + str({e}) + '\n')
                 img_name = 'not_found.jpeg'
@@ -90,7 +94,7 @@ def format_data(item):
     except Exception as e:
         print(str({e}))
         print('EXCEPTION====='+str(name)+str(isInStoc)+'=====EXCEPTION')
-        with open('output/errLog-' + str(currentDate) + '.txt', 'a') as logs:
+        with open(config['Paths']['vexio_output'] + 'errLog-' + str(currentDate) + '.txt', 'a') as logs:
             logs.write('ERR IN FORMAT_DATA FOR PRODUCT: ' + name)
             logs.write('ERR: ' + str({e}) + '\n')
 
@@ -120,7 +124,7 @@ def scrape(path : str):
         category = soup.find(class_='breadcrumb').text.strip().split('\xa0')[-1]
         next_page_button = soup.find(class_ = 'pagination-next')
 
-        with open('output/vexio_' + str(currentDate) + '.csv', 'a', newline='') as scrapefile:
+        with open(config['Paths']['vexio_output'] + 'vexio_' + str(currentDate) + '.csv', 'a', newline='') as scrapefile:
                 writer = csv.writer(scrapefile)
                 for element in li_items:
                     try:
@@ -131,7 +135,7 @@ def scrape(path : str):
                         writer.writerow(formatted_dict.values())
                     except Exception as e:
                         print(str({e}))
-                        with open('output/errLog-' + str(currentDate) + '.txt', 'a') as logs:
+                        with open(config['Paths']['vexio_output'] + 'errLog-' + str(currentDate) + '.txt', 'a') as logs:
                             logs.write('ON PATH:' + path +  '\n' + 'PAGE:' + str(current_page) + '\n')
                         continue
 
@@ -147,14 +151,16 @@ def scrape(path : str):
 def main():
     try:
         print(os.getcwd())  
-        origin = os.path.join('output', 'dying_gasp_' + str(currentDate) + '.txt')
+        origin = os.path.join(config['Paths']['vexio_output'], 'dying_gasp_' + str(currentDate) + '.txt')
         pathCount=0
 
         if (os.path.exists(origin)):
             print('DYING GASP DETECTED -- DEFAULTING TO ' + str(origin) + ' -- SCRAPING FROM LAST KNOWN PATH')
         else:
             print('NO DYING GASP -- DEFAULTING TO vexio_tree.txt')
-            origin = 'vexio_tree.txt' 
+            origin = config['Paths']['vexio_output'] + 'vexio_tree.txt' 
+            with open(config['Paths']['vexio_output'] + 'dying_gasp_' + str(currentDate) + '.txt', 'w'):
+                print('dying_gasp created')
 
         with open(origin, 'r') as origin_file:
             for path in origin_file:
@@ -169,14 +175,14 @@ def main():
                     scrape(path=path)
                 except Exception as e:
                     print(str({e}))
-                    with open('output/errLog-' + str(currentDate) + '.txt', 'a') as logs:
+                    with open(config['Paths']['vexio_output'] + 'errLog-' + str(currentDate) + '.txt', 'a') as logs:
                         logs.write('ERR MAIN: ' + str({e}))
                     driver.delete_all_cookies()
                     continue
     except KeyboardInterrupt as end:
         #write the remaining lines in dying_gasp from current line to EOF
         print('PANIC!')
-        with open('output/dying_gasp_' + str(currentDate) + '_tmp.txt', 'w') as gasp:
+        with open(config['Paths']['vexio_output'] + 'dying_gasp_' + str(currentDate) + '_tmp.txt', 'w') as gasp:
             gasp.write(latest_path + '\n')
 
             with open(origin, 'r') as origin_file:
@@ -188,7 +194,7 @@ def main():
                 while(line):
                     line = origin_file.readline()
                     gasp.write(line)
-        os.rename('output/dying_gasp_' + str(currentDate) + '_tmp.txt', 'output/dying_gasp_' + str(currentDate) + '.txt')
+        os.rename(config['Paths']['vexio_output'] +  'dying_gasp_' + str(currentDate) + '_tmp.txt', config['Paths']['vexio_output'] + 'dying_gasp_' + str(currentDate) + '.txt')
 
 main()
 driver.quit()
