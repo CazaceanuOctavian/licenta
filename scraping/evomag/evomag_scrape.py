@@ -3,6 +3,7 @@ import os
 import csv
 import requests
 import datetime
+import configparser
 
 from bs4 import NavigableString
 from bs4 import BeautifulSoup
@@ -18,6 +19,9 @@ options.binary_location = '/etc/firefox'
 driver = webdriver.Firefox(options=options)
 
 currentDate = datetime.datetime.now().strftime('%Y_%m_%d')
+
+config = configparser.ConfigParser()
+config.read('/home/tavi/Desktop/licenta/cfg.ini')
 
 latest_path = None
 
@@ -51,7 +55,10 @@ def format_data(item):
         driver.delete_all_cookies()
         driver.get(itemUrl)
 
-        WebDriverWait(driver, 2).until( EC.presence_of_all_elements_located )
+        # Wait for an element with a specific ID to appear (e.g., 'myElement')
+        element = WebDriverWait(driver, 2).until(
+            EC.presence_of_element_located((By.CLASS_NAME, "product_codes"))
+        )
 
         page_source = driver.page_source
         other_soup = BeautifulSoup(page_source, 'html.parser')
@@ -73,7 +80,7 @@ def format_data(item):
                 with open(filepath, 'wb') as file:
                     file.write(img_data)
             except Exception as e:
-                with open('output/errLog-' + str(currentDate) + '.txt', 'a') as logs:
+                with open(config['Paths']['evomag_output'] + 'errLog-' + str(currentDate) + '.txt', 'a') as logs:
                     logs.write('ERR FOR IMAGE SCRAPING: ' + name)
                     logs.write('ERR: ' + str({e}) + '\n')
                 img_name = 'not_found.jpeg'
@@ -93,7 +100,7 @@ def format_data(item):
     except Exception as e:
         print(str({e}))
         print('EXCEPTION====='+str(name)+str(isInStoc)+'=====EXCEPTION')
-        with open('output/errLog-' + str(currentDate) + '.txt', 'a') as logs:
+        with open(config['Paths']['evomag_output'] + 'errLog-' + str(currentDate) + '.txt', 'a') as logs:
             logs.write('ERR IN FORMAT_DATA FOR PRODUCT: ' + name)
             logs.write('ERR: ' + str({e}) + '\n')
     
@@ -101,17 +108,18 @@ def format_data(item):
 def scrape(path : str):
 
     if path.rfind("https") == -1:
-    # TODO --> bug ciudat aici unde nu ia bine current_page-ul si da append la prima linie din dying_breath noul path...
         target_url = 'https://www.evomag.ro' + path
         current_page = 1
     else:
-        target_url = path
+        #TODO --> this may be stupid 
+        target_url = path.split('https://www.evomag.ro')[-1]
         current_page = int(path.split(":")[-1].split('/')[0])
+        target_url = path.split('filtru/pagina:' + str(current_page))[0]
 
     global latest_path
-    latest_path = path
+    latest_path = path 
 
-    driver.get(target_url)
+    driver.get(target_url + 'filtru/pagina:' + str(current_page))
 
     #wait for images to lazly load
     element = WebDriverWait(driver, 2)
@@ -139,7 +147,7 @@ def scrape(path : str):
         if next_page_button is None:
             break
 
-        with open('output/evomag_' + str(currentDate) + '.csv', 'a', newline='') as scrapefile:
+        with open(config['Paths']['evomag_output'] + 'evomag_' + str(currentDate) + '.csv', 'a', newline='') as scrapefile:
                 writer = csv.writer(scrapefile)
                 for element in li_items:
                     try:
@@ -151,7 +159,7 @@ def scrape(path : str):
                         
                     except Exception as e:
                         print(str({e}))
-                        with open('output/errLog-' + str(currentDate) + '.txt', 'a') as logs:
+                        with open(config['Paths']['evomag_output'] + 'errLog-' + str(currentDate) + '.txt', 'a') as logs:
                             logs.write('ON PATH:' + path +  '\n' + 'PAGE:' + str(current_page) + '\n')
                         continue
                     
@@ -165,7 +173,7 @@ def scrape(path : str):
                 
 def main():
     try:
-        origin = os.path.join('output', 'dying_gasp_' + str(currentDate) + '.txt')
+        origin = os.path.join(config['Paths']['evomag_output'], 'dying_gasp_' + str(currentDate) + '.txt')
         pathCount = 0
         global latest_path
 
@@ -173,7 +181,7 @@ def main():
             print('DYING GASP DETECTED -- DEFAULTING TO ' + str(origin) + ' -- SCRAPING FROM LAST KNOW PATH')
         else:
             print('NO DYING GASP -- DEFAULTING TO evomag_tree.txt')
-            origin = 'evomag_tree.txt' 
+            origin = config['Paths']['evomag_output'] + 'evomag_tree.txt' 
 
         with open(origin, 'r') as origin_file:
             for path in origin_file:
@@ -188,15 +196,15 @@ def main():
                     scrape(path=path)
                 except Exception as e:
                     print(str({e}))
-                    with open('output/errLog-' + str(currentDate) + '.txt', 'a') as logs:
+                    with open(config['Paths']['evomag_output'] + 'errLog-' + str(currentDate) + '.txt', 'a') as logs:
                         logs.write('ERR MAIN: ' + str({e}))
                     driver.delete_all_cookies()
                     continue
     except KeyboardInterrupt as end:
         #write the remaining lines in dying_gasp from current line to EOF
         print('PANIC!')
-        with open('output/dying_gasp_' + str(currentDate) + '_tmp.txt', 'w') as gasp:
-            gasp.write(latest_path)
+        with open(config['Paths']['evomag_output'] + 'dying_gasp_' + str(currentDate) + '_tmp.txt', 'w') as gasp:
+            gasp.write(latest_path + '\n')
 
             with open(origin, 'r') as origin_file:
                 for _ in range(pathCount):
@@ -207,7 +215,7 @@ def main():
                 while(line):
                     line = origin_file.readline()
                     gasp.write(line)
-        os.rename('output/dying_gasp_' + str(currentDate) + '_tmp.txt', 'output/dying_gasp_' + str(currentDate) + '.txt')
+        os.rename(config['Paths']['evomag_output'] + 'dying_gasp_' + str(currentDate) + '_tmp.txt', config['Paths']['evomag_output'] + 'dying_gasp_' + str(currentDate) + '.txt')
         
 main()
 driver.quit()

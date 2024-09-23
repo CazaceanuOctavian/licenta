@@ -1,18 +1,30 @@
-ERR MAIN: {TypeError('can only concatenate str (not "int") to str')}ERR IN FORMAT_DATA FOR PRODUCT: Folie discretie ecran Lenovo 0A61771, 15.6 inchERR: {UnboundLocalError("local variable 'img_name' referenced before assignment")}
+ERR IN FORMAT_DATA FOR PRODUCT: Memorie laptop Kingston DDR4 - 64GB - 2666 - CL - 16 Impact Dual KitERR: {UnboundLocalError("local variable 'img_name' referenced before assignment")}
 ON PATH:https://www.vexio.ro/laptop-accesorii/
-PAGE:2
-ERR IN FORMAT_DATA FOR PRODUCT: Memorie laptop Corsair notebook 8GB, DDR3, 1066MHz, CL7 Dual...ERR: {UnboundLocalError("local variable 'img_name' referenced before assignment")}
+PAGE:5
+ERR IN FORMAT_DATA FOR PRODUCT: Green Cell Battery for Lenovo P500 14,4V 2200mAhERR: {UnboundLocalError("local variable 'img_name' referenced before assignment")}
 ON PATH:https://www.vexio.ro/laptop-accesorii/
-PAGE:2
-ERR IN FORMAT_DATA FOR PRODUCT: Memorie laptop Corsair notebook Kit 2x4GB, DDR3, 1333MHz CL9 Dual...ERR: {UnboundLocalError("local variable 'img_name' referenced before assignment")}
-ON PATH:https://www.vexio.ro/laptop-accesorii/
-PAGE:2
-ERR IN FORMAT_DATA FOR PRODUCT: Husa AntiSoc Case Logic LAPS116K, pentru laptop, 15.6 inch, NegruERR: {UnboundLocalError("local variable 'img_name' referenced before assignment")}
-ON PATH:https://www.vexio.ro/laptop-accesorii/
-PAGE:2
-ERR IN FORMAT_DATA FOR PRODUCT: Memorie laptop Corsair DDR3 SODIMM 4GB 1600MHz CL11 ValueSelectERR: {UnboundLocalError("local variable 'img_name' referenced before assignment")}
-ON PATH:https://www.vexio.ro/laptop-accesorii/
-PAGE:2
-ERR IN FORMAT_DATA FOR PRODUCT: Memorie laptop Kingston KVR16S11S6/2, 2GB DDR3 1600MHz, SODIMMERR: {UnboundLocalError("local variable 'img_name' referenced before assignment")}
-ON PATH:https://www.vexio.ro/laptop-accesorii/
-PAGE:2
+PAGE:8
+ERR MAIN: {TypeError('can only concatenate str (not "int") to str')}ERR IN FORMAT_DATA FOR PRODUCT: Husa/Stand Logitech Slim Folio Touch cu tastatura pentru tableta de...ERR: {UnboundLocalError("local variable 'img_name' referenced before assignment")}
+ON PATH:https://www.vexio.ro/tablete-accesorii/
+PAGE:3
+ERR IN FORMAT_DATA FOR PRODUCT: AKYGA Universal Tablet Adapter/Stand AK-TB-05 5V/6A 30W DC 4 x USBERR: {UnboundLocalError("local variable 'img_name' referenced before assignment")}
+ON PATH:https://www.vexio.ro/tablete-accesorii/
+PAGE:8
+ERR IN FORMAT_DATA FOR PRODUCT: Akyga Car charger AK-CH-02 2100mA 2xUSB blackERR: {UnboundLocalError("local variable 'img_name' referenced before assignment")}
+ON PATH:https://www.vexio.ro/tablete-accesorii/
+PAGE:8
+ERR IN FORMAT_DATA FOR PRODUCT: AKYGA Universal Tablet Adapter AK-TB-06 5V/2.5A DC MicroUSBERR: {UnboundLocalError("local variable 'img_name' referenced before assignment")}
+ON PATH:https://www.vexio.ro/tablete-accesorii/
+PAGE:8
+ERR MAIN: {TypeError('can only concatenate str (not "int") to str')}ERR IN FORMAT_DATA FOR PRODUCT: AKYGA Universal Tablet Adapter/Stand AK-TB-05 5V/6A 30W DC 4 x USBERR: {UnboundLocalError("local variable 'img_name' referenced before assignment")}
+ON PATH:https://www.vexio.ro/tablete-accesorii/pagina7/
+PAGE:8
+ERR IN FORMAT_DATA FOR PRODUCT: Akyga Car charger AK-CH-02 2100mA 2xUSB blackERR: {UnboundLocalError("local variable 'img_name' referenced before assignment")}
+ON PATH:https://www.vexio.ro/tablete-accesorii/pagina7/
+PAGE:8
+ERR IN FORMAT_DATA FOR PRODUCT: Akyga USB charger AK-CH-03BK 240V 1000mA 1xUSB blackERR: {UnboundLocalError("local variable 'img_name' referenced before assignment")}
+ON PATH:https://www.vexio.ro/tablete-accesorii/pagina7/
+PAGE:8
+ERR IN FORMAT_DATA FOR PRODUCT: Samsung Galaxy Tab S6 lite S Pen Pink EJ-PP610BPEGEUERR: {UnboundLocalError("local variable 'img_name' referenced before assignment")}
+ON PATH:https://www.vexio.ro/tablete-accesorii/
+PAGE:9

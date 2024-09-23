@@ -109,7 +109,9 @@ def scrape(path : str):
     if path.rfind("pagina") == -1:
         current_page = 1
     else:
-        current_page = path.split('/')[-2][-1]
+        current_page = int(path.split('/')[-2][-1])
+        path = path.split('pagina' + str(current_page) + '/')[0]
+
 
     driver.get(target_url)
 
@@ -159,8 +161,6 @@ def main():
         else:
             print('NO DYING GASP -- DEFAULTING TO vexio_tree.txt')
             origin = config['Paths']['vexio_output'] + 'vexio_tree.txt' 
-            with open(config['Paths']['vexio_output'] + 'dying_gasp_' + str(currentDate) + '.txt', 'w'):
-                print('dying_gasp created')
 
         with open(origin, 'r') as origin_file:
             for path in origin_file:

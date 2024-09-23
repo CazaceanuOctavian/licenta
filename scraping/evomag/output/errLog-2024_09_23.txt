@@ -1,0 +1,61 @@
+ERR IN FORMAT_DATA FOR PRODUCT: Laptop ASUS Vivobook 15 M1502YA (Procesor AMD Ryzen™ 5 7430U (16M cache, up to 4.3 GHz), 15.6" FHD, 8GB, 512GB SSD, AMD Radeon Graphics, Albastru)ERR: {NoSuchWindowException()}
+ON PATH:/portabile-laptopuri-notebook/
+PAGE:2
+ERR IN FORMAT_DATA FOR PRODUCT: Laptop Lenovo V15 G2 ALC (Procesor AMD Ryzen  7 5700U (8M Cache, up to 4.3 GHz), 15.6" FHD, 8GB, 512GB SSD, AMD Radeon™ Graphics, Negru)ERR: {NoSuchWindowException()}
+ON PATH:/portabile-laptopuri-notebook/
+PAGE:2
+ERR IN FORMAT_DATA FOR PRODUCT: Laptop Lenovo ThinkBook 16 G6 IRL (Procesor Intel® Core™ i5-1335U (12M Cache, up to 4.60 GHz), 16" WUXGA IPS, 8GB DDR5, 512GB SSD, Intel Iris Xe Graphics, Gri)ERR: {NoSuchWindowException()}
+ON PATH:/portabile-laptopuri-notebook/
+PAGE:2
+ERR IN FORMAT_DATA FOR PRODUCT: Laptop Dell Vostro 3530 (Procesor Intel® Core™ i7-1355U (12M Cache, up to 5.0 GHz) 15.6" FHD, 16GB, 512GB SSD, Intel Iris Xe Graphics, Linux, Negru)ERR: {NoSuchWindowException()}
+ON PATH:/portabile-laptopuri-notebook/
+PAGE:2
+ERR IN FORMAT_DATA FOR PRODUCT: Laptop Gaming Lenovo IdeaPad 3 15ACH6 cu procesor AMD Ryzen™ 5 5500H pana la 4.20 GHz, 15.6", Full HD, IPS, 8GB, 512GB SSD, NVIDIA® GeForce RTX™ 2050 4GB GDDR6, No OS, NegruERR: {NoSuchWindowException()}
+ON PATH:/portabile-laptopuri-notebook/
+PAGE:2
+ERR IN FORMAT_DATA FOR PRODUCT: Laptop Acer Aspire 5 A515 (Procesor Intel® Core™ i7-13620H (24M Cache, up to 4.90 GHz) 15.6" FHD, 16GB, 512GB SSD, Intel UHD Graphics, Gri)ERR: {NoSuchWindowException()}
+ON PATH:/portabile-laptopuri-notebook/
+PAGE:2
+ERR IN FORMAT_DATA FOR PRODUCT: Laptop Acer Aspire 5 A515 (Procesor Intel® Core™ i5-13420H (12M Cache, up to 4.60 GHz) 15.6" FHD, 16GB, 512GB SSD, NVIDIA GeForce RTX 2050 @4GB, Gri)ERR: {NoSuchWindowException()}
+ON PATH:/portabile-laptopuri-notebook/
+PAGE:2
+ERR IN FORMAT_DATA FOR PRODUCT: Laptop Acer Aspire 3 A315-44P (Procesor AMD Ryzen™ 5 5500U (8M Cache, up to 4.0 GHz), 15.6" FHD, 8GB, 512GB SSD, AMD Radeon Graphics, Argintiu)ERR: {NoSuchWindowException()}
+ON PATH:/portabile-laptopuri-notebook/
+PAGE:2
+ERR IN FORMAT_DATA FOR PRODUCT: Laptop Dell Vostro 3530 (Procesor Intel® Core™ i7-1355U (12M Cache, up to 5.0 GHz) 15.6" FHD, 16GB, 512GB SSD, FGP, Intel Iris Xe Graphics, Linux, Negru)ERR: {NoSuchWindowException()}
+ON PATH:/portabile-laptopuri-notebook/
+PAGE:2
+ERR IN FORMAT_DATA FOR PRODUCT: Laptop Lenovo ThinkBook 16 G7 ARP (Procesor AMD Ryzen 5 7535HS (16M Cache, up to 4.55 GHz), 16" WUXGA, 16GB DDR5, 512GB SSD, AMD Radeon 660M Graphics, Gri)ERR: {NoSuchWindowException()}
+ON PATH:/portabile-laptopuri-notebook/
+PAGE:2
+ERR IN FORMAT_DATA FOR PRODUCT: Laptop HP 250 G10 (Procesor Intel® Core™ i3-1315U (10M Cache, up to 4.50 GHz) 15.6" FHD, 8GB, 256GB SSD, Intel UHD Graphics, Argintiu)ERR: {NoSuchWindowException()}
+ON PATH:/portabile-laptopuri-notebook/
+PAGE:2
+ERR IN FORMAT_DATA FOR PRODUCT: Laptop Asus VivoBook X1502ZA (Procesor Intel® Core™ i5-1240P (12M Cache, up to 4.40 GHz) 15.6" FHD, 8GB, 512GB SSD, Intel Iris Xe Graphics, Argintiu)ERR: {NoSuchWindowException()}
+ON PATH:/portabile-laptopuri-notebook/
+PAGE:2
+ERR IN FORMAT_DATA FOR PRODUCT: Laptop Acer Aspire 5 A515-57G, (Procesor Intel® Core™ i7-1255U (12M Cache, up to 4.70 GHz) 15.6" FHD, 16GB DDR4, 512GB SSD, GeForce RTX 2050 @4GB, Gri)ERR: {NoSuchWindowException()}
+ON PATH:/portabile-laptopuri-notebook/
+PAGE:2
+ERR IN FORMAT_DATA FOR PRODUCT: Laptop Apple MacBook Pro 14 2023 (Procesor Apple M2 Max (12-core CPU / 30-core GPU) 14.2" Liquid Retina XDR, 64GB, 8TB SSD, Mac OS Ventura, Layout INT, Gri)ERR: {NoSuchWindowException()}
+ON PATH:/portabile-laptopuri-notebook/
+PAGE:2
+ERR IN FORMAT_DATA FOR PRODUCT: Laptop Apple MacBook Air (Procesor Apple M1 (12M Cache, up to 3.20 GHz), 13.3", Retina, 8GB, 256GB SSD, Integrated M1 Graphics, Mac OS Big Sur, Layout INT, Gri)ERR: {NoSuchWindowException()}
+ON PATH:/portabile-laptopuri-notebook/
+PAGE:2
+ERR IN FORMAT_DATA FOR PRODUCT: Laptop ASUS VivoBook 15X OLED K3504VA cu procesor Intel®Core™ i7-1360P pana la 5.0 GHz, 15.6", Full HD, OLED, 8GB, 512GB SSD, Intel® UHD Graphics, No OS, NegruERR: {NoSuchWindowException()}
+ON PATH:/portabile-laptopuri-notebook/
+PAGE:2
+ERR IN FORMAT_DATA FOR PRODUCT: Laptop Lenovo ThinkBook 16 G7 IML (Procesor Intel® Core™ Ultra 5 125U (12M Cache, up to 4.30 GHz), 16" WUXGA, 16GB DDR5, 1TB SSD, Intel Graphics, Gri)ERR: {NoSuchWindowException()}
+ON PATH:/portabile-laptopuri-notebook/
+PAGE:2
+ERR IN FORMAT_DATA FOR PRODUCT: Laptop Apple MacBook Air 15 (Procesor Apple M3 (8-core CPU), 15.3" Liquid Retina, 8GB, 256GB SSD, Apple M3 10-core GPU, Mac OS, Layout US, Gri) + adaptor priza US - EUERR: {NoSuchWindowException()}
+ON PATH:/portabile-laptopuri-notebook/
+PAGE:2
+ERR IN FORMAT_DATA FOR PRODUCT: Laptop Lenovo ThinkBook 16 G7 IML (Procesor Intel® Core™ Ultra 5 125U (12M Cache, up to 4.30 GHz), 16" WUXGA, 16GB DDR5, 512GB SSD, Intel Graphics, Gri)ERR: {NoSuchWindowException()}
+ON PATH:/portabile-laptopuri-notebook/
+PAGE:2
+ERR IN FORMAT_DATA FOR PRODUCT: Laptop Gaming ASUS TUF F15 FX507VV (Procesor Intel® Core™ i7-13620H (24M Cache, up to 4.90 GHz) 15.6" FHD 144Hz, 16GB, 512GB SSD, nVidia GeForce RTX 4060 @8GB, Negru/Gri)ERR: {NoSuchWindowException()}
+ON PATH:/portabile-laptopuri-notebook/
+PAGE:2
+ERR MAIN: {NoSuchWindowException()}
