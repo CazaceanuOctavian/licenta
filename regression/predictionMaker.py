@@ -1,7 +1,7 @@
 import psycopg2
 import pandas as pd
 import pickle
-import os
+import configparser
 import time
 
 start_time = time.time()
@@ -21,6 +21,9 @@ def predict_price(Old_Price, loaded_model):
 cur = conn.cursor()
 cur.execute('SELECT DISTINCT category FROM products')
 
+config = configparser.ConfigParser()
+config.read('/home/tavi/Desktop/licenta/cfg.ini')
+
 categories = cur.fetchall()
 formatted_categories = []
 for category in categories:
@@ -29,7 +32,7 @@ for category in categories:
 for category in formatted_categories:
     try:
         #TODO --> shit naming, make it not shitty by removing .csv
-        model_path = '/home/tavi/Desktop/licenta/regression/models/dts_' + category.replace("'",'').replace(' ','_') + '.csv.pkl'
+        model_path = config['Paths']['model_path']  + 'dts_' + category.replace("'",'').replace(' ','_') + '.csv.pkl'
         print('trying to predict with model ' + model_path)
         try:
             with open(model_path, 'rb') as model_file:
@@ -41,7 +44,7 @@ for category in formatted_categories:
         cur.execute('SELECT id, raw_price FROM products WHERE category LIKE ' + category)
         fetchedItems = cur.fetchall()
 
-        with open('/home/tavi/Desktop/licenta/regression/predictions/output_test.csv', 'a') as output:
+        with open(config['Paths']['output_path'] + 'output_test.csv', 'a') as output:
             for item in fetchedItems:
                 item_id = item[0]
                 item_price = item[1]
