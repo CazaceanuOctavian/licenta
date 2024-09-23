@@ -29,7 +29,7 @@ for category in categories:
 for category in formatted_categories:
     try:
         #TODO --> shit naming, make it not shitty by removing .csv
-        model_path = 'models/dts_' + category.replace("'",'').replace(' ','_') + '.csv.pkl'
+        model_path = '/home/tavi/Desktop/licenta/regression/models/dts_' + category.replace("'",'').replace(' ','_') + '.csv.pkl'
         print('trying to predict with model ' + model_path)
         try:
             with open(model_path, 'rb') as model_file:
@@ -41,7 +41,7 @@ for category in formatted_categories:
         cur.execute('SELECT id, raw_price FROM products WHERE category LIKE ' + category)
         fetchedItems = cur.fetchall()
 
-        with open('predictions/output_test.csv', 'a') as output:
+        with open('/home/tavi/Desktop/licenta/regression/predictions/output_test.csv', 'a') as output:
             for item in fetchedItems:
                 item_id = item[0]
                 item_price = item[1]

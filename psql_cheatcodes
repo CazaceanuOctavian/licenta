@@ -8,9 +8,6 @@ psql
 \COPY products(name, raw_price, raw_rating, is_in_stock, url, product_code, retailer, imagepath, category) FROM '/home/tavi/Desktop/licenta/scraping/evomag/evomag_scrape_new.csv' DELIMITER ',' CSV HEADER;
 \COPY products(name, raw_price, raw_rating, is_in_stock, url, product_code, retailer, imagepath, category) FROM '/home/tavi/Desktop/licenta/scraping/vexio/vexio_scrape_jpgs.csv' DELIMITER ',' CSV HEADER;
 
-
-
-
 ===================workink========================================
 
 CREATE OR REPLACE FUNCTION assign_categories_test(OUT p_product_code VARCHAR(255), OUT p_duplicates_number INTEGER ) RETURNS SETOF RECORD AS $$

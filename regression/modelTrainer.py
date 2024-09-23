@@ -6,7 +6,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.ensemble import RandomForestRegressor
 from sklearn.metrics import mean_squared_error, r2_score
 
-datasetDir = 'dataset/'
+datasetDir = '/home/tavi/Desktop/licenta/regression/dataset/'
 
 for dataset in os.listdir(datasetDir):
     dataset_path = os.path.join(datasetDir, dataset)
@@ -14,7 +14,7 @@ for dataset in os.listdir(datasetDir):
         data = pd.read_csv(dataset_path)
         if data.empty:
             print(f"Skipping empty dataset: {dataset}")
-            with open('models/performanceLogs.txt', 'a') as logs:
+            with open('/home/tavi/Desktop/licenta/regression/models/performanceLogs.txt', 'a') as logs:
                 logs.write(f"WARNING -- DATASET: " + str(dataset) + " is empty!\n")
                 logs.write("-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\n")
             continue
@@ -33,13 +33,13 @@ for dataset in os.listdir(datasetDir):
         mse = mean_squared_error(y_test, y_pred)
         r2 = r2_score(y_test, y_pred)
 
-        with open('models/performanceLogs.txt', 'a') as logs:
+        with open('/home/tavi/Desktop/licenta/regression/models/performanceLogs.txt', 'a') as logs:
             logs.write(f"Performance for category: " + '_'.join(dataset.split('_')[1:])  + '\n') 
             logs.write(f"Mean Squared Error: {mse}" + '\n')
             logs.write(f"R-Squared: {r2}" + '\n')
             logs.write("-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\n")
 
-        with open('models/' + str(dataset) + '.pkl', 'wb') as file:
+        with open('/home/tavi/Desktop/licenta/regression/models/' + str(dataset) + '.pkl', 'wb') as file:
              pickle.dump(rf_regressor, file)
     else:
         print('Invalid Path -- ' + str(dataset_path) + ' does not exist')

@@ -65,15 +65,15 @@ const QueryPrice: React.FC<SearchProps> = ({ selectedOrder, selectedCategory, lo
             <p>ordonare: </p>
             <div className="price-ordering">
                 <select id="order-dropdown" value={selectedOrder} onChange={handleOrderChange}>
-                    <option>--Select--</option>
+                    <option value={'undefined'}>--Select--</option>
                     <option value={'desc'}>Descrescatoare</option>
-                    <option value={'cresc'}>Crescatoare</option>
+                    <option value={'asc'}>Crescatoare</option>
                 </select>
             </div>
             <p>categoria de produs:</p>
             <div className="category-container">
                 <select id="category-dropdown" value={selectedCategory} onChange={handleCategoryChange}>
-                    <option>--Select--</option>
+                    <option value={'undefined'}>--Select--</option>
                     {categories.map((option, index) => (
                         <option key={index} value={option}>
                             {option}
