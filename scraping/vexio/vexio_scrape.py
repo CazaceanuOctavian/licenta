@@ -69,7 +69,6 @@ def format_data(item):
         #WebDriverWait(driver, 2).until( EC.presence_of_all_elements_located )
 
         product_code = other_soup.find(class_='model').text.strip()
-        print(name)
         product_code = product_code.replace('/','+rep+')
 
         #=====scraping image=====
@@ -88,6 +87,8 @@ def format_data(item):
                 img_name = 'not_found.jpeg'
         #=====scraping image=====
 
+        print('vexio -- ' + name)
+
         return {
             'name' : name,
             'raw_price' : price,
@@ -101,7 +102,7 @@ def format_data(item):
     
     except Exception as e:
         print(str({e}))
-        print('EXCEPTION====='+str(name)+str(isInStoc)+'=====EXCEPTION')
+        print('EXCEPTION VEXIO====='+str(name)+str(isInStoc)+'=====EXCEPTION VEXIO')
         with open(config['Paths']['vexio_output'] + 'errLog-' + str(currentDate) + '.txt', 'a') as logs:
             logs.write('ERR IN FORMAT_DATA FOR PRODUCT: ' + name)
             logs.write('ERR: ' + str({e}) + '\n')
