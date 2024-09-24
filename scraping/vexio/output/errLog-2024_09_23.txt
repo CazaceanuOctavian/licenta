@@ -46,3 +46,105 @@ PAGE:11
 ERR IN FORMAT_DATA FOR PRODUCT: Husa cu tastatura Logitech Slim Folio pentru iPad (7th gen) / iPad...ERR: {UnboundLocalError("local variable 'img_name' referenced before assignment")}
 ON PATH:https://www.vexio.ro/tablete-accesorii/
 PAGE:11
+ERR IN FORMAT_DATA FOR PRODUCT: Logitech 920-010255ERR: {UnboundLocalError("local variable 'img_name' referenced before assignment")}
+ON PATH:https://www.vexio.ro/tablete-accesorii/
+PAGE:15
+ERR IN FORMAT_DATA FOR PRODUCT: Logitech 920-009629ERR: {UnboundLocalError("local variable 'img_name' referenced before assignment")}
+ON PATH:https://www.vexio.ro/tablete-accesorii/
+PAGE:15
+ERR IN FORMAT_DATA FOR PRODUCT: TARGUS protective cover for Surface GO green - THZ779GLERR: {UnboundLocalError("local variable 'img_name' referenced before assignment")}
+ON PATH:https://www.vexio.ro/tablete-accesorii/
+PAGE:16
+ERR IN FORMAT_DATA FOR PRODUCT: Tableta Apple iPad Pro 11" (4. Gen) 128GB Wi-Fi + Cell SilverERR: {UnboundLocalError("local variable 'img_name' referenced before assignment")}
+ON PATH:https://www.vexio.ro/tablete-accesorii/
+PAGE:18
+ERR IN FORMAT_DATA FOR PRODUCT: Tableta Apple iPad Pro 12,9" (6. Gen) 2TB Wi-Fi Space GreyERR: {UnboundLocalError("local variable 'img_name' referenced before assignment")}
+ON PATH:https://www.vexio.ro/tablete-accesorii/
+PAGE:18
+ERR IN FORMAT_DATA FOR PRODUCT: Tableta Apple iPad Pro 12,9" (6. Gen) 1TB Wi-Fi Space GreyERR: {UnboundLocalError("local variable 'img_name' referenced before assignment")}
+ON PATH:https://www.vexio.ro/tablete-accesorii/
+PAGE:18
+ERR IN FORMAT_DATA FOR PRODUCT: Tableta Apple iPad Pro 12,9" (6. Gen) 2TB Wi-Fi SilverERR: {UnboundLocalError("local variable 'img_name' referenced before assignment")}
+ON PATH:https://www.vexio.ro/tablete-accesorii/
+PAGE:18
+ERR IN FORMAT_DATA FOR PRODUCT: Tableta Apple iPad Pro 11" (4. Gen) 2TB Wi-Fi + Cell Space GreyERR: {UnboundLocalError("local variable 'img_name' referenced before assignment")}
+ON PATH:https://www.vexio.ro/tablete-accesorii/
+PAGE:18
+ERR IN FORMAT_DATA FOR PRODUCT: Targus VersaVu sleeve, tablet sleeve (black, iPad (7th generation),...ERR: {UnboundLocalError("local variable 'img_name' referenced before assignment")}
+ON PATH:https://www.vexio.ro/tablete-accesorii/
+PAGE:19
+ERR IN FORMAT_DATA FOR PRODUCT: Microsoft Surface Slim Pen 2 black CommercialERR: {UnboundLocalError("local variable 'img_name' referenced before assignment")}
+ON PATH:https://www.vexio.ro/tablete-accesorii/
+PAGE:19
+ERR IN FORMAT_DATA FOR PRODUCT: Panasonic HAND STRAPERR: {UnboundLocalError("local variable 'img_name' referenced before assignment")}
+ON PATH:https://www.vexio.ro/tablete-accesorii/
+PAGE:21
+ERR IN FORMAT_DATA FOR PRODUCT: STARTECH TABLET STAND - DESK/WALL MOUNTERR: {UnboundLocalError("local variable 'img_name' referenced before assignment")}
+ON PATH:https://www.vexio.ro/tablete-accesorii/
+PAGE:21
+ERR IN FORMAT_DATA FOR PRODUCT: GAMBER JOHNSON LOW PROFILE TABLET KBD BRACKETERR: {UnboundLocalError("local variable 'img_name' referenced before assignment")}
+ON PATH:https://www.vexio.ro/tablete-accesorii/
+PAGE:21
+ERR IN FORMAT_DATA FOR PRODUCT: Compulocks BRANDME BRANDED FLOOR STANDERR: {UnboundLocalError("local variable 'img_name' referenced before assignment")}
+ON PATH:https://www.vexio.ro/tablete-accesorii/
+PAGE:21
+ERR IN FORMAT_DATA FOR PRODUCT: Compulocks RUGGED TBLET CASE SECURE HOLDERERR: {UnboundLocalError("local variable 'img_name' referenced before assignment")}
+ON PATH:https://www.vexio.ro/tablete-accesorii/
+PAGE:21
+ERR IN FORMAT_DATA FOR PRODUCT: Compulocks 360 STAND (TILT+ SWIVEL)ERR: {UnboundLocalError("local variable 'img_name' referenced before assignment")}
+ON PATH:https://www.vexio.ro/tablete-accesorii/
+PAGE:21
+ERR IN FORMAT_DATA FOR PRODUCT: Compulocks 360 STAND (TILT+ SWIVEL)ERR: {UnboundLocalError("local variable 'img_name' referenced before assignment")}
+ON PATH:https://www.vexio.ro/tablete-accesorii/
+PAGE:21
+ERR IN FORMAT_DATA FOR PRODUCT: Compulocks TABLET VHB HAND GRIPERR: {UnboundLocalError("local variable 'img_name' referenced before assignment")}
+ON PATH:https://www.vexio.ro/tablete-accesorii/
+PAGE:21
+ERR IN FORMAT_DATA FOR PRODUCT: Compulocks UNIVERSAL CLING VESAMOUNTERR: {UnboundLocalError("local variable 'img_name' referenced before assignment")}
+ON PATH:https://www.vexio.ro/tablete-accesorii/
+PAGE:21
+ERR IN FORMAT_DATA FOR PRODUCT: Compulocks UNIVERSASL CLINGSTAND WHITEERR: {UnboundLocalError("local variable 'img_name' referenced before assignment")}
+ON PATH:https://www.vexio.ro/tablete-accesorii/
+PAGE:21
+ERR IN FORMAT_DATA FOR PRODUCT: Compulocks UNIVERSAL TABLET LOCK + STANDERR: {UnboundLocalError("local variable 'img_name' referenced before assignment")}
+ON PATH:https://www.vexio.ro/tablete-accesorii/
+PAGE:21
+ERR IN FORMAT_DATA FOR PRODUCT: Compulocks UNIVERSAL CLING VESAMOUNTERR: {UnboundLocalError("local variable 'img_name' referenced before assignment")}
+ON PATH:https://www.vexio.ro/tablete-accesorii/
+PAGE:21
+ERR IN FORMAT_DATA FOR PRODUCT: Compulocks IPAD 10.2 SPACE ENCLOSURE BLACKERR: {UnboundLocalError("local variable 'img_name' referenced before assignment")}
+ON PATH:https://www.vexio.ro/tablete-accesorii/
+PAGE:22
+ERR IN FORMAT_DATA FOR PRODUCT: Compulocks IPAD 10.2 SPACE ENCLOSURE WHITEERR: {UnboundLocalError("local variable 'img_name' referenced before assignment")}
+ON PATH:https://www.vexio.ro/tablete-accesorii/
+PAGE:22
+ERR IN FORMAT_DATA FOR PRODUCT: Compulocks GALAXY TAB A 10.1 2019 SPACEERR: {UnboundLocalError("local variable 'img_name' referenced before assignment")}
+ON PATH:https://www.vexio.ro/tablete-accesorii/
+PAGE:22
+ERR IN FORMAT_DATA FOR PRODUCT: ERGONOMIC SOLUTIONS A-FRAME BEZEL PUSH-LOCK BLACKERR: {UnboundLocalError("local variable 'img_name' referenced before assignment")}
+ON PATH:https://www.vexio.ro/tablete-accesorii/
+PAGE:22
+ERR IN FORMAT_DATA FOR PRODUCT: Compulocks NEW IPAD PRO 12.9IN SPACE WHITEERR: {UnboundLocalError("local variable 'img_name' referenced before assignment")}
+ON PATH:https://www.vexio.ro/tablete-accesorii/
+PAGE:22
+ERR IN FORMAT_DATA FOR PRODUCT: Compulocks AXIS ENCLOSURE 10.2IN BLACKERR: {UnboundLocalError("local variable 'img_name' referenced before assignment")}
+ON PATH:https://www.vexio.ro/tablete-accesorii/
+PAGE:22
+ERR IN FORMAT_DATA FOR PRODUCT: Vogels TMS 1050 TABLET DASHBOARD PACKERR: {UnboundLocalError("local variable 'img_name' referenced before assignment")}
+ON PATH:https://www.vexio.ro/tablete-accesorii/
+PAGE:22
+ERR IN FORMAT_DATA FOR PRODUCT: Vogels TMS 1010 TABLET WALL PACKERR: {UnboundLocalError("local variable 'img_name' referenced before assignment")}
+ON PATH:https://www.vexio.ro/tablete-accesorii/
+PAGE:22
+ERR IN FORMAT_DATA FOR PRODUCT: STARTECH SMARTPHONE AND TABLET STAND -ERR: {UnboundLocalError("local variable 'img_name' referenced before assignment")}
+ON PATH:https://www.vexio.ro/tablete-accesorii/
+PAGE:22
+ERR IN FORMAT_DATA FOR PRODUCT: Compulocks SPACE MS SURFACE GO 10INERR: {UnboundLocalError("local variable 'img_name' referenced before assignment")}
+ON PATH:https://www.vexio.ro/tablete-accesorii/
+PAGE:22
+ERR IN FORMAT_DATA FOR PRODUCT: MOBILIS ANTI-SHOCK CLEAR TC70/72/75/77ERR: {UnboundLocalError("local variable 'img_name' referenced before assignment")}
+ON PATH:https://www.vexio.ro/tablete-accesorii/
+PAGE:22
+ERR IN FORMAT_DATA FOR PRODUCT: STARTECH MOBILE TABLET STAND - 7 TO 11INERR: {UnboundLocalError("local variable 'img_name' referenced before assignment")}
+ON PATH:https://www.vexio.ro/tablete-accesorii/
+PAGE:23

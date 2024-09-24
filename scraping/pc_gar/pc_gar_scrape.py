@@ -52,7 +52,7 @@ def format_data(item):
         print('EXCEPTION====='+str(name)+'=====EXCEPTION')
 
 def scrape(path):
-    target_url = path
+    target_url = 'http://webcache.googleusercontent.com/search?q=cache:' + path
     driver.get(target_url)
 
     pagina_existenta = True
@@ -81,7 +81,7 @@ def scrape(path):
                         scrapefile.write(json_dump+'\n')
                     except:
                         break
-        new_path = path + 'pagina' + str(current_page) + '/'
+        new_path = 'http://webcache.googleusercontent.com/search?q=cache:' + path + 'pagina' + str(current_page) + '/'
         driver.delete_all_cookies()
         driver.get(new_path)
 

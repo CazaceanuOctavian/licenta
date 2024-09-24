@@ -16,6 +16,7 @@ from bs4 import BeautifulSoup
 options = Options()
 #options.add_argument('--headless')
 options.binary_location = '/etc/firefox'
+options.page_load_strategy = 'eager'
 driver = webdriver.Firefox(options=options)
 try:
     driver.install_addon('/home/tavi/snap/firefox/common/.mozilla/firefox/53alnjep.default/extensions/{d10d0bf8-f5b5-c8b4-a8b2-2b9879e08c5d}.xpi')
