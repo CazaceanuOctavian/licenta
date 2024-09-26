@@ -19,10 +19,10 @@ CREATE table products(
 	retailer VARCHAR(100),
 	imagepath VARCHAR(150),
 	category VARCHAR(150),
-	predicted_price FLOAT
+	predicted_price FLOAT --> do like DEFAULT -1
 )
 
-
+--stable
 psql --host=$PGDATA --username=tav --dbname=product_administration --port=5432
 ===================workink========================================
 

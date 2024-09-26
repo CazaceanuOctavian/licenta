@@ -6,6 +6,9 @@ const ProductDetailsComponent: React.FC = () => {
     var product_id = window.location.href.split('=')[1]
     const [predictedPrice, setPredictedPrice] = useState<string>('?')
 
+
+    //<GraphComponent userQuery={product_id}/>
+    //readd graphcomponent --!
     return (
         <div className='page'>
             <div className='fist-section'>this is the product details section</div>
@@ -18,7 +21,6 @@ const ProductDetailsComponent: React.FC = () => {
                     <p>
                         statistics will go here at some point
                     </p>
-                    <GraphComponent userQuery={product_id}/>
                     <p>the predicted price for next month for this product is: {predictedPrice}</p>
                 </h1>
             </div>
