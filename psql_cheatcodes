@@ -5,9 +5,25 @@ psql
 
 \l -> listeaza baze de date
 \c <nume_bd> -> te conecteaza la baza de date specificata
-\COPY products(name, raw_price, raw_rating, is_in_stock, url, product_code, retailer, imagepath, category) FROM '/home/tavi/Desktop/licenta/scraping/evomag/evomag_scrape_new.csv' DELIMITER ',' CSV HEADER;
-\COPY products(name, raw_price, raw_rating, is_in_stock, url, product_code, retailer, imagepath, category) FROM '/home/tavi/Desktop/licenta/scraping/vexio/vexio_scrape_jpgs.csv' DELIMITER ',' CSV HEADER;
+\COPY products(name, raw_price, raw_rating, is_in_stock, url, product_code, retailer, imagepath, category) FROM '/home/tav/Desktop/licenta/scraping/evomag/output/evomag_scrape_big.csv' DELIMITER ',' CSV HEADER;
+\COPY products(name, raw_price, raw_rating, is_in_stock, url, product_code, retailer, imagepath, category) FROM '/home/tav/Desktop/licenta/scraping/vexio/output/vexio_scrape_big.csv' DELIMITER ',' CSV HEADER;
 
+CREATE table products(
+	id SERIAL PRIMARY KEY,
+	name VARCHAR(500),
+	raw_price FLOAT,
+	raw_rating INTEGER,
+	is_in_stock BOOLEAN,
+	url VARCHAR(500),
+	product_code VARCHAR(100),
+	retailer VARCHAR(100),
+	imagepath VARCHAR(150),
+	category VARCHAR(150),
+	predicted_price FLOAT
+)
+
+
+psql --host=$PGDATA --username=tav --dbname=product_administration --port=5432
 ===================workink========================================
 
 CREATE OR REPLACE FUNCTION assign_categories_test(OUT p_product_code VARCHAR(255), OUT p_duplicates_number INTEGER ) RETURNS SETOF RECORD AS $$
@@ -20,16 +36,16 @@ BEGIN
 	LOOP
 	        FETCH NEXT FROM duplicates_cursor INTO iterator;
 	        EXIT WHEN NOT FOUND;
-	        
+
 	        p_product_code := iterator.product_code;
 	        p_duplicates_number := iterator.num_of_duplicates;
-	        
-	        UPDATE products 
+
+	        UPDATE products
 	        SET category = 'found'
 	        WHERE product_code = iterator.product_code;
-	        
+
 	        RETURN NEXT;
-	END LOOP; 
+	END LOOP;
 	CLOSE duplicates_cursor;
 END;
 $$
@@ -49,29 +65,29 @@ BEGIN
 	LOOP
 	        FETCH NEXT FROM duplicates_cursor INTO iterator;
 	        EXIT WHEN NOT FOUND;
-	        
+
 	        p_product_code := iterator.product_code;
 	        p_duplicates_number := iterator.num_of_duplicates;
-	        
-	        SELECT category 
+
+	        SELECT category
 	        INTO p_category_evomag
 	        FROM products
 	        WHERE retailer LIKE 'evomag' AND product_code LIKE p_product_code;
-	        
-		SELECT category 
+
+		SELECT category
 	        INTO p_category_vexio
 	        FROM products
 	        WHERE retailer LIKE 'vexio' AND product_code LIKE p_product_code;
-	        
+
 	       	RAISE NOTICE 'EVOMAG: % - VEXIO: %', p_category_evomag, p_category_vexio;
-	       	
+
 	       	IF p_category_evomag NOT LIKE p_category_vexio THEN
 			UPDATE products
 			SET category = p_category_vexio
-			WHERE category like p_category_evomag; 
+			WHERE category like p_category_evomag;
 	        END IF;
 	        RETURN NEXT;
-	END LOOP; 
+	END LOOP;
 	CLOSE duplicates_cursor;
 END;
 $$
@@ -83,7 +99,7 @@ SET raw_price = floor(random() * (1500 - 50 + 1) + 50);
 --------------------------
 select MIN(products.raw_price) as og_raw_price, MIN(products_test.raw_price) as newest_raw_price, products.product_code
  from products
- join products_test ON products.product_code = products_test.product_code 
+ join products_test ON products.product_code = products_test.product_code
  GROUP BY products.product_code;
 --------------------------
 !!!god_script
@@ -102,7 +118,7 @@ BEGIN
 
     -- Execute the dynamic query
     EXECUTE sql_query;
-END $$; 
+END $$;
 --------------------------
 SELECT tablename
 FROM pg_catalog.pg_tables
@@ -111,7 +127,7 @@ WHERE schemaname = 'public'
 SELECT ARRAY(SELECT tablename
                  FROM pg_catalog.pg_tables
                  WHERE schemaname = 'public') INTO table_names;
---------------------------  
+--------------------------
 
 
 DO $$
@@ -124,43 +140,51 @@ BEGIN
     SELECT ARRAY(SELECT tablename
                  FROM pg_catalog.pg_tables
                  WHERE schemaname = 'public') INTO table_names;
-	
+
     FOR i IN 1..array_length(table_names, 1) LOOP
 		select_clause := select_clause || ' MIN(' || table_names[i] || '.raw_price) as price_' || table_names[i] || ',';
 
     END LOOP;
-    
+
     select_clause := LEFT(select_clause, length(select_clause) - 1);
 	select_clause := select_clause || E'\n' || E'FROM products';
-	
+
 	RAISE NOTICE 'select_clause: %', select_clause;
-	 
+
     FOR i IN 1..array_length(table_names, 1) LOOP
-    
+
     	IF table_names[i] NOT LIKE 'products' THEN
-    		
-			select_clause := select_clause || E'\nFULL OUTER JOIN ' || table_names[i] 
+
+			select_clause := select_clause || E'\nFULL OUTER JOIN ' || table_names[i]
 			|| ' ON products.product_code = ' || table_names[i] || '.product_code';
-		 
+
 		END IF;
     END LOOP;
-    
+
     select_clause := select_clause || E'\nGROUP BY products.product_code;';
-    
+
     RAISE NOTICE 'select_clause: %', select_clause;
 	EXECUTE select_clause;
-END $$; 
+END $$;
 
 ================================================
 
 GODLY SQL_QUERY
 
-SELECT * 
+SELECT *
 FROM products
-WHERE to_tsvector(name) @@ plainto_tsquery(?1) AND 
-	raw_price BETWEEN ?4 AND ?5 AND 
-	category LIKE COALESCE(NULLIF(?6, 'undefined'), '%') 
+WHERE to_tsvector(name) @@ plainto_tsquery(?1) AND
+	raw_price BETWEEN ?4 AND ?5 AND
+	category LIKE COALESCE(NULLIF(?6, 'undefined'), '%')
 LIMIT ?2 OFFSET (?3-1) * ?2
+
+
+
+view_products_asc
+view_products_desc
+
+CREATE OR REPLACE VIEW view_products_asc AS SELECT * FROM products ORDER BY raw_price ASC;
+CREATE OR REPLACE VIEW view_products_desc AS SELECT * FROM products ORDER BY raw_price DESC;
 
 
 

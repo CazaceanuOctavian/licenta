@@ -1,0 +1,98 @@
+2024-09-26 13:56:54.389 UTC [32040] LOG:  starting PostgreSQL 15.8 on x86_64-pc-linux-gnu, compiled by gcc (GCC) 13.3.0, 64-bit
+2024-09-26 13:56:54.389 UTC [32040] LOG:  listening on IPv4 address "0.0.0.0", port 5432
+2024-09-26 13:56:54.389 UTC [32040] LOG:  listening on IPv6 address "::", port 5432
+2024-09-26 13:56:54.393 UTC [32040] LOG:  listening on Unix socket "/home/tav/Desktop/licenta/.nix-shell/db/.s.PGSQL.5432"
+2024-09-26 13:56:54.399 UTC [32044] LOG:  database system was shut down at 2024-09-26 13:56:54 UTC
+2024-09-26 13:56:54.404 UTC [32040] LOG:  database system is ready to accept connections
+2024-09-26 13:57:26.626 UTC [32385] LOG:  connection received: host=127.0.0.1 port=37310
+2024-09-26 13:57:26.631 UTC [32385] LOG:  connection authorized: user=postgres database=product_administration
+2024-09-26 13:57:26.631 UTC [32385] FATAL:  role "postgres" does not exist
+2024-09-26 13:57:58.427 UTC [32627] LOG:  connection received: host=127.0.0.1 port=57824
+2024-09-26 13:57:58.433 UTC [32627] LOG:  connection authorized: user=postgres database=product_administration
+2024-09-26 13:57:58.433 UTC [32627] FATAL:  role "postgres" does not exist
+2024-09-26 13:58:16.895 UTC [32726] LOG:  connection received: host=127.0.0.1 port=47988
+2024-09-26 13:58:16.896 UTC [32726] LOG:  connection authorized: user=postgres database=product_administration
+2024-09-26 13:58:16.896 UTC [32726] FATAL:  role "postgres" does not exist
+2024-09-26 13:58:29.268 UTC [32776] LOG:  connection received: host=127.0.0.1 port=56550
+2024-09-26 13:58:29.269 UTC [32776] LOG:  connection authorized: user=postgres database=product_administration
+2024-09-26 13:58:29.269 UTC [32776] FATAL:  role "postgres" does not exist
+2024-09-26 13:59:09.399 UTC [32997] LOG:  connection received: host=127.0.0.1 port=55980
+2024-09-26 13:59:09.411 UTC [32997] LOG:  connection authorized: user=postgres database=product_administration
+2024-09-26 13:59:09.411 UTC [32997] FATAL:  role "postgres" does not exist
+2024-09-26 14:00:03.340 UTC [33215] LOG:  connection received: host=[local]
+2024-09-26 14:00:03.341 UTC [33215] LOG:  connection authorized: user=postgres database=postgres application_name=psql
+2024-09-26 14:00:03.341 UTC [33215] FATAL:  role "postgres" does not exist
+2024-09-26 14:01:54.498 UTC [32042] LOG:  checkpoint starting: time
+2024-09-26 14:01:58.546 UTC [32042] LOG:  checkpoint complete: wrote 43 buffers (0.3%); 0 WAL file(s) added, 0 removed, 0 recycled; write=4.024 s, sync=0.010 s, total=4.048 s; sync files=11, longest=0.007 s, average=0.001 s; distance=252 kB, estimate=252 kB
+2024-09-26 14:03:09.610 UTC [33569] LOG:  connection received: host=[local]
+2024-09-26 14:03:09.611 UTC [33569] LOG:  connection authorized: user=tav database=postgres application_name=psql
+2024-09-26 14:04:03.147 UTC [33948] LOG:  connection received: host=127.0.0.1 port=43352
+2024-09-26 14:04:03.159 UTC [33948] LOG:  connection authorized: user=tav database=product_administration
+2024-09-26 14:04:03.159 UTC [33948] FATAL:  database "product_administration" does not exist
+2024-09-26 14:04:30.844 UTC [34065] LOG:  connection received: host=[local]
+2024-09-26 14:04:30.845 UTC [34065] LOG:  connection authorized: user=tav database=postgres application_name=psql
+2024-09-26 14:05:26.556 UTC [34302] LOG:  connection received: host=[local]
+2024-09-26 14:05:26.557 UTC [34302] LOG:  connection authorized: user=tav database=postgres application_name=psql
+2024-09-26 14:06:10.514 UTC [34558] LOG:  connection received: host=127.0.0.1 port=41706
+2024-09-26 14:06:10.522 UTC [34558] LOG:  connection authorized: user=tav database=postgres
+2024-09-26 14:06:10.680 UTC [34562] LOG:  connection received: host=127.0.0.1 port=41714
+2024-09-26 14:06:10.681 UTC [34562] LOG:  connection authorized: user=tav database=postgres
+2024-09-26 14:06:10.715 UTC [34568] LOG:  connection received: host=127.0.0.1 port=41720
+2024-09-26 14:06:10.716 UTC [34568] LOG:  connection authorized: user=tav database=postgres
+2024-09-26 14:06:10.750 UTC [34569] LOG:  connection received: host=127.0.0.1 port=41730
+2024-09-26 14:06:10.751 UTC [34569] LOG:  connection authorized: user=tav database=postgres
+2024-09-26 14:06:10.785 UTC [34570] LOG:  connection received: host=127.0.0.1 port=41738
+2024-09-26 14:06:10.786 UTC [34570] LOG:  connection authorized: user=tav database=postgres
+2024-09-26 14:06:10.820 UTC [34571] LOG:  connection received: host=127.0.0.1 port=41742
+2024-09-26 14:06:10.821 UTC [34571] LOG:  connection authorized: user=tav database=postgres
+2024-09-26 14:06:10.855 UTC [34572] LOG:  connection received: host=127.0.0.1 port=41758
+2024-09-26 14:06:10.856 UTC [34572] LOG:  connection authorized: user=tav database=postgres
+2024-09-26 14:06:10.890 UTC [34573] LOG:  connection received: host=127.0.0.1 port=41762
+2024-09-26 14:06:10.891 UTC [34573] LOG:  connection authorized: user=tav database=postgres
+2024-09-26 14:06:10.926 UTC [34574] LOG:  connection received: host=127.0.0.1 port=41772
+2024-09-26 14:06:10.927 UTC [34574] LOG:  connection authorized: user=tav database=postgres
+2024-09-26 14:06:10.961 UTC [34575] LOG:  connection received: host=127.0.0.1 port=41786
+2024-09-26 14:06:10.962 UTC [34575] LOG:  connection authorized: user=tav database=postgres
+2024-09-26 14:06:21.507 UTC [34558] ERROR:  relation "view_products_desc" does not exist at character 15
+2024-09-26 14:06:21.507 UTC [34558] STATEMENT:  SELECT * FROM view_products_desc WHERE to_tsvector(name) @@ plainto_tsquery($1) AND raw_price BETWEEN $2 AND $3 AND category LIKE COALESCE(NULLIF($4, 'undefined'), '%') LIMIT $5 OFFSET ($6-1) * $7
+2024-09-26 14:10:53.334 UTC [35112] LOG:  connection received: host=[local]
+2024-09-26 14:10:53.335 UTC [35112] LOG:  connection authorized: user=tav database=postgres application_name=psql
+2024-09-26 14:11:54.680 UTC [32042] LOG:  checkpoint starting: time
+2024-09-26 14:11:59.688 UTC [35112] ERROR:  syntax error at or near "ls" at character 1
+2024-09-26 14:11:59.688 UTC [35112] STATEMENT:  ls
+	;
+2024-09-26 14:12:05.678 UTC [35245] LOG:  connection received: host=[local]
+2024-09-26 14:12:05.682 UTC [35245] LOG:  connection authorized: user=tav database=product_administration application_name=psql
+2024-09-26 14:12:52.243 UTC [35625] LOG:  connection received: host=127.0.0.1 port=35682
+2024-09-26 14:12:52.249 UTC [35625] LOG:  connection authorized: user=tav database=product_administration
+2024-09-26 14:12:52.385 UTC [35629] LOG:  connection received: host=127.0.0.1 port=35696
+2024-09-26 14:12:52.386 UTC [35629] LOG:  connection authorized: user=tav database=product_administration
+2024-09-26 14:12:52.421 UTC [35630] LOG:  connection received: host=127.0.0.1 port=35712
+2024-09-26 14:12:52.422 UTC [35630] LOG:  connection authorized: user=tav database=product_administration
+2024-09-26 14:12:52.456 UTC [35631] LOG:  connection received: host=127.0.0.1 port=35722
+2024-09-26 14:12:52.457 UTC [35631] LOG:  connection authorized: user=tav database=product_administration
+2024-09-26 14:12:52.491 UTC [35632] LOG:  connection received: host=127.0.0.1 port=35728
+2024-09-26 14:12:52.492 UTC [35632] LOG:  connection authorized: user=tav database=product_administration
+2024-09-26 14:12:52.526 UTC [35633] LOG:  connection received: host=127.0.0.1 port=35738
+2024-09-26 14:12:52.527 UTC [35633] LOG:  connection authorized: user=tav database=product_administration
+2024-09-26 14:12:52.561 UTC [35634] LOG:  connection received: host=127.0.0.1 port=35754
+2024-09-26 14:12:52.562 UTC [35634] LOG:  connection authorized: user=tav database=product_administration
+2024-09-26 14:12:52.596 UTC [35635] LOG:  connection received: host=127.0.0.1 port=35768
+2024-09-26 14:12:52.597 UTC [35635] LOG:  connection authorized: user=tav database=product_administration
+2024-09-26 14:12:52.631 UTC [35636] LOG:  connection received: host=127.0.0.1 port=35780
+2024-09-26 14:12:52.632 UTC [35636] LOG:  connection authorized: user=tav database=product_administration
+2024-09-26 14:12:52.666 UTC [35637] LOG:  connection received: host=127.0.0.1 port=35786
+2024-09-26 14:12:52.667 UTC [35637] LOG:  connection authorized: user=tav database=product_administration
+2024-09-26 14:13:16.600 UTC [35625] ERROR:  relation "view_products_desc" does not exist at character 15
+2024-09-26 14:13:16.600 UTC [35625] STATEMENT:  SELECT * FROM view_products_desc WHERE to_tsvector(name) @@ plainto_tsquery($1) AND raw_price BETWEEN $2 AND $3 AND category LIKE COALESCE(NULLIF($4, 'undefined'), '%') LIMIT $5 OFFSET ($6-1) * $7
+2024-09-26 14:13:27.644 UTC [32042] LOG:  checkpoint complete: wrote 927 buffers (5.7%); 0 WAL file(s) added, 0 removed, 0 recycled; write=92.919 s, sync=0.032 s, total=92.965 s; sync files=307, longest=0.003 s, average=0.001 s; distance=4245 kB, estimate=4245 kB
+2024-09-26 14:15:11.520 UTC [44173] LOG:  connection received: host=[local]
+2024-09-26 14:15:11.524 UTC [44173] LOG:  connection authorized: user=tav database=product_administration application_name=psql
+2024-09-26 14:15:52.729 UTC [35625] ERROR:  relation "view_products_desc" does not exist at character 15
+2024-09-26 14:15:52.729 UTC [35625] STATEMENT:  SELECT * FROM view_products_desc WHERE to_tsvector(name) @@ plainto_tsquery($1) AND raw_price BETWEEN $2 AND $3 AND category LIKE COALESCE(NULLIF($4, 'undefined'), '%') LIMIT $5 OFFSET ($6-1) * $7
+2024-09-26 14:16:54.745 UTC [32042] LOG:  checkpoint starting: time
+2024-09-26 14:19:33.000 UTC [44173] ERROR:  syntax error at or near "" at character 1
+2024-09-26 14:19:33.000 UTC [44173] STATEMENT:  [200~CREATE OR REPLACE VIEW view_products_desc AS SELECT * FROM products ORDER BY raw_price DESC;
+2024-09-26 14:19:38.957 UTC [44173] ERROR:  syntax error at or near "~" at character 1
+2024-09-26 14:19:38.957 UTC [44173] STATEMENT:  ~CREATE OR REPLACE VIEW view_products_desc AS SELECT * FROM products ORDER BY raw_price DESC;
+2024-09-26 14:21:24.019 UTC [32042] LOG:  checkpoint complete: wrote 2807 buffers (17.1%); 0 WAL file(s) added, 0 removed, 2 recycled; write=269.250 s, sync=0.007 s, total=269.275 s; sync files=27, longest=0.002 s, average=0.001 s; distance=28306 kB, estimate=28306 kB

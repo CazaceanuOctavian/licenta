@@ -1,0 +1,4 @@
+2024-09-26 13:56:54.389 UTC [32040] LOG:  redirecting log output to logging collector process
+2024-09-26 13:56:54.389 UTC [32040] HINT:  Future log output will appear in directory "log".
+2024-09-26 14:14:59.207 UTC [44102] FATAL:  lock file "postmaster.pid" already exists
+2024-09-26 14:14:59.207 UTC [44102] HINT:  Is another postmaster (PID 32040) running in data directory "/home/tav/Desktop/licenta/.nix-shell/db"?

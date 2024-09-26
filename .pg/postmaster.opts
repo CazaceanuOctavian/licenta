@@ -1,1 +1,0 @@
-/nix/store/5r7nk7yzxx2m4h72zpab7wpplfxs6ngx-postgresql-15.8/bin/postgres "-D" "/home/tav/Desktop/licenta/.pg" "-c" "unix_socket_directories=/home/tav/Desktop/licenta/.pg" "-c" "listen_addresses=*"
