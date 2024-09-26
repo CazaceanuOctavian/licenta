@@ -4,11 +4,8 @@ import csv
 import requests
 import datetime
 import configparser
-import objgraph
 import time
 
-from pympler import summary
-from pympler import muppy
 from bs4 import NavigableString
 from bs4 import BeautifulSoup
 from selenium import webdriver
@@ -22,10 +19,10 @@ from selenium.webdriver.support import expected_conditions as EC
 
 def install_addons():
     try:
-        driver.install_addon('/home/tavi/snap/firefox/common/.mozilla/firefox/53alnjep.default/extensions/{d10d0bf8-f5b5-c8b4-a8b2-2b9879e08c5d}.xpi')
-        driver.install_addon('/home/tavi/snap/firefox/common/.mozilla/firefox/53alnjep.default/extensions/jid1-MnnxcxisBPnSXQ@jetpack.xpi')
-        driver.install_addon('/home/tavi/snap/firefox/common/.mozilla/firefox/53alnjep.default/extensions/langpack-en-US@firefox.mozilla.org.xpi')
-        driver.install_addon('/home/tavi/snap/firefox/common/.mozilla/firefox/53alnjep.default/extensions/uBlock0@raymondhill.net.xpi')
+        driver.install_addon('/home/tav/snap/firefox/common/.mozilla/firefox/53alnjep.default/extensions/{d10d0bf8-f5b5-c8b4-a8b2-2b9879e08c5d}.xpi')
+        driver.install_addon('/home/tav/snap/firefox/common/.mozilla/firefox/53alnjep.default/extensions/jid1-MnnxcxisBPnSXQ@jetpack.xpi')
+        driver.install_addon('/home/tav/snap/firefox/common/.mozilla/firefox/53alnjep.default/extensions/langpack-en-US@firefox.mozilla.org.xpi')
+        driver.install_addon('/home/tav/snap/firefox/common/.mozilla/firefox/53alnjep.default/extensions/uBlock0@raymondhill.net.xpi')
     except Exception as e:
         print('WARNING: Could not install some add-ons...')
 
@@ -42,7 +39,7 @@ def create_driver():
     options.add_argument("--disable-dev-shm-usage")
     options.set_preference("browser.privatebrowsing.autostart", True)
 
-    options.binary_location = '/etc/firefox'
+    options.binary_location = '/nix/store/wwig0jkpjw2j4snlws3yvgcbhz4kax7d-firefox-130.0.1/bin/firefox'
     options.page_load_strategy = 'eager'
     driver = webdriver.Firefox(options=options)
     return driver
@@ -54,7 +51,7 @@ def create_driver():
 currentDate = datetime.datetime.now().strftime('%Y_%m_%d')
 
 config = configparser.ConfigParser()
-config.read('/home/tavi/Desktop/licenta/cfg.ini')
+config.read('/home/tav/Desktop/licenta/cfg.ini')
 
 latest_path = None
 
@@ -116,7 +113,7 @@ def format_data(item,driver):
                 img_data = requests.get(imageUrl).content
                 img_name = product_code + '.jpeg'
                 #
-                filepath = os.path.join('/home/tavi/Desktop/licenta/frontend/public/images', img_name) 
+                filepath = os.path.join('/home/tav/Desktop/licenta/frontend/public/images', img_name) 
                 with open(filepath, 'wb') as file:
                     file.write(img_data)
             except Exception as e:

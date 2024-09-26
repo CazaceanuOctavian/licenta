@@ -3,7 +3,7 @@ import configparser
 import sys
 
 config = configparser.ConfigParser()
-config.read('/home/tavi/Desktop/licenta/cfg.ini')
+config.read('/home/tav/Desktop/licenta/cfg.ini')
 
 scripts = [config['Scripts']['evomag_scraper'], config['Scripts']['vexio_scraper']]
 processes = []

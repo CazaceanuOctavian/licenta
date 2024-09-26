@@ -15,21 +15,21 @@ from bs4 import BeautifulSoup
 
 options = Options()
 #options.add_argument('--headless')
-options.binary_location = '/etc/firefox'
-options.page_load_strategy = 'eager'
+options.binary_location = '/nix/store/wwig0jkpjw2j4snlws3yvgcbhz4kax7d-firefox-130.0.1/bin/firefox'
+options.page_load_strategy = 'normal'
 driver = webdriver.Firefox(options=options)
 try:
-    driver.install_addon('/home/tavi/snap/firefox/common/.mozilla/firefox/53alnjep.default/extensions/{d10d0bf8-f5b5-c8b4-a8b2-2b9879e08c5d}.xpi')
-    driver.install_addon('/home/tavi/snap/firefox/common/.mozilla/firefox/53alnjep.default/extensions/jid1-MnnxcxisBPnSXQ@jetpack.xpi')
-    driver.install_addon('/home/tavi/snap/firefox/common/.mozilla/firefox/53alnjep.default/extensions/langpack-en-US@firefox.mozilla.org.xpi')
-    driver.install_addon('/home/tavi/snap/firefox/common/.mozilla/firefox/53alnjep.default/extensions/uBlock0@raymondhill.net.xpi')
+    driver.install_addon('/home/tav/snap/firefox/common/.mozilla/firefox/53alnjep.default/extensions/{d10d0bf8-f5b5-c8b4-a8b2-2b9879e08c5d}.xpi')
+    driver.install_addon('/home/tav/snap/firefox/common/.mozilla/firefox/53alnjep.default/extensions/jid1-MnnxcxisBPnSXQ@jetpack.xpi')
+    driver.install_addon('/home/tav/snap/firefox/common/.mozilla/firefox/53alnjep.default/extensions/langpack-en-US@firefox.mozilla.org.xpi')
+    driver.install_addon('/home/tav/snap/firefox/common/.mozilla/firefox/53alnjep.default/extensions/uBlock0@raymondhill.net.xpi')
 except Exception as e:
     print('WARNING: Could not install some add-ons...')
 
 currentDate = datetime.datetime.now().strftime('%Y_%m_%d')
 
 config = configparser.ConfigParser()
-config.read('/home/tavi/Desktop/licenta/cfg.ini')
+config.read('/home/tav/Desktop/licenta/cfg.ini')
 
 latest_path = None
 

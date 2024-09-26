@@ -2,7 +2,7 @@ import subprocess
 import configparser
 
 config = configparser.ConfigParser()
-config.read('/home/tavi/Desktop/licenta/cfg.ini')
+config.read('/home/tav/Desktop/licenta/cfg.ini')
 
 scripts = [config['Scripts']['dataset_builder'], config['Scripts']['model_trainer'], config['Scripts']['prediction_maker']]
 

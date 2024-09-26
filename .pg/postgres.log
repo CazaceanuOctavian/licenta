@@ -1,0 +1,6 @@
+2024-09-26 09:30:54.134 UTC [120623] LOG:  starting PostgreSQL 15.8 on x86_64-pc-linux-gnu, compiled by gcc (GCC) 13.3.0, 64-bit
+2024-09-26 09:30:54.135 UTC [120623] LOG:  listening on IPv4 address "0.0.0.0", port 5432
+2024-09-26 09:30:54.135 UTC [120623] LOG:  listening on IPv6 address "::", port 5432
+2024-09-26 09:30:54.147 UTC [120623] LOG:  listening on Unix socket "/home/tav/Desktop/licenta/.pg/.s.PGSQL.5432"
+2024-09-26 09:30:54.154 UTC [120632] LOG:  database system was shut down at 2024-09-26 09:30:53 UTC
+2024-09-26 09:30:54.166 UTC [120623] LOG:  database system is ready to accept connections

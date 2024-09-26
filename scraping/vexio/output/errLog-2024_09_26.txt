@@ -1,0 +1,10 @@
+ERR FOR IMAGE SCRAPING: Folie discretie ecran Lenovo 0A61771, 15.6 inchERR: {FileNotFoundError(2, 'No such file or directory')}
+ERR FOR IMAGE SCRAPING: Memorie laptop Corsair notebook Kit 2x4GB, DDR3, 1333MHz CL9 Dual...ERR: {FileNotFoundError(2, 'No such file or directory')}
+ERR FOR IMAGE SCRAPING: Husa AntiSoc Case Logic LAPS116K, pentru laptop, 15.6 inch, NegruERR: {FileNotFoundError(2, 'No such file or directory')}
+ERR FOR IMAGE SCRAPING: Memorie laptop Corsair DDR3 SODIMM 4GB 1600MHz CL11 ValueSelectERR: {FileNotFoundError(2, 'No such file or directory')}
+ERR FOR IMAGE SCRAPING: Memorie laptop Kingston KVR16S11S6/2, 2GB DDR3 1600MHz, SODIMMERR: {FileNotFoundError(2, 'No such file or directory')}
+ERR FOR IMAGE SCRAPING: Memorie laptop Corsair 8GB DDR3L SODIMM, 1600MHz Dual ChannelERR: {FileNotFoundError(2, 'No such file or directory')}
+ERR FOR IMAGE SCRAPING: Dicota Rucsac notebook D30675 ECO 14-15.6 inch cu husa detasabilaERR: {FileNotFoundError(2, 'No such file or directory')}
+ERR FOR IMAGE SCRAPING: Memorie laptop Corsair CMSA16GX3M2A1600C11 SODIMM pentru Mac, 2x8GB...ERR: {FileNotFoundError(2, 'No such file or directory')}
+ERR FOR IMAGE SCRAPING: Everki geanta notebook Advance Briefcase 14.1 inch, neagraERR: {FileNotFoundError(2, 'No such file or directory')}
+ERR FOR IMAGE SCRAPING: ESPERANZA Cooling pad Tivano EA144, 2 ventilatoareERR: {FileNotFoundError(2, 'No such file or directory')}
