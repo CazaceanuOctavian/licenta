@@ -17,10 +17,10 @@ timeout = 10
 last_print_time = 0  
 
 conn = psycopg2.connect(
-    host="localhost",  
-    database="product_administration",  
-    user="tav",  
-    password="qwe123"  
+    host=config['Database']['host'],  
+    database=config['Database']['db'],  
+    user=config['Database']['user'],  
+    password=config['Database']['password']  
 )
 
 scripts = [config['Scripts']['evomag_scraper'], config['Scripts']['vexio_scraper']]
@@ -52,7 +52,7 @@ finally:
         if process.poll() is None:  
             process.send_signal(signal.SIGINT)
 
-    #create Table for the current day
+    #create Table for the current day if table doesn't exist already
     cur = conn.cursor()
     cur.execute('CREATE TABLE products_' + str(datetime.datetime.now().strftime('%Y_%m_%d')) + '(\
         id SERIAL PRIMARY KEY,\
@@ -105,6 +105,9 @@ finally:
     cur.execute("SELECT * FROM assign_categories()")
     conn.commit()
     print('=====SUCCESSFULLY ASSIGNED CATEGORIES=====')
+
+    #create price evolution view
+    
 
     cur.close()
     conn.close()

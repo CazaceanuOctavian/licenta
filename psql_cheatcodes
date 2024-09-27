@@ -187,11 +187,43 @@ CREATE OR REPLACE VIEW view_products_asc AS SELECT * FROM products ORDER BY raw_
 CREATE OR REPLACE VIEW view_products_desc AS SELECT * FROM products ORDER BY raw_price DESC;
 
 
+=================procedrized price_history======================
 
+CREATE OR REPLACE PROCEDURE generate_price_history_view()
+LANGUAGE plpgsql
+AS $$
+DECLARE
+	select_clause TEXT := 'CREATE OR REPLACE VIEW price_history_view as select products.product_code, ';
+    join_clause TEXT;
+    i INT;
+    table_names TEXT[];
+BEGIN
+    SELECT ARRAY(SELECT tablename
+                 FROM pg_catalog.pg_tables
+                 WHERE schemaname = 'public') INTO table_names;
 
+    FOR i IN 1..array_length(table_names, 1) LOOP
+		select_clause := select_clause || ' MIN(' || table_names[i] || '.raw_price) as price_' || table_names[i] || ',';
 
+    END LOOP;
 
+    select_clause := LEFT(select_clause, length(select_clause) - 1);
+	select_clause := select_clause || E'\n' || E'FROM products';
 
+	RAISE NOTICE 'select_clause: %', select_clause;
 
+    FOR i IN 1..array_length(table_names, 1) LOOP
 
+    	IF table_names[i] NOT LIKE 'products' THEN
 
+			select_clause := select_clause || E'\nFULL OUTER JOIN ' || table_names[i]
+			|| ' ON products.product_code = ' || table_names[i] || '.product_code';
+
+		END IF;
+    END LOOP;
+
+    select_clause := select_clause || E'\nGROUP BY products.product_code;';
+
+    RAISE NOTICE 'select_clause: %', select_clause;
+	EXECUTE select_clause;
+END $$;
