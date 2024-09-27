@@ -246,7 +246,7 @@ def main():
                     with open(config['Paths']['evomag_output'] + 'errLog-' + str(currentDate) + '.txt', 'a') as logs:
                         logs.write('ERR MAIN: ' + str({e}))
                     continue
-    except Exception as end:
+    finally:
         #write the remaining lines in dying_gasp from current line to EOF
         print('PANIC!')
         with open(config['Paths']['evomag_output'] + 'dying_gasp_' + str(currentDate) + '_tmp.txt', 'w') as gasp:
@@ -262,6 +262,7 @@ def main():
                     line = origin_file.readline()
                     gasp.write(line)
         os.rename(config['Paths']['evomag_output'] + 'dying_gasp_' + str(currentDate) + '_tmp.txt', config['Paths']['evomag_output'] + 'dying_gasp_' + str(currentDate) + '.txt')
+        
 
 # scrape('https://www.evomag.ro/telefoane-tablete-accesorii-accesorii-telefoane/filtru/pagina:1')
 main()

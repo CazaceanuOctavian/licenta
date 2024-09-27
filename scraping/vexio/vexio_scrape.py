@@ -188,7 +188,7 @@ def main():
                         logs.write('ERR MAIN: ' + str({e}))
                     driver.delete_all_cookies()
                     continue
-    except Exception as end:
+    finally:
         #write the remaining lines in dying_gasp from current line to EOF
         print('PANIC!')
         with open(config['Paths']['vexio_output'] + 'dying_gasp_' + str(currentDate) + '_tmp.txt', 'w') as gasp:
@@ -204,6 +204,8 @@ def main():
                     line = origin_file.readline()
                     gasp.write(line)
         os.rename(config['Paths']['vexio_output'] +  'dying_gasp_' + str(currentDate) + '_tmp.txt', config['Paths']['vexio_output'] + 'dying_gasp_' + str(currentDate) + '.txt')
+        time.sleep(2)
+        driver.quit()
 
 main()
 driver.quit()

@@ -1,3 +1,4 @@
 *.jpeg
 *.csv
 *.pkl
+.nix-shell
