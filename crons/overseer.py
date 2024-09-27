@@ -68,6 +68,7 @@ finally:
         predicted_price FLOAT DEFAULT -1\
     )')
     conn.commit()
+    print('=====SUCCESSFULLY CREATED TABLE FOR CURRENT DAY=====')
 
     #insert data from .csv files into created table
     copy_statement_evo = "COPY products_2024_09_27(name, raw_price, raw_rating, is_in_stock, url, product_code, retailer, imagepath, category) FROM '/home/tav/Desktop/licenta/scraping/evomag/output/evomag_scrape_big.csv' DELIMITER ',' CSV HEADER;"
@@ -80,20 +81,30 @@ finally:
     with open(config['Paths']['evomag_output'] + "evomag_scrape_big.csv", 'r') as f:
         cur.copy_expert(copy_statement_evo, f)
     conn.commit()
+    print('=====SUCCESSFULLY INSERTED SCRAPED VALUES INTO CURRENT TABLE=====')
 
     #delete main table and associated views
     cur.execute("DROP TABLE products CASCADE;")
     conn.commit()
+    print('=====SUCCESSFULLY DELETED OLD TABLE AND VIEWS=====')
 
     #create main table after the current day table
     cur.execute("CREATE TABLE products AS SELECT * FROM products_2024_09_27")
     conn.commit()
+    print('=====SUCCESSFULLY CREATED NEW TABLE=====')
 
-    #create views
-    cur.execute("CREATE VIEW view_products_asc AS SELECT * FROM products")
+    #create views associated to main table
+    cur.execute("CREATE VIEW view_products_asc AS SELECT * FROM products ORDER BY raw_price ASC;")
     conn.commit()
-    cur.execute("CREATE VIEW view_products_asc AS SELECT * FROM products")
+    cur.execute("CREATE VIEW view_products_desc AS SELECT * FROM products ORDER BY raw_price DESC;")
     conn.commit()
+    print('=====SUCCESSFULLY CREATED NEW VIEWS=====')
+
+    #remove duplicate categories
+    print('--->TRYING TO ASSIGN CATEGORIES, THIS MAY TAKE SOME TIME...<---')
+    cur.execute("SELECT * FROM assign_categories()")
+    conn.commit()
+    print('=====SUCCESSFULLY ASSIGNED CATEGORIES=====')
 
     cur.close()
     conn.close()

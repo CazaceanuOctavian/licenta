@@ -247,7 +247,7 @@ def main():
                         logs.write('ERR MAIN: ' + str({e}))
                     continue
     finally:
-        #write the remaining lines in dying_gasp from current line to EOF
+        #write the remaining categories in dying_gasp from current line to EOF
         print('PANIC!')
         with open(config['Paths']['evomag_output'] + 'dying_gasp_' + str(currentDate) + '_tmp.txt', 'w') as gasp:
             gasp.write(latest_path + '\n')
