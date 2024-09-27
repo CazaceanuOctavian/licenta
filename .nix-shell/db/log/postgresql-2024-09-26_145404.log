@@ -1,0 +1,17 @@
+2024-09-26 14:54:04.422 UTC [27126] LOG:  starting PostgreSQL 15.8 on x86_64-pc-linux-gnu, compiled by gcc (GCC) 13.3.0, 64-bit
+2024-09-26 14:54:04.422 UTC [27126] LOG:  listening on IPv4 address "0.0.0.0", port 5432
+2024-09-26 14:54:04.422 UTC [27126] LOG:  listening on IPv6 address "::", port 5432
+2024-09-26 14:54:04.427 UTC [27126] LOG:  listening on Unix socket "/home/tav/Desktop/licenta/.nix-shell/db/.s.PGSQL.5432"
+2024-09-26 14:54:04.433 UTC [27130] LOG:  database system was shut down at 2024-09-26 14:53:54 UTC
+2024-09-26 14:54:04.438 UTC [27126] LOG:  database system is ready to accept connections
+2024-09-26 14:54:06.944 UTC [27164] LOG:  connection received: host=[local]
+2024-09-26 14:54:06.946 UTC [27164] LOG:  connection authorized: user=tav database=product_administration application_name=psql
+2024-09-26 14:54:15.050 UTC [27199] LOG:  connection received: host=[local]
+2024-09-26 14:54:15.051 UTC [27199] LOG:  connection authorized: user=tav database=product_administration application_name=psql
+2024-09-26 14:54:34.292 UTC [27126] LOG:  received fast shutdown request
+2024-09-26 14:54:34.298 UTC [27126] LOG:  aborting any active transactions
+2024-09-26 14:54:34.300 UTC [27126] LOG:  background worker "logical replication launcher" (PID 27133) exited with exit code 1
+2024-09-26 14:54:34.300 UTC [27128] LOG:  shutting down
+2024-09-26 14:54:34.302 UTC [27128] LOG:  checkpoint starting: shutdown immediate
+2024-09-26 14:54:34.316 UTC [27128] LOG:  checkpoint complete: wrote 3 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.004 s, sync=0.002 s, total=0.016 s; sync files=2, longest=0.001 s, average=0.001 s; distance=0 kB, estimate=0 kB
+2024-09-26 14:54:34.321 UTC [27126] LOG:  database system is shut down

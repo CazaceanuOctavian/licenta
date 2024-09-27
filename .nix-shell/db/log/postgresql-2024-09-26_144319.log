@@ -1,0 +1,24 @@
+2024-09-26 14:43:19.874 UTC [10378] LOG:  starting PostgreSQL 15.8 on x86_64-pc-linux-gnu, compiled by gcc (GCC) 13.3.0, 64-bit
+2024-09-26 14:43:19.875 UTC [10378] LOG:  listening on IPv4 address "0.0.0.0", port 5432
+2024-09-26 14:43:19.875 UTC [10378] LOG:  listening on IPv6 address "::", port 5432
+2024-09-26 14:43:19.878 UTC [10378] LOG:  listening on Unix socket "/home/tav/Desktop/licenta/.nix-shell/db/.s.PGSQL.5432"
+2024-09-26 14:43:19.883 UTC [10382] LOG:  database system was shut down at 2024-09-26 14:43:19 UTC
+2024-09-26 14:43:19.888 UTC [10378] LOG:  database system is ready to accept connections
+2024-09-26 14:44:05.040 UTC [18988] LOG:  connection received: host=127.0.0.1 port=58698
+2024-09-26 14:44:05.046 UTC [18988] LOG:  connection authorized: user=tav database=product_administration
+2024-09-26 14:44:05.046 UTC [18988] FATAL:  database "product_administration" does not exist
+2024-09-26 14:44:47.812 UTC [19178] LOG:  connection received: host=[local]
+2024-09-26 14:44:47.813 UTC [19178] LOG:  connection authorized: user=tav database=product_administration application_name=psql
+2024-09-26 14:44:47.813 UTC [19178] FATAL:  database "product_administration" does not exist
+2024-09-26 14:44:54.515 UTC [19213] LOG:  connection received: host=[local]
+2024-09-26 14:44:54.516 UTC [19213] LOG:  connection authorized: user=tav database=postgres application_name=psql
+2024-09-26 14:45:05.056 UTC [19214] LOG:  connection received: host=[local]
+2024-09-26 14:45:05.060 UTC [19214] LOG:  connection authorized: user=tav database=product_adminsitration application_name=psql
+2024-09-26 14:45:05.060 UTC [19214] FATAL:  database "product_adminsitration" does not exist
+2024-09-26 14:45:17.468 UTC [10378] LOG:  received fast shutdown request
+2024-09-26 14:45:17.475 UTC [10378] LOG:  aborting any active transactions
+2024-09-26 14:45:17.477 UTC [10378] LOG:  background worker "logical replication launcher" (PID 10385) exited with exit code 1
+2024-09-26 14:45:17.478 UTC [10380] LOG:  shutting down
+2024-09-26 14:45:17.479 UTC [10380] LOG:  checkpoint starting: shutdown immediate
+2024-09-26 14:45:17.496 UTC [10380] LOG:  checkpoint complete: wrote 41 buffers (0.3%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.006 s, sync=0.005 s, total=0.019 s; sync files=11, longest=0.003 s, average=0.001 s; distance=229 kB, estimate=229 kB
+2024-09-26 14:45:17.510 UTC [10378] LOG:  database system is shut down

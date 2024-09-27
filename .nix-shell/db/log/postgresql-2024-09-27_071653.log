@@ -1,0 +1,43 @@
+2024-09-27 07:16:53.254 UTC [296876] LOG:  starting PostgreSQL 15.8 on x86_64-pc-linux-gnu, compiled by gcc (GCC) 13.3.0, 64-bit
+2024-09-27 07:16:53.254 UTC [296876] LOG:  listening on IPv4 address "0.0.0.0", port 5432
+2024-09-27 07:16:53.254 UTC [296876] LOG:  listening on IPv6 address "::", port 5432
+2024-09-27 07:16:53.259 UTC [296876] LOG:  listening on Unix socket "/home/tav/Desktop/licenta/.nix-shell/db/.s.PGSQL.5432"
+2024-09-27 07:16:53.267 UTC [296881] LOG:  database system was shut down at 2024-09-27 07:16:35 UTC
+2024-09-27 07:16:53.274 UTC [296876] LOG:  database system is ready to accept connections
+2024-09-27 07:16:54.488 UTC [296919] LOG:  connection received: host=127.0.0.1 port=50946
+2024-09-27 07:16:54.492 UTC [296919] LOG:  connection authorized: user=tav database=product_administration
+2024-09-27 07:16:54.542 UTC [296920] LOG:  connection received: host=127.0.0.1 port=50958
+2024-09-27 07:16:54.544 UTC [296920] LOG:  connection authorized: user=tav database=product_administration
+2024-09-27 07:17:02.228 UTC [296973] LOG:  connection received: host=127.0.0.1 port=33878
+2024-09-27 07:17:02.230 UTC [296973] LOG:  connection authorized: user=tav database=product_administration
+2024-09-27 07:17:09.172 UTC [297091] LOG:  connection received: host=127.0.0.1 port=58670
+2024-09-27 07:17:09.173 UTC [297091] LOG:  connection authorized: user=tav database=product_administration
+2024-09-27 07:17:14.788 UTC [297112] LOG:  connection received: host=127.0.0.1 port=58682
+2024-09-27 07:17:14.792 UTC [297112] LOG:  connection authorized: user=tav database=product_administration
+2024-09-27 07:17:14.916 UTC [297113] LOG:  connection received: host=127.0.0.1 port=58684
+2024-09-27 07:17:14.920 UTC [297113] LOG:  connection authorized: user=tav database=product_administration
+2024-09-27 07:17:21.293 UTC [297130] LOG:  connection received: host=127.0.0.1 port=54428
+2024-09-27 07:17:21.294 UTC [297130] LOG:  connection authorized: user=tav database=product_administration
+2024-09-27 07:17:23.084 UTC [297131] LOG:  connection received: host=127.0.0.1 port=54440
+2024-09-27 07:17:23.090 UTC [297131] LOG:  connection authorized: user=tav database=product_administration
+2024-09-27 07:17:31.692 UTC [297140] LOG:  connection received: host=127.0.0.1 port=53952
+2024-09-27 07:17:31.695 UTC [297140] LOG:  connection authorized: user=tav database=product_administration
+2024-09-27 07:17:32.958 UTC [297188] LOG:  connection received: host=127.0.0.1 port=53964
+2024-09-27 07:17:32.961 UTC [297188] LOG:  connection authorized: user=tav database=product_administration
+2024-09-27 07:18:43.043 UTC [296876] LOG:  received fast shutdown request
+2024-09-27 07:18:43.045 UTC [296876] LOG:  aborting any active transactions
+2024-09-27 07:18:43.045 UTC [297130] FATAL:  terminating connection due to administrator command
+2024-09-27 07:18:43.045 UTC [297188] FATAL:  terminating connection due to administrator command
+2024-09-27 07:18:43.045 UTC [297140] FATAL:  terminating connection due to administrator command
+2024-09-27 07:18:43.045 UTC [297131] FATAL:  terminating connection due to administrator command
+2024-09-27 07:18:43.045 UTC [297091] FATAL:  terminating connection due to administrator command
+2024-09-27 07:18:43.045 UTC [297113] FATAL:  terminating connection due to administrator command
+2024-09-27 07:18:43.046 UTC [297112] FATAL:  terminating connection due to administrator command
+2024-09-27 07:18:43.048 UTC [296920] FATAL:  terminating connection due to administrator command
+2024-09-27 07:18:43.048 UTC [296973] FATAL:  terminating connection due to administrator command
+2024-09-27 07:18:43.049 UTC [296919] FATAL:  terminating connection due to administrator command
+2024-09-27 07:18:43.051 UTC [296876] LOG:  background worker "logical replication launcher" (PID 296884) exited with exit code 1
+2024-09-27 07:18:43.053 UTC [296879] LOG:  shutting down
+2024-09-27 07:18:43.054 UTC [296879] LOG:  checkpoint starting: shutdown immediate
+2024-09-27 07:18:43.068 UTC [296879] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.004 s, sync=0.003 s, total=0.016 s; sync files=3, longest=0.002 s, average=0.001 s; distance=0 kB, estimate=0 kB
+2024-09-27 07:18:43.074 UTC [296876] LOG:  database system is shut down

@@ -1,0 +1,22 @@
+2024-09-26 14:48:58.820 UTC [28122] LOG:  starting PostgreSQL 15.8 on x86_64-pc-linux-gnu, compiled by gcc (GCC) 13.3.0, 64-bit
+2024-09-26 14:48:58.820 UTC [28122] LOG:  listening on IPv4 address "0.0.0.0", port 5432
+2024-09-26 14:48:58.820 UTC [28122] LOG:  listening on IPv6 address "::", port 5432
+2024-09-26 14:48:58.824 UTC [28122] LOG:  listening on Unix socket "/home/tav/Desktop/licenta/.nix-shell/db/.s.PGSQL.5432"
+2024-09-26 14:48:58.830 UTC [28126] LOG:  database system was shut down at 2024-09-26 14:45:17 UTC
+2024-09-26 14:48:58.835 UTC [28122] LOG:  database system is ready to accept connections
+2024-09-26 14:49:27.887 UTC [28176] LOG:  connection received: host=[local]
+2024-09-26 14:49:27.888 UTC [28176] LOG:  connection authorized: user=tav database=postgres application_name=psql
+2024-09-26 14:49:43.607 UTC [28212] LOG:  connection received: host=[local]
+2024-09-26 14:49:43.609 UTC [28212] LOG:  connection authorized: user=tav database=product_administration application_name=psql
+2024-09-26 14:49:43.609 UTC [28212] FATAL:  database "product_administration" does not exist
+2024-09-26 14:49:51.754 UTC [28248] LOG:  connection received: host=[local]
+2024-09-26 14:49:51.755 UTC [28248] LOG:  connection authorized: user=tav database=postgres application_name=psql
+2024-09-26 14:50:22.732 UTC [28285] LOG:  connection received: host=[local]
+2024-09-26 14:50:22.733 UTC [28285] LOG:  connection authorized: user=tav database=product_administration application_name=psql
+2024-09-26 14:50:28.466 UTC [28122] LOG:  received fast shutdown request
+2024-09-26 14:50:28.467 UTC [28122] LOG:  aborting any active transactions
+2024-09-26 14:50:28.469 UTC [28122] LOG:  background worker "logical replication launcher" (PID 28129) exited with exit code 1
+2024-09-26 14:50:28.470 UTC [28124] LOG:  shutting down
+2024-09-26 14:50:28.474 UTC [28124] LOG:  checkpoint starting: shutdown immediate
+2024-09-26 14:50:28.542 UTC [28124] LOG:  checkpoint complete: wrote 956 buffers (5.8%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.034 s, sync=0.028 s, total=0.072 s; sync files=306, longest=0.003 s, average=0.001 s; distance=4374 kB, estimate=4374 kB
+2024-09-26 14:50:28.547 UTC [28122] LOG:  database system is shut down

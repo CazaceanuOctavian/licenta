@@ -1,0 +1,50 @@
+2024-09-27 06:17:32.642 UTC [244034] LOG:  starting PostgreSQL 15.8 on x86_64-pc-linux-gnu, compiled by gcc (GCC) 13.3.0, 64-bit
+2024-09-27 06:17:32.642 UTC [244034] LOG:  listening on IPv4 address "0.0.0.0", port 5432
+2024-09-27 06:17:32.642 UTC [244034] LOG:  listening on IPv6 address "::", port 5432
+2024-09-27 06:17:32.646 UTC [244034] LOG:  listening on Unix socket "/home/tav/Desktop/licenta/.nix-shell/db/.s.PGSQL.5432"
+2024-09-27 06:17:32.654 UTC [244038] LOG:  database system was shut down at 2024-09-27 06:15:20 UTC
+2024-09-27 06:17:32.668 UTC [244034] LOG:  database system is ready to accept connections
+2024-09-27 06:18:02.472 UTC [252538] LOG:  connection received: host=127.0.0.1 port=42548
+2024-09-27 06:18:02.478 UTC [252538] LOG:  connection authorized: user=tav database=product_administration
+2024-09-27 06:18:02.642 UTC [252542] LOG:  connection received: host=127.0.0.1 port=42562
+2024-09-27 06:18:02.643 UTC [252542] LOG:  connection authorized: user=tav database=product_administration
+2024-09-27 06:18:02.677 UTC [252543] LOG:  connection received: host=127.0.0.1 port=42574
+2024-09-27 06:18:02.679 UTC [252543] LOG:  connection authorized: user=tav database=product_administration
+2024-09-27 06:18:02.713 UTC [252544] LOG:  connection received: host=127.0.0.1 port=42578
+2024-09-27 06:18:02.714 UTC [252544] LOG:  connection authorized: user=tav database=product_administration
+2024-09-27 06:18:02.748 UTC [252545] LOG:  connection received: host=127.0.0.1 port=42584
+2024-09-27 06:18:02.749 UTC [252545] LOG:  connection authorized: user=tav database=product_administration
+2024-09-27 06:18:02.784 UTC [252546] LOG:  connection received: host=127.0.0.1 port=42590
+2024-09-27 06:18:02.785 UTC [252546] LOG:  connection authorized: user=tav database=product_administration
+2024-09-27 06:18:02.819 UTC [252547] LOG:  connection received: host=127.0.0.1 port=42592
+2024-09-27 06:18:02.820 UTC [252547] LOG:  connection authorized: user=tav database=product_administration
+2024-09-27 06:18:02.854 UTC [252548] LOG:  connection received: host=127.0.0.1 port=42596
+2024-09-27 06:18:02.855 UTC [252548] LOG:  connection authorized: user=tav database=product_administration
+2024-09-27 06:18:02.894 UTC [252549] LOG:  connection received: host=127.0.0.1 port=42602
+2024-09-27 06:18:02.895 UTC [252549] LOG:  connection authorized: user=tav database=product_administration
+2024-09-27 06:18:02.930 UTC [252550] LOG:  connection received: host=127.0.0.1 port=42608
+2024-09-27 06:18:02.931 UTC [252550] LOG:  connection authorized: user=tav database=product_administration
+2024-09-27 06:19:47.172 UTC [261458] LOG:  connection received: host=[local]
+2024-09-27 06:19:47.173 UTC [261458] LOG:  connection authorized: user=tav database=product_administration application_name=psql
+2024-09-27 06:20:16.889 UTC [261458] ERROR:  relation "prodcuts" does not exist at character 22
+2024-09-27 06:20:16.889 UTC [261458] STATEMENT:  select COUNT(*) from prodcuts;
+2024-09-27 06:21:12.277 UTC [261458] ERROR:  syntax error at or near "ls" at character 1
+2024-09-27 06:21:12.277 UTC [261458] STATEMENT:  ls
+	;
+2024-09-27 06:21:35.059 UTC [244034] LOG:  received fast shutdown request
+2024-09-27 06:21:35.065 UTC [244034] LOG:  aborting any active transactions
+2024-09-27 06:21:35.066 UTC [252550] FATAL:  terminating connection due to administrator command
+2024-09-27 06:21:35.066 UTC [252549] FATAL:  terminating connection due to administrator command
+2024-09-27 06:21:35.066 UTC [252545] FATAL:  terminating connection due to administrator command
+2024-09-27 06:21:35.066 UTC [252548] FATAL:  terminating connection due to administrator command
+2024-09-27 06:21:35.066 UTC [252546] FATAL:  terminating connection due to administrator command
+2024-09-27 06:21:35.066 UTC [252547] FATAL:  terminating connection due to administrator command
+2024-09-27 06:21:35.066 UTC [252544] FATAL:  terminating connection due to administrator command
+2024-09-27 06:21:35.066 UTC [252543] FATAL:  terminating connection due to administrator command
+2024-09-27 06:21:35.066 UTC [252538] FATAL:  terminating connection due to administrator command
+2024-09-27 06:21:35.069 UTC [252542] FATAL:  terminating connection due to administrator command
+2024-09-27 06:21:35.079 UTC [244034] LOG:  background worker "logical replication launcher" (PID 244041) exited with exit code 1
+2024-09-27 06:21:35.081 UTC [244036] LOG:  shutting down
+2024-09-27 06:21:35.082 UTC [244036] LOG:  checkpoint starting: shutdown immediate
+2024-09-27 06:21:35.099 UTC [244036] LOG:  checkpoint complete: wrote 5 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.004 s, sync=0.003 s, total=0.019 s; sync files=3, longest=0.002 s, average=0.001 s; distance=0 kB, estimate=0 kB
+2024-09-27 06:21:35.111 UTC [244034] LOG:  database system is shut down

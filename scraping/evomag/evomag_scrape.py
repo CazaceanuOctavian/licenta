@@ -123,7 +123,7 @@ def format_data(item,driver):
                 img_name = 'not_found.jpeg'
             #=====scraping image=====
 
-        #print('evomag -- ' + name)
+        print('evomag -- ' + name)
 
         return {
             'name' : name,
@@ -246,7 +246,7 @@ def main():
                     with open(config['Paths']['evomag_output'] + 'errLog-' + str(currentDate) + '.txt', 'a') as logs:
                         logs.write('ERR MAIN: ' + str({e}))
                     continue
-    except KeyboardInterrupt as end:
+    except Exception as end:
         #write the remaining lines in dying_gasp from current line to EOF
         print('PANIC!')
         with open(config['Paths']['evomag_output'] + 'dying_gasp_' + str(currentDate) + '_tmp.txt', 'w') as gasp:

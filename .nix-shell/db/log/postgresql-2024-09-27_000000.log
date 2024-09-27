@@ -1,0 +1,7 @@
+2024-09-27 06:15:20.835 UTC [41434] LOG:  received fast shutdown request
+2024-09-27 06:15:20.839 UTC [41434] LOG:  aborting any active transactions
+2024-09-27 06:15:20.849 UTC [41434] LOG:  background worker "logical replication launcher" (PID 41441) exited with exit code 1
+2024-09-27 06:15:20.850 UTC [41436] LOG:  shutting down
+2024-09-27 06:15:20.854 UTC [41436] LOG:  checkpoint starting: shutdown immediate
+2024-09-27 06:15:20.899 UTC [41436] LOG:  checkpoint complete: wrote 0 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.033 s, sync=0.001 s, total=0.048 s; sync files=0, longest=0.000 s, average=0.000 s; distance=0 kB, estimate=0 kB
+2024-09-27 06:15:20.908 UTC [41434] LOG:  database system is shut down

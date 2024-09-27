@@ -188,7 +188,7 @@ def main():
                         logs.write('ERR MAIN: ' + str({e}))
                     driver.delete_all_cookies()
                     continue
-    except KeyboardInterrupt as end:
+    except Exception as end:
         #write the remaining lines in dying_gasp from current line to EOF
         print('PANIC!')
         with open(config['Paths']['vexio_output'] + 'dying_gasp_' + str(currentDate) + '_tmp.txt', 'w') as gasp:

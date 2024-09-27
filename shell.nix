@@ -8,6 +8,7 @@ pkgs.mkShell {
       python-pkgs.selenium
       python-pkgs.beautifulsoup4
       python-pkgs.configparser
+      python-pkgs.psycopg2
     ]))
     #java
     pkgs.jdk
