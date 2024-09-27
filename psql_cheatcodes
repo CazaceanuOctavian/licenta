@@ -187,7 +187,7 @@ CREATE OR REPLACE VIEW view_products_asc AS SELECT * FROM products ORDER BY raw_
 CREATE OR REPLACE VIEW view_products_desc AS SELECT * FROM products ORDER BY raw_price DESC;
 
 
-=================procedrized price_history======================
+=================procedurised_price_history======================
 
 CREATE OR REPLACE PROCEDURE generate_price_history_view()
 LANGUAGE plpgsql

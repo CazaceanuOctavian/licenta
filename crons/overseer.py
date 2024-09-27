@@ -28,7 +28,7 @@ processes = []
 signals = []
 
 for script in scripts:
-        process = subprocess.Popen(['python3', script], stdout=None, stderr=None)
+        process = subprocess.Popen(['python3', script], stdout=None, stderr=subprocess.DEVNULL)
         processes.append(process)
         signals.append(process.pid)
 
@@ -52,22 +52,46 @@ finally:
         if process.poll() is None:  
             process.send_signal(signal.SIGINT)
 
-    #create Table for the current day if table doesn't exist already
     cur = conn.cursor()
-    cur.execute('CREATE TABLE products_' + str(datetime.datetime.now().strftime('%Y_%m_%d')) + '(\
-        id SERIAL PRIMARY KEY,\
-        name VARCHAR(500),\
-        raw_price FLOAT,\
-        raw_rating INTEGER,\
-        is_in_stock BOOLEAN,\
-        url VARCHAR(500),\
-        product_code VARCHAR(100),\
-        retailer VARCHAR(100),\
-        imagepath VARCHAR(150),\
-        category VARCHAR(150),\
-        predicted_price FLOAT DEFAULT -1\
-    )')
-    conn.commit()
+
+    #create Table for the current day. If the table already exists --> delete it then create it again
+    cur.execute("SELECT tablename FROM pg_catalog.pg_tables WHERE schemaname = 'public' AND tablename LIKE 'products_" + str(datetime.datetime.now().strftime('%Y_%m_%d') + "'"))
+    current_table = cur.fetchall()
+    
+    if current_table:
+        print('--->TABLE FOR CURRENT DAY EXISTS --> TRYING TO RECREATE WITH UPDATED VALUES...<---')
+        cur.execute("DROP TABLE products_" + str(datetime.datetime.now().strftime('%Y_%m_%d')) + ' CASCADE;')
+        conn.commit()
+        cur.execute('CREATE TABLE products_' + str(datetime.datetime.now().strftime('%Y_%m_%d')) + '(\
+                    id SERIAL PRIMARY KEY,\
+                    name VARCHAR(500),\
+                    raw_price FLOAT,\
+                    raw_rating INTEGER,\
+                    is_in_stock BOOLEAN,\
+                    url VARCHAR(500),\
+                    product_code VARCHAR(100),\
+                    retailer VARCHAR(100),\
+                    imagepath VARCHAR(150),\
+                    category VARCHAR(150),\
+                    predicted_price FLOAT DEFAULT -1\
+                )')
+        conn.commit()
+    else:
+        print('--->TABLE FOR CURRENT DAY DOES NOT EXIST... CREATING TABLE<---')
+        cur.execute('CREATE TABLE products_' + str(datetime.datetime.now().strftime('%Y_%m_%d')) + '(\
+            id SERIAL PRIMARY KEY,\
+            name VARCHAR(500),\
+            raw_price FLOAT,\
+            raw_rating INTEGER,\
+            is_in_stock BOOLEAN,\
+            url VARCHAR(500),\
+            product_code VARCHAR(100),\
+            retailer VARCHAR(100),\
+            imagepath VARCHAR(150),\
+            category VARCHAR(150),\
+            predicted_price FLOAT DEFAULT -1\
+        )')
+        conn.commit()
     print('=====SUCCESSFULLY CREATED TABLE FOR CURRENT DAY=====')
 
     #insert data from .csv files into created table
@@ -102,14 +126,55 @@ finally:
 
     #remove duplicate categories
     print('--->TRYING TO ASSIGN CATEGORIES, THIS MAY TAKE SOME TIME...<---')
+    
     cur.execute("SELECT * FROM assign_categories()")
     conn.commit()
     print('=====SUCCESSFULLY ASSIGNED CATEGORIES=====')
 
     #create price evolution view
-    
+    proc_definition = """
+    CREATE OR REPLACE PROCEDURE generate_price_history_view()
+    LANGUAGE plpgsql
+    AS $$
+    DECLARE
+        select_clause TEXT := 'CREATE OR REPLACE VIEW price_history_view as select products.product_code, ';
+        join_clause TEXT;
+        i INT;
+        table_names TEXT[];
+    BEGIN
+        SELECT ARRAY(SELECT tablename
+                    FROM pg_catalog.pg_tables
+                    WHERE schemaname = 'public') INTO table_names;
 
+        FOR i IN 1..array_length(table_names, 1) LOOP
+            select_clause := select_clause || ' MIN(' || table_names[i] || '.raw_price) as price_' || table_names[i] || ',';
+        END LOOP;
+
+        select_clause := LEFT(select_clause, length(select_clause) - 1);
+        select_clause := select_clause || E'\n' || E'FROM products';
+
+        RAISE NOTICE 'select_clause: %', select_clause;
+
+        FOR i IN 1..array_length(table_names, 1) LOOP
+            IF table_names[i] NOT LIKE 'products' THEN
+                select_clause := select_clause || E'\nFULL OUTER JOIN ' || table_names[i]
+                || ' ON products.product_code = ' || table_names[i] || '.product_code';
+            END IF;
+        END LOOP;
+
+        select_clause := select_clause || E'\nGROUP BY products.product_code;';
+
+        RAISE NOTICE 'select_clause: %', select_clause;
+        EXECUTE select_clause;
+    END $$;
+    """
+    cur.execute(proc_definition)
+    conn.commit()
+    cur.execute('CALL generate_price_history_view();')
+    conn.commit()
+    print('=====SUCCESSFULLY CREATED price history view=====')
+
+
+    print('--->DONE!<---')
     cur.close()
     conn.close()
-
-
