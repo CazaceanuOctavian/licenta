@@ -13,7 +13,7 @@ currentDate = datetime.datetime.now()
 start_time = time.time()
 
 #scrape for 28800 seconds (8 hours) at a time
-timeout = 10
+timeout = 28800
 last_print_time = 0  
 
 conn = psycopg2.connect(
@@ -95,8 +95,8 @@ finally:
     print('=====SUCCESSFULLY CREATED TABLE FOR CURRENT DAY=====')
 
     #insert data from .csv files into created table
-    copy_statement_evo = "COPY products_2024_09_27(name, raw_price, raw_rating, is_in_stock, url, product_code, retailer, imagepath, category) FROM '/home/tav/Desktop/licenta/scraping/evomag/output/evomag_scrape_big.csv' DELIMITER ',' CSV HEADER;"
-    copy_statement_vex = "COPY products_2024_09_27(name, raw_price, raw_rating, is_in_stock, url, product_code, retailer, imagepath, category) FROM '/home/tav/Desktop/licenta/scraping/vexio/output/vexio_scrape_big.csv' DELIMITER ',' CSV HEADER;"
+    copy_statement_evo = "COPY products_" + str(datetime.datetime.now().strftime('%Y_%m_%d')) + "(name, raw_price, raw_rating, is_in_stock, url, product_code, retailer, imagepath, category) FROM '/home/tav/Desktop/licenta/scraping/evomag/output/evomag_scrape_big.csv' DELIMITER ',' CSV HEADER;"
+    copy_statement_vex = "COPY products_" + str(datetime.datetime.now().strftime('%Y_%m_%d')) + "(name, raw_price, raw_rating, is_in_stock, url, product_code, retailer, imagepath, category) FROM '/home/tav/Desktop/licenta/scraping/vexio/output/vexio_scrape_big.csv' DELIMITER ',' CSV HEADER;"
 
     with open(config['Paths']['vexio_output'] + "vexio_scrape_big.csv", 'r') as f:
         cur.copy_expert(copy_statement_vex, f)
@@ -113,7 +113,7 @@ finally:
     print('=====SUCCESSFULLY DELETED OLD TABLE AND VIEWS=====')
 
     #create main table after the current day table
-    cur.execute("CREATE TABLE products AS SELECT * FROM products_2024_09_27")
+    cur.execute("CREATE TABLE products AS SELECT * FROM products_" + str(datetime.datetime.now().strftime('%Y_%m_%d')))
     conn.commit()
     print('=====SUCCESSFULLY CREATED NEW TABLE=====')
 

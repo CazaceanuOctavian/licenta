@@ -227,3 +227,69 @@ BEGIN
     RAISE NOTICE 'select_clause: %', select_clause;
 	EXECUTE select_clause;
 END $$;
+
+
+=============================INSERTING INTO THE PRODCUTS ACCUMULATION TABLE===============================================
+
+CREATE OR REPLACE PROCEDURE insert_into_aggregation_table()
+LANGUAGE plpgsql
+AS $$
+DECLARE
+	latest_table_name VARCHAR(225) := (SELECT * from latest_products_table);
+	iterator RECORD;
+
+	test_var VARCHAR(100);
+	stmt VARCHAR(255);
+	my_count INTEGER := 0;
+BEGIN
+	stmt := 'SELECT * FROM ' || quote_ident(latest_table_name);
+
+	RAISE NOTICE '%', stmt;
+
+	FOR iterator IN EXECUTE stmt
+	LOOP
+		my_count := my_count + 1;
+		SELECT product_code 
+		INTO test_var
+		FROM products 
+		WHERE product_code LIKE iterator.product_code;
+
+		RAISE NOTICE 'COUNT: %', my_count;
+
+		IF test_var IS NULL THEN
+			RAISE NOTICE 'inserted new product with product code -- %', iterator.product_code;
+			INSERT INTO products SELECT * FROM latest_table_name WHERE id = iterator.id;
+		ELSE 
+			RAISE NOTICE 'updated product with product code -- %', iterator.product_code;
+		END IF;
+	END LOOP;
+  
+END $$;
+
+
+=============================INSERTING INTO THE PRODCUTS ACCUMULATION TABLE GODLY===============================================
+
+
+CREATE OR REPLACE PROCEDURE insert_into_aggregation_table()
+LANGUAGE plpgsql
+AS $$
+DECLARE
+    new_table_name text;
+BEGIN
+	SELECT * FROM latest_products_table
+	INTO new_table_name;
+
+    EXECUTE format('
+        CREATE OR REPLACE VIEW combined_view AS
+        SELECT n.*
+        FROM %I n
+        UNION ALL
+        SELECT o.*
+        FROM products o
+        WHERE NOT EXISTS (
+            SELECT 1
+            FROM %I n
+            WHERE n.product_code = o.product_code
+        );
+    ', new_table_name, new_table_name);
+END $$;

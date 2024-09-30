@@ -1,0 +1,63 @@
+ERR IN FORMAT_DATA FOR PRODUCT: Folie discretie ecran Lenovo 0A61771, 15.6 inchERR: {UnboundLocalError("cannot access local variable 'img_name' where it is not associated with a value")}
+ON PATH:https://www.vexio.ro/laptop-accesorii/
+PAGE:2
+ERR IN FORMAT_DATA FOR PRODUCT: Memorie laptop Corsair notebook Kit 2x4GB, DDR3, 1333MHz CL9 Dual...ERR: {UnboundLocalError("cannot access local variable 'img_name' where it is not associated with a value")}
+ON PATH:https://www.vexio.ro/laptop-accesorii/
+PAGE:2
+ERR IN FORMAT_DATA FOR PRODUCT: Folie discretie ecran Lenovo 0A61771, 15.6 inchERR: {UnboundLocalError("cannot access local variable 'img_name' where it is not associated with a value")}
+ON PATH:https://www.vexio.ro/laptop-accesorii/
+PAGE:2
+ERR IN FORMAT_DATA FOR PRODUCT: Memorie laptop Corsair notebook Kit 2x4GB, DDR3, 1333MHz CL9 Dual...ERR: {UnboundLocalError("cannot access local variable 'img_name' where it is not associated with a value")}
+ON PATH:https://www.vexio.ro/laptop-accesorii/
+PAGE:2
+ERR IN FORMAT_DATA FOR PRODUCT: Husa AntiSoc Case Logic LAPS116K, pentru laptop, 15.6 inch, NegruERR: {UnboundLocalError("cannot access local variable 'img_name' where it is not associated with a value")}
+ON PATH:https://www.vexio.ro/laptop-accesorii/
+PAGE:2
+ERR IN FORMAT_DATA FOR PRODUCT: Protecție Kensington MicroSaver 2.0 Keyed LockERR: {UnboundLocalError("cannot access local variable 'img_name' where it is not associated with a value")}
+ON PATH:https://www.vexio.ro/laptop-accesorii/
+PAGE:4
+ERR IN FORMAT_DATA FOR PRODUCT: Protecție Kensington MicroSaver 2.0 Keyed LockERR: {UnboundLocalError("cannot access local variable 'img_name' where it is not associated with a value")}
+ON PATH:https://www.vexio.ro/laptop-accesorii/
+PAGE:4
+ERR IN FORMAT_DATA FOR PRODUCT: Accesoriu montare docking station Dell Mounting KitERR: {UnboundLocalError("cannot access local variable 'img_name' where it is not associated with a value")}
+ON PATH:https://www.vexio.ro/laptop-accesorii/
+PAGE:4
+ERR IN FORMAT_DATA FOR PRODUCT: Case Logic Husa Deco 14" NegruERR: {UnboundLocalError("cannot access local variable 'img_name' where it is not associated with a value")}
+ON PATH:https://www.vexio.ro/laptop-accesorii/
+PAGE:4
+ERR IN FORMAT_DATA FOR PRODUCT: Spacer Geanta KOOL pentru Laptop de 15.6" NegruERR: {UnboundLocalError("cannot access local variable 'img_name' where it is not associated with a value")}
+ON PATH:https://www.vexio.ro/laptop-accesorii/
+PAGE:4
+ERR IN FORMAT_DATA FOR PRODUCT: Memorie laptop GOODRAM 8GB DDR3 SO-DIMM memory module 1333 MHzERR: {UnboundLocalError("cannot access local variable 'img_name' where it is not associated with a value")}
+ON PATH:https://www.vexio.ro/laptop-accesorii/
+PAGE:4
+ERR IN FORMAT_DATA FOR PRODUCT: Lenovo Yoga 14-inch SleeveERR: {UnboundLocalError("cannot access local variable 'img_name' where it is not associated with a value")}
+ON PATH:https://www.vexio.ro/laptop-accesorii/
+PAGE:4
+ERR IN FORMAT_DATA FOR PRODUCT: Asus Rucsac laptop gaming ROG Ranger BP2701, 17" , NegruERR: {UnboundLocalError("cannot access local variable 'img_name' where it is not associated with a value")}
+ON PATH:https://www.vexio.ro/laptop-accesorii/
+PAGE:4
+ERR IN FORMAT_DATA FOR PRODUCT: Dell Husa laptop Essential Sleeve 15" NegruERR: {UnboundLocalError("cannot access local variable 'img_name' where it is not associated with a value")}
+ON PATH:https://www.vexio.ro/laptop-accesorii/
+PAGE:4
+ERR IN FORMAT_DATA FOR PRODUCT: Lenovo Thinkpad Top Loader 15.6" BlackERR: {UnboundLocalError("cannot access local variable 'img_name' where it is not associated with a value")}
+ON PATH:https://www.vexio.ro/laptop-accesorii/
+PAGE:5
+ERR IN FORMAT_DATA FOR PRODUCT: Dicota Eco Multi BASE black 14-15.6 - D30446-RPETERR: {UnboundLocalError("cannot access local variable 'img_name' where it is not associated with a value")}
+ON PATH:https://www.vexio.ro/laptop-accesorii/
+PAGE:5
+ERR IN FORMAT_DATA FOR PRODUCT: Lenovo ThinkPad Essential, 65WERR: {UnboundLocalError("cannot access local variable 'img_name' where it is not associated with a value")}
+ON PATH:https://www.vexio.ro/laptop-accesorii/
+PAGE:5
+ERR IN FORMAT_DATA FOR PRODUCT: PORT Designs Yosemite Eco 15.6 Inch GreyERR: {UnboundLocalError("cannot access local variable 'img_name' where it is not associated with a value")}
+ON PATH:https://www.vexio.ro/laptop-accesorii/
+PAGE:5
+ERR IN FORMAT_DATA FOR PRODUCT: Memorie laptop Silicon Power SP016GBSFU320X02, 16GB, DDR4-3200MHz,...ERR: {UnboundLocalError("cannot access local variable 'img_name' where it is not associated with a value")}
+ON PATH:https://www.vexio.ro/laptop-accesorii/
+PAGE:5
+ERR IN FORMAT_DATA FOR PRODUCT: Green Cell AD57AP power adapter/inverter Indoor 45 W BlackERR: {UnboundLocalError("cannot access local variable 'img_name' where it is not associated with a value")}
+ON PATH:https://www.vexio.ro/laptop-accesorii/
+PAGE:5
+ERR IN FORMAT_DATA FOR PRODUCT: Green Cell AD64P power adapter/inverter Indoor 45 W BlackERR: {UnboundLocalError("cannot access local variable 'img_name' where it is not associated with a value")}
+ON PATH:https://www.vexio.ro/laptop-accesorii/
+PAGE:5
