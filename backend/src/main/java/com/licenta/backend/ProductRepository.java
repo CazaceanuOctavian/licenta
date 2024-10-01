@@ -9,7 +9,7 @@ public interface ProductRepository extends CrudRepository<Product, Integer> {
     @Query(value = "SELECT * FROM products WHERE to_tsvector(name) @@ plainto_tsquery(?1)", nativeQuery = true)
     List<Product> findProductByName(String name);
 
-    @Query(value = "SELECT * FROM products WHERE to_tsvector(name) @@ plainto_tsquery(?1) LIMIT ?2 OFFSET (?3-1) * ?2", nativeQuery = true)
+    @Query(value = "SELECT * FROM products WHERE to_tsvector(nproductsame) @@ plainto_tsquery(?1) LIMIT ?2 OFFSET (?3-1) * ?2", nativeQuery = true)
     List<Product> findProductByNameLimit(String name, int limit, int page);
 
     @Query(value = "SELECT * FROM products WHERE to_tsvector(name) @@ plainto_tsquery(?1) AND raw_price BETWEEN ?4 AND ?5 LIMIT ?2 OFFSET (?3-1) * ?2", nativeQuery = true)
@@ -37,7 +37,7 @@ public interface ProductRepository extends CrudRepository<Product, Integer> {
     // int upperPrice,
     // String category, Sort sort);
 
-    @Query(value = "SELECT * FROM products WHERE product_code LIKE ?1", nativeQuery = true)
+    @Query(value = "SELECT * FROM 'products' WHERE product_code LIKE ?1", nativeQuery = true)
     List<Product> findProductByProductCode(String productCode);
 
     @Query(value = "SELECT DISTINCT category FROM products", nativeQuery = true)

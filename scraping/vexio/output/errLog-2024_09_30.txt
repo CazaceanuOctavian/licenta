@@ -61,3 +61,18 @@ PAGE:5
 ERR IN FORMAT_DATA FOR PRODUCT: Green Cell AD64P power adapter/inverter Indoor 45 W BlackERR: {UnboundLocalError("cannot access local variable 'img_name' where it is not associated with a value")}
 ON PATH:https://www.vexio.ro/laptop-accesorii/
 PAGE:5
+ERR IN FORMAT_DATA FOR PRODUCT: Lenovo Thinkpad Top Loader 15.6" BlackERR: {UnboundLocalError("cannot access local variable 'img_name' where it is not associated with a value")}
+ON PATH:https://www.vexio.ro/laptop-accesorii/
+PAGE:5
+ERR IN FORMAT_DATA FOR PRODUCT: Lenovo ThinkPad Essential, 65WERR: {UnboundLocalError("cannot access local variable 'img_name' where it is not associated with a value")}
+ON PATH:https://www.vexio.ro/laptop-accesorii/
+PAGE:5
+ERR IN FORMAT_DATA FOR PRODUCT: PORT Designs Yosemite Eco 15.6 Inch GreyERR: {UnboundLocalError("cannot access local variable 'img_name' where it is not associated with a value")}
+ON PATH:https://www.vexio.ro/laptop-accesorii/
+PAGE:5
+ERR IN FORMAT_DATA FOR PRODUCT: Memorie laptop Silicon Power SP016GBSFU320X02, 16GB, DDR4-3200MHz,...ERR: {UnboundLocalError("cannot access local variable 'img_name' where it is not associated with a value")}
+ON PATH:https://www.vexio.ro/laptop-accesorii/
+PAGE:5
+ERR IN FORMAT_DATA FOR PRODUCT: Green Cell AD57AP power adapter/inverter Indoor 45 W BlackERR: {UnboundLocalError("cannot access local variable 'img_name' where it is not associated with a value")}
+ON PATH:https://www.vexio.ro/laptop-accesorii/
+PAGE:5
