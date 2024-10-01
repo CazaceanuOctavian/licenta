@@ -272,7 +272,7 @@ END $$;
 CREATE OR REPLACE VIEW view_latest_products_table AS 
 SELECT tablename 
 FROM pg_tables 
-WHERE tablename LIKE 'products_%' 
+WHERE tablename LIKE 'products_2%' 
 ORDER BY tablename DESC 
 LIMIT 1;
 
@@ -288,8 +288,7 @@ BEGIN
 	INTO new_table_name;
 
     EXECUTE format('
-        CREATE TABLE 
-		AS
+        CREATE TABLE products_aggregation_table AS
         SELECT n.*
         FROM %I n
         UNION ALL

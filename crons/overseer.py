@@ -154,7 +154,7 @@ finally:
     CREATE OR REPLACE VIEW view_latest_products_table AS 
     SELECT tablename 
     FROM pg_tables 
-    WHERE tablename LIKE 'products_%' 
+    WHERE tablename LIKE 'products_2%' 
     ORDER BY tablename DESC 
     LIMIT 1;
     """
@@ -194,12 +194,18 @@ finally:
     conn.commit()
 
     cur.execute("CALL insert_into_aggregation_table()")
-    print('=====SUCCESSFULLY INSERTED VALUES INTO AGGREGATION TABLE=====')
+    conn.commit()
 
+    cur.execute("SELECT COUNT(*) FROM products_aggregation_table")
+    sanity_test = cur.fetchall()
+    if sanity_test:
+        print (sanity_test)
+        print('=====SUCCESSFULLY INSERTED VALUES INTO AGGREGATION TABLE=====')
+    else:
+        print("!!!ERR!!!")
 
     #TODO --> AGREGA AICI PE CATEGORI
     print('--->TRYING TO ASSIGN CATEGORIES, THIS MAY TAKE SOME TIME...<---')
-    time.sleep(5)    
     cur.execute("SELECT * FROM assign_categories()")
     conn.commit()
     print('=====SUCCESSFULLY ASSIGNED CATEGORIES=====')
