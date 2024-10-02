@@ -49,11 +49,11 @@ def format_data(item):
         else:
             isInStoc = 0
 
-        try:
-            price = float(item.find_next(class_='price margin-bottom-xs clearfix col-xs-6 grid-full').text.strip().replace(',','.').split(' ')[0])
-        except Exception as e:
-            #TODO -->fix bug where this gets value of 2.7 instead of 2799 
-            price = float(item.find_next(class_='price margin-bottom-xs clearfix col-xs-6 grid-full').text.strip().split('\n')[-1].split(' ')[0].split(',')[0])
+        # try:
+        #     price = float(item.find_next(class_='price margin-bottom-xs clearfix col-xs-6 grid-full').text.strip().replace(',','.').split(' ')[0])
+        # except Exception as e:
+        #     #TODO -->fix bug where this gets value of 2.7 instead of 2799 
+        #     price = float(item.find_next(class_='price margin-bottom-xs clearfix col-xs-6 grid-full').text.strip().split('\n')[-1].split(' ')[0].split(',')[0])
 
         
 
@@ -74,6 +74,11 @@ def format_data(item):
 
         product_code = other_soup.find(class_='model').text.strip()
         product_code = product_code.replace('/','+rep+')
+
+        raw_price = other_soup.find(id='price-value').text
+        if '.' in raw_price:
+            raw_price = raw_price.replace('.','')
+        price = float(raw_price.replace('"','').strip().split(' ')[0].replace(',', '.'))
 
         #=====scraping image=====
         if imageUrl != 'err':

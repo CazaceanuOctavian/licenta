@@ -13,3 +13,99 @@ PAGE:15
 ERR IN FORMAT_DATA FOR PRODUCT: Memorie laptop Corsair Memorie RAM Value Select, SODIMM, DDR4, 8GB,...ERR: {UnboundLocalError("cannot access local variable 'img_name' where it is not associated with a value")}
 ON PATH:https://www.vexio.ro/laptop-accesorii/
 PAGE:17
+ERR IN FORMAT_DATA FOR PRODUCT: Tableta Samsung Active 3 64GB 4GB RAM WiFi BlackERR: {ValueError("could not convert string to float: '1.899.00'")}
+ON PATH:https://www.vexio.ro/tablete-accesorii/
+PAGE:2
+ERR IN FORMAT_DATA FOR PRODUCT: Tableta Apple iPad mini 6 8.3" Wi-Fi 64GB StarlightERR: {ValueError("could not convert string to float: '3.000.99'")}
+ON PATH:https://www.vexio.ro/tablete-accesorii/
+PAGE:2
+ERR IN FORMAT_DATA FOR PRODUCT: Tableta Samsung Galaxy Tab S6 Lite (2022) 10.4" 128GB 4GB RAM WiFi...ERR: {ValueError("could not convert string to float: '1.399.00'")}
+ON PATH:https://www.vexio.ro/tablete-accesorii/
+PAGE:3
+ERR IN FORMAT_DATA FOR PRODUCT: Tableta Kruger Matz EDGE 1089 Windows 11 Pro 10.1" 4GB RAM 128GB Wi-FiERR: {ValueError("could not convert string to float: '1.049.00'")}
+ON PATH:https://www.vexio.ro/tablete-accesorii/
+PAGE:3
+ERR IN FORMAT_DATA FOR PRODUCT: Tableta Kruger Matz TABLETA 10.1 INCH EDGE WINDOWS 11 PROERR: {ValueError("could not convert string to float: '1.076.99'")}
+ON PATH:https://www.vexio.ro/tablete-accesorii/
+PAGE:3
+ERR IN FORMAT_DATA FOR PRODUCT: Stylus Pen - USAMS Active Touch Screen (US-ZB135) - WhiteERR: {UnboundLocalError("cannot access local variable 'img_name' where it is not associated with a value")}
+ON PATH:https://www.vexio.ro/tablete-accesorii/
+PAGE:4
+ERR IN FORMAT_DATA FOR PRODUCT: Tableta Xiaomi Pad 6 11" 128GB 6GB RAM WiFi BlueERR: {ValueError("could not convert string to float: '1.299.00'")}
+ON PATH:https://www.vexio.ro/tablete-accesorii/
+PAGE:4
+ERR IN FORMAT_DATA FOR PRODUCT: Folie de protectie Samsung NotePaper Screen pentru Galaxy Tab S9...ERR: {UnboundLocalError("cannot access local variable 'img_name' where it is not associated with a value")}
+ON PATH:https://www.vexio.ro/tablete-accesorii/
+PAGE:4
+ERR IN FORMAT_DATA FOR PRODUCT: Tableta Samsung Galaxy Tab S9 11" 128GB 8GB RAM WiFi GrayERR: {ValueError("could not convert string to float: '3.199.00'")}
+ON PATH:https://www.vexio.ro/tablete-accesorii/
+PAGE:4
+ERR IN FORMAT_DATA FOR PRODUCT: Tableta Samsung Galaxy Tab S9 11" 128GB 8GB RAM WiFi BeigeERR: {ValueError("could not convert string to float: '3.199.00'")}
+ON PATH:https://www.vexio.ro/tablete-accesorii/
+PAGE:4
+ERR IN FORMAT_DATA FOR PRODUCT: Memorie laptop Corsair notebook Kit 2x4GB, DDR3, 1333MHz CL9 Dual...ERR: {UnboundLocalError("cannot access local variable 'img_name' where it is not associated with a value")}
+ON PATH:https://www.vexio.ro/laptop-accesorii/
+PAGE:2
+ERR IN FORMAT_DATA FOR PRODUCT: Docking Station Anker PowerExpand 7-in-1, Thunderbolt 3, 45W, 4K...ERR: {ValueError("could not convert string to float: '1.099.00'")}
+ON PATH:https://www.vexio.ro/laptop-accesorii/
+PAGE:4
+ERR IN FORMAT_DATA FOR PRODUCT: Green Cell Dell DE127ERR: {UnboundLocalError("cannot access local variable 'img_name' where it is not associated with a value")}
+ON PATH:https://www.vexio.ro/laptop-accesorii/
+PAGE:6
+ERR IN FORMAT_DATA FOR PRODUCT: Logitech Logi Dock MS Teams GraphiteERR: {ValueError("could not convert string to float: '1.799.99'")}
+ON PATH:https://www.vexio.ro/laptop-accesorii/
+PAGE:7
+ERR IN FORMAT_DATA FOR PRODUCT: Notebook HP EliteBook 650 G9 15.6" FHD Intel Core i5-1235U 8GB...ERR: {ValueError("could not convert string to float: '3.673.99'")}
+ON PATH:https://www.vexio.ro/laptop-accesorii/
+PAGE:7
+ERR IN FORMAT_DATA FOR PRODUCT: Notebook Acer Aspire 3 A315-59 15.6" FHD Intel Corei7-1255U 8GB...ERR: {ValueError("could not convert string to float: '2.397.99'")}
+ON PATH:https://www.vexio.ro/laptop-accesorii/
+PAGE:8
+ERR IN FORMAT_DATA FOR PRODUCT: Notebook Asus VivoBook 15 X1502ZA-BQ292 15.6" FHD Intel Core i5...ERR: {ValueError("could not convert string to float: '2.099.00'")}
+ON PATH:https://www.vexio.ro/laptop-accesorii/
+PAGE:8
+ERR IN FORMAT_DATA FOR PRODUCT: Notebook Dell G15 5521 Special Edition 15.6" QHD Intel Core...ERR: {ValueError("could not convert string to float: '12.999.00'")}
+ON PATH:https://www.vexio.ro/laptop-accesorii/
+PAGE:8
+ERR IN FORMAT_DATA FOR PRODUCT: Green Cell Power Supply PRO 19V 2.1A 40W SMG N100 N130ERR: {UnboundLocalError("cannot access local variable 'img_name' where it is not associated with a value")}
+ON PATH:https://www.vexio.ro/laptop-accesorii/
+PAGE:9
+ERR IN FORMAT_DATA FOR PRODUCT: Notebook Dell Vostro 5630 16" FHD+ Intel Core i5-1340P 8GB 512GB...ERR: {ValueError("could not convert string to float: '5.392.99'")}
+ON PATH:https://www.vexio.ro/laptop-accesorii/
+PAGE:9
+ERR IN FORMAT_DATA FOR PRODUCT: Notebook Asus TUF Gaming A15 FA507NU-LP030 15.6" FHD AMD Ryzen 7...ERR: {ValueError("could not convert string to float: '5.497.99'")}
+ON PATH:https://www.vexio.ro/laptop-accesorii/
+PAGE:9
+ERR IN FORMAT_DATA FOR PRODUCT: Notebook Dell Latitude 5540 15.6" FHD Intel Core i5-1345U 16GB...ERR: {ValueError("could not convert string to float: '5.499.00'")}
+ON PATH:https://www.vexio.ro/laptop-accesorii/
+PAGE:9
+ERR IN FORMAT_DATA FOR PRODUCT: Notebook HP 250 G10 Intel Core i5-1335U 15.6inch FHD, 8GB RAM 512GB...ERR: {ValueError("could not convert string to float: '2.049.99'")}
+ON PATH:https://www.vexio.ro/laptop-accesorii/
+PAGE:10
+ERR IN FORMAT_DATA FOR PRODUCT: Dell EcoLoop Leather PE1422VL pentru laptop de 14" NegruERR: {UnboundLocalError("cannot access local variable 'img_name' where it is not associated with a value")}
+ON PATH:https://www.vexio.ro/laptop-accesorii/
+PAGE:10
+ERR IN FORMAT_DATA FOR PRODUCT: Suport Reglabil Laptop cu Diagonala 11 - 17" - Yesido (LP02) - SliverERR: {AttributeError("'str' object has no attribute 'text'")}
+ON PATH:https://www.vexio.ro/laptop-accesorii/
+PAGE:10
+ERR IN FORMAT_DATA FOR PRODUCT: Notebook Asus AS 15 AMD Ryzen 7 7435HS 15.6inch Full HD RAM 16GB...ERR: {UnboundLocalError("cannot access local variable 'img_name' where it is not associated with a value")}
+ON PATH:https://www.vexio.ro/laptop-accesorii/
+PAGE:12
+ERR IN FORMAT_DATA FOR PRODUCT: Memorie laptop Kingston Memorie 8GB, 1600MHz, DDR3 Non-ECC CL11...ERR: {UnboundLocalError("cannot access local variable 'img_name' where it is not associated with a value")}
+ON PATH:https://www.vexio.ro/laptop-accesorii/
+PAGE:14
+ERR IN FORMAT_DATA FOR PRODUCT: Incarcator notebook Lenovo ThinkPad Slim AC 0B47036, 45WERR: {UnboundLocalError("cannot access local variable 'img_name' where it is not associated with a value")}
+ON PATH:https://www.vexio.ro/laptop-accesorii/
+PAGE:15
+ERR IN FORMAT_DATA FOR PRODUCT: Apple Incarcator MagSafe mc556z/b pentru MacBook Pro 2010ERR: {UnboundLocalError("cannot access local variable 'img_name' where it is not associated with a value")}
+ON PATH:https://www.vexio.ro/laptop-accesorii/
+PAGE:15
+ERR IN FORMAT_DATA FOR PRODUCT: HDD Laptop Seagate BarraCuda, 2 TB, 5400 RPM, SATA 6GB/sERR: {UnboundLocalError("cannot access local variable 'img_name' where it is not associated with a value")}
+ON PATH:https://www.vexio.ro/laptop-accesorii/
+PAGE:20
+ERR IN FORMAT_DATA FOR PRODUCT: HDD Laptop Seagate BarraCuda, 5 TB, 5400 RPM, SATA 6GB/sERR: {UnboundLocalError("cannot access local variable 'img_name' where it is not associated with a value")}
+ON PATH:https://www.vexio.ro/laptop-accesorii/
+PAGE:20
+ERR IN FORMAT_DATA FOR PRODUCT: HDD Laptop Seagate HDD ST500LM030, 500GB, SATA, 6Gb/s, 5400 rmpERR: {UnboundLocalError("cannot access local variable 'img_name' where it is not associated with a value")}
+ON PATH:https://www.vexio.ro/laptop-accesorii/
+PAGE:20
