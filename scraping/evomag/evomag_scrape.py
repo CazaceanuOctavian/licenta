@@ -9,22 +9,20 @@ import time
 from bs4 import NavigableString
 from bs4 import BeautifulSoup
 from selenium import webdriver
-from selenium.webdriver import DesiredCapabilities
 from selenium.webdriver.firefox.options import Options
-from selenium.webdriver.firefox.firefox_profile import FirefoxProfile
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
 
-def install_addons():
-    try:
-        driver.install_addon('/home/tav/snap/firefox/common/.mozilla/firefox/53alnjep.default/extensions/{d10d0bf8-f5b5-c8b4-a8b2-2b9879e08c5d}.xpi')
-        driver.install_addon('/home/tav/snap/firefox/common/.mozilla/firefox/53alnjep.default/extensions/jid1-MnnxcxisBPnSXQ@jetpack.xpi')
-        driver.install_addon('/home/tav/snap/firefox/common/.mozilla/firefox/53alnjep.default/extensions/langpack-en-US@firefox.mozilla.org.xpi')
-        driver.install_addon('/home/tav/snap/firefox/common/.mozilla/firefox/53alnjep.default/extensions/uBlock0@raymondhill.net.xpi')
-    except Exception as e:
-        print('WARNING: Could not install some add-ons...')
+# def install_addons():
+#     try:
+#         driver.install_addon('/home/tav/snap/firefox/common/.mozilla/firefox/53alnjep.default/extensions/{d10d0bf8-f5b5-c8b4-a8b2-2b9879e08c5d}.xpi')
+#         driver.install_addon('/home/tav/snap/firefox/common/.mozilla/firefox/53alnjep.default/extensions/jid1-MnnxcxisBPnSXQ@jetpack.xpi')
+#         driver.install_addon('/home/tav/snap/firefox/common/.mozilla/firefox/53alnjep.default/extensions/langpack-en-US@firefox.mozilla.org.xpi')
+#         driver.install_addon('/home/tav/snap/firefox/common/.mozilla/firefox/53alnjep.default/extensions/uBlock0@raymondhill.net.xpi')
+#     except Exception as e:
+#         print('WARNING: Could not install some add-ons...')
 
 
 def create_driver():
@@ -39,7 +37,7 @@ def create_driver():
     options.add_argument("--disable-dev-shm-usage")
     options.set_preference("browser.privatebrowsing.autostart", True)
 
-    options.binary_location = '/nix/store/wwig0jkpjw2j4snlws3yvgcbhz4kax7d-firefox-130.0.1/bin/firefox'
+    options.binary_location = '/nix/store/z5lcsw013vbkgwxw6n7kx9lgbadqf7vy-firefox-130.0.1/bin/firefox'
     options.page_load_strategy = 'eager'
     driver = webdriver.Firefox(options=options)
     return driver
@@ -100,6 +98,9 @@ def format_data(item,driver):
         page_source = driver.page_source
         other_soup = BeautifulSoup(page_source, 'html.parser')
 
+        em_elems = other_soup.find_all('em')
+        manufacturer = em_elems[-2].text.strip().lower()
+
         product_code = other_soup.find(class_='product_codes').span.text.strip()
         match = re.search(r'\[ (.*?) \]', product_code)
         if match:
@@ -133,7 +134,8 @@ def format_data(item,driver):
             'url' : itemUrl,
             'product_code' : product_code,
             'online_mag' : 'evomag',
-            'img_path' : '/images/' + img_name
+            'img_path' : '/images/' + img_name,
+            'manufacturer': manufacturer
             }
     
     except Exception as e:

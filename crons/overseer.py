@@ -1,6 +1,5 @@
 import subprocess
 import configparser
-import sys
 import time
 import signal
 import datetime
@@ -199,10 +198,10 @@ finally:
     cur.execute("SELECT COUNT(*) FROM products_aggregation_table")
     sanity_test = cur.fetchall()
     if sanity_test:
-        print (sanity_test)
         print('=====SUCCESSFULLY INSERTED VALUES INTO AGGREGATION TABLE=====')
     else:
-        print("!!!ERR!!!")
+        print("!!!!>-------ERR INSERTING INTO AGGREGATION TABLE!!-------<!!!!")
+        raise Exception
 
     #TODO --> AGREGA AICI PE CATEGORI
     print('--->TRYING TO ASSIGN CATEGORIES, THIS MAY TAKE SOME TIME...<---')

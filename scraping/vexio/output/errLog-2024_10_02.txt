@@ -1,0 +1,15 @@
+ERR IN FORMAT_DATA FOR PRODUCT: Notebook Lenovo ThinkPad E16 Gen 2 16" WUXGA Intel Core Ultra 7...ERR: {UnboundLocalError("cannot access local variable 'img_name' where it is not associated with a value")}
+ON PATH:https://www.vexio.ro/laptop-accesorii/
+PAGE:12
+ERR IN FORMAT_DATA FOR PRODUCT: Apple Incarcator MagSafe mc556z/b pentru MacBook Pro 2010ERR: {UnboundLocalError("cannot access local variable 'img_name' where it is not associated with a value")}
+ON PATH:https://www.vexio.ro/laptop-accesorii/
+PAGE:15
+ERR IN FORMAT_DATA FOR PRODUCT: Apple Incarcator MagSafe 2 md506z/a pentru MacBook Pro RetinaERR: {UnboundLocalError("cannot access local variable 'img_name' where it is not associated with a value")}
+ON PATH:https://www.vexio.ro/laptop-accesorii/
+PAGE:15
+ERR IN FORMAT_DATA FOR PRODUCT: Apple Incarcator MagSafe 2 md592z/a pentru MacBook AirERR: {UnboundLocalError("cannot access local variable 'img_name' where it is not associated with a value")}
+ON PATH:https://www.vexio.ro/laptop-accesorii/
+PAGE:15
+ERR IN FORMAT_DATA FOR PRODUCT: Memorie laptop Corsair Memorie RAM Value Select, SODIMM, DDR4, 8GB,...ERR: {UnboundLocalError("cannot access local variable 'img_name' where it is not associated with a value")}
+ON PATH:https://www.vexio.ro/laptop-accesorii/
+PAGE:17

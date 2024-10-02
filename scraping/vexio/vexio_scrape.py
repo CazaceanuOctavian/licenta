@@ -15,7 +15,7 @@ from bs4 import BeautifulSoup
 
 options = Options()
 #options.add_argument('--headless')
-options.binary_location = '/nix/store/wwig0jkpjw2j4snlws3yvgcbhz4kax7d-firefox-130.0.1/bin/firefox'
+options.binary_location = '/nix/store/z5lcsw013vbkgwxw6n7kx9lgbadqf7vy-firefox-130.0.1/bin/firefox'
 options.page_load_strategy = 'normal'
 driver = webdriver.Firefox(options=options)
 try:
@@ -39,6 +39,8 @@ def no_nav_strings(iterable):
 
 def format_data(item):
     try:
+
+        manufacturer = item.find_next(class_='manufacturer pull-left').text.strip()
         name = item.find_next(class_='name').text.strip()
         isInStoc = item.find_next(class_=re.compile('availability margin-bottom-xs', re.IGNORECASE)).text.strip()
         test = isInStoc[:2]
@@ -52,6 +54,8 @@ def format_data(item):
         except Exception as e:
             #TODO -->fix bug where this gets value of 2.7 instead of 2799 
             price = float(item.find_next(class_='price margin-bottom-xs clearfix col-xs-6 grid-full').text.strip().split('\n')[-1].split(' ')[0].split(',')[0])
+
+        
 
         itemUrl = item.find_parent().findPreviousSibling().a['href']
         #TODO -->fix bug when the first image off of every big page gets skipped 
@@ -97,7 +101,8 @@ def format_data(item):
             'url' : itemUrl,
             'product_code' : product_code,
             'online_mag' : 'vexio',
-            'img_path' : '/images/' + img_name
+            'img_path' : '/images/' + img_name,
+            'manufacturer' : manufacturer
             }
     
     except Exception as e:
