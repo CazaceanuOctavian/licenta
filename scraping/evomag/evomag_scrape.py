@@ -73,7 +73,9 @@ def format_data(item,driver):
         else:
             isInStoc = 0
         #price = float(item.find_next(class_='real_price').text.strip().replace(',','.').split(' ')[0])
-        price = float(item.find_next(class_='real_price').text.split(' ')[0].replace('.','').replace(',','.'))
+        #price = float(item.find_next(class_='real_price').text.split(' ')[0].replace('.','').replace(',','.'))
+        price = item.find_next(class_='real_price').text.split(' ')[0].replace('.','')
+        price = float(price[:-2] + '.' + price[-2:]) 
 
         try:
             #evomag are hidden un 'fa cadou' in care mai e o imagine care este scraped din greseala
