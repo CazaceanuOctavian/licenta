@@ -109,3 +109,30 @@ PAGE:20
 ERR IN FORMAT_DATA FOR PRODUCT: HDD Laptop Seagate HDD ST500LM030, 500GB, SATA, 6Gb/s, 5400 rmpERR: {UnboundLocalError("cannot access local variable 'img_name' where it is not associated with a value")}
 ON PATH:https://www.vexio.ro/laptop-accesorii/
 PAGE:20
+ERR IN FORMAT_DATA FOR PRODUCT: Memorie laptop G.Skill Ripjaws Dual Channel Kit 32GB (2x16GB) DDR4...ERR: {UnboundLocalError("cannot access local variable 'img_name' where it is not associated with a value")}
+ON PATH:https://www.vexio.ro/laptop-accesorii/
+PAGE:22
+ERR IN FORMAT_DATA FOR PRODUCT: Akyga Notebook power supply AK-ND-45 19.5V/6.15A 120W 4.5x3.0 mm +...ERR: {UnboundLocalError("cannot access local variable 'img_name' where it is not associated with a value")}
+ON PATH:https://www.vexio.ro/laptop-accesorii/
+PAGE:25
+ERR IN FORMAT_DATA FOR PRODUCT: Akyga Notebook power supply AK-ND-56 19V/6.32A 120W 5.5x3.0 mm SAMSUNGERR: {UnboundLocalError("cannot access local variable 'img_name' where it is not associated with a value")}
+ON PATH:https://www.vexio.ro/laptop-accesorii/
+PAGE:26
+ERR IN FORMAT_DATA FOR PRODUCT: Dicota Secret 2-Way Privacy filter for Surface Pro 4 / Surface Pro...ERR: {UnboundLocalError("cannot access local variable 'img_name' where it is not associated with a value")}
+ON PATH:https://www.vexio.ro/laptop-accesorii/
+PAGE:28
+ERR IN FORMAT_DATA FOR PRODUCT: Dicota Secret 2-Way 21.5 Wide (16:9) Privacy filter, self-adhesiveERR: {UnboundLocalError("cannot access local variable 'img_name' where it is not associated with a value")}
+ON PATH:https://www.vexio.ro/laptop-accesorii/
+PAGE:28
+ERR IN FORMAT_DATA FOR PRODUCT: Qoltec Alimentator pentru notebook Lenovo | 170W | 20V | 8.5A |...ERR: {UnboundLocalError("cannot access local variable 'img_name' where it is not associated with a value")}
+ON PATH:https://www.vexio.ro/laptop-accesorii/
+PAGE:31
+ERR IN FORMAT_DATA FOR PRODUCT: Memorie laptop Transcend 16GB DDR4 2133Mhz SO-DIMM 2Rx8 1Gx8 CL15 1.2VERR: {UnboundLocalError("cannot access local variable 'img_name' where it is not associated with a value")}
+ON PATH:https://www.vexio.ro/laptop-accesorii/
+PAGE:32
+ERR IN FORMAT_DATA FOR PRODUCT: ACCO/KENSINGTON PRIVACY FILTER 2W REMOVABLEERR: {UnboundLocalError("cannot access local variable 'img_name' where it is not associated with a value")}
+ON PATH:https://www.vexio.ro/laptop-accesorii/
+PAGE:33
+ERR IN FORMAT_DATA FOR PRODUCT: Lenovo ThinkPad 15” Sleeve NegruERR: {UnboundLocalError("cannot access local variable 'img_name' where it is not associated with a value")}
+ON PATH:https://www.vexio.ro/laptop-accesorii/
+PAGE:34

@@ -40,7 +40,7 @@ def no_nav_strings(iterable):
 def format_data(item):
     try:
 
-        manufacturer = item.find_next(class_='manufacturer pull-left').text.strip()
+        manufacturer = item.find_next(class_='manufacturer pull-left').text.strip().lower()
         name = item.find_next(class_='name').text.strip()
         isInStoc = item.find_next(class_=re.compile('availability margin-bottom-xs', re.IGNORECASE)).text.strip()
         test = isInStoc[:2]
@@ -80,7 +80,7 @@ def format_data(item):
             raw_price = raw_price.replace('.','')
         price = float(raw_price.replace('"','').strip().split(' ')[0].replace(',', '.'))
 
-        #=====scraping image=====
+        #=====scraping image=====   
         if imageUrl != 'err':
             try:
                 img_data = requests.get(imageUrl).content

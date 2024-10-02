@@ -82,3 +82,5 @@
 2024-10-02 07:18:30.351 UTC [10225] HINT:  Future log output will appear in directory "log".
 2024-10-02 07:18:51.469 UTC [18915] FATAL:  lock file "postmaster.pid" already exists
 2024-10-02 07:18:51.469 UTC [18915] HINT:  Is another postmaster (PID 10225) running in data directory "/home/tav/Desktop/licenta/.nix-shell/db"?
+2024-10-02 09:09:58.983 UTC [82146] LOG:  redirecting log output to logging collector process
+2024-10-02 09:09:58.983 UTC [82146] HINT:  Future log output will appear in directory "log".
