@@ -32,6 +32,8 @@ public class Product {
     private String category;
     @Column(name = "predicted_price")
     private float predictedPrice;
+    @Column(name = "manufacturer")
+    private String manufacturer;
 
     public Product(String name, float price, boolean isInStock, byte rating, String productCode, String url,
             String imagePath, String category, float predictedPrice) {
@@ -44,10 +46,19 @@ public class Product {
         this.imagePath = imagePath;
         this.category = category;
         this.predictedPrice = predictedPrice;
+        this.manufacturer = manufacturer;
     }
 
     private Product() {
 
+    }
+
+    public void setManufacturer(String manufacturer) {
+        this.manufacturer = manufacturer;
+    }
+
+    public String getManufacturer() {
+        return this.manufacturer;
     }
 
     public void setPredictedPrice(float newPredictedPrice) {

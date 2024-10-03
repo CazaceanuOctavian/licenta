@@ -37,6 +37,11 @@ public interface ProductRepository extends CrudRepository<Product, Integer> {
     // int upperPrice,
     // String category, Sort sort);
 
+    @Query(value = "SELECT DISTINCT manufacturer FROM view_products_desc WHERE to_tsvector(name) @@ plainto_tsquery(?1) AND raw_price BETWEEN ?4 AND ?5 AND category LIKE COALESCE(NULLIF(?6, 'undefined'), '%') LIMIT ?2 OFFSET (?3-1) * ?2", nativeQuery = true)
+    List<String> fetchManufacturersAtPriceRange(String name, int limit, int page, int lowerPrice,
+            int upperPrice,
+            String category);
+
     @Query(value = "SELECT * FROM 'products' WHERE product_code LIKE ?1", nativeQuery = true)
     List<Product> findProductByProductCode(String productCode);
 
@@ -45,5 +50,7 @@ public interface ProductRepository extends CrudRepository<Product, Integer> {
 
     @Query(value = "SELECT * FROM price_history_view WHERE product_code LIKE ?1", nativeQuery = true)
     List<String> fetchProductHistory(String productCode);
+
+
 
 }

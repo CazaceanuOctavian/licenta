@@ -61,7 +61,7 @@ finally:
         print('--->TABLE FOR CURRENT DAY EXISTS --> TRYING TO RECREATE WITH UPDATED VALUES...<---')
         cur.execute("DROP TABLE products_" + str(datetime.datetime.now().strftime('%Y_%m_%d')) + ' CASCADE;')
         conn.commit()
-        cur.execute('CREATE TABLE products_' + str(datetime.datetime.now().strftime('%Y_%m_%d')) + '(\
+        cur.execute("CREATE TABLE products_" + str(datetime.datetime.now().strftime('%Y_%m_%d')) + "(\
                     id SERIAL PRIMARY KEY,\
                     name VARCHAR(500),\
                     raw_price FLOAT,\
@@ -72,12 +72,13 @@ finally:
                     retailer VARCHAR(100),\
                     imagepath VARCHAR(150),\
                     category VARCHAR(150),\
-                    predicted_price FLOAT DEFAULT -1\
-                )')
+                    predicted_price FLOAT DEFAULT -1,\
+                    manufacturer VARCHAR(100) DEFAULT 'N/A'\
+                )")
         conn.commit()
     else:
         print('--->TABLE FOR CURRENT DAY DOES NOT EXIST... CREATING TABLE<---')
-        cur.execute('CREATE TABLE products_' + str(datetime.datetime.now().strftime('%Y_%m_%d')) + '(\
+        cur.execute("CREATE TABLE products_" + str(datetime.datetime.now().strftime('%Y_%m_%d')) + "(\
             id SERIAL PRIMARY KEY,\
             name VARCHAR(500),\
             raw_price FLOAT,\
@@ -88,8 +89,9 @@ finally:
             retailer VARCHAR(100),\
             imagepath VARCHAR(150),\
             category VARCHAR(150),\
-            predicted_price FLOAT DEFAULT -1\
-        )')
+            predicted_price FLOAT DEFAULT -1,\
+            manufacturer VARCHAR(100) DEFAULT 'N/A'\
+        )")
         conn.commit()
     print('=====SUCCESSFULLY CREATED TABLE FOR CURRENT DAY=====')
 
