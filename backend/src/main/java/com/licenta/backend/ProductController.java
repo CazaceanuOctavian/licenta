@@ -186,18 +186,15 @@ public class ProductController {
 
    
     @CrossOrigin(origins = "*")
-    @GetMapping("/products/name/fetchManufacturersInPriceRange={productName},{limit},{page},{lowerPrice},{upperPrice},{category},{order},")
+    @GetMapping("/products/name/fetchManufacturersInPriceRange={productName},{lowerPrice},{upperPrice},{category},{order},")
     public Iterable<String> fetchCategoriesByPrice(
             @PathVariable String productName,
-            @PathVariable int limit,
-            @PathVariable int page,
             @PathVariable int lowerPrice,
             @PathVariable int upperPrice,
             @PathVariable String category,
             @PathVariable String order) {
         Iterable<String> retrievedManufacturerList;
-        retrievedManufacturerList = this.productRepository.fetchManufacturersAtPriceRange(productName, limit, page,
-                    lowerPrice, upperPrice, category);
+        retrievedManufacturerList = this.productRepository.fetchManufacturersAtPriceRange(productName, lowerPrice, upperPrice, category);
 
         for (String manufacturer : retrievedManufacturerList) {
             System.out.println(manufacturer);

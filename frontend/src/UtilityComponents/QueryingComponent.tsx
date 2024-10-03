@@ -53,7 +53,6 @@ const QueryPrice: React.FC<SearchProps> = ({userQuery, selectedOrder, selectedCa
         setSelectedOrder(event.target.value);
       };
 
-
     useEffect(() => {
         callApiCategories();
     }, []);
