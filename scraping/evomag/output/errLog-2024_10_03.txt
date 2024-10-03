@@ -1,0 +1,15 @@
+ERR IN FORMAT_DATA FOR PRODUCT: Laptop ASUS Vivobook A1504VA (Procesor Intel Core i5-1335U (12M Cache, up to 4.60 GHz) 15.6" FHD, 8GB, 512GB SSD, Intel Iris Xe Graphics, Albastru)ERR: {NameError("name 'manufacturer' is not defined")}
+ON PATH:/portabile-laptopuri-notebook/
+PAGE:2
+ERR IN FORMAT_DATA FOR PRODUCT: Laptop Asus X515KA (Procesor Intel® Celeron® N4500 (4M Cache, up to 2.80 GHz) 15.6" FHD, 8GB, 512GB SSD, Intel® UHD Graphics, Argintiu)ERR: {NameError("name 'manufacturer' is not defined")}
+ON PATH:/portabile-laptopuri-notebook/
+PAGE:2
+ERR IN FORMAT_DATA FOR PRODUCT: Laptop Lenovo ThinkBook 16 G7 ARP (Procesor AMD Ryzen 7 7735HS (16M Cache, up to 4.75 GHz), 16" WUXGA, 32GB DDR5, 1TB SSD, AMD Radeon 680M Graphics, Gri)ERR: {NameError("name 'manufacturer' is not defined")}
+ON PATH:/portabile-laptopuri-notebook/
+PAGE:2
+ERR IN FORMAT_DATA FOR PRODUCT: Laptop ASUS Vivobook X1504VA (Procesor Intel Core i5-1335U (12M Cache, up to 4.60 GHz) 15.6" FHD, 16GB, 512GB SSD, Intel Iris Xe Graphics, Roz)ERR: {NameError("name 'manufacturer' is not defined")}
+ON PATH:/portabile-laptopuri-notebook/
+PAGE:2
+ERR IN FORMAT_DATA FOR PRODUCT: Laptop ASUS Vivobook X1504ZA (Procesor Intel Core i3-1215U (10M Cache, up to 4.40 GHz) 15.6" FHD, 8GB, 512GB SSD, Intel UHD Graphics, Argintiu)ERR: {NameError("name 'manufacturer' is not defined")}
+ON PATH:/portabile-laptopuri-notebook/
+PAGE:2

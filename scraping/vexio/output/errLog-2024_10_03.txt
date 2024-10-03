@@ -1,0 +1,12 @@
+ERR IN FORMAT_DATA FOR PRODUCT: Folie discretie ecran Lenovo 0A61771, 15.6 inchERR: {UnboundLocalError("cannot access local variable 'img_name' where it is not associated with a value")}
+ON PATH:https://www.vexio.ro/laptop-accesorii/
+PAGE:2
+ERR IN FORMAT_DATA FOR PRODUCT: Memorie laptop Corsair notebook Kit 2x4GB, DDR3, 1333MHz CL9 Dual...ERR: {UnboundLocalError("cannot access local variable 'img_name' where it is not associated with a value")}
+ON PATH:https://www.vexio.ro/laptop-accesorii/
+PAGE:2
+ERR IN FORMAT_DATA FOR PRODUCT: Geanta laptop Targus TAR300 16 inch, neagraERR: {UnboundLocalError("cannot access local variable 'img_name' where it is not associated with a value")}
+ON PATH:https://www.vexio.ro/laptop-accesorii/
+PAGE:2
+ERR IN FORMAT_DATA FOR PRODUCT: Memorie laptop Kingston KVR16S11S6/2, 2GB DDR3 1600MHz, SODIMMERR: {UnboundLocalError("cannot access local variable 'img_name' where it is not associated with a value")}
+ON PATH:https://www.vexio.ro/laptop-accesorii/
+PAGE:2

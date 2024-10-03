@@ -100,13 +100,17 @@ def format_data(item,driver):
         page_source = driver.page_source
         other_soup = BeautifulSoup(page_source, 'html.parser')
 
-        em_elems = other_soup.find_all('em')
-        manufacturer = em_elems[-2].text.strip().lower()
+        #Page may or may not have many more em elements
+        #Solution --> go to a page element and get all the above needed em's
+        em_elems = other_soup.find(class_='product_info_area').find_all_previous('em')
+        manufacturer = em_elems[1].text.strip()
 
-        product_code = other_soup.find(class_='product_codes').span.text.strip()
-        match = re.search(r'\[ (.*?) \]', product_code)
-        if match:
-            product_code = match.group(1)
+
+        # product_code = other_soup.find(class_='product_codes').span.text.strip()
+        # match = re.search(r'\[ (.*?) \]', product_code)
+        # if match:
+        #     product_code = match.group(1)
+        product_code = other_soup.find(class_='code-value').text.strip()
         
         product_code = product_code.replace('/','+rep+')
 

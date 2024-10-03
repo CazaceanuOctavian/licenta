@@ -24,6 +24,11 @@ CREATE table products(
 
 --stable
 psql --host=$PGDATA --username=tav --dbname=product_administration --port=5432
+
+
+\COPY products_test(name, raw_price, raw_rating, is_in_stock, url, product_code, retailer, imagepath, manufacturer, category) FROM '/home/tav/Desktop/licenta/scraping/vexio/output/vexio_2024_10_02.csv' DELIMITER ',' CSV HEADER;
+\COPY products_test(name, raw_price, raw_rating, is_in_stock, url, product_code, retailer, imagepath, manufacturer, category) FROM '/home/tav/Desktop/licenta/scraping/evomag/output/evomag_2024_10_02.csv' DELIMITER ',' CSV HEADER;
+
 ===================workink========================================
 
 CREATE OR REPLACE FUNCTION assign_categories_test(OUT p_product_code VARCHAR(255), OUT p_duplicates_number INTEGER ) RETURNS SETOF RECORD AS $$
