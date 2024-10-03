@@ -13,7 +13,7 @@ const Products: React.FC = () => {
     const [categories, setCategory] = useState<string[]>([])
     const [selectedCategory, setSelectedCategory] = useState<string>('')
     const [selectedOrder, setSelectedOrder] = useState<string>('')
-    const [manufacturers, setSelecteManufacturers] = useState<string[]>([])
+    const [manufacturers, setSelectedManufacturers] = useState<string[]>([])
 
     return (
         <div className="product-component">
@@ -27,7 +27,7 @@ const Products: React.FC = () => {
                 categories={categories} setCategories={setCategory} 
                 selectedCategory={selectedCategory} setSelectedCategory={setSelectedCategory}
                 selectedOrder={selectedOrder} setSelectedOrder={setSelectedOrder} 
-                manufacturers={manufacturers} setSelecteManufacturers={setSelecteManufacturers}
+                manufacturers={manufacturers} setSelecteManufacturers={setSelectedManufacturers}
                 userQuery={userQuery}/>
 
                 <PopulateComponent productDisplayType="default" queryType='withCategoryAndOrdering' userQuery={userQuery} 

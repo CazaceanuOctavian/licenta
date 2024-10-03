@@ -204,4 +204,58 @@ public class ProductController {
         return retrievedManufacturerList;
     }
 
+    @CrossOrigin(origins = "*")
+    @GetMapping("/products/name/searchByNamePagePriceCategoryManufacturerOrdering={productName},{limit},{page},{lowerPrice},{upperPrice},{category},{manufacturer},{order},")
+    public Iterable<Product> searchByNamePagePriceCategoryManufacturerOrdering(
+            @PathVariable String productName,
+            @PathVariable int limit,
+            @PathVariable int page,
+            @PathVariable int lowerPrice,
+            @PathVariable int upperPrice,
+            @PathVariable String category,
+            @PathVariable String manufacturer,
+            @PathVariable String order) {
+
+        Iterable<Product> retrievedProductList;
+        if (String.valueOf(order).equals("asc")) {
+            retrievedProductList = this.productRepository.customSearchQueryByCategoryAndPriceAsc(productName, limit,
+                    page, lowerPrice, upperPrice, category);
+        } else if (String.valueOf(order).equals("desc")) {
+            retrievedProductList = this.productRepository.customSearchQueryByCategoryAndPriceDesc(productName, limit,
+                    page, lowerPrice, upperPrice, category);
+        } else {
+            retrievedProductList = this.productRepository.customSearchQueryByCategoryAndPrice(productName, limit, page,
+                    lowerPrice, upperPrice, category);
+        }
+
+        List<Product> productList = new ArrayList<>();
+        for (Product product : retrievedProductList) {
+            productList.add(product);
+        }
+
+        if (String.valueOf(order).equals("asc")) {
+            Collections.sort(productList, new Comparator<Product>() {
+                @Override
+                public int compare(Product p1, Product p2) {
+                    return Double.compare(p1.getPrice(), p2.getPrice());
+                }
+            });
+        } else if (String.valueOf(order).equals("desc")) {
+            Collections.sort(productList, new Comparator<Product>() {
+                @Override
+                public int compare(Product p1, Product p2) {
+                    return Double.compare(p2.getPrice(), p1.getPrice());
+                }
+            });
+        }
+
+        for (Product product : retrievedProductList) {
+            System.out.println(product.toString());
+        }
+
+        System.out.println("i found the above products by id from the db!");
+        return productList;
+
+    }
+
 }

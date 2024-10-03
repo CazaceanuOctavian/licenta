@@ -29,6 +29,10 @@ public interface ProductRepository extends CrudRepository<Product, Integer> {
             int upperPrice,
             String category);
 
+    @Query(value= "SELECT * FROM products_lowest_price_no_dups WHERE to_tsvector(name) @@ plainto_tsquery(?1) AND raw_price BETWEEN ?4 AND ?5 AND category LIKE COALESCE(NULLIF(?6, 'undefined'), '%') AND manufacturer IN (?7) LIMIT ?2 OFFSET (?3-1) * ?2;", nativeQuery = true)
+    List<Product> fetchByNamePagePriceCategoryManufacturerOrdering(String name, int limit, int page, int lowerPrice, int upperPrice,
+        String category, String manufacturers);
+
     // @Query(value = "SELECT * FROM products WHERE to_tsvector(name) @@
     // plainto_tsquery(?1) AND raw_price BETWEEN ?4 AND ?5 AND category LIKE ?6
     // LIMIT ?2 OFFSET (?3-1) * ?2")
