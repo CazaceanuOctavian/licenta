@@ -16,20 +16,20 @@ interface SearchProps {
     selectedOrder: string
     setSelectedOrder: (query: string) =>void;
     manufacturers: string[]
-    setSelecteManufacturers: (query: string[]) =>void;
+    setManufacturers: (query: string[]) =>void;
+    selectedManufacturers: string[]
+    setSelectedManufacturers: (query: string[]) =>void;
     
     userQuery:string
 }
 
-const QueryPrice: React.FC<SearchProps> = ({userQuery, selectedOrder, selectedCategory, lowerPice, upperPrice, categories, manufacturers, setSelectedOrder, setLowerPrice, setUpperPrice, setCategories, setSelectedCategory, setSelecteManufacturers }) => {
+const QueryPrice: React.FC<SearchProps> = ({userQuery, selectedOrder, selectedCategory, lowerPice, upperPrice, categories, manufacturers, selectedManufacturers, setSelectedOrder, setLowerPrice, setUpperPrice, setCategories, setSelectedCategory, setManufacturers, setSelectedManufacturers }) => {
 
     const callApiCategories = async () => {
         try {
             console.log('FROM APICALL TRYING TO FETCH: CATEGORIES');
             const data = await FetchData('http://localhost:8080/products/categories');
-            const fetchedManufacutrers = await FetchData('http://localhost:8080/products/name/fetchManufacturersInPriceRange=' + userQuery + ',' + lowerPice + ',' + upperPrice + ',' + 'undefined,desc,')
             setCategories(data);
-            setSelecteManufacturers(fetchedManufacutrers)
         } catch (error) {
             console.log('error with fetch operation: ' + error);
         }
@@ -40,7 +40,7 @@ const QueryPrice: React.FC<SearchProps> = ({userQuery, selectedOrder, selectedCa
             console.log('FROM APICALL TRYING TO FETCH: CATEGORIES');
             const fetchedManufacutrers = await FetchData('http://localhost:8080/products/name/fetchManufacturersInPriceRange=' + userQuery + ',' + lowerPice + ',' + upperPrice + ',' + 'undefined,desc,')
             //const fetchedManufacutrers = await FetchData('http://localhost:8080/products/name/fetchManufacturersInPriceRange=laptop,20,9999,undefined,desc,')
-            setSelecteManufacturers(fetchedManufacutrers)
+            setManufacturers(fetchedManufacutrers)
         } catch (error) {
             console.log('error with fetch operation: ' + error);
         }
@@ -55,6 +55,7 @@ const QueryPrice: React.FC<SearchProps> = ({userQuery, selectedOrder, selectedCa
       };
 
     useEffect(() => {
+        setManufacturers([])
         callApiCategories();
         lowerPice = '0'
         upperPrice = '999999'
@@ -106,7 +107,7 @@ const QueryPrice: React.FC<SearchProps> = ({userQuery, selectedOrder, selectedCa
                 </select> 
             </div>
             <p>producatori: </p>
-            <ManufacturerListComponent data={manufacturers}/>
+            <ManufacturerListComponent data={manufacturers} selectedManufacturers={selectedManufacturers} setSelectedManufacturers={setSelectedManufacturers}/>
         </div>
     );
     

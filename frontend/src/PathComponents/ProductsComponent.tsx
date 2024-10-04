@@ -13,7 +13,8 @@ const Products: React.FC = () => {
     const [categories, setCategory] = useState<string[]>([])
     const [selectedCategory, setSelectedCategory] = useState<string>('')
     const [selectedOrder, setSelectedOrder] = useState<string>('')
-    const [manufacturers, setSelectedManufacturers] = useState<string[]>([])
+    const [manufacturers, setManufacturers] = useState<string[]>([])
+    const [selectedManufacturers, setSelectedManufacturers] = useState<string[]>([])
 
     return (
         <div className="product-component">
@@ -21,13 +22,16 @@ const Products: React.FC = () => {
             selectedValue={selectedValue} setSelectedValue={setSelectedValue}
             selectedPage={selectedPage} setSelectedPage={setSelectedPage} />
 
+            <p>PASSED MANUFACTURERS ARE: {selectedManufacturers}</p>
+
             <div className="main-page-div">
                 <QueryPrice lowerPice={lowerPrice} upperPrice={upperPrice} 
                 setLowerPrice={setLowerPrice} setUpperPrice={setUpperPrice} 
                 categories={categories} setCategories={setCategory} 
                 selectedCategory={selectedCategory} setSelectedCategory={setSelectedCategory}
                 selectedOrder={selectedOrder} setSelectedOrder={setSelectedOrder} 
-                manufacturers={manufacturers} setSelecteManufacturers={setSelectedManufacturers}
+                manufacturers={manufacturers} setManufacturers={setManufacturers}
+                selectedManufacturers={selectedManufacturers} setSelectedManufacturers={setSelectedManufacturers}
                 userQuery={userQuery}/>
 
                 <PopulateComponent productDisplayType="default" queryType='withCategoryAndOrdering' userQuery={userQuery} 

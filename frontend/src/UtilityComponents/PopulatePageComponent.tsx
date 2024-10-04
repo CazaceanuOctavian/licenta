@@ -61,7 +61,7 @@ const PopulateComponent: React.FC<userQueryProp> = ({ selectedOrder, queryType, 
         else {
             callApi(userQuery)
         }
-      }, [userQuery, selectedValue, selectedPage, lowerPrice, upperPrice, category, selectedOrder,]); 
+      }, [userQuery, selectedValue, selectedPage, lowerPrice, upperPrice, category, selectedOrder]); 
 
     //TODO --> queryType switch statement might be shit, look to see if you can refactor at some point...
     const ContextComponent: React.FC<SwitchComponentProps> = ({ displayType, queryType, fetchedData }) => {

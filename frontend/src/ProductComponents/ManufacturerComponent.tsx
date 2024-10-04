@@ -1,6 +1,13 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
-export const ManufacturerListComponent: React.FC<{ data: string[] }> = ({ data }) => {
+interface selectedManufacturers{
+    selectedManufacturers: string[]
+    setSelectedManufacturers: (query: string[]) =>void
+
+    data:string[]
+;}
+
+export const ManufacturerListComponent: React.FC<selectedManufacturers> = ({ data, selectedManufacturers, setSelectedManufacturers }) => {
     const [checkedItems, setCheckedItems] = useState<string[]>([]);
 
     const handleCheckboxChange = (item: string) => {
@@ -8,6 +15,7 @@ export const ManufacturerListComponent: React.FC<{ data: string[] }> = ({ data }
             if (prevState.includes(item)) {
                 // Item is already checked, remove it from the list
                 return prevState.filter(checkedItem => checkedItem !== item);
+                
             } else {
                 // Item is not checked, add it to the list
                 return [...prevState, item];
@@ -20,6 +28,10 @@ export const ManufacturerListComponent: React.FC<{ data: string[] }> = ({ data }
         return checkedItems;
     };
 
+    useEffect(() => {
+        setSelectedManufacturers(checkedItems)
+    }, [checkedItems])
+    
     return (
         <div className="manufacturer-container">
             <ul className="manufacturer-list">

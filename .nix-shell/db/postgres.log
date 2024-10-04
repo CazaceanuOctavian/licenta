@@ -102,3 +102,9 @@
 2024-10-03 11:34:49.096 UTC [223114] HINT:  Is another postmaster (PID 206068) running in data directory "/home/tav/Desktop/licenta/.nix-shell/db"?
 2024-10-03 11:58:30.384 UTC [234004] FATAL:  lock file "postmaster.pid" already exists
 2024-10-03 11:58:30.384 UTC [234004] HINT:  Is another postmaster (PID 206068) running in data directory "/home/tav/Desktop/licenta/.nix-shell/db"?
+2024-10-04 08:06:52.000 UTC [10378] LOG:  redirecting log output to logging collector process
+2024-10-04 08:06:52.000 UTC [10378] HINT:  Future log output will appear in directory "log".
+2024-10-04 08:07:22.076 UTC [18848] FATAL:  lock file "postmaster.pid" already exists
+2024-10-04 08:07:22.076 UTC [18848] HINT:  Is another postmaster (PID 10378) running in data directory "/home/tav/Desktop/licenta/.nix-shell/db"?
+2024-10-04 08:08:10.915 UTC [27980] FATAL:  lock file "postmaster.pid" already exists
+2024-10-04 08:08:10.915 UTC [27980] HINT:  Is another postmaster (PID 10378) running in data directory "/home/tav/Desktop/licenta/.nix-shell/db"?
