@@ -40,86 +40,48 @@ const PopulateComponent: React.FC<userQueryProp> = ({ selectedManufacturers, sel
     }
 
     useEffect(() => {
-        if (window.location.href.includes('search')) {
-            if (selectedValue === '')
-                selectedValue = '20'
-            if (selectedPage === undefined)
-                selectedPage = 1
-            if (lowerPrice === '')
-                lowerPrice = '0'
-            if (upperPrice === '')
-                upperPrice = '999999'
-            if (selectedOrder === '')
-                selectedOrder = 'undefined'
-            if (category === '')
-                category = 'undefined'
-            if (selectedManufacturers === undefined)
-                selectedManufacturersStringify = 'undefined'
-            else 
-                selectedManufacturersStringify = selectedManufacturers.join(',')
+        if (selectedValue === '')
+            selectedValue = '20'
+        if (selectedPage === undefined)
+            selectedPage = 1
+        if (lowerPrice === '')
+            lowerPrice = '0'
+        if (upperPrice === '')
+            upperPrice = '999999'
+        if (selectedOrder === '')
+            selectedOrder = 'undefined'
+        if (category === '')
+            category = 'undefined'
 
-            switch(queryType) {
-                case "withCategoryOrderingManufacturers":
-                    if (selectedManufacturers?.length !== 0) {
-                        apiQuery = 'http://localhost:8080/products/name/searchByNamePagePriceCategoryManufacturerOrdering='
-                        params = userQuery + ',' + selectedValue + ',' +  selectedPage + ',' +  lowerPrice + ',' 
-                            +  upperPrice + ',' +  category + ',' + selectedManufacturersStringify + ',' +  selectedOrder + ',';
-                    }
-                    else {
-                        apiQuery = 'http://localhost:8080/products/name/searchAndPaginateCustomCategoryAndOrdering=' 
-                        params = userQuery + ',' + selectedValue + ',' +  selectedPage + ',' +  lowerPrice + ',' 
-                            +  upperPrice + ',' +  category + ',' +  selectedOrder + ',';
-                    }
-                    break;
-                case "withProductCode":
-                    apiQuery = 'http://localhost:8080/products/code/search=';
-                    params = userQuery
-                    break;
-            }
-            callApi(apiQuery + params)
+        if (selectedManufacturers === undefined)
+            selectedManufacturersStringify = 'undefined'
+        else  {
+            selectedManufacturersStringify = selectedManufacturers.join('-')
+            selectedManufacturersStringify = '"' + selectedManufacturersStringify + '"' 
         }
+
+        switch(queryType) {
+            case "withCategoryOrderingManufacturers":
+                if (selectedManufacturers?.length !== 0) {
+                    apiQuery = 'http://localhost:8080/products/name/searchByNamePagePriceCategoryManufacturerOrdering='
+                    params = userQuery + ',' + selectedValue + ',' +  selectedPage + ',' +  lowerPrice + ',' 
+                        +  upperPrice + ',' +  category + ',' + selectedManufacturersStringify + ',' +  selectedOrder + ',';
+                }
+                else {
+                    apiQuery = 'http://localhost:8080/products/name/searchAndPaginateCustomCategoryAndOrdering=' 
+                    params = userQuery + ',' + selectedValue + ',' +  selectedPage + ',' +  lowerPrice + ',' 
+                        +  upperPrice + ',' +  category + ',' +  selectedOrder + ',';
+                }
+                break;
+            case "withProductCode":
+                apiQuery = 'http://localhost:8080/products/code/search=';
+                params = userQuery
+                break;
+        }
+        callApi(apiQuery + params)
       }, [userQuery, selectedValue, selectedPage, lowerPrice, upperPrice, category, selectedOrder, selectedManufacturers]); 
 
-    //TODO --> queryType switch statement might be shit, look to see if you can refactor at some point...
-    const ContextComponent: React.FC<SwitchComponentProps> = ({ displayType, queryType, fetchedData }) => {
-        // switch(queryType) {
-        //     case "withNoCategory":
-        //         apiQuery = 'http://localhost:8080/products/name/searchAndPaginateCustom=';
-        //         console.log('called withNoCategory')
-        //         break;
-        //     case "withCategory":
-        //         if (category === '') {
-        //             apiQuery = 'http://localhost:8080/products/name/searchAndPaginateCustom=';
-        //             console.log('called withCategory but found no category so defaulted to withNoCategory')
-        //         }
-        //         else {
-        //             apiQuery = 'http://localhost:8080/products/name/searchAndPaginateCustomCategory=';
-        //             console.log('called withCategory')
-        //         }
-        //         break;
-        //     case "withCategoryAndOrdering":
-        //         apiQuery = 'http://localhost:8080/products/name/searchAndPaginateCustomCategoryAndOrdering='
-        //         console.log('called withCategoryAndOrdering')
-        //         break;
-        //     case "withCategoryOrderingManufacturers":
-        //         if (selectedManufacturers?.length !== 0) {
-        //             apiQuery = 'http://localhost:8080/products/name/searchByNamePagePriceCategoryManufacturerOrdering='
-        //             params = userQuery + ',' + selectedValue + ',' +  selectedPage + ',' +  lowerPrice + ',' 
-        //                 +  upperPrice + ',' +  category + ',' +  selectedOrder + ',' +  selectedManufacturers;
-        //         }
-        //         else {
-        //             apiQuery = 'http://localhost:8080/products/name/searchAndPaginateCustomCategoryAndOrdering=' 
-        //             params = userQuery + ',' + selectedValue + ',' +  selectedPage + ',' +  lowerPrice + ',' 
-        //                 +  upperPrice + ',' +  category + ',' +  selectedOrder + ',';
-        //         }
-        //         console.log('called withCategoryOrderingManufacturers')
-        //         break;
-        //     case "withProductCode":
-        //         apiQuery = 'http://localhost:8080/products/code/search=';
-        //         console.log('called withProductCode')
-        //         break;
-        // }
-        //======================================================================
+    const ContextComponent: React.FC<SwitchComponentProps> = ({ displayType, fetchedData }) => {
         switch (displayType) {
             case "default":
                 return <ProductListDefault data={fetchedData} />;

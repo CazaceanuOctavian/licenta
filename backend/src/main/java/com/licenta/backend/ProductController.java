@@ -1,5 +1,6 @@
 package com.licenta.backend;
 
+import java.util.Arrays;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
@@ -217,17 +218,20 @@ public class ProductController {
             @PathVariable String order) {
 
         Iterable<Product> retrievedProductList;
+        
+        manufacturer = manufacturer.substring(1, manufacturer.length() - 1);
+        List<String> manufacturerList = Arrays.asList(manufacturer.split("-"));
 
         if (String.valueOf(order).equals("asc"))
             retrievedProductList = this.productRepository.fetchByNamePagePriceCategoryManufacturerOrderingAsc(productName, limit, page,
-                lowerPrice, upperPrice, category, manufacturer);
+                lowerPrice, upperPrice, category, manufacturerList);
         else if (String.valueOf(order).equals("desc")) {
             retrievedProductList = this.productRepository.fetchByNamePagePriceCategoryManufacturerOrderingDesc(productName, limit, page,
-            lowerPrice, upperPrice, category, manufacturer);
+            lowerPrice, upperPrice, category, manufacturerList);
         }
         else {
             retrievedProductList = this.productRepository.fetchByNamePagePriceCategoryManufacturerOrdering(productName, limit, page,
-                lowerPrice, upperPrice, category, manufacturer);
+                lowerPrice, upperPrice, category, manufacturerList);
         }
 
 
