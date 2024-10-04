@@ -217,45 +217,25 @@ public class ProductController {
             @PathVariable String order) {
 
         Iterable<Product> retrievedProductList;
-        if (String.valueOf(order).equals("asc")) {
-            retrievedProductList = this.productRepository.customSearchQueryByCategoryAndPriceAsc(productName, limit,
-                    page, lowerPrice, upperPrice, category);
-        } else if (String.valueOf(order).equals("desc")) {
-            retrievedProductList = this.productRepository.customSearchQueryByCategoryAndPriceDesc(productName, limit,
-                    page, lowerPrice, upperPrice, category);
-        } else {
-            retrievedProductList = this.productRepository.customSearchQueryByCategoryAndPrice(productName, limit, page,
-                    lowerPrice, upperPrice, category);
+
+        if (String.valueOf(order).equals("asc"))
+            retrievedProductList = this.productRepository.fetchByNamePagePriceCategoryManufacturerOrderingAsc(productName, limit, page,
+                lowerPrice, upperPrice, category, manufacturer);
+        else if (String.valueOf(order).equals("desc")) {
+            retrievedProductList = this.productRepository.fetchByNamePagePriceCategoryManufacturerOrderingDesc(productName, limit, page,
+            lowerPrice, upperPrice, category, manufacturer);
+        }
+        else {
+            retrievedProductList = this.productRepository.fetchByNamePagePriceCategoryManufacturerOrdering(productName, limit, page,
+                lowerPrice, upperPrice, category, manufacturer);
         }
 
-        List<Product> productList = new ArrayList<>();
-        for (Product product : retrievedProductList) {
-            productList.add(product);
-        }
-
-        if (String.valueOf(order).equals("asc")) {
-            Collections.sort(productList, new Comparator<Product>() {
-                @Override
-                public int compare(Product p1, Product p2) {
-                    return Double.compare(p1.getPrice(), p2.getPrice());
-                }
-            });
-        } else if (String.valueOf(order).equals("desc")) {
-            Collections.sort(productList, new Comparator<Product>() {
-                @Override
-                public int compare(Product p1, Product p2) {
-                    return Double.compare(p2.getPrice(), p1.getPrice());
-                }
-            });
-        }
 
         for (Product product : retrievedProductList) {
             System.out.println(product.toString());
         }
 
         System.out.println("i found the above products by id from the db!");
-        return productList;
-
+        return retrievedProductList;
     }
-
 }

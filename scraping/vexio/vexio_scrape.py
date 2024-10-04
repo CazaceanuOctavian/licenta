@@ -4,6 +4,7 @@ import csv
 import requests
 import datetime
 import configparser
+import time
 
 from selenium import webdriver
 from selenium.webdriver.common.by import By
@@ -39,7 +40,6 @@ def no_nav_strings(iterable):
 
 def format_data(item):
     try:
-
         manufacturer = item.find_next(class_='manufacturer pull-left').text.strip().lower()
         name = item.find_next(class_='name').text.strip()
         isInStoc = item.find_next(class_=re.compile('availability margin-bottom-xs', re.IGNORECASE)).text.strip()

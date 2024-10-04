@@ -33,6 +33,14 @@ public interface ProductRepository extends CrudRepository<Product, Integer> {
     List<Product> fetchByNamePagePriceCategoryManufacturerOrdering(String name, int limit, int page, int lowerPrice, int upperPrice,
         String category, String manufacturers);
 
+    @Query(value= "SELECT * FROM view_products_asc WHERE to_tsvector(name) @@ plainto_tsquery(?1) AND raw_price BETWEEN ?4 AND ?5 AND category LIKE COALESCE(NULLIF(?6, 'undefined'), '%') AND manufacturer IN (?7) LIMIT ?2 OFFSET (?3-1) * ?2;", nativeQuery = true)
+    List<Product> fetchByNamePagePriceCategoryManufacturerOrderingAsc(String name, int limit, int page, int lowerPrice, int upperPrice,
+        String category, String manufacturers);
+
+    @Query(value= "SELECT * FROM view_products_desc WHERE to_tsvector(name) @@ plainto_tsquery(?1) AND raw_price BETWEEN ?4 AND ?5 AND category LIKE COALESCE(NULLIF(?6, 'undefined'), '%') AND manufacturer IN (?7) LIMIT ?2 OFFSET (?3-1) * ?2;", nativeQuery = true)
+    List<Product> fetchByNamePagePriceCategoryManufacturerOrderingDesc(String name, int limit, int page, int lowerPrice, int upperPrice,
+        String category, String manufacturers);
+
     // @Query(value = "SELECT * FROM products WHERE to_tsvector(name) @@
     // plainto_tsquery(?1) AND raw_price BETWEEN ?4 AND ?5 AND category LIKE ?6
     // LIMIT ?2 OFFSET (?3-1) * ?2")
@@ -46,7 +54,7 @@ public interface ProductRepository extends CrudRepository<Product, Integer> {
             int upperPrice,
             String category);
 
-    @Query(value = "SELECT * FROM 'products' WHERE product_code LIKE ?1", nativeQuery = true)
+    @Query(value = "SELECT * FROM products WHERE product_code LIKE ?1", nativeQuery = true)
     List<Product> findProductByProductCode(String productCode);
 
     @Query(value = "SELECT DISTINCT category FROM products", nativeQuery = true)
@@ -54,7 +62,4 @@ public interface ProductRepository extends CrudRepository<Product, Integer> {
 
     @Query(value = "SELECT * FROM price_history_view WHERE product_code LIKE ?1", nativeQuery = true)
     List<String> fetchProductHistory(String productCode);
-
-
-
 }

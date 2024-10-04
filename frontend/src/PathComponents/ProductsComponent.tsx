@@ -34,9 +34,10 @@ const Products: React.FC = () => {
                 selectedManufacturers={selectedManufacturers} setSelectedManufacturers={setSelectedManufacturers}
                 userQuery={userQuery}/>
 
-                <PopulateComponent productDisplayType="default" queryType='withCategoryAndOrdering' userQuery={userQuery} 
+                <PopulateComponent productDisplayType="default" queryType='withCategoryOrderingManufacturers' userQuery={userQuery} 
                 selectedValue={selectedValue} selectedPage={selectedPage}
-                lowerPrice={lowerPrice} upperPrice={upperPrice} category={selectedCategory} selectedOrder={selectedOrder}/>
+                lowerPrice={lowerPrice} upperPrice={upperPrice} category={selectedCategory} selectedOrder={selectedOrder}
+                selectedManufacturers={selectedManufacturers}/>
             
             </div>
 

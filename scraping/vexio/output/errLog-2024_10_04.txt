@@ -1,0 +1,105 @@
+ERR IN FORMAT_DATA FOR PRODUCT: Folie discretie ecran Lenovo 0A61771, 15.6 inchERR: {AttributeError("'NoneType' object has no attribute 'text'")}
+ON PATH:https://www.vexio.ro/laptop-accesorii/
+PAGE:2
+ERR IN FORMAT_DATA FOR PRODUCT: Memorie laptop Corsair notebook Kit 2x4GB, DDR3, 1333MHz CL9 Dual...ERR: {AttributeError("'NoneType' object has no attribute 'text'")}
+ON PATH:https://www.vexio.ro/laptop-accesorii/
+PAGE:2
+ERR IN FORMAT_DATA FOR PRODUCT: Memorie laptop Corsair DDR3 SODIMM 4GB 1600MHz CL11 ValueSelectERR: {AttributeError("'NoneType' object has no attribute 'text'")}
+ON PATH:https://www.vexio.ro/laptop-accesorii/
+PAGE:2
+ERR IN FORMAT_DATA FOR PRODUCT: Geanta laptop Targus TAR300 16 inch, neagraERR: {AttributeError("'NoneType' object has no attribute 'text'")}
+ON PATH:https://www.vexio.ro/laptop-accesorii/
+PAGE:2
+ERR IN FORMAT_DATA FOR PRODUCT: Memorie laptop Kingston KVR16S11S6/2, 2GB DDR3 1600MHz, SODIMMERR: {AttributeError("'NoneType' object has no attribute 'text'")}
+ON PATH:https://www.vexio.ro/laptop-accesorii/
+PAGE:2
+ERR IN FORMAT_DATA FOR PRODUCT: Memorie laptop Corsair 8GB DDR3L SODIMM, 1600MHz Dual ChannelERR: {NoSuchWindowException()}
+ON PATH:https://www.vexio.ro/laptop-accesorii/
+PAGE:2
+ERR IN FORMAT_DATA FOR PRODUCT: Dicota Rucsac notebook D30675 ECO 14-15.6 inch cu husa detasabilaERR: {InvalidSessionIdException()}
+ON PATH:https://www.vexio.ro/laptop-accesorii/
+PAGE:2
+ERR IN FORMAT_DATA FOR PRODUCT: Memorie laptop Corsair CMSA16GX3M2A1600C11 SODIMM pentru Mac, 2x8GB...ERR: {InvalidSessionIdException()}
+ON PATH:https://www.vexio.ro/laptop-accesorii/
+PAGE:2
+ERR IN FORMAT_DATA FOR PRODUCT: Memorie laptop Patriot Signature 2 GB DDR2, 800 MHz, Non-ECC, CL 6,...ERR: {InvalidSessionIdException()}
+ON PATH:https://www.vexio.ro/laptop-accesorii/
+PAGE:2
+ERR IN FORMAT_DATA FOR PRODUCT: Everki geanta notebook Advance Briefcase 14.1 inch, neagraERR: {InvalidSessionIdException()}
+ON PATH:https://www.vexio.ro/laptop-accesorii/
+PAGE:2
+ERR IN FORMAT_DATA FOR PRODUCT: ESPERANZA Cooling pad Tivano EA144, 2 ventilatoareERR: {InvalidSessionIdException()}
+ON PATH:https://www.vexio.ro/laptop-accesorii/
+PAGE:2
+ERR IN FORMAT_DATA FOR PRODUCT: Memorie laptop Corsair Value Select, DDR4, 16GB, 2133 GHz, CL15, 1.2VERR: {InvalidSessionIdException()}
+ON PATH:https://www.vexio.ro/laptop-accesorii/
+PAGE:2
+ERR IN FORMAT_DATA FOR PRODUCT: Troller laptop 600664, extensibil, rotile, compartiment Tableta /...ERR: {InvalidSessionIdException()}
+ON PATH:https://www.vexio.ro/laptop-accesorii/
+PAGE:2
+ERR IN FORMAT_DATA FOR PRODUCT: Memorie laptop Kingston Value Ram, DDR3, 8 GB, 1600 GHz, CL11,...ERR: {InvalidSessionIdException()}
+ON PATH:https://www.vexio.ro/laptop-accesorii/
+PAGE:2
+ERR IN FORMAT_DATA FOR PRODUCT: Natec Laptop BOXER Black 17,3'' | Anti-Shock System |ERR: {InvalidSessionIdException()}
+ON PATH:https://www.vexio.ro/laptop-accesorii/
+PAGE:2
+ERR IN FORMAT_DATA FOR PRODUCT: ESPERANZA EA148 Lampa notebook cu LED-uri 10ERR: {InvalidSessionIdException()}
+ON PATH:https://www.vexio.ro/laptop-accesorii/
+PAGE:2
+ERR IN FORMAT_DATA FOR PRODUCT: ESPERANZA Stand notebook de racire 15,6"-17" SAMUM EA141, Iluminate...ERR: {InvalidSessionIdException()}
+ON PATH:https://www.vexio.ro/laptop-accesorii/
+PAGE:2
+ERR IN FORMAT_DATA FOR PRODUCT: ESPERANZA EA147K Lampa notebook cu LED-uri 6ERR: {InvalidSessionIdException()}
+ON PATH:https://www.vexio.ro/laptop-accesorii/
+PAGE:2
+ERR IN FORMAT_DATA FOR PRODUCT: Memorie laptop Patriot Memorie notebook Signature, 8GB, DDR4,...ERR: {InvalidSessionIdException()}
+ON PATH:https://www.vexio.ro/laptop-accesorii/
+PAGE:2
+ERR IN FORMAT_DATA FOR PRODUCT: SATECHI Aluminum Pro Hub Type-C 4K Space GreyERR: {InvalidSessionIdException()}
+ON PATH:https://www.vexio.ro/laptop-accesorii/
+PAGE:2
+ERR IN FORMAT_DATA FOR PRODUCT: Targus Pulse 11.6-13.3'' Laptop Sleeve Black and EbonyERR: {InvalidSessionIdException()}
+ON PATH:https://www.vexio.ro/laptop-accesorii/
+PAGE:2
+ERR IN FORMAT_DATA FOR PRODUCT: Tracer Geanta notebook Balance 17 inch BlackERR: {InvalidSessionIdException()}
+ON PATH:https://www.vexio.ro/laptop-accesorii/
+PAGE:2
+ERR IN FORMAT_DATA FOR PRODUCT: Thermaltake Massive 20 RGBERR: {InvalidSessionIdException()}
+ON PATH:https://www.vexio.ro/laptop-accesorii/
+PAGE:2
+ERR MAIN: {InvalidSessionIdException()}ERR IN FORMAT_DATA FOR PRODUCT: Inter-Tech 120W external PSU for ITX series Q/E/SY/ITXERR: {UnboundLocalError("cannot access local variable 'img_name' where it is not associated with a value")}
+ON PATH:https://www.vexio.ro/laptop-accesorii/
+PAGE:3
+ERR IN FORMAT_DATA FOR PRODUCT: Memorie laptop Corsair Vengeance 16GB DDR4 2666MHz CL18 1.2vERR: {UnboundLocalError("cannot access local variable 'img_name' where it is not associated with a value")}
+ON PATH:https://www.vexio.ro/laptop-accesorii/
+PAGE:3
+ERR IN FORMAT_DATA FOR PRODUCT: Memorie laptop Corsair Vengeance 16GB DDR4 2400MHz CL16 1.2vERR: {UnboundLocalError("cannot access local variable 'img_name' where it is not associated with a value")}
+ON PATH:https://www.vexio.ro/laptop-accesorii/
+PAGE:3
+ERR IN FORMAT_DATA FOR PRODUCT: Wenger Potomac 17", 2-piece, NegruERR: {UnboundLocalError("cannot access local variable 'img_name' where it is not associated with a value")}
+ON PATH:https://www.vexio.ro/laptop-accesorii/
+PAGE:3
+ERR IN FORMAT_DATA FOR PRODUCT: Acumulator Green Cell A1321 pentru Apple MacBook Pro 15 A1286 (Mid...ERR: {UnboundLocalError("cannot access local variable 'img_name' where it is not associated with a value")}
+ON PATH:https://www.vexio.ro/laptop-accesorii/
+PAGE:3
+ERR IN FORMAT_DATA FOR PRODUCT: ALIMENTATOR UNIVERSAL LAPTOP 120W USBERR: {UnboundLocalError("cannot access local variable 'img_name' where it is not associated with a value")}
+ON PATH:https://www.vexio.ro/laptop-accesorii/
+PAGE:4
+ERR IN FORMAT_DATA FOR PRODUCT: Rucsaac pentru laptop Lenovo Casual B210 GX40Q17226 de 15.6" AlbastruERR: {UnboundLocalError("cannot access local variable 'img_name' where it is not associated with a value")}
+ON PATH:https://www.vexio.ro/laptop-accesorii/
+PAGE:4
+ERR IN FORMAT_DATA FOR PRODUCT: Memorie laptop Silicon Power 8GB, DDR3L-1600MHz, CL11ERR: {UnboundLocalError("cannot access local variable 'img_name' where it is not associated with a value")}
+ON PATH:https://www.vexio.ro/laptop-accesorii/
+PAGE:4
+ERR IN FORMAT_DATA FOR PRODUCT: Cheie bloccare diverse combinatii Kensington ClickSafeERR: {UnboundLocalError("cannot access local variable 'img_name' where it is not associated with a value")}
+ON PATH:https://www.vexio.ro/laptop-accesorii/
+PAGE:4
+ERR IN FORMAT_DATA FOR PRODUCT: Accesoriu montare docking station Dell Mounting KitERR: {UnboundLocalError("cannot access local variable 'img_name' where it is not associated with a value")}
+ON PATH:https://www.vexio.ro/laptop-accesorii/
+PAGE:4
+ERR IN FORMAT_DATA FOR PRODUCT: Case Logic Husa Deco 14" NegruERR: {UnboundLocalError("cannot access local variable 'img_name' where it is not associated with a value")}
+ON PATH:https://www.vexio.ro/laptop-accesorii/
+PAGE:4
+ERR IN FORMAT_DATA FOR PRODUCT: Spacer Geanta KOOL pentru Laptop de 15.6" NegruERR: {UnboundLocalError("cannot access local variable 'img_name' where it is not associated with a value")}
+ON PATH:https://www.vexio.ro/laptop-accesorii/
+PAGE:4
