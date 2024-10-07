@@ -1,12 +1,16 @@
 import psycopg2
 import time
 import csv
+import configparser
+
+config = configparser.ConfigParser()
+config.read('/home/tav/Desktop/licenta/cfg.ini')
 
 conn = psycopg2.connect(
-    host="localhost",  
-    database="product_administration",  
-    user="postgres",  
-    password="postgres"  
+    host=config['Database']['host'],  
+    database=config['Database']['db'],  
+    user=config['Database']['user'],  
+    password=config['Database']['password']  
 )
 
 cur = conn.cursor()

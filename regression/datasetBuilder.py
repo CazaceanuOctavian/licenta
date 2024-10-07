@@ -52,7 +52,7 @@ for category in formatted_categories:
             #stringify resulting vector so that we can use it in a SELECT query  
             resulting_columns = ','.join(selected_columns)
 
-            cur.execute('SELECT' + resulting_columns + 'FROM price_history_view_test WHERE category LIKE ' + str(category))
+            cur.execute('SELECT ' + resulting_columns + ' FROM price_history_view WHERE category LIKE ' + str(category))
             prices = cur.fetchall()
             for price in prices:
                 price = str(price).replace(',','').replace('(','').replace(')','').replace("'",'')  

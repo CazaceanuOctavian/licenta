@@ -8,7 +8,9 @@ from sklearn.ensemble import RandomForestRegressor
 from sklearn.metrics import mean_squared_error, r2_score
 
 config = configparser.ConfigParser()
-config.read('/home/tavi/Desktop/licenta/cfg.ini')
+config.read('/home/tav/Desktop/licenta/cfg.ini')
+
+print(config['Paths']['dataset_path'])
 
 for dataset in os.listdir(config['Paths']['dataset_path']):
     dataset_path = os.path.join(config['Paths']['dataset_path'], dataset)

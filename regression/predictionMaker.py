@@ -9,8 +9,6 @@ start_time = time.time()
 config = configparser.ConfigParser()
 config.read('/home/tav/Desktop/licenta/cfg.ini')
 
-x = config['Paths']['dataset_path']
-
 conn = psycopg2.connect(
     host=config['Database']['host'],  
     database=config['Database']['db'],  

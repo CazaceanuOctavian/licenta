@@ -137,7 +137,7 @@ SELECT ARRAY(SELECT tablename
 
 DO $$
 DECLARE
-	select_clause TEXT := 'CREATE OR REPLACE VIEW price_history_view as select products.product_code, ';
+	select_clause TEXT := 'CREATE OR REPLACE VIEW price_history_view as select products.product_code, products.category,';
     join_clause TEXT;
     i INT;
     table_names TEXT[];
@@ -166,7 +166,7 @@ BEGIN
 		END IF;
     END LOOP;
 
-    select_clause := select_clause || E'\nGROUP BY products.product_code;';
+    select_clause := select_clause || E'\nGROUP BY products.product_code, products.category;';
 
     RAISE NOTICE 'select_clause: %', select_clause;
 	EXECUTE select_clause;
@@ -198,14 +198,14 @@ CREATE OR REPLACE PROCEDURE generate_price_history_view()
 LANGUAGE plpgsql
 AS $$
 DECLARE
-	select_clause TEXT := 'CREATE OR REPLACE VIEW price_history_view as select products.product_code, ';
+	select_clause TEXT := 'CREATE OR REPLACE VIEW price_history_view as select products.product_code, products.category, ';
     join_clause TEXT;
     i INT;
     table_names TEXT[];
 BEGIN
     SELECT ARRAY(SELECT tablename
                  FROM pg_catalog.pg_tables
-                 WHERE schemaname = 'public') INTO table_names;
+                 WHERE schemaname = 'public' and tablename LIKE 'products_2%') INTO table_names;
 
     FOR i IN 1..array_length(table_names, 1) LOOP
 		select_clause := select_clause || ' MIN(' || table_names[i] || '.raw_price) as price_' || table_names[i] || ',';
@@ -227,7 +227,7 @@ BEGIN
 		END IF;
     END LOOP;
 
-    select_clause := select_clause || E'\nGROUP BY products.product_code;';
+    select_clause := select_clause || E'\nGROUP BY products.product_code, products.category;';
 
     RAISE NOTICE 'select_clause: %', select_clause;
 	EXECUTE select_clause;
