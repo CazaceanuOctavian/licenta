@@ -284,6 +284,8 @@ finally:
     conn.commit()
     print('=====SUCCESSFULLY RENAMED CURRENT AGGREGATION TABLE TO PRODUCTS=====')
 
+    #train and predict prices for products by executing predict_prices
+    
 
     print('Done!')
     #delete main table and associated views

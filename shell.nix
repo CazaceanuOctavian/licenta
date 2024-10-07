@@ -9,6 +9,7 @@ pkgs.mkShell {
       python-pkgs.beautifulsoup4
       python-pkgs.configparser
       python-pkgs.psycopg2
+      python-pkgs.scikit-learn
     ]))
     #java
     pkgs.jdk

@@ -2,20 +2,20 @@ import psycopg2
 import pandas as pd
 import os
 import configparser
+from datetime import datetime
 
+config = configparser.ConfigParser()
+config.read('/home/tav/Desktop/licenta/cfg.ini')
 
 conn = psycopg2.connect(
-    host="localhost",  
-    database="product_administration",  
-    user="postgres",  
-    password="postgres"  
+    host=config['Database']['host'],  
+    database=config['Database']['db'],  
+    user=config['Database']['user'],  
+    password=config['Database']['password']  
 )
 
 cur = conn.cursor()
 cur.execute('SELECT DISTINCT category FROM products')
-
-config = configparser.ConfigParser()
-config.read('/home/tavi/Desktop/licenta/cfg.ini')
 
 categories = cur.fetchall()
 formatted_categories = []
@@ -25,10 +25,37 @@ for category in categories:
 for category in formatted_categories:
     try:
         with open(config['Paths']['dataset_path'] + 'dts_' + category.replace("'",'').replace(' ','_') + '_tmp.csv', 'a') as dataset:
-            cur.execute('SELECT price_products, price_products_2 FROM price_history_view_test WHERE category LIKE ' + str(category))
+            #get all columns for dataset 
+            cur.execute("SELECT column_name FROM information_schema.columns WHERE table_name LIKE 'price_history_view' AND column_name LIKE 'price_%' ORDER BY column_name DESC")
+            columns = cur.fetchall()
+            for i in range(len(columns)):
+                columns[i] = str(columns[i]).replace("'", '').replace('(','').replace(')','').replace(',','')
+            #filter columns so that we chose them based on a time interval starting with the latest scraped date
+            selected_columns = []
+            i=0
+            while i < len(columns):
+                current_column = columns[i]
+                selected_columns.append(current_column)
+                found_match = False
+                for j in range(i+1, len(columns)):
+                    next_column = columns[j]
+                    current_date = datetime.strptime(current_column[-10:], '%Y_%m_%d')
+                    next_date = datetime.strptime(next_column[-10:], '%Y_%m_%d')
+                    difference = (current_date - next_date).days
+                    #change here to get the desired number of days
+                    if (difference >= 7):
+                        i = j 
+                        found_match = True
+                        break
+                if found_match is False:
+                    break
+            #stringify resulting vector so that we can use it in a SELECT query  
+            resulting_columns = ','.join(selected_columns)
+
+            cur.execute('SELECT' + resulting_columns + 'FROM price_history_view_test WHERE category LIKE ' + str(category))
             prices = cur.fetchall()
             for price in prices:
-                price = str(price).replace(',','').replace('(','').replace(')','').replace("'",'')
+                price = str(price).replace(',','').replace('(','').replace(')','').replace("'",'')  
                 price = price.strip().split(' ')
                 for i in range(2):
                     price[i] = float(price[i])

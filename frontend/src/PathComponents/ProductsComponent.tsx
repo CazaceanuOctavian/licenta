@@ -22,8 +22,6 @@ const Products: React.FC = () => {
             selectedValue={selectedValue} setSelectedValue={setSelectedValue}
             selectedPage={selectedPage} setSelectedPage={setSelectedPage} />
 
-            <p>PASSED MANUFACTURERS ARE: {selectedManufacturers}</p>
-
             <div className="main-page-div">
                 <QueryPrice lowerPice={lowerPrice} upperPrice={upperPrice} 
                 setLowerPrice={setLowerPrice} setUpperPrice={setUpperPrice} 

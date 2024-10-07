@@ -6,11 +6,16 @@ import time
 
 start_time = time.time()
 
+config = configparser.ConfigParser()
+config.read('/home/tav/Desktop/licenta/cfg.ini')
+
+x = config['Paths']['dataset_path']
+
 conn = psycopg2.connect(
-    host="localhost",  
-    database="product_administration",  
-    user="postgres",  
-    password="postgres"  
+    host=config['Database']['host'],  
+    database=config['Database']['db'],  
+    user=config['Database']['user'],  
+    password=config['Database']['password']  
 )
 
 def predict_price(Old_Price, loaded_model):
@@ -20,9 +25,6 @@ def predict_price(Old_Price, loaded_model):
 
 cur = conn.cursor()
 cur.execute('SELECT DISTINCT category FROM products')
-
-config = configparser.ConfigParser()
-config.read('/home/tavi/Desktop/licenta/cfg.ini')
 
 categories = cur.fetchall()
 formatted_categories = []

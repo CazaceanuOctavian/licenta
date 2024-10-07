@@ -31,7 +31,6 @@ export const ManufacturerListComponent: React.FC<selectedManufacturers> = ({ dat
     useEffect(() => {
         setSelectedManufacturers(checkedItems)
     }, [checkedItems])
-    
     return (
         <div className="manufacturer-container">
             <ul className="manufacturer-list">
