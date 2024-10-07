@@ -39,7 +39,6 @@ const QueryPrice: React.FC<SearchProps> = ({userQuery, selectedOrder, selectedCa
         try {
             console.log('FROM APICALL TRYING TO FETCH: MANUFACTURERS');
             const fetchedManufacutrers = await FetchData('http://localhost:8080/products/name/fetchManufacturersInPriceRange=' + userQuery + ',' + lowerPice + ',' + upperPrice + ',' + 'undefined,desc,')
-            //const fetchedManufacutrers = await FetchData('http://localhost:8080/products/name/fetchManufacturersInPriceRange=laptop,20,9999,undefined,desc,')
             setManufacturers(fetchedManufacutrers)
         } catch (error) {
             console.log('error with fetch operation: ' + error);
@@ -56,13 +55,13 @@ const QueryPrice: React.FC<SearchProps> = ({userQuery, selectedOrder, selectedCa
 
     useEffect(() => {
         setSelectedManufacturers([])
-        // lowerPice = '0'
-        // upperPrice = '999999'
         callApiCategories();
     }, []);
 
     useEffect(() => {
-        callApiManufacturers();
+        if (userQuery !== '') {
+            callApiManufacturers();
+        }
     }, [userQuery])
 
     return (

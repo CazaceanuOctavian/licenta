@@ -60,26 +60,28 @@ const PopulateComponent: React.FC<userQueryProp> = ({ selectedManufacturers, sel
             selectedManufacturersStringify = '"' + selectedManufacturersStringify + '"' 
         }
 
-        switch(queryType) {
-            case "withCategoryOrderingManufacturers":
-                if (selectedManufacturers?.length !== 0) {
-                    apiQuery = 'http://localhost:8080/products/name/searchByNamePagePriceCategoryManufacturerOrdering='
-                    params = userQuery + ',' + selectedValue + ',' +  selectedPage + ',' +  lowerPrice + ',' 
-                        +  upperPrice + ',' +  category + ',' + selectedManufacturersStringify + ',' +  selectedOrder + ',';
-                }
-                else {
-                    apiQuery = 'http://localhost:8080/products/name/searchAndPaginateCustomCategoryAndOrdering=' 
-                    params = userQuery + ',' + selectedValue + ',' +  selectedPage + ',' +  lowerPrice + ',' 
-                        +  upperPrice + ',' +  category + ',' +  selectedOrder + ',';
-                }
-                break;
-            case "withProductCode":
-                apiQuery = 'http://localhost:8080/products/code/search=';
-                params = userQuery
-                break;
+        if (userQuery !== '') {
+            switch(queryType) {
+                case "withCategoryOrderingManufacturers":
+                    if (selectedManufacturers?.length !== 0) {
+                        apiQuery = 'http://localhost:8080/products/name/searchByNamePagePriceCategoryManufacturerOrdering='
+                        params = userQuery + ',' + selectedValue + ',' +  selectedPage + ',' +  lowerPrice + ',' 
+                            +  upperPrice + ',' +  category + ',' + selectedManufacturersStringify + ',' +  selectedOrder + ',';
+                    }
+                    else {
+                        apiQuery = 'http://localhost:8080/products/name/searchAndPaginateCustomCategoryAndOrdering=' 
+                        params = userQuery + ',' + selectedValue + ',' +  selectedPage + ',' +  lowerPrice + ',' 
+                            +  upperPrice + ',' +  category + ',' +  selectedOrder + ',';
+                    }
+                    break;
+                case "withProductCode":
+                    apiQuery = 'http://localhost:8080/products/code/search=';
+                    params = userQuery
+                    break;
+            }
+            callApi(apiQuery + params)
         }
-        callApi(apiQuery + params)
-      }, [userQuery, selectedValue, selectedPage, lowerPrice, upperPrice, category, selectedOrder, selectedManufacturers]); 
+    }, [userQuery, selectedValue, selectedPage, lowerPrice, upperPrice, category, selectedOrder, selectedManufacturers]); 
 
     const ContextComponent: React.FC<SwitchComponentProps> = ({ displayType, fetchedData }) => {
         switch (displayType) {
