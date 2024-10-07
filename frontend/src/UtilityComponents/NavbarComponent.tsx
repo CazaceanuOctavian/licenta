@@ -15,7 +15,7 @@ interface SwitchComponentProps {
     displayType: string
 }
 
-const Navbar: React.FC<SearchProps> = ( {displayType, setUserQuery, selectedValue, setSelectedValue, selectedPage, setSelectedPage} ) => {
+const Navbar: React.FC<SearchProps> = ( {displayType, setUserQuery, userQuery, selectedValue, setSelectedValue, selectedPage, setSelectedPage} ) => {
 
     const handleSelectChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
         setSelectedValue(event.target.value);
@@ -40,7 +40,7 @@ const Navbar: React.FC<SearchProps> = ( {displayType, setUserQuery, selectedValu
                     <div className="nav-baar">
                         <div className="search-container">
                             <button className="prev-button" onClick={decrement}>prev</button>
-                            <Search userQuery="" setUserQuery={setUserQuery} />
+                            <Search userQuery={userQuery} setUserQuery={setUserQuery} />
                             <button className="next-button" onClick={increment}>next</button>
                         </div>
                         <select id="count-dropdown" value={selectedValue} onChange={handleSelectChange}>

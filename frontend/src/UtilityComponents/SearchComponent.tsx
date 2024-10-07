@@ -23,12 +23,12 @@ const Search: React.FC<SearchProps> = ({ userQuery, setUserQuery }) => {
         if(event.key === "Enter"){
             var search = document.getElementById('search_bar') as HTMLInputElement;
             if(search){
-                let userQuery:string = getStringOrDefault(search.value)
+                userQuery = getStringOrDefault(search.value)
                 setUserQuery(userQuery)
                 //move to another url with page 1 as beginning
             }
         }
-      };
+    };
 
     return (
         <div>
@@ -36,7 +36,7 @@ const Search: React.FC<SearchProps> = ({ userQuery, setUserQuery }) => {
                 type="text"
                 value={query}
                 onChange={(e) => setQuery(e.target.value)}
-                placeholder="Enter your query and press Enter"
+                placeholder={userQuery}
             />
         </div>
     )

@@ -37,7 +37,7 @@ const QueryPrice: React.FC<SearchProps> = ({userQuery, selectedOrder, selectedCa
 
     const callApiManufacturers = async () => {
         try {
-            console.log('FROM APICALL TRYING TO FETCH: CATEGORIES');
+            console.log('FROM APICALL TRYING TO FETCH: MANUFACTURERS');
             const fetchedManufacutrers = await FetchData('http://localhost:8080/products/name/fetchManufacturersInPriceRange=' + userQuery + ',' + lowerPice + ',' + upperPrice + ',' + 'undefined,desc,')
             //const fetchedManufacutrers = await FetchData('http://localhost:8080/products/name/fetchManufacturersInPriceRange=laptop,20,9999,undefined,desc,')
             setManufacturers(fetchedManufacutrers)
@@ -55,10 +55,10 @@ const QueryPrice: React.FC<SearchProps> = ({userQuery, selectedOrder, selectedCa
       };
 
     useEffect(() => {
-        setManufacturers([])
+        setSelectedManufacturers([])
+        // lowerPice = '0'
+        // upperPrice = '999999'
         callApiCategories();
-        lowerPice = '0'
-        upperPrice = '999999'
     }, []);
 
     useEffect(() => {

@@ -8,8 +8,8 @@ const Products: React.FC = () => {
     const [userQuery, setUserQuery] = useState<string>('');
     const [selectedValue, setSelectedValue] = useState<string>('')
     const [selectedPage, setSelectedPage] = useState<number>(1)
-    const [lowerPrice, setLowerPrice] = useState<string>('')
-    const [upperPrice, setUpperPrice] = useState<string>('')
+    const [lowerPrice, setLowerPrice] = useState<string>('0')
+    const [upperPrice, setUpperPrice] = useState<string>('999999')
     const [categories, setCategory] = useState<string[]>([])
     const [selectedCategory, setSelectedCategory] = useState<string>('')
     const [selectedOrder, setSelectedOrder] = useState<string>('')
