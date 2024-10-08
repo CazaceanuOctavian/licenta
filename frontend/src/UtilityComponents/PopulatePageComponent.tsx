@@ -81,6 +81,15 @@ const PopulateComponent: React.FC<userQueryProp> = ({ selectedManufacturers, sel
             }
             callApi(apiQuery + params)
         }
+        
+        if (userQuery === 'static') {
+            switch(queryType) {
+                case "withBestPredictedPrices":
+                    apiQuery = 'http://localhost:8080/products/getBestPredictedProducts'
+                    params = ''
+            }
+            callApi(apiQuery + params)
+        }
     }, [userQuery, selectedValue, selectedPage, lowerPrice, upperPrice, category, selectedOrder, selectedManufacturers]); 
 
     const ContextComponent: React.FC<SwitchComponentProps> = ({ displayType, fetchedData }) => {

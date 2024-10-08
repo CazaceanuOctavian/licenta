@@ -347,3 +347,9 @@ WHERE id IN (
 	  AND manufacturer IN (?7)
     LIMIT ?2 
     OFFSET (?3-1) * ?2;"
+
+@QUERY TO GET PRODUCTS WITH BIGGEST DIF BETWEEN ACTUAL AND PREDICTED PRICE FOR FRONT END
+
+SELECT id, name, raw_price, raw_rating, is_in_stock, url, product_code, retailer, imagepath, category, predicted_price FROM products GROUP BY id, name, raw_price, raw_rating, is_in_stock, url, product_code, retailer, imagepath, category, predicted_price ORDER BY MAX(raw_price - predicted_price) DESC LIMIT 40;
+
+-----------------------------------------------------------------
