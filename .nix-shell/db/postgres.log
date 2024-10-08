@@ -138,3 +138,21 @@
 2024-10-07 08:29:42.981 UTC [53839] HINT:  Future log output will appear in directory "log".
 2024-10-07 08:35:01.750 UTC [63278] FATAL:  lock file "postmaster.pid" already exists
 2024-10-07 08:35:01.750 UTC [63278] HINT:  Is another postmaster (PID 53839) running in data directory "/home/tav/Desktop/licenta/.nix-shell/db"?
+2024-10-07 18:42:41.215 UTC [15244] LOG:  redirecting log output to logging collector process
+2024-10-07 18:42:41.215 UTC [15244] HINT:  Future log output will appear in directory "log".
+2024-10-07 18:46:58.597 UTC [27574] LOG:  redirecting log output to logging collector process
+2024-10-07 18:46:58.597 UTC [27574] HINT:  Future log output will appear in directory "log".
+2024-10-07 18:50:59.414 UTC [10324] LOG:  redirecting log output to logging collector process
+2024-10-07 18:50:59.414 UTC [10324] HINT:  Future log output will appear in directory "log".
+2024-10-08 04:39:08.500 UTC [25334] LOG:  redirecting log output to logging collector process
+2024-10-08 04:39:08.500 UTC [25334] HINT:  Future log output will appear in directory "log".
+2024-10-08 11:45:51.327 UTC [46259] LOG:  redirecting log output to logging collector process
+2024-10-08 11:45:51.327 UTC [46259] HINT:  Future log output will appear in directory "log".
+2024-10-08 11:50:52.851 UTC [11248] LOG:  redirecting log output to logging collector process
+2024-10-08 11:50:52.851 UTC [11248] HINT:  Future log output will appear in directory "log".
+2024-10-08 11:51:00.094 UTC [19154] FATAL:  lock file "postmaster.pid" already exists
+2024-10-08 11:51:00.094 UTC [19154] HINT:  Is another postmaster (PID 11248) running in data directory "/home/tav/Desktop/licenta/.nix-shell/db"?
+2024-10-08 11:52:13.729 UTC [36080] FATAL:  lock file "postmaster.pid" already exists
+2024-10-08 11:52:13.729 UTC [36080] HINT:  Is another postmaster (PID 11248) running in data directory "/home/tav/Desktop/licenta/.nix-shell/db"?
+2024-10-08 11:52:15.852 UTC [36780] FATAL:  lock file "postmaster.pid" already exists
+2024-10-08 11:52:15.852 UTC [36780] HINT:  Is another postmaster (PID 11248) running in data directory "/home/tav/Desktop/licenta/.nix-shell/db"?

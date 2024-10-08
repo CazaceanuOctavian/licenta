@@ -242,4 +242,18 @@ public class ProductController {
         System.out.println("i found the above products by id from the db!");
         return retrievedProductList;
     }
+
+    @CrossOrigin(origins = "*")
+    @GetMapping("/products/getBestPredictedProducts")
+    public Iterable<Product> getBestPredictedProducts() {
+        Iterable<Product> retrievedProductList;
+        retrievedProductList = this.productRepository.fetchBestPredictedProducts();
+
+        for (Product product : retrievedProductList) {
+            System.out.println(product);
+        }
+
+        System.out.println("i the above product by name from the db!");
+        return retrievedProductList;
+    }
 }

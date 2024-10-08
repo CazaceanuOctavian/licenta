@@ -16,7 +16,7 @@ from bs4 import BeautifulSoup
 
 options = Options()
 #options.add_argument('--headless')
-options.binary_location = '/nix/store/z5lcsw013vbkgwxw6n7kx9lgbadqf7vy-firefox-130.0.1/bin/firefox'
+options.binary_location = '/nix/store/a538cnm0cdvacx484395jz60n75b8w5k-firefox-131.0/bin/firefox'
 options.page_load_strategy = 'normal'
 driver = webdriver.Firefox(options=options)
 try:
@@ -40,6 +40,7 @@ def no_nav_strings(iterable):
 
 def format_data(item):
     try:
+        time.sleep(1)
         manufacturer = item.find_next(class_='manufacturer pull-left').text.strip().lower()
         name = item.find_next(class_='name').text.strip()
         isInStoc = item.find_next(class_=re.compile('availability margin-bottom-xs', re.IGNORECASE)).text.strip()

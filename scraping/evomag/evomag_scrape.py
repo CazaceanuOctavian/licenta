@@ -37,7 +37,7 @@ def create_driver():
     options.add_argument("--disable-dev-shm-usage")
     options.set_preference("browser.privatebrowsing.autostart", True)
 
-    options.binary_location = '/nix/store/z5lcsw013vbkgwxw6n7kx9lgbadqf7vy-firefox-130.0.1/bin/firefox'
+    options.binary_location = '/nix/store/a538cnm0cdvacx484395jz60n75b8w5k-firefox-131.0/bin/firefox'
     options.page_load_strategy = 'eager'
     driver = webdriver.Firefox(options=options)
     return driver

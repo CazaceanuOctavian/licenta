@@ -62,4 +62,8 @@ public interface ProductRepository extends CrudRepository<Product, Integer> {
 
     @Query(value = "SELECT * FROM price_history_view WHERE product_code LIKE ?1", nativeQuery = true)
     List<String> fetchProductHistory(String productCode);
+
+    @Query(value = "SELECT id, name, raw_price, raw_rating, is_in_stock, url, product_code, retailer, imagepath, category, manufacturer, predicted_price FROM products GROUP BY id, name, raw_price, raw_rating, is_in_stock, url, product_code, retailer, imagepath, category, manufacturer, predicted_price ORDER BY MAX(raw_price - predicted_price) DESC LIMIT 40;", nativeQuery = true)
+    List<Product> fetchBestPredictedProducts();
+
 }
