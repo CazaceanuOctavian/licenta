@@ -16,7 +16,7 @@ interface SwitchComponentProps {
 }
 
 const Navbar: React.FC<SearchProps> = ( {displayType, setUserQuery, userQuery, selectedValue, setSelectedValue, selectedPage, setSelectedPage} ) => {
-
+    
     const handleSelectChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
         setSelectedValue(event.target.value);
       };
@@ -27,11 +27,11 @@ const Navbar: React.FC<SearchProps> = ( {displayType, setUserQuery, userQuery, s
     }
 
     const decrement = () => {
-        if (selectedPage > 1)
+        if (selectedPage > 1 && selectedPage - 1 > 0) {
             window.scrollTo({ top: 0, behavior: 'instant' }); 
             setSelectedPage(selectedPage - 1)
+        }
     }
-
 
     const ContextComponent: React.FC<SwitchComponentProps> = ({ displayType }) => {
         switch (displayType) {
