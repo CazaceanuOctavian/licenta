@@ -256,4 +256,18 @@ public class ProductController {
         System.out.println("i the above product by name from the db!");
         return retrievedProductList;
     }
+
+    @CrossOrigin(origins = "*")
+    @GetMapping("/products/getLowestHistoricalPriceProducts")
+    public Iterable<Product> getLowestHistoricalPriceProducts() {
+        Iterable<Product> retrievedProductList;
+        retrievedProductList = this.productRepository.fetchAllProductHistoryView();
+
+        for (Product product : retrievedProductList) {
+            System.out.println(product);
+        }
+
+        System.out.println("i the above product by name from the db!");
+        return retrievedProductList;
+    }
 }

@@ -353,3 +353,52 @@ WHERE id IN (
 SELECT id, name, raw_price, raw_rating, is_in_stock, url, product_code, retailer, imagepath, category, predicted_price FROM products GROUP BY id, name, raw_price, raw_rating, is_in_stock, url, product_code, retailer, imagepath, category, predicted_price ORDER BY MAX(raw_price - predicted_price) DESC LIMIT 40;
 
 -----------------------------------------------------------------
+=================QUERY FOR SELECTING LOWEST PRICE PRODUCUTS HISTORICALLY===============
+DO $$ 
+DECLARE
+	latest_column text;
+	other_columns text[];
+BEGIN
+	SELECT ARRAY(SELECT column_name
+				 FROM information_schema.columns
+				 WHERE table_name LIKE 'price_history_view') into other_columns;
+	
+	latest_column := other_columns(other_columns.COUNT);
+	RAISE NOTICE 'last column is: %', latest_column;
+END $$
+
+=========
+
+DO $$ 
+DECLARE
+    latest_column TEXT;
+    other_columns TEXT[];
+	dynamic_query TEXT := 'CREATE OR REPLACE VIEW lowest_historical_price_view AS SELECT * from price_history_view WHERE';
+BEGIN
+    SELECT ARRAY(SELECT column_name
+                 FROM information_schema.columns
+                 WHERE table_name = 'price_history_view'
+				 ORDER BY column_name ASC) 
+    INTO other_columns;
+    
+    latest_column := other_columns[array_length(other_columns, 1) - 1];
+
+	dynamic_query := dynamic_query || ' ' || latest_column || ' = LEAST(';
+    
+	FOR i IN 1..array_length(other_columns, 1)-1 LOOP
+		dynamic_query := dynamic_query || other_columns[i] || ',';
+	END LOOP;
+
+	dynamic_query := LEFT(dynamic_query, length(dynamic_query) - 1);
+	dynamic_query := dynamic_query || ')';
+
+    RAISE NOTICE 'dynamic query is: %', dynamic_query;
+
+	EXECUTE dynamic_query;
+END $$;
+
+
+//DELETE THIS AT SOME POINT
+SELECT * FROM test WHERE price3 = LEAST(price1, price2, price3);
+
+

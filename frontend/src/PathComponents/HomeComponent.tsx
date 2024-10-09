@@ -3,11 +3,18 @@ import PopulateComponent from "../UtilityComponents/PopulatePageComponent";
 
 export const Home: React.FC = () => {
     return (
-        <h1>
-            home page
-            <div className="product-carousel-best-predicted-prices">
+        <div id="root">
+            <h1 className="main-title">
+                home page
+            </h1>
+            <div className="products-best-predicted-prices">
+                <h4 className="informative">Prezicem ca urmatoarele produse vor avea cele mai mari ieftiniri in viitor:</h4>
                 <PopulateComponent userQuery="static" queryType="withBestPredictedPrices" productDisplayType="default"></PopulateComponent>
             </div>
-        </h1>
+            <div className="products-lowest-current-prices">
+                <h4 className="informative">Urmatoarele produse au cel mai ieftin pret de pana acum:</h4>
+                <PopulateComponent userQuery="static" queryType="withLowestHistoricalPrices" productDisplayType="default"></PopulateComponent>
+            </div>
+        </div>
     )
 }

@@ -87,7 +87,13 @@ const PopulateComponent: React.FC<userQueryProp> = ({ selectedManufacturers, sel
                 case "withBestPredictedPrices":
                     apiQuery = 'http://localhost:8080/products/getBestPredictedProducts'
                     params = ''
-            }
+                    break;
+                case "withLowestHistoricalPrices":
+                    //TODO --> change with different api
+                    apiQuery = 'http://localhost:8080/products/getBestPredictedProducts'
+                    params = ''            
+                    break;
+                }
             callApi(apiQuery + params)
         }
     }, [userQuery, selectedValue, selectedPage, lowerPrice, upperPrice, category, selectedOrder, selectedManufacturers]); 
