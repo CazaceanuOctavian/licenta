@@ -9,21 +9,24 @@ interface SearchProps {
     setSelectedValue: (query: string) => void;
     selectedPage: number
     setSelectedPage: (query: number) => void;
+    maxPages:string
 }
 
 interface SwitchComponentProps {
     displayType: string
 }
 
-const Navbar: React.FC<SearchProps> = ( {displayType, setUserQuery, userQuery, selectedValue, setSelectedValue, selectedPage, setSelectedPage} ) => {
+const Navbar: React.FC<SearchProps> = ( {displayType, setUserQuery, userQuery, selectedValue, setSelectedValue, selectedPage, setSelectedPage, maxPages} ) => {
     
     const handleSelectChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
         setSelectedValue(event.target.value);
       };
 
     const increment = () => {
-        window.scrollTo({ top: 0, behavior: 'instant' }); 
-        setSelectedPage(selectedPage + 1)
+        if(selectedPage + 1 <= Number.parseInt(maxPages)) {
+            window.scrollTo({ top: 0, behavior: 'instant' }); 
+            setSelectedPage(selectedPage + 1)
+        }
     }
 
     const decrement = () => {

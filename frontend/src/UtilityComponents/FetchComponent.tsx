@@ -20,4 +20,3 @@ export const FetchData = async (query: string) : Promise<any> => {
     }
 
 };
-

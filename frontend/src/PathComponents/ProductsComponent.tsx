@@ -15,12 +15,16 @@ const Products: React.FC = () => {
     const [selectedOrder, setSelectedOrder] = useState<string>('')
     const [manufacturers, setManufacturers] = useState<string[]>([])
     const [selectedManufacturers, setSelectedManufacturers] = useState<string[]>([])
+    const [maxPages, setMaxPages] = useState<string>('')
 
     return (
         <div className="product-component">
             <Navbar displayType="withFullFeatures" userQuery={userQuery} setUserQuery={setUserQuery} 
             selectedValue={selectedValue} setSelectedValue={setSelectedValue}
-            selectedPage={selectedPage} setSelectedPage={setSelectedPage} />
+            selectedPage={selectedPage} setSelectedPage={setSelectedPage} 
+            maxPages={maxPages}/>
+
+            <p>Fetched max number of pages is: {maxPages}</p>
 
             <div className="main-page-div">
                 <QueryPrice lowerPice={lowerPrice} upperPrice={upperPrice} 
@@ -35,13 +39,13 @@ const Products: React.FC = () => {
                 <PopulateComponent productDisplayType="default" queryType='withCategoryOrderingManufacturers' userQuery={userQuery} 
                 selectedValue={selectedValue} selectedPage={selectedPage}
                 lowerPrice={lowerPrice} upperPrice={upperPrice} category={selectedCategory} selectedOrder={selectedOrder}
-                selectedManufacturers={selectedManufacturers}/>
+                selectedManufacturers={selectedManufacturers} maxPages={maxPages} setMaxPages={setMaxPages}/>
             
             </div>
 
             <Navbar displayType="withOnlyButtons" userQuery={userQuery} setUserQuery={setUserQuery} 
             selectedValue={selectedValue} setSelectedValue={setSelectedValue}
-            selectedPage={selectedPage} setSelectedPage={setSelectedPage} />
+            selectedPage={selectedPage} setSelectedPage={setSelectedPage} maxPages={maxPages}/>
         </div>
     )
 }

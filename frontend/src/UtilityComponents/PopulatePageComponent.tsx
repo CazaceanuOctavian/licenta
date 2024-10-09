@@ -14,6 +14,9 @@ interface userQueryProp {
     category?: string
     selectedOrder?: string
     selectedManufacturers?: string[]
+    maxPages?: string
+    setMaxPages?: (query: string) =>void;
+
 }
 
 interface SwitchComponentProps {
@@ -22,18 +25,32 @@ interface SwitchComponentProps {
     fetchedData: Product[];
 }
 
-const PopulateComponent: React.FC<userQueryProp> = ({ selectedManufacturers, selectedOrder, queryType, productDisplayType, userQuery, selectedValue, selectedPage, lowerPrice, upperPrice, category }) => {
+const PopulateComponent: React.FC<userQueryProp> = ({ selectedManufacturers, selectedOrder, queryType, productDisplayType, userQuery, selectedValue, selectedPage, lowerPrice, upperPrice, category, maxPages, setMaxPages }) => {
     const [fetchedData, setData] = useState<Product[]>([]);
+    const [complementaryFetchedData, setComplementaryFetchedData] = useState<string>('');
     
     let apiQuery: string = '';
+    let complementaryApiQuery: string = '';
     let params: string = '';
-    let selectedManufacturersStringify: string = ''
+    let complementaryParams: string = '';
+    let selectedManufacturersStringify: string = '';
 
+    //very ugly having to use if but idk how to do it better 
     const callApi = async (query: string) => {
         try {
-            console.log('FROM APICALL TRYING TO FETCH: ' + query)
-            const data = await FetchData(query);
-            setData(data);
+            if(query.startsWith('complementary')) {
+                query = query.replace('complementary', '')
+                console.log('FROM APICALL TRYING TO FETCH COMPLEMENTARY: ' + query)
+                const data = await FetchData(query);
+                if(setMaxPages?.bind) {
+                    setMaxPages(data)
+                }
+            }
+            else {
+                console.log('FROM APICALL TRYING TO FETCH: ' + query)
+                const data = await FetchData(query);
+                setData(data);
+            }
         } catch (error) {
             console.log('error with fetch operation:' + error)
         }
@@ -73,6 +90,12 @@ const PopulateComponent: React.FC<userQueryProp> = ({ selectedManufacturers, sel
                         params = userQuery + ',' + selectedValue + ',' +  selectedPage + ',' +  lowerPrice + ',' 
                             +  upperPrice + ',' +  category + ',' +  selectedOrder + ',';
                     }
+
+                    complementaryApiQuery = 'http://localhost:8080/products/name/fetchMaxPages='
+                    complementaryParams = userQuery + ',' + selectedValue + ',' + lowerPrice + ',' + upperPrice + ',' + category  + ',' +
+                            + selectedManufacturersStringify + ','
+
+                    callApi('complementary' + complementaryApiQuery + complementaryParams)
                     break;
                 case "withProductCode":
                     apiQuery = 'http://localhost:8080/products/code/search=';
@@ -96,7 +119,7 @@ const PopulateComponent: React.FC<userQueryProp> = ({ selectedManufacturers, sel
                 }
             callApi(apiQuery + params)
         }
-    }, [userQuery, selectedValue, selectedPage, lowerPrice, upperPrice, category, selectedOrder, selectedManufacturers]); 
+    }, [userQuery, selectedValue, selectedPage, lowerPrice, upperPrice, category, selectedOrder, selectedManufacturers]);  
 
     const ContextComponent: React.FC<SwitchComponentProps> = ({ displayType, fetchedData }) => {
         switch (displayType) {
