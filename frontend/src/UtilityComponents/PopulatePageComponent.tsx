@@ -27,7 +27,6 @@ interface SwitchComponentProps {
 
 const PopulateComponent: React.FC<userQueryProp> = ({ selectedManufacturers, selectedOrder, queryType, productDisplayType, userQuery, selectedValue, selectedPage, lowerPrice, upperPrice, category, maxPages, setMaxPages }) => {
     const [fetchedData, setData] = useState<Product[]>([]);
-    const [complementaryFetchedData, setComplementaryFetchedData] = useState<string>('');
     
     let apiQuery: string = '';
     let complementaryApiQuery: string = '';
@@ -112,7 +111,6 @@ const PopulateComponent: React.FC<userQueryProp> = ({ selectedManufacturers, sel
                     params = ''
                     break;
                 case "withLowestHistoricalPrices":
-                    //TODO --> change with different api
                     apiQuery = 'http://localhost:8080/products/getLowestHistoricalPriceProducts'
                     params = ''            
                     break;

@@ -22,7 +22,7 @@ const Search: React.FC<SearchProps> = ({ userQuery, setUserQuery }) => {
     const handleKeyPress = (event: KeyboardEvent) => {
         if(event.key === "Enter"){
             var search = document.getElementById('search_bar') as HTMLInputElement;
-            if(search){
+            if(search.value){
                 userQuery = getStringOrDefault(search.value)
                 setUserQuery(userQuery)
                 //move to another url with page 1 as beginning

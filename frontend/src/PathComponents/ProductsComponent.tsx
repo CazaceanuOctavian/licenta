@@ -25,6 +25,7 @@ const Products: React.FC = () => {
             maxPages={maxPages}/>
 
             <p>Fetched max number of pages is: {maxPages}</p>
+            <p>Current page is: {selectedPage}</p>
 
             <div className="main-page-div">
                 <QueryPrice lowerPice={lowerPrice} upperPrice={upperPrice} 
