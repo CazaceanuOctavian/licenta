@@ -270,4 +270,23 @@ public class ProductController {
         System.out.println("i the above product by name from the db!");
         return retrievedProductList;
     }
+
+    @CrossOrigin(origins = "*")
+    @GetMapping("/products/name/fetchMaxPages={productName},{limit},{lowerPrice},{upperPrice},{category},{manufacturer},")
+    public String getMaxPages(
+            @PathVariable String productName,
+            @PathVariable int limit,
+            @PathVariable int lowerPrice,
+            @PathVariable int upperPrice,
+            @PathVariable String category,
+            @PathVariable String manufacturer) {
+
+        manufacturer = manufacturer.substring(1, manufacturer.length() - 1);
+        List<String> manufacturerList = Arrays.asList(manufacturer.split("-"));
+
+        String maxPages = this.productRepository.fetchMaxPages(productName, limit, lowerPrice, upperPrice, category, manufacturerList);
+        
+        System.out.println("i found the above products by id from the db!");
+        return maxPages;
+    }
 }

@@ -400,5 +400,6 @@ END $$;
 
 //DELETE THIS AT SOME POINT
 SELECT * FROM test WHERE price3 = LEAST(price1, price2, price3);
+@Query(value = "SELECT CEIL(COUNT(*) / ?2) AS total_pages FROM view_products_desc WHERE to_tsvector(name) @@ plainto_tsquery(?1) AND raw_price BETWEEN ?3 AND ?4 AND category LIKE COALESCE(NULLIF(?5, 'undefined'), '%') AND (CASE WHEN ?6 = 'undefined' THEN true ELSE manufacturer IN (?6) END);", nativeQuery = true)
 
 
