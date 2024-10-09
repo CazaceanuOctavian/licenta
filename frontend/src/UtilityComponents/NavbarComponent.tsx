@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Search from "./SearchComponent"
 
 interface SearchProps {
@@ -35,6 +35,12 @@ const Navbar: React.FC<SearchProps> = ( {displayType, setUserQuery, userQuery, s
             setSelectedPage(selectedPage - 1)
         }
     }
+
+    useEffect(() => {
+        if(selectedPage > Number.parseInt(maxPages)) {
+             setSelectedPage(Number.parseInt(maxPages))
+        }
+    }, [maxPages, selectedPage]);
 
     const ContextComponent: React.FC<SwitchComponentProps> = ({ displayType }) => {
         switch (displayType) {
