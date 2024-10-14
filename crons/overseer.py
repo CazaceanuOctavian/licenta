@@ -230,7 +230,7 @@ finally:
     current_table = cur.fetchall()
 
     if current_table:
-        print('--->NO DUPLICATES AGGREGATION TABLE EXISTS... TRYING TO RECREATE WITH UPDATED VALUES...<---')
+        print('--->DUPLICATES AGGREGATION TABLE EXISTS... TRYING TO RECREATE WITH UPDATED VALUES...<---')
         cur.execute("DROP TABLE products_lowest_price_no_dups CASCADE")
         conn.commit()
 

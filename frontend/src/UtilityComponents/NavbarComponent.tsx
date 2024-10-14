@@ -37,6 +37,13 @@ const Navbar: React.FC<SearchProps> = ( {displayType, setUserQuery, userQuery, s
     }
 
     useEffect(() => {
+        //set maxPages > 0 condition to fix bug where when a search would yield nothing
+        //the page was set to 0 which made the database return error 500 and would stop
+        //searches until next button was pressed or page refresh
+        if(Number.parseInt(maxPages) == 0) {
+            maxPages='1'
+        }
+
         if(selectedPage > Number.parseInt(maxPages)) {
              setSelectedPage(Number.parseInt(maxPages))
         }

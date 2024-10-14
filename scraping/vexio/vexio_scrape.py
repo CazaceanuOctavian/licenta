@@ -16,7 +16,7 @@ from bs4 import BeautifulSoup
 
 options = Options()
 #options.add_argument('--headless')
-options.binary_location = '/nix/store/a538cnm0cdvacx484395jz60n75b8w5k-firefox-131.0/bin/firefox'
+options.binary_location = '/nix/store/spcnlja8k1ms4328i0zgcqc3m1nvkzv4-firefox-131.0.2/bin/firefox'
 options.page_load_strategy = 'normal'
 driver = webdriver.Firefox(options=options)
 try:

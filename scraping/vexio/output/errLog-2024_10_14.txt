@@ -1,0 +1,3 @@
+ERR IN FORMAT_DATA FOR PRODUCT: Folie discretie ecran Lenovo 0A61771, 15.6 inchERR: {AttributeError("'NoneType' object has no attribute 'text'")}
+ON PATH:https://www.vexio.ro/laptop-accesorii/
+PAGE:2
